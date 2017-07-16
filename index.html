@@ -1,0 +1,78 @@
+---
+layout: page
+title: Joshua's Blog
+subtitle: Don't aim for success if you want it; just do what you love and believe in, and it will come naturally.
+use-site-title: true
+---
+
+<div class="posts-list">
+  {% for post in paginator.posts %}
+  <article class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+	  <h1 class="post-title">{{ post.title }}</h1>
+
+	  {% if post.subtitle %}
+	  <h3 class="post-subtitle">
+	    {{ post.subtitle }}
+	  </h3>
+	  {% endif %}
+    </a>
+
+    <p class="post-meta">
+      <b>Posted on</b> {{ post.date | date: "%B %-d, %Y" }}
+      {% if post.categories.size > 0 %}
+          <b>Categories:</b>
+          {% if site.link-categories %}
+          {% for category in post.categories %}
+            <a href="/category/{{ category }}">{{ category }}</a>
+          {% endfor %}
+          {% else %}
+            {{ post.categories | join: ", " }}
+          {% endif %}
+      {% endif %}
+      {% if post.tags.size > 0 %}
+          <b>Tags:</b>
+          {% if site.link-tags %}
+          {% for tag in post.tags %}
+            <a href="/tag/{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+          {% else %}
+            {{ post.tags | join: ", " }}
+          {% endif %}
+      {% endif %}
+    </p>
+
+    <div class="post-entry-container">
+      {% if post.image %}
+      <div class="post-image">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <img src="{{ post.image }}">
+        </a>
+      </div>
+      {% endif %}
+      <div class="post-entry">
+        {{ post.content }}
+        {% assign excerpt_word_count = post.excerpt | number_of_words %}
+        <!-- {% if post.content != post.excerpt or excerpt_word_count > site.excerpt_length %}
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
+        {% endif %} -->
+      </div>
+    </div>
+   </article>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<ul class="pager main-pager">
+  {% if paginator.previous_page %}
+  <li class="previous">
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+  </li>
+  {% endif %}
+  {% if paginator.next_page %}
+  <li class="next">
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}
