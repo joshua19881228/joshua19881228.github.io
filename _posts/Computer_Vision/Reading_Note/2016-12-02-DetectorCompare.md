@@ -1,6 +1,6 @@
 ---
 title: "Reading Note: Speed/accuracy trade-offs for modern convolutional object detectors"
-category: ["Computer Vsion"]
+category: ["Computer Vision"]
 tag: "Reading Note"
 ---
 

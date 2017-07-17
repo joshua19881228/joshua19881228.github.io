@@ -1,6 +1,6 @@
 ---
 title: "Reading Note: Pixel Objectness"
-category: ["Computer Vsion"]
+category: ["Computer Vision"]
 tag: "Reading Note"
 ---
 

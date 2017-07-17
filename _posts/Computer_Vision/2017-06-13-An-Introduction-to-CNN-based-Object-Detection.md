@@ -1,6 +1,6 @@
 ---
 title: "An Introduction to CNN based Object Detection"
-category: "Computer Vsion"
+category: "Computer Vision"
 ---
 
 # 1. Content #

@@ -1,6 +1,6 @@
 ---
 title: "Reading Note: Fully Convolutional Instance-aware Semantic Segmentation"
-category: ["Computer Vsion"]
+category: ["Computer Vision"]
 tag: "Reading Note"
 ---
 

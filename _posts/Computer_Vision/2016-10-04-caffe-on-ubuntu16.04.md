@@ -1,6 +1,6 @@
 ---
 title: "Set up Caffe after Updating Ubuntu from 14.04 to 16.04"
-category: "Computer Vsion"
+category: "Computer Vision"
 ---
 
 Today I accidentally upgraded my Ubuntu 14.04 to Ubuntu 16.04. Then evidently Caffe can not be built. Several modifications are of need to bypass the issues. 
