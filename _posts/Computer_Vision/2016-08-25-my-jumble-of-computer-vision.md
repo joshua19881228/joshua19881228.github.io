@@ -141,6 +141,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields ([PDF](https://arxiv.org/abs/1611.08050), [Project/Code](https://github.com/ZheC/Multi-Person-Pose-Estimation), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-realtime-multi-person-2d-pose-estimation-using-part-affinity-fields_188/))
 * Towards Accurate Multi-person Pose Estimation in the Wild ([PDF](https://arxiv.org/abs/1701.01779), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-towards-accurate-multi-person-pose-estimation-in-the-wild_195/))
 * Adversarial PoseNet: A Structure-aware Convolutional Network for Human Pose Estimation ([PDF](https://arxiv.org/abs/1705.00389))
+* Coarse-to-Fine Volumetric Prediction for Single-Image 3D Human Pose ([PDF](https://arxiv.org/abs/1611.07828), [Project/Code](https://www.seas.upenn.edu/~pavlakos/projects/volumetric/))
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
@@ -318,6 +319,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Pruning Convolutional Neural Networks for Resource Efficient Inference ([PDF](https://arxiv.org/abs/1611.06440), [Project/Code](https://github.com/jacobgil/pytorch-pruning))
 * Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly ([PDF](https://arxiv.org/abs/1707.00600), [Project/Code](http://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/zero-shot-learning/zero-shot-learning-the-good-the-bad-and-the-ugly/))
 * ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices ([PDF](https://arxiv.org/abs/1707.01083), [Caffe Implementation](https://github.com/camel007/Caffe-ShuffleNet))
+* Submanifold Sparse Convolutional Networks ([PDF](https://arxiv.org/abs/1706.01307), [Project/Code](https://github.com/facebookresearch/SparseConvNet))
 
 ### GAN ###
 
