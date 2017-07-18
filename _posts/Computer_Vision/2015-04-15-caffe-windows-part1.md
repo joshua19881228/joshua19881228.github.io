@@ -1,3 +1,8 @@
+---
+title: "VS2013配置Caffe卷积神经网络工具（64位Windows 7）——准备依赖库"
+category: "Computer Vision"
+---
+
 2014年4月的时候自己在公司就将Caffe移植到Windows系统了，今年自己换了台电脑，想在家里也随便跑跑，本来也装了Ubuntu可以很方便的配置好，无奈在家的风格是“娱乐的时候抽空学习”，所以移植到Windows还是很有必要的。但是，公司禁止将公司内部资料带出，很多地方又都忘记了，周末磨了一天终于移植完，本篇为记录将Caffe移植至Windows7 x64系统下的一些关键步骤。第一步先看看这老些依赖库怎么搞。
 
 在真正开始编译各依赖库之前，需要准备一些必备工具：
@@ -6,7 +11,12 @@
 
 其次是CMake工具，下载地址：http://www.cmake.org/download/
 
-### 1．Boost
+## Table of Content ##
+
+* Content
+{:toc}
+
+## 1．Boost
 
 下载地址：http://www.boost.org/
 
@@ -21,7 +31,7 @@
 
 共享库：bjam --build-type=complete toolset=msvc-9.0 toolset=msvc-12.0 threading=multi link=shared address-model=64
 
-### 2．OpenCV
+## 2．OpenCV
 
 下载地址：http://opencv.org/downloads.html 本文中使用的是2.4.10版本
 
@@ -29,7 +39,7 @@
 
 下载后的安装包中有已编译好的库，可直接引用，如D:\LIBS\opencv\build\x64\vc12
 
-### 3．OpenBlas
+## 3．OpenBlas
 
 下载地址：http://sourceforge.net/projects/openblas/files/
 
@@ -37,7 +47,7 @@
 
 OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址是一个已编译好的压缩包OpenBLAS-v0.2.14-Win32.zip (12.1 MB)，直接提供了./bin ./include ./lib路径
 
-### 4．CUDA
+## 4．CUDA
 
 下载地址：https://developer.nvidia.com/cuda-downloads
 
@@ -47,7 +57,7 @@ OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址�
 
 以上是依赖库比较常用，最好将该它们的include和lib加入到Windows的环境变量中，方便后续的库的编译
 
-### 5．GFlags
+## 5．GFlags
 
 下载地址：https://github.com/gflags/gflags
 
@@ -61,7 +71,7 @@ OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址�
 6. 打开刚刚生成的VS工程，build其中的ALL_BUILD工程，注意选择x64模式，并分别生成Debug和Release下的库 
 7. 编译成功后，在工程路径下会生成bin、include、lib三个文件夹 
 
-### 6．GLog
+## 6．GLog
 
 下载地址：https://github.com/google/glog
 
@@ -69,7 +79,7 @@ OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址�
 
 该工程中包含VS工程google-glog.sln，打开直接编译即可，同样注意Solution Platform选择x64模式，并分别生成Debug和Release下的库
 
-### 7．LevelDB
+## 7．LevelDB
 
 下载地址：https://github.com/bureau14/leveldb 
 
@@ -79,7 +89,7 @@ OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址�
 
 与编译GFlags方法类似，唯一需要注意的地方是将CMakeLists.txt中第82行的-DSNAPPY注释掉，否则需要依赖Snappy库，其实并不绝对需要，为了简单起见将此库去掉。另外Leveldb依赖于boost库，如果没有将boost库添加至环境变量，可能需要手动进行设置。
 
-### 8．LMDB
+## 8．LMDB
 
 下载地址：https://gitorious.org/mdb/mdb/archive/462dc097451834477b597447af69c5acc93182b7.tar.gz
 
@@ -94,7 +104,7 @@ OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址�
 7. 其中一个.c文件中包含了unistd.h，为了解决这个问题需要准备三个文件 unistd.h、getopt.h、getopt.c。unistd.h可以考http://stackoverflow.com/questions/341817/is-there-a-replacement-for-unistd-h-for-windows-visual-c解决。另外两个可以从http://ieng6.ucsd.edu/~cs12x/vc08install/getopt9.zip下载
 8.  最后编译即可
 
-### 9．ProtoBuf
+## 9．ProtoBuf
 
 下载地址：https://github.com/google/protobuf
 
@@ -102,7 +112,7 @@ OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址�
 
 压缩包里有一个叫vsprojects的文件夹，其中有现成的VS工程，可以用来直接编译，也需要注意将Solution Platform修改为x64模式
 
-10．HDF5
+## 10．HDF5
 
 下载地址：http://www.hdfgroup.org/ftp/HDF5/current/src/CMake/hdf518-CMakeWindows.zip
 
@@ -110,9 +120,7 @@ OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址�
 
 解压后，在VS2013 x64 Cross Tools Command Prompt终端工具中运行build-VS2013-64.bat即可。
 
- 
-
-整理头文件和库文件
+## 整理头文件和库文件
 
 将5-10的头文件和编译后的库统一整理到一个3rdparty文件夹下，其中包含两个文件夹include和lib
 
