@@ -16,9 +16,9 @@ category: "Computer Vision"
 * Content
 {:toc}
 
-## 1．Boost
+## 1. Boost
 
-下载地址：http://www.boost.org/
+下载地址：[http://www.boost.org/](http://www.boost.org/)
 
 编译方法：
 
@@ -31,25 +31,25 @@ category: "Computer Vision"
 
 共享库：bjam --build-type=complete toolset=msvc-9.0 toolset=msvc-12.0 threading=multi link=shared address-model=64
 
-## 2．OpenCV
+## 2. OpenCV
 
-下载地址：http://opencv.org/downloads.html 本文中使用的是2.4.10版本
+下载地址：[http://opencv.org/downloads.html](http://opencv.org/downloads.html) 本文中使用的是2.4.10版本
 
 编译方法：
 
 下载后的安装包中有已编译好的库，可直接引用，如D:\LIBS\opencv\build\x64\vc12
 
-## 3．OpenBlas
+## 3. OpenBlas
 
-下载地址：http://sourceforge.net/projects/openblas/files/
+下载地址：[http://sourceforge.net/projects/openblas/files/](http://sourceforge.net/projects/openblas/files/)
 
 编译方法：
 
 OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址是一个已编译好的压缩包OpenBLAS-v0.2.14-Win32.zip (12.1 MB)，直接提供了./bin ./include ./lib路径
 
-## 4．CUDA
+## 4. CUDA
 
-下载地址：https://developer.nvidia.com/cuda-downloads
+下载地址：[https://developer.nvidia.com/cuda-downloads](https://developer.nvidia.com/cuda-downloads)
 
 编译方法：
 
@@ -57,9 +57,9 @@ OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址�
 
 以上是依赖库比较常用，最好将该它们的include和lib加入到Windows的环境变量中，方便后续的库的编译
 
-## 5．GFlags
+## 5. GFlags
 
-下载地址：https://github.com/gflags/gflags
+下载地址：[https://github.com/gflags/gflags](https://github.com/gflags/gflags)
 
 编译方法：
 
@@ -71,27 +71,27 @@ OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址�
 6. 打开刚刚生成的VS工程，build其中的ALL_BUILD工程，注意选择x64模式，并分别生成Debug和Release下的库 
 7. 编译成功后，在工程路径下会生成bin、include、lib三个文件夹 
 
-## 6．GLog
+## 6. GLog
 
-下载地址：https://github.com/google/glog
+下载地址：[https://github.com/google/glog](https://github.com/google/glog)
 
 编译方法：
 
 该工程中包含VS工程google-glog.sln，打开直接编译即可，同样注意Solution Platform选择x64模式，并分别生成Debug和Release下的库
 
-## 7．LevelDB
+## 7. LevelDB
 
-下载地址：https://github.com/bureau14/leveldb 
+下载地址：[https://github.com/bureau14/leveldb](https://github.com/bureau14/leveldb)
 
-这里没有选择官方的https://github.com/google/leveldb是由于官方版本移除了CMake的依赖项，自己写起来比较复杂
+这里没有选择官方的[https://github.com/google/leveldb](https://github.com/google/leveldb)是由于官方版本移除了CMake的依赖项，自己写起来比较复杂
 
 编译方法：
 
 与编译GFlags方法类似，唯一需要注意的地方是将CMakeLists.txt中第82行的-DSNAPPY注释掉，否则需要依赖Snappy库，其实并不绝对需要，为了简单起见将此库去掉。另外Leveldb依赖于boost库，如果没有将boost库添加至环境变量，可能需要手动进行设置。
 
-## 8．LMDB
+## 8. LMDB
 
-下载地址：https://gitorious.org/mdb/mdb/archive/462dc097451834477b597447af69c5acc93182b7.tar.gz
+下载地址：[https://gitorious.org/mdb/mdb/archive/462dc097451834477b597447af69c5acc93182b7.tar.gz](https://gitorious.org/mdb/mdb/archive/462dc097451834477b597447af69c5acc93182b7.tar.gz)
 
 编译方法：
 
@@ -101,20 +101,20 @@ OpenBlas库在windows上编译起来比较复杂，这里给出的下载地址�
 4. 单击next按钮后选择Project type为Console application project 
 5. 将Solution Platform修改为x64模式
 6. 注意将工程的输出改为静态库，右键单击工程 --> property --> Configuration Properties --> General --> Project Default --> Configureation Type --> Static library (.lib)
-7. 其中一个.c文件中包含了unistd.h，为了解决这个问题需要准备三个文件 unistd.h、getopt.h、getopt.c。unistd.h可以考http://stackoverflow.com/questions/341817/is-there-a-replacement-for-unistd-h-for-windows-visual-c解决。另外两个可以从http://ieng6.ucsd.edu/~cs12x/vc08install/getopt9.zip下载
+7. 其中一个.c文件中包含了unistd.h，为了解决这个问题需要准备三个文件 unistd.h、getopt.h、getopt.c。unistd.h可以考[http://stackoverflow.com/questions/341817/is-there-a-replacement-for-unistd-h-for-windows-visual-c](http://stackoverflow.com/questions/341817/is-there-a-replacement-for-unistd-h-for-windows-visual-c)解决。另外两个可以从[http://ieng6.ucsd.edu/~cs12x/vc08install/getopt9.zip](http://ieng6.ucsd.edu/~cs12x/vc08install/getopt9.zip)下载
 8.  最后编译即可
 
-## 9．ProtoBuf
+## 9. ProtoBuf
 
-下载地址：https://github.com/google/protobuf
+下载地址：[https://github.com/google/protobuf](https://github.com/google/protobuf)
 
 编译方法：
 
 压缩包里有一个叫vsprojects的文件夹，其中有现成的VS工程，可以用来直接编译，也需要注意将Solution Platform修改为x64模式
 
-## 10．HDF5
+## 10. HDF5
 
-下载地址：http://www.hdfgroup.org/ftp/HDF5/current/src/CMake/hdf518-CMakeWindows.zip
+下载地址：[http://www.hdfgroup.org/ftp/HDF5/current/src/CMake/hdf518-CMakeWindows.zip](http://www.hdfgroup.org/ftp/HDF5/current/src/CMake/hdf518-CMakeWindows.zip)
 
 编译方法：
 
