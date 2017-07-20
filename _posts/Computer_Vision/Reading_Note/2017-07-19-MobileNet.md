@@ -1,5 +1,5 @@
 ---
-title: "Reading Note:  MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"
+title: "Reading Note: MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"
 category: ["Computer Vision"]
 tag: "Reading Note"
 ---
