@@ -9,12 +9,12 @@ tag: "Caffe"
 * Content
 {:toc}
 
-##Disable default driver##
+## Disable default driver ##
 
 1. modify `/etc/modprobe.d/blacklist.conf` by adding following commond at the end of the file:`blacklist nouveau`
 2. modify `/etc/default/grub` file by adding `rdblacklist=nouveau nouveau.modeset=0`
 
-##Install NVIDIA GPU Driver##
+## Install NVIDIA GPU Driver ##
 
 1. type `ctrl+alt+F1` to tty and log in.
 2. shut down lightdm `sudo service lightdm stop`
@@ -22,7 +22,7 @@ tag: "Caffe"
 4. install driver. Note that the version of the driver must be correspondent to the GPU card. One can find the correct version in NVIDIA official website. For example, my GPU is GTX970M, then I should use the following commend: `sudo apt-get install nvidia-352` and `sudo apt-get install nvidia-352-uvm`
 5. reboot
 
-##Install CUDA Toolkit##
+## Install CUDA Toolkit ##
 
 1. download CUDA 7.0 .run file from NVIDIA website. Note that the CUDA version should be correspendent to gcc version and driver version.
 2. change .run file mode by `chmod +x *.run`

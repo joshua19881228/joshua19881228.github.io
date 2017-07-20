@@ -14,7 +14,7 @@ tag: "Caffe"
 1. install NVIDIA GTX970M driver
 2. install CUDA 7.0 Toolkit
 
-Please refer to my previous blog [Installation of NVIDIA GPU Driver and CUDA Toolkit](http://joshua881228.webfactional.com/blog_installation-of-nvidia-gpu-driver-and-cuda-toolkit_54/)
+Please refer to my previous blog [Installation of NVIDIA GPU Driver and CUDA Toolkit](https://joshua19881228.github.io/2015-08-29-Ndriver-Cuda/)
 
 ## Install OpenBLAS ##
 
