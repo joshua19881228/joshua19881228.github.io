@@ -96,7 +96,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Adversarial Examples for Semantic Image Segmentation ([PDF](https://arxiv.org/abs/1703.01101))
 * Large Kernel Matters -- Improve Semantic Segmentation by Global Convolutional Network ([PDF](https://arxiv.org/abs/1703.02719))
 * Deep Image Matting ([PDF](https://arxiv.org/abs/1703.03872), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-deep-image-matting_217/))
-* Mask R-CNN ([PDF](https://arxiv.org/abs/1703.06870), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-mask-r-cnn_226/))
+* Mask R-CNN ([PDF](https://arxiv.org/abs/1703.06870), [Caffe Implementation](https://github.com/jasjeetIM/Mask-RCNN), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-mask-r-cnn_226/))
 * Predicting Deeper into the Future of Semantic Segmentation ([PDF](https://arxiv.org/abs/1703.07684))
 * Convolutional Oriented Boundaries: From Image Segmentation to High-Level Tasks ([PDF](https://arxiv.org/abs/1701.04658), [Project/Code](http://www.vision.ee.ethz.ch/~cvlsegmentation/cob/))
 * One-Shot Video Object Segmentation ([PDF](https://arxiv.org/abs/1611.05198), [Project/Code](https://github.com/kmaninis/OSVOS-caffe))
@@ -112,6 +112,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Rethinking Atrous Convolution for Semantic Image Segmentation ([PDF](https://arxiv.org/abs/1706.05587))
 * Discriminative Localization in CNNs for Weakly-Supervised Segmentation of Pulmonary Nodules ([PDF](https://arxiv.org/abs/1707.01086))
 * Superpixel-based semantic segmentation trained by statistical process control ([PDF](https://arxiv.org/abs/1706.10071))
+* The Devil is in the Decoder ([PDF](https://arxiv.org/abs/1707.05847))
 
 ### TRACKING ###
 
@@ -345,6 +346,7 @@ I am going to maintain this page to record a few things about computer vision th
 * MAGAN: Margin Adaptation for Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1704.03817))
 * Pose Guided Person Image Generation ([PDF](https://arxiv.org/abs/1705.09368))
 * On the Effects of Batch and Weight Normalization in Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1704.03971), [Project/Code](https://github.com/stormraiser/GAN-weight-norm))
+* Aesthetic-Driven Image Enhancement by Adversarial Learning ([PDF](https://arxiv.org/abs/1707.05251))
 
 ### MACHINE LEARNING ###
 
@@ -362,6 +364,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Two-Bit Networks for Deep Learning on Resource-Constrained Embedded Devices ([PDF](https://arxiv.org/abs/1701.00485))
 * SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size ([PDF](https://arxiv.org/abs/1602.07360), [Project/Code](https://github.com/DeepScale/SqueezeNet))
 * MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications ([PDF](https://arxiv.org/abs/1704.04861), [Caffe Implementation](https://github.com/farmingyard/caffe-mobilenet), [Reading Note](https://joshua19881228.github.io/2017-07-19-MobileNet/))
+* Binarized Convolutional Neural Networks with Separable Filters for Efficient Hardware Acceleration ([PDF](https://arxiv.org/abs/1707.04693))
 
 ### OTHER ###
 
@@ -390,6 +393,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Person Re-identification: Past, Present and Future ([PDF](https://arxiv.org/abs/1610.02984))
 * ResnetCrowd: A Residual Deep Learning Architecture for Crowd Counting, Violent Behaviour Detection and Crowd Density Level Classification ([PDF](https://arxiv.org/abs/1705.10698))
 * Unsupervised Person Re-identification: Clustering and Fine-tuning ([PDF](https://arxiv.org/abs/1705.10444), [Project/Code](https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning))
+* Learning Cross-modal Embeddings for Cooking Recipes and Food Images ([PDF](http://im2recipe.csail.mit.edu/im2recipe.pdf), [Project/Code](http://im2recipe.csail.mit.edu/))
 
 ## INTERESTING FINDS ##
 
@@ -560,6 +564,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [基于深度卷积神经网络进行人脸识别的原理是什么](https://www.zhihu.com/question/60759296/answer/180176680)
 * [10 Deep Learning projects based on Apache MXNet](https://medium.com/@julsimon/10-deep-learning-projects-based-on-apache-mxnet-8231109f3f64)
 * [Off the Convex Path](http://www.offconvex.org/)
+* [cv-tricks.com](http://cv-tricks.com/)
 	
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
