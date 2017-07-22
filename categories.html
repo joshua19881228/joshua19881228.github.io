@@ -4,17 +4,17 @@ permalink: /categories/
 title: Categories
 ---
 
-<div id="posts-list">
+<div class="posts-list">
 {% for category in site.categories %}
     {% capture category_name %}{{ category | first }}{% endcapture %}
     <a href="#{{ category_name | slugize }}" ><h2 style="text-align:center">{{ category_name }}</h2></a>
 {% endfor %}
 </div>
 
-<div id="posts-list">
+<div class="posts-list">
 {% for category in site.categories %}
     {% capture category_name %}{{ category | first }}{% endcapture %}
-    <div id="#{{ category_name | slugize }}"></div>
+    <div id="{{ category_name | slugize }}"></div>
     <p></p>    
     <h2>{{ category_name }}</h2>
     <ul>

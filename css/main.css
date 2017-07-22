@@ -322,7 +322,7 @@ footer .theme-by {
 }
 
 .post-preview .post-title {
-  font-size: 35px;
+  font-size: 40px;
   margin-top: 0;
 }
 .post-preview .post-subtitle {
@@ -371,7 +371,7 @@ footer .theme-by {
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
@@ -516,7 +516,7 @@ footer .theme-by {
     font-size: 80px;
   }
   .intro-header .post-heading h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   .intro-header.big-img .img-desc {
     font-size: 14px;
@@ -736,4 +736,11 @@ article {
 #backtop a:hover { /* 小按钮上有鼠标悬停时 */
     background: #428bca; /* 小按钮的底色 */
     color: #fff; /* 文字颜色 */
+}
+
+:target:before {
+  content:"";
+  display:block;
+  height:60px; /* fixed header height*/
+  margin:-60px 0 0; /* negative fixed header height */
 }
