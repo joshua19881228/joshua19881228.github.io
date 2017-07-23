@@ -321,6 +321,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Zero-Shot Learning - A Comprehensive Evaluation of the Good, the Bad and the Ugly ([PDF](https://arxiv.org/abs/1707.00600), [Project/Code](http://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/zero-shot-learning/zero-shot-learning-the-good-the-bad-and-the-ugly/))
 * ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices ([PDF](https://arxiv.org/abs/1707.01083), [Caffe Implementation](https://github.com/camel007/Caffe-ShuffleNet))
 * Submanifold Sparse Convolutional Networks ([PDF](https://arxiv.org/abs/1706.01307), [Project/Code](https://github.com/facebookresearch/SparseConvNet))
+* Dual Path Networks ([PDF](https://arxiv.org/abs/1707.01629))
 
 ### GAN ###
 
