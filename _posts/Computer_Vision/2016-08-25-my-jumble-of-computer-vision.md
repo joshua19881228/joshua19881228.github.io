@@ -113,6 +113,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Discriminative Localization in CNNs for Weakly-Supervised Segmentation of Pulmonary Nodules ([PDF](https://arxiv.org/abs/1707.01086))
 * Superpixel-based semantic segmentation trained by statistical process control ([PDF](https://arxiv.org/abs/1706.10071))
 * The Devil is in the Decoder ([PDF](https://arxiv.org/abs/1707.05847))
+* Semantic Segmentation with Reverse Attention ([PDF](https://arxiv.org/abs/1707.06426))
 
 ### TRACKING ###
 
@@ -322,6 +323,7 @@ I am going to maintain this page to record a few things about computer vision th
 * ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices ([PDF](https://arxiv.org/abs/1707.01083), [Caffe Implementation](https://github.com/camel007/Caffe-ShuffleNet))
 * Submanifold Sparse Convolutional Networks ([PDF](https://arxiv.org/abs/1706.01307), [Project/Code](https://github.com/facebookresearch/SparseConvNet))
 * Dual Path Networks ([PDF](https://arxiv.org/abs/1707.01629))
+* ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression ([PDF](https://arxiv.org/abs/1707.06342))
 
 ### GAN ###
 
@@ -395,6 +397,7 @@ I am going to maintain this page to record a few things about computer vision th
 * ResnetCrowd: A Residual Deep Learning Architecture for Crowd Counting, Violent Behaviour Detection and Crowd Density Level Classification ([PDF](https://arxiv.org/abs/1705.10698))
 * Unsupervised Person Re-identification: Clustering and Fine-tuning ([PDF](https://arxiv.org/abs/1705.10444), [Project/Code](https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning))
 * Learning Cross-modal Embeddings for Cooking Recipes and Food Images ([PDF](http://im2recipe.csail.mit.edu/im2recipe.pdf), [Project/Code](http://im2recipe.csail.mit.edu/))
+* Convolutional neural network architecture for geometric matching ([PDF](https://arxiv.org/abs/1703.05593), [Project/Code](http://www.di.ens.fr/willow/research/cnngeometric/))
 
 ## INTERESTING FINDS ##
 
@@ -420,6 +423,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [Adversarial Nets Papers](https://github.com/zhangqianhui/AdversarialNetsPapers)
 * [Creating Human-Level AI](https://www.youtube.com/watch?v=ZHYXp3gJCaI)
 * [Adversarial Nets Papers](https://github.com/chihyaoma/AdversarialNetsPapers)
+* [cv-tricks.com](http://cv-tricks.com/)
 
 ### PROJECTS ###
 
@@ -565,7 +569,6 @@ I am going to maintain this page to record a few things about computer vision th
 * [基于深度卷积神经网络进行人脸识别的原理是什么](https://www.zhihu.com/question/60759296/answer/180176680)
 * [10 Deep Learning projects based on Apache MXNet](https://medium.com/@julsimon/10-deep-learning-projects-based-on-apache-mxnet-8231109f3f64)
 * [Off the Convex Path](http://www.offconvex.org/)
-* [cv-tricks.com](http://cv-tricks.com/)
 	
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
@@ -671,6 +674,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [目标跟踪相关资源](https://zhuanlan.zhihu.com/p/27292838)
 * [Intro to Neural Networks and Machine Learning](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/)
 * [Tips for Training Recurrent Neural Networks](http://danijar.com/tips-for-training-recurrent-neural-networks/)
+* [A Gentle Introduction to Mini-Batch Gradient Descent and How to Configure Batch Size](http://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/)
 
 ## SKILLS ##
 
