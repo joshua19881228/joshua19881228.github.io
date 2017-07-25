@@ -1,5 +1,7 @@
 # Joshua's Blog #
 
+This repo is used to manage [Joshua's Blog using Jekyll on Github](https://joshua19881228.github.io/).
+
 Previously I set up a personal website [Joshua's Blog](http://joshua881228.webfactional.com/) on [WebFaction](https://www.webfaction.com/) using [Django](https://www.djangoproject.com/). I learned much from this experience. However, I decided to move the blogs to github.io using [Jekyll](http://jekyllrb.com/). Actually, I've already been managing my blogs using github in [my_blogs](https://github.com/joshua19881228/my_blogs). So it won't be hard for me to transferring them. As for [Joshua's Blog] on WebFaction, I don't think I will keep maintaining it and paying the fees. I feel happy to have a free blog :)
 
 # About the Theme #
