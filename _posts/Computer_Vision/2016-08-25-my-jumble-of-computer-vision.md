@@ -324,6 +324,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Submanifold Sparse Convolutional Networks ([PDF](https://arxiv.org/abs/1706.01307), [Project/Code](https://github.com/facebookresearch/SparseConvNet))
 * Dual Path Networks ([PDF](https://arxiv.org/abs/1707.01629))
 * ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression ([PDF](https://arxiv.org/abs/1707.06342))
+* Memory-Efficient Implementation of DenseNets ([PDF](https://arxiv.org/abs/1707.06990))
 
 ### GAN ###
 
@@ -398,6 +399,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Unsupervised Person Re-identification: Clustering and Fine-tuning ([PDF](https://arxiv.org/abs/1705.10444), [Project/Code](https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning))
 * Learning Cross-modal Embeddings for Cooking Recipes and Food Images ([PDF](http://im2recipe.csail.mit.edu/im2recipe.pdf), [Project/Code](http://im2recipe.csail.mit.edu/))
 * Convolutional neural network architecture for geometric matching ([PDF](https://arxiv.org/abs/1703.05593), [Project/Code](http://www.di.ens.fr/willow/research/cnngeometric/))
+* Semantic Compositional Networks for Visual Captioning ([PDF](https://arxiv.org/abs/1611.08002), [Project/Code](https://github.com/zhegan27/SCN_for_video_captioning))
 
 ## INTERESTING FINDS ##
 
@@ -569,6 +571,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [基于深度卷积神经网络进行人脸识别的原理是什么](https://www.zhihu.com/question/60759296/answer/180176680)
 * [10 Deep Learning projects based on Apache MXNet](https://medium.com/@julsimon/10-deep-learning-projects-based-on-apache-mxnet-8231109f3f64)
 * [Off the Convex Path](http://www.offconvex.org/)
+* [图像风格迁移(Neural Style)简史](https://zhuanlan.zhihu.com/p/26746283)
 	
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
@@ -675,6 +678,8 @@ I am going to maintain this page to record a few things about computer vision th
 * [Intro to Neural Networks and Machine Learning](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/)
 * [Tips for Training Recurrent Neural Networks](http://danijar.com/tips-for-training-recurrent-neural-networks/)
 * [A Gentle Introduction to Mini-Batch Gradient Descent and How to Configure Batch Size](http://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/)
+* [Learning To See（机器学习计算机视觉入门）（英文字幕）](https://www.bilibili.com/video/av12532910/)
+* [37 Reasons why your Neural Network is not working](https://medium.com/@slavivanov/4020854bd607)
 
 ## SKILLS ##
 
