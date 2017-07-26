@@ -228,6 +228,7 @@ I am going to maintain this page to record a few things about computer vision th
 * A Neural Representation of Sketch Drawings ([PDF](https://arxiv.org/abs/1704.03477))
 * Visual Attribute Transfer through Deep Image Analogy ([PDF](https://arxiv.org/abs/1705.01088))
 * Deep Semantics-Aware Photo Adjustment ([PDF](https://arxiv.org/abs/1706.08260))
+* Diversified Texture Synthesis with Feed-forward Networks ([PDF](https://arxiv.org/abs/1703.01664), [Project/Code](https://github.com/Yijunmaverick/MultiTextureSynthesis))
 
 ### CNN AND DEEP LEARNING ###
 
@@ -426,6 +427,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [Creating Human-Level AI](https://www.youtube.com/watch?v=ZHYXp3gJCaI)
 * [Adversarial Nets Papers](https://github.com/chihyaoma/AdversarialNetsPapers)
 * [cv-tricks.com](http://cv-tricks.com/)
+* [Find deep learning models for your mobile platform](http://mlmodelzoo.com/)
 
 ### PROJECTS ###
 
@@ -572,6 +574,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [10 Deep Learning projects based on Apache MXNet](https://medium.com/@julsimon/10-deep-learning-projects-based-on-apache-mxnet-8231109f3f64)
 * [Off the Convex Path](http://www.offconvex.org/)
 * [图像风格迁移(Neural Style)简史](https://zhuanlan.zhihu.com/p/26746283)
+* [ML notes: Why the log-likelihood?](https://blog.metaflow.fr/ml-notes-why-the-log-likelihood-24f7b6c40f83)
 	
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
