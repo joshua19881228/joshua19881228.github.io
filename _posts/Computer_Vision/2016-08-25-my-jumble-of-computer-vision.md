@@ -505,6 +505,8 @@ I am going to maintain this page to record a few things about computer vision th
 * [MobileNet-MXNet](https://github.com/KeyKy/mobilenet-mxnet)
     This is a MXNet implementation of Google's MobileNets.
 * [NoScope: 1000x Faster Deep Learning Queries over Video](http://dawn.cs.stanford.edu/2017/06/22/noscope/)
+* [Caffe2 C++ Tutorials and Examples](https://github.com/leonardvandriel/caffe2_cpp_tutorial)
+* [Web Image Downloader Tools](https://github.com/kencoken/imsearch-tools)
 
 ### NEWS/BLOGS ###
 
