@@ -56,7 +56,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Real Time Image Saliency for Black Box Classifiers ([PDF](https://arxiv.org/abs/1705.07857))
 * An Efficient Approach for Object Detection and Tracking of Objects in a Video with Variable Background ([PDF](https://arxiv.org/abs/1706.02672))
 * RON: Reverse Connection with Objectness Prior Networks for Object Detection ([PDF](https://arxiv.org/abs/1707.01691), [Project/Code](https://github.com/taokong/RON))
-* Deformable Part-based Fully Convolutional Network for Object Detection ([PDF](https://arxiv.org/abs/1707.06175))
+* Deformable Part-based Fully Convolutional Network for Object Detection ([PDF](https://arxiv.org/abs/1707.06175), [Reading Note](https://joshua19881228.github.io/2017-07-28-DP-FCN/))
 
 ### SEGMENTATION/PARSING ###
 
