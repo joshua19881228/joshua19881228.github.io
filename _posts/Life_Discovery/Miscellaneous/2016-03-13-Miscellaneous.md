@@ -20,6 +20,4 @@ tag: ["Miscellaneous"]
 
 下午一边看比赛，还画了一幅画。画的内容是瓦维尔城堡的一角，临摹我照的一张照片。基本功其实挺差的，应该好好找一本书看看，也应该多画一画练习练习。现在还处于只能临摹的状态，不能凭空作画，说明脑子里对事物的了解还不够深，没有记住事物的特点。希望能够快快进步，后面还想画彩色铅笔画。
 
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Miscellaneous/figures/WawelCastle.jpg" alt="" width="640"/>
-
 晚上看了一会儿书，把东尼·博赞的《思维导图》看完了，感觉现在自己可以画出一些东西，但是还不能完全体会思维导图带来的好处，估计自己还只停留在表面，还需要自己多练习多思考，或者再仔细读一读《思维导图》这本书。博客开头的配图就是刚刚完成的用思维导图记录的周末日记，这篇博客也可以看做是对这幅思维导图的解说。
