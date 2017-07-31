@@ -115,6 +115,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Superpixel-based semantic segmentation trained by statistical process control ([PDF](https://arxiv.org/abs/1706.10071))
 * The Devil is in the Decoder ([PDF](https://arxiv.org/abs/1707.05847))
 * Semantic Segmentation with Reverse Attention ([PDF](https://arxiv.org/abs/1707.06426))
+* Learning Deconvolution Network for Semantic Segmentation ([PDF](https://arxiv.org/abs/1505.04366), [Project/Code](https://github.com/HyeonwooNoh/DeconvNet))
 
 ### TRACKING ###
 
