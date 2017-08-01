@@ -57,6 +57,7 @@ I am going to maintain this page to record a few things about computer vision th
 * An Efficient Approach for Object Detection and Tracking of Objects in a Video with Variable Background ([PDF](https://arxiv.org/abs/1706.02672))
 * RON: Reverse Connection with Objectness Prior Networks for Object Detection ([PDF](https://arxiv.org/abs/1707.01691), [Project/Code](https://github.com/taokong/RON))
 * Deformable Part-based Fully Convolutional Network for Object Detection ([PDF](https://arxiv.org/abs/1707.06175), [Reading Note](https://joshua19881228.github.io/2017-07-28-DP-FCN/))
+* Recurrent Scale Approximation for Object Detection in CNN ([PDF](https://arxiv.org/abs/1707.09531))
 
 ### SEGMENTATION/PARSING ###
 
@@ -403,6 +404,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Learning Cross-modal Embeddings for Cooking Recipes and Food Images ([PDF](http://im2recipe.csail.mit.edu/im2recipe.pdf), [Project/Code](http://im2recipe.csail.mit.edu/))
 * Convolutional neural network architecture for geometric matching ([PDF](https://arxiv.org/abs/1703.05593), [Project/Code](http://www.di.ens.fr/willow/research/cnngeometric/))
 * Semantic Compositional Networks for Visual Captioning ([PDF](https://arxiv.org/abs/1611.08002), [Project/Code](https://github.com/zhegan27/SCN_for_video_captioning))
+* CNN-based Cascaded Multi-task Learning of High-level Prior and Density Estimation for Crowd Counting ([PDF](https://arxiv.org/abs/1707.09605))
 
 ## INTERESTING FINDS ##
 
