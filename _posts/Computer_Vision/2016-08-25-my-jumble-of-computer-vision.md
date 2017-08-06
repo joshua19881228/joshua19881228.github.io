@@ -147,6 +147,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Towards Accurate Multi-person Pose Estimation in the Wild ([PDF](https://arxiv.org/abs/1701.01779), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-towards-accurate-multi-person-pose-estimation-in-the-wild_195/))
 * Adversarial PoseNet: A Structure-aware Convolutional Network for Human Pose Estimation ([PDF](https://arxiv.org/abs/1705.00389))
 * Coarse-to-Fine Volumetric Prediction for Single-Image 3D Human Pose ([PDF](https://arxiv.org/abs/1611.07828), [Project/Code](https://www.seas.upenn.edu/~pavlakos/projects/volumetric/))
+* Learning Feature Pyramids for Human Pose Estimation ([PDF](https://arxiv.org/abs/1708.01101), [Project/Code](https://github.com/bearpaw/PyraNet))
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
@@ -188,6 +189,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Concurrence-Aware Long Short-Term Sub-Memories for Person-Person Action Recognition ([PDF](https://arxiv.org/abs/1706.00931))
 * Video Imagination from a Single Image with Transformation Generation ([PDF](https://arxiv.org/abs/1706.04124), [Project/Code](https://github.com/gitpub327/VideoImagination))
 * Optimizing Deep CNN-Based Queries over Video Streams at Scale ([PDF](https://arxiv.org/abs/1703.02529), [Project/Code](https://github.com/stanford-futuredata/noscope), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-a-pursuit-of-temporal-accuracy-in-general-activity-detectionoptimizing-deep-cnn-based-queries-over-video-streams-at-scale_241/))
+* Extreme Low Resolution Activity Recognition with Multi-Siamese Embedding Learning ([PDF](https://arxiv.org/abs/1708.00999))
 
 ### FACE ###
 
@@ -329,6 +331,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Dual Path Networks ([PDF](https://arxiv.org/abs/1707.01629))
 * ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression ([PDF](https://arxiv.org/abs/1707.06342), [Reading Note](https://joshua19881228.github.io/2017-08-03-ThiNet/))
 * Memory-Efficient Implementation of DenseNets ([PDF](https://arxiv.org/abs/1707.06990))
+* Residual Attention Network for Image Classification ([PDF](https://arxiv.org/abs/1704.06904), [Project/Code](https://github.com/buptwangfei/residual-attention-network))
 
 ### GAN ###
 
