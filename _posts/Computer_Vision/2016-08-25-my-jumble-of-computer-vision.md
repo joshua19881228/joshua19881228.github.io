@@ -137,6 +137,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Good Features to Correlate for Visual Tracking ([PDF](https://arxiv.org/abs/1704.06326))
 * Re3 : Real-Time Recurrent Regression Networks for Object Tracking ([PDF](https://arxiv.org/abs/1705.06368))
 * Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning ([PDF](https://drive.google.com/file/d/0B34VXh5mZ22cZUs2Umc1cjlBMFU/view), [Project/Code](https://sites.google.com/view/cvpr2017-adnet))
+* Simple Online and Realtime Tracking with a Deep Association Metric ([PDF](https://arxiv.org/abs/1703.07402))
 
 ### POSE ESTIMATION ###
 
@@ -190,6 +191,9 @@ I am going to maintain this page to record a few things about computer vision th
 * Video Imagination from a Single Image with Transformation Generation ([PDF](https://arxiv.org/abs/1706.04124), [Project/Code](https://github.com/gitpub327/VideoImagination))
 * Optimizing Deep CNN-Based Queries over Video Streams at Scale ([PDF](https://arxiv.org/abs/1703.02529), [Project/Code](https://github.com/stanford-futuredata/noscope), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-a-pursuit-of-temporal-accuracy-in-general-activity-detectionoptimizing-deep-cnn-based-queries-over-video-streams-at-scale_241/))
 * Extreme Low Resolution Activity Recognition with Multi-Siamese Embedding Learning ([PDF](https://arxiv.org/abs/1708.00999))
+* Predicting Human Activities Using Stochastic Grammar ([PDF](https://arxiv.org/abs/1708.00945))
+* Discriminative convolutional Fisher vector network for action recognition ([PDF](https://arxiv.org/abs/1707.06119))
+* Extreme Low Resolution Activity Recognition with Multi-Siamese Embedding Learning ([PDF](https://arxiv.org/abs/1708.00999))
 
 ### FACE ###
 
@@ -234,6 +238,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Visual Attribute Transfer through Deep Image Analogy ([PDF](https://arxiv.org/abs/1705.01088))
 * Deep Semantics-Aware Photo Adjustment ([PDF](https://arxiv.org/abs/1706.08260))
 * Diversified Texture Synthesis with Feed-forward Networks ([PDF](https://arxiv.org/abs/1703.01664), [Project/Code](https://github.com/Yijunmaverick/MultiTextureSynthesis))
+* Real-Time Neural Style Transfer for Videos ([PDF](http://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Real-Time_Neural_Style_CVPR_2017_paper.pdf))
 
 ### CNN AND DEEP LEARNING ###
 
@@ -408,6 +413,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Convolutional neural network architecture for geometric matching ([PDF](https://arxiv.org/abs/1703.05593), [Project/Code](http://www.di.ens.fr/willow/research/cnngeometric/))
 * Semantic Compositional Networks for Visual Captioning ([PDF](https://arxiv.org/abs/1611.08002), [Project/Code](https://github.com/zhegan27/SCN_for_video_captioning))
 * CNN-based Cascaded Multi-task Learning of High-level Prior and Density Estimation for Crowd Counting ([PDF](https://arxiv.org/abs/1707.09605))
+* Understanding Black-box Predictions via Influence Functions ([PDF](https://arxiv.org/abs/1703.04730))
 
 ## INTERESTING FINDS ##
 
@@ -612,7 +618,8 @@ I am going to maintain this page to record a few things about computer vision th
 * [DukeMTMC4ReID](https://github.com/NEU-Gou/DukeReID)
     >DukeMTMC4ReID dataset is new large-scale real-world person re-id dataset based on DukeMTMC.
 * [Person Re-identification Datasets](http://robustsystems.coe.neu.edu/sites/robustsystems.coe.neu.edu/files/systems/projectpages/reiddataset.html)
-    >Person re-identification has drawn intensive attention in the computer vision society in recent decades. As far as we know, this page collects all public datasets that have been tested by person re-identification algorithms. 
+    >Person re-identification has drawn intensive attention in the computer vision society in recent decades. As far as we know, this page collects all public datasets that have been tested by person re-identification algorithms.
+* [MIT Saliency Benchmark](http://saliency.mit.edu/home.html)
 
 ### TOOLKITS ###
 
