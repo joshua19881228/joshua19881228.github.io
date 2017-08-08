@@ -59,6 +59,10 @@ I am going to maintain this page to record a few things about computer vision th
 * Deformable Part-based Fully Convolutional Network for Object Detection ([PDF](https://arxiv.org/abs/1707.06175), [Reading Note](https://joshua19881228.github.io/2017-07-28-DP-FCN/))
 * Recurrent Scale Approximation for Object Detection in CNN ([PDF](https://arxiv.org/abs/1707.09531))
 * DSOD: Learning Deeply Supervised Object Detectors from Scratch ([PDF](https://arxiv.org/abs/1708.01241), [Project/Code](https://github.com/szq0214/DSOD))
+* PPR-FCN: Weakly Supervised Visual Relation Detection via Parallel Pairwise R-FCN ([PDF](https://arxiv.org/abs/1708.01956))
+* Focal Loss for Dense Object Detection ([PDF](https://arxiv.org/abs/1708.02002))
+* Learning Uncertain Convolutional Features for Accurate Saliency Detection ([PDF](https://arxiv.org/abs/1708.02031))
+* Optimizing Region Selection for Weakly Supervised Object Detection ([PDF](https://arxiv.org/abs/1708.01723))
 
 ### SEGMENTATION/PARSING ###
 
@@ -118,6 +122,7 @@ I am going to maintain this page to record a few things about computer vision th
 * The Devil is in the Decoder ([PDF](https://arxiv.org/abs/1707.05847))
 * Semantic Segmentation with Reverse Attention ([PDF](https://arxiv.org/abs/1707.06426))
 * Learning Deconvolution Network for Semantic Segmentation ([PDF](https://arxiv.org/abs/1505.04366), [Project/Code](https://github.com/HyeonwooNoh/DeconvNet))
+* Depth Adaptive Deep Neural Network for Semantic Segmentation ([PDF](https://arxiv.org/abs/1708.01818))
 
 ### TRACKING ###
 
