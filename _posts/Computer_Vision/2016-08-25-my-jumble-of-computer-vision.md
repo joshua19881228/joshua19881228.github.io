@@ -58,6 +58,7 @@ I am going to maintain this page to record a few things about computer vision th
 * RON: Reverse Connection with Objectness Prior Networks for Object Detection ([PDF](https://arxiv.org/abs/1707.01691), [Project/Code](https://github.com/taokong/RON))
 * Deformable Part-based Fully Convolutional Network for Object Detection ([PDF](https://arxiv.org/abs/1707.06175), [Reading Note](https://joshua19881228.github.io/2017-07-28-DP-FCN/))
 * Recurrent Scale Approximation for Object Detection in CNN ([PDF](https://arxiv.org/abs/1707.09531))
+* DSOD: Learning Deeply Supervised Object Detectors from Scratch ([PDF](https://arxiv.org/abs/1708.01241), [Project/Code](https://github.com/szq0214/DSOD))
 
 ### SEGMENTATION/PARSING ###
 
