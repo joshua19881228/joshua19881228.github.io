@@ -343,6 +343,7 @@ I am going to maintain this page to record a few things about computer vision th
 * ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression ([PDF](https://arxiv.org/abs/1707.06342), [Reading Note](https://joshua19881228.github.io/2017-08-03-ThiNet/))
 * Memory-Efficient Implementation of DenseNets ([PDF](https://arxiv.org/abs/1707.06990))
 * Residual Attention Network for Image Classification ([PDF](https://arxiv.org/abs/1704.06904), [Project/Code](https://github.com/buptwangfei/residual-attention-network))
+* An Effective Training Method For Deep Convolutional Neural Network ([PDF](https://arxiv.org/abs/1708.01666))
 
 ### GAN ###
 
