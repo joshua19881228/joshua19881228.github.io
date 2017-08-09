@@ -123,6 +123,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Semantic Segmentation with Reverse Attention ([PDF](https://arxiv.org/abs/1707.06426))
 * Learning Deconvolution Network for Semantic Segmentation ([PDF](https://arxiv.org/abs/1505.04366), [Project/Code](https://github.com/HyeonwooNoh/DeconvNet))
 * Depth Adaptive Deep Neural Network for Semantic Segmentation ([PDF](https://arxiv.org/abs/1708.01818))
+* Semantic Instance Segmentation with a Discriminative Loss Function ([PDF](https://arxiv.org/abs/1708.02551))
 
 ### TRACKING ###
 
@@ -421,6 +422,8 @@ I am going to maintain this page to record a few things about computer vision th
 * Semantic Compositional Networks for Visual Captioning ([PDF](https://arxiv.org/abs/1611.08002), [Project/Code](https://github.com/zhegan27/SCN_for_video_captioning))
 * CNN-based Cascaded Multi-task Learning of High-level Prior and Density Estimation for Crowd Counting ([PDF](https://arxiv.org/abs/1707.09605))
 * Understanding Black-box Predictions via Influence Functions ([PDF](https://arxiv.org/abs/1703.04730))
+* Learning a Repression Network for Precise Vehicle Search ([PDF](https://arxiv.org/abs/1708.02386))
+* Jointly Attentive Spatial-Temporal Pooling Networks for Video-based Person Re-Identification ([PDF](https://arxiv.org/abs/1708.02286))
 
 ## INTERESTING FINDS ##
 
