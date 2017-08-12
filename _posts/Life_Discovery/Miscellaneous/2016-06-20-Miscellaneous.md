@@ -1,7 +1,7 @@
 ---
 title: "Miscellaneous [20160620]"
 category: "Life Discovery"
-tag: ["Miscellaneous", "Movie"]
+tag: ["Miscellaneous"]
 ---
 
 好久没有更博了，每次想写点什么都觉得静不下心。其实仔细想想，最近的输入确实也比较少，输出自然也少。
