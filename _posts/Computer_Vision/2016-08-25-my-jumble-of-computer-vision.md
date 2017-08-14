@@ -145,6 +145,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Re3 : Real-Time Recurrent Regression Networks for Object Tracking ([PDF](https://arxiv.org/abs/1705.06368))
 * Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning ([PDF](https://drive.google.com/file/d/0B34VXh5mZ22cZUs2Umc1cjlBMFU/view), [Project/Code](https://sites.google.com/view/cvpr2017-adnet))
 * Simple Online and Realtime Tracking with a Deep Association Metric ([PDF](https://arxiv.org/abs/1703.07402))
+* Learning Policies for Adaptive Tracking with Deep Feature Cascades ([PDF](https://arxiv.org/abs/1708.02973))
 
 ### POSE ESTIMATION ###
 
