@@ -341,7 +341,7 @@ I am going to maintain this page to record a few things about computer vision th
 * ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices ([PDF](https://arxiv.org/abs/1707.01083), [Caffe Implementation](https://github.com/camel007/Caffe-ShuffleNet))
 * Submanifold Sparse Convolutional Networks ([PDF](https://arxiv.org/abs/1706.01307), [Project/Code](https://github.com/facebookresearch/SparseConvNet))
 * Dual Path Networks ([PDF](https://arxiv.org/abs/1707.01629))
-* ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression ([PDF](https://arxiv.org/abs/1707.06342), [Reading Note](https://joshua19881228.github.io/2017-08-03-ThiNet/))
+* ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression ([PDF](https://arxiv.org/abs/1707.06342), [Project/Code](https://github.com/Roll920/ThiNet), [Reading Note](https://joshua19881228.github.io/2017-08-03-ThiNet/))
 * Memory-Efficient Implementation of DenseNets ([PDF](https://arxiv.org/abs/1707.06990))
 * Residual Attention Network for Image Classification ([PDF](https://arxiv.org/abs/1704.06904), [Project/Code](https://github.com/buptwangfei/residual-attention-network))
 * An Effective Training Method For Deep Convolutional Neural Network ([PDF](https://arxiv.org/abs/1708.01666))
