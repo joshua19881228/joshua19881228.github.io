@@ -247,6 +247,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Deep Semantics-Aware Photo Adjustment ([PDF](https://arxiv.org/abs/1706.08260))
 * Diversified Texture Synthesis with Feed-forward Networks ([PDF](https://arxiv.org/abs/1703.01664), [Project/Code](https://github.com/Yijunmaverick/MultiTextureSynthesis))
 * Real-Time Neural Style Transfer for Videos ([PDF](http://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Real-Time_Neural_Style_CVPR_2017_paper.pdf))
+* Creatism: A deep-learning photographer capable of creating professional work ([PDF](https://arxiv.org/abs/1707.03491))
 
 ### CNN AND DEEP LEARNING ###
 
