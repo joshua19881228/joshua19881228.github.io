@@ -63,6 +63,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Focal Loss for Dense Object Detection ([PDF](https://arxiv.org/abs/1708.02002))
 * Learning Uncertain Convolutional Features for Accurate Saliency Detection ([PDF](https://arxiv.org/abs/1708.02031))
 * Optimizing Region Selection for Weakly Supervised Object Detection ([PDF](https://arxiv.org/abs/1708.01723))
+* Kill Two Birds With One Stone: Boosting Both Object Detection Accuracy and Speed With adaptive Patch-of-Interest Composition ([PDF](https://arxiv.org/abs/1708.03795))
 
 ### SEGMENTATION/PARSING ###
 
@@ -124,6 +125,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Learning Deconvolution Network for Semantic Segmentation ([PDF](https://arxiv.org/abs/1505.04366), [Project/Code](https://github.com/HyeonwooNoh/DeconvNet))
 * Depth Adaptive Deep Neural Network for Semantic Segmentation ([PDF](https://arxiv.org/abs/1708.01818))
 * Semantic Instance Segmentation with a Discriminative Loss Function ([PDF](https://arxiv.org/abs/1708.02551))
+* A Cost-Sensitive Visual Question-Answer Framework for Mining a Deep And-OR Object Semantics from Web Images ([PDF](https://arxiv.org/abs/1708.03911))
 
 ### TRACKING ###
 
@@ -146,6 +148,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Action-Decision Networks for Visual Tracking with Deep Reinforcement Learning ([PDF](https://drive.google.com/file/d/0B34VXh5mZ22cZUs2Umc1cjlBMFU/view), [Project/Code](https://sites.google.com/view/cvpr2017-adnet))
 * Simple Online and Realtime Tracking with a Deep Association Metric ([PDF](https://arxiv.org/abs/1703.07402))
 * Learning Policies for Adaptive Tracking with Deep Feature Cascades ([PDF](https://arxiv.org/abs/1708.02973))
+* Recurrent Filter Learning for Visual Tracking ([PDF](https://arxiv.org/abs/1708.03874))
 
 ### POSE ESTIMATION ###
 
@@ -157,6 +160,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Adversarial PoseNet: A Structure-aware Convolutional Network for Human Pose Estimation ([PDF](https://arxiv.org/abs/1705.00389))
 * Coarse-to-Fine Volumetric Prediction for Single-Image 3D Human Pose ([PDF](https://arxiv.org/abs/1611.07828), [Project/Code](https://www.seas.upenn.edu/~pavlakos/projects/volumetric/))
 * Learning Feature Pyramids for Human Pose Estimation ([PDF](https://arxiv.org/abs/1708.01101), [Project/Code](https://github.com/bearpaw/PyraNet))
+* Joint Multi-Person Pose Estimation and Semantic Part Segmentation ([PDF](https://arxiv.org/abs/1708.03383))
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
@@ -202,6 +206,10 @@ I am going to maintain this page to record a few things about computer vision th
 * Predicting Human Activities Using Stochastic Grammar ([PDF](https://arxiv.org/abs/1708.00945))
 * Discriminative convolutional Fisher vector network for action recognition ([PDF](https://arxiv.org/abs/1707.06119))
 * Extreme Low Resolution Activity Recognition with Multi-Siamese Embedding Learning ([PDF](https://arxiv.org/abs/1708.00999))
+* Exploiting Semantic Contextualization for Interpretation of Human Activity in Videos ([PDF](https://arxiv.org/abs/1708.03725))
+* Lattice Long Short-Term Memory for Human Action Recognition ([PDF](https://arxiv.org/abs/1708.03958))
+* Kinship Verification from Videos using Spatio-Temporal Texture Features and Deep Learning ([PDF](https://arxiv.org/abs/1708.04069))
+* Fast-Forward Video Based on Semantic Extraction ([PDF](https://arxiv.org/abs/1708.04160))
 
 ### FACE ###
 
@@ -222,6 +230,8 @@ I am going to maintain this page to record a few things about computer vision th
 * Semi and Weakly Supervised Semantic Segmentation Using Generative Adversarial Network ([PDF](https://arxiv.org/abs/1703.09695))
 * Deep Alignment Network: A convolutional neural network for robust face alignment ([PDF](https://arxiv.org/abs/1706.01789), [Project/Code](https://github.com/MarekKowalski/DeepAlignmentNetwork))
 * Scale-Aware Face Detection ([PDF](https://arxiv.org/abs/1706.09876))
+* SSH: Single Stage Headless Face Detector ([PDF](https://arxiv.org/abs/1708.03979))
+* AffectNet: A Database for Facial Expression, Valence, and Arousal Computing in the Wild ([PDF](https://arxiv.org/abs/1708.03985))
 
 ### OPTICAL FLOW ###
 
@@ -325,7 +335,6 @@ I am going to maintain this page to record a few things about computer vision th
 * On Generalization and Regularization in Deep Learning ([PDF](https://arxiv.org/abs/1704.01312))
 * Interpretable Explanations of Black Boxes by Meaningful Perturbation ([PDF](https://arxiv.org/abs/1704.03296))
 * Energy Propagation in Deep Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1704.03636))
-* Beyond triplet loss: a deep quadruplet network for person re-identification ([PDF](https://arxiv.org/abs/1704.01719))
 * Introspection: Accelerating Neural Network Training By Learning Weight Evolution ([PDF](https://arxiv.org/abs/1704.04959))
 * Deeply-Supervised Nets ([PDF](https://arxiv.org/abs/1409.5185))
 * Speeding up Convolutional Neural Networks By Exploiting the Sparsity of Rectifier Units ([PDF](https://arxiv.org/abs/1704.07724))
@@ -393,6 +402,17 @@ I am going to maintain this page to record a few things about computer vision th
 * Binarized Convolutional Neural Networks with Separable Filters for Efficient Hardware Acceleration ([PDF](https://arxiv.org/abs/1707.04693))
 * Channel Pruning for Accelerating Very Deep Neural Networks ([PDF](https://arxiv.org/abs/1707.06168))
 
+### ReID ###
+
+* Learning Deep Neural Networks for Vehicle Re-ID with Visual-spatio-temporal Path Proposals ([PDF](https://arxiv.org/abs/1708.03918))
+* Beyond triplet loss: a deep quadruplet network for person re-identification ([PDF](https://arxiv.org/abs/1704.01719))
+* Person Re-identification by Local Maximal Occurrence Representation and Metric Learning ([PDF](http://www.cbsr.ia.ac.cn/users/scliao/papers/Liao-CVPR15-LOMO-XQDA.pdf), [Project/Code](http://www.cbsr.ia.ac.cn/users/scliao/projects/lomo_xqda/))
+* Person Re-identification: Past, Present and Future ([PDF](https://arxiv.org/abs/1610.02984))
+* Unsupervised Person Re-identification: Clustering and Fine-tuning ([PDF](https://arxiv.org/abs/1705.10444), [Project/Code](https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning))
+* Jointly Attentive Spatial-Temporal Pooling Networks for Video-based Person Re-Identification ([PDF](https://arxiv.org/abs/1708.02286))
+* Divide and Fuse: A Re-ranking Approach for Person Re-identification ([PDF](https://arxiv.org/abs/1708.04169))
+
+
 ### OTHER ###
 
 * Learning Aligned Cross-Modal Representations from Weakly Aligned Data ([PDF](http://cmplaces.csail.mit.edu/content/paper.pdf), [Project/Code](http://cmplaces.csail.mit.edu/))
@@ -416,17 +436,14 @@ I am going to maintain this page to record a few things about computer vision th
 * Computer Vision for Autonomous Vehicles: Problems, Datasets and State-of-the-Art ([PDF](https://arxiv.org/abs/1704.05519), [Project/Code](http://www.cvlibs.net/projects/autonomous_vision_survey/))
 * Learning Features by Watching Objects Move ([PDF](https://arxiv.org/abs/1612.06370), [Project/Code](https://people.eecs.berkeley.edu/~pathak/unsupervised_video/))
 * GMS: Grid-based Motion Statistics for Fast, Ultra-robust Feature Correspondence ([PDF](http://jwbian.net/Papers/GMS_CVPR17.pdf), [Project/Code](http://jwbian.net/gms))
-* Person Re-identification by Local Maximal Occurrence Representation and Metric Learning ([PDF](http://www.cbsr.ia.ac.cn/users/scliao/papers/Liao-CVPR15-LOMO-XQDA.pdf), [Project/Code](http://www.cbsr.ia.ac.cn/users/scliao/projects/lomo_xqda/))
-* Person Re-identification: Past, Present and Future ([PDF](https://arxiv.org/abs/1610.02984))
 * ResnetCrowd: A Residual Deep Learning Architecture for Crowd Counting, Violent Behaviour Detection and Crowd Density Level Classification ([PDF](https://arxiv.org/abs/1705.10698))
-* Unsupervised Person Re-identification: Clustering and Fine-tuning ([PDF](https://arxiv.org/abs/1705.10444), [Project/Code](https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning))
 * Learning Cross-modal Embeddings for Cooking Recipes and Food Images ([PDF](http://im2recipe.csail.mit.edu/im2recipe.pdf), [Project/Code](http://im2recipe.csail.mit.edu/))
 * Convolutional neural network architecture for geometric matching ([PDF](https://arxiv.org/abs/1703.05593), [Project/Code](http://www.di.ens.fr/willow/research/cnngeometric/))
 * Semantic Compositional Networks for Visual Captioning ([PDF](https://arxiv.org/abs/1611.08002), [Project/Code](https://github.com/zhegan27/SCN_for_video_captioning))
 * CNN-based Cascaded Multi-task Learning of High-level Prior and Density Estimation for Crowd Counting ([PDF](https://arxiv.org/abs/1707.09605))
 * Understanding Black-box Predictions via Influence Functions ([PDF](https://arxiv.org/abs/1703.04730))
 * Learning a Repression Network for Precise Vehicle Search ([PDF](https://arxiv.org/abs/1708.02386))
-* Jointly Attentive Spatial-Temporal Pooling Networks for Video-based Person Re-Identification ([PDF](https://arxiv.org/abs/1708.02286))
+* Visual Graph Mining ([PDF](https://arxiv.org/abs/1708.03921))
 
 ## INTERESTING FINDS ##
 
