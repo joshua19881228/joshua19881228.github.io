@@ -258,6 +258,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Diversified Texture Synthesis with Feed-forward Networks ([PDF](https://arxiv.org/abs/1703.01664), [Project/Code](https://github.com/Yijunmaverick/MultiTextureSynthesis))
 * Real-Time Neural Style Transfer for Videos ([PDF](http://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Real-Time_Neural_Style_CVPR_2017_paper.pdf))
 * Creatism: A deep-learning photographer capable of creating professional work ([PDF](https://arxiv.org/abs/1707.03491))
+* Deep Image Harmonization ([PDF](https://arxiv.org/abs/1703.00069), [Project/Code](https://github.com/wasidennis/DeepHarmonization))
 
 ### CNN AND DEEP LEARNING ###
 
@@ -444,6 +445,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Understanding Black-box Predictions via Influence Functions ([PDF](https://arxiv.org/abs/1703.04730))
 * Learning a Repression Network for Precise Vehicle Search ([PDF](https://arxiv.org/abs/1708.02386))
 * Visual Graph Mining ([PDF](https://arxiv.org/abs/1708.03921))
+* Style2Vec: Representation Learning for Fashion Items from Style Sets ([PDF](https://arxiv.org/abs/1708.04014))
 
 ## INTERESTING FINDS ##
 
