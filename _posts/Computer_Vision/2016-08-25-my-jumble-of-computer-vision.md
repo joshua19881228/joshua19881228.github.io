@@ -64,6 +64,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Learning Uncertain Convolutional Features for Accurate Saliency Detection ([PDF](https://arxiv.org/abs/1708.02031))
 * Optimizing Region Selection for Weakly Supervised Object Detection ([PDF](https://arxiv.org/abs/1708.01723))
 * Kill Two Birds With One Stone: Boosting Both Object Detection Accuracy and Speed With adaptive Patch-of-Interest Composition ([PDF](https://arxiv.org/abs/1708.03795))
+* Flow-Guided Feature Aggregation for Video Object Detection ([PDF](https://arxiv.org/abs/1703.10025))
 
 ### SEGMENTATION/PARSING ###
 
@@ -232,6 +233,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Scale-Aware Face Detection ([PDF](https://arxiv.org/abs/1706.09876))
 * SSH: Single Stage Headless Face Detector ([PDF](https://arxiv.org/abs/1708.03979))
 * AffectNet: A Database for Facial Expression, Valence, and Arousal Computing in the Wild ([PDF](https://arxiv.org/abs/1708.03985))
+* SphereFace: Deep Hypersphere Embedding for Face Recognition ([PDF](https://arxiv.org/abs/1704.08063), [Project/Code](https://github.com/wy1iu/sphereface))
 
 ### OPTICAL FLOW ###
 
@@ -622,6 +624,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [Off the Convex Path](http://www.offconvex.org/)
 * [图像风格迁移(Neural Style)简史](https://zhuanlan.zhihu.com/p/26746283)
 * [ML notes: Why the log-likelihood?](https://blog.metaflow.fr/ml-notes-why-the-log-likelihood-24f7b6c40f83)
+* [Generative Adversarial Networks (GANs): Engine and Applications](https://blog.statsbot.co/generative-adversarial-networks-gans-engine-and-applications-f96291965b47)
 	
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
