@@ -211,6 +211,8 @@ I am going to maintain this page to record a few things about computer vision th
 * Lattice Long Short-Term Memory for Human Action Recognition ([PDF](https://arxiv.org/abs/1708.03958))
 * Kinship Verification from Videos using Spatio-Temporal Texture Features and Deep Learning ([PDF](https://arxiv.org/abs/1708.04069))
 * Fast-Forward Video Based on Semantic Extraction ([PDF](https://arxiv.org/abs/1708.04160))
+* Emotion Detection on TV Show Transcripts with Sequence-based Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1708.04299))
+* ConvNet Architecture Search for Spatiotemporal Feature Learning ([PDF](https://arxiv.org/abs/1708.05038), [Project/Code](http://vlg.cs.dartmouth.edu/c3d/), [Github](https://github.com/facebook/C3D))
 
 ### FACE ###
 
