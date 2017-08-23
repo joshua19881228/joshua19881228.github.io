@@ -405,7 +405,7 @@ I am going to maintain this page to record a few things about computer vision th
 * SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size ([PDF](https://arxiv.org/abs/1602.07360), [Project/Code](https://github.com/DeepScale/SqueezeNet))
 * MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications ([PDF](https://arxiv.org/abs/1704.04861), [Caffe Implementation](https://github.com/farmingyard/caffe-mobilenet), [Reading Note](https://joshua19881228.github.io/2017-07-19-MobileNet/))
 * Binarized Convolutional Neural Networks with Separable Filters for Efficient Hardware Acceleration ([PDF](https://arxiv.org/abs/1707.04693))
-* Channel Pruning for Accelerating Very Deep Neural Networks ([PDF](https://arxiv.org/abs/1707.06168))
+* Channel Pruning for Accelerating Very Deep Neural Networks ([PDF](https://arxiv.org/abs/1707.06168), [Project/Code](https://github.com/yihui-he/channel-pruning))
 
 ### ReID ###
 
