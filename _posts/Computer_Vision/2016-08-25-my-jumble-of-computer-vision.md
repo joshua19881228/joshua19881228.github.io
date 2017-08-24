@@ -65,6 +65,8 @@ I am going to maintain this page to record a few things about computer vision th
 * Optimizing Region Selection for Weakly Supervised Object Detection ([PDF](https://arxiv.org/abs/1708.01723))
 * Kill Two Birds With One Stone: Boosting Both Object Detection Accuracy and Speed With adaptive Patch-of-Interest Composition ([PDF](https://arxiv.org/abs/1708.03795))
 * Flow-Guided Feature Aggregation for Video Object Detection ([PDF](https://arxiv.org/abs/1703.10025))
+* BlitzNet: A Real-Time Deep Network for Scene Understanding ([PDF]( BlitzNet: A Real-Time Deep Network for Scene Understanding), [Project/Code](http://thoth.inrialpes.fr/research/blitznet/))
+*  RON: Reverse Connection with Objectness Prior Networks for Object Detection ([PDF](https://arxiv.org/abs/1707.01691))
 
 ### SEGMENTATION/PARSING ###
 
@@ -387,6 +389,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Pose Guided Person Image Generation ([PDF](https://arxiv.org/abs/1705.09368))
 * On the Effects of Batch and Weight Normalization in Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1704.03971), [Project/Code](https://github.com/stormraiser/GAN-weight-norm))
 * Aesthetic-Driven Image Enhancement by Adversarial Learning ([PDF](https://arxiv.org/abs/1707.05251))
+* Learning Efficient Convolutional Networks through Network Slimming ([PDF](https://arxiv.org/abs/1708.06519), [Project/Code](https://github.com/liuzhuang13/slimming))
 
 ### MACHINE LEARNING ###
 
@@ -396,7 +399,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [Bayesian Reasoning and Machine Learning](http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage)
 * Stochastic Gradient Descent as Approximate Bayesian Inference ([PDF](https://arxiv.org/abs/1704.04289))
 
-### EMBEDDED ###
+### LIGHT-WEIGHT MODEL/EMBEDDED ###
 
 * Caffeinated FPGAs: FPGA Framework For Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1609.09671))
 * Comprehensive Evaluation of OpenCL-based Convolutional Neural Network Accelerators in Xilinx and Altera FPGAs  ([PDF](https://arxiv.org/abs/1609.09296))
