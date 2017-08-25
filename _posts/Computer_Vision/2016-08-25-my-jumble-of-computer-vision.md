@@ -363,6 +363,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Memory-Efficient Implementation of DenseNets ([PDF](https://arxiv.org/abs/1707.06990))
 * Residual Attention Network for Image Classification ([PDF](https://arxiv.org/abs/1704.06904), [Project/Code](https://github.com/buptwangfei/residual-attention-network))
 * An Effective Training Method For Deep Convolutional Neural Network ([PDF](https://arxiv.org/abs/1708.01666))
+* Learning to Transfer ([PDF](https://arxiv.org/abs/1708.05629))
 
 ### GAN ###
 
@@ -399,7 +400,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [Bayesian Reasoning and Machine Learning](http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage)
 * Stochastic Gradient Descent as Approximate Bayesian Inference ([PDF](https://arxiv.org/abs/1704.04289))
 
-### LIGHT-WEIGHT MODEL/EMBEDDED ###
+### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE ###
 
 * Caffeinated FPGAs: FPGA Framework For Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1609.09671))
 * Comprehensive Evaluation of OpenCL-based Convolutional Neural Network Accelerators in Xilinx and Altera FPGAs  ([PDF](https://arxiv.org/abs/1609.09296))
@@ -409,6 +410,7 @@ I am going to maintain this page to record a few things about computer vision th
 * MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications ([PDF](https://arxiv.org/abs/1704.04861), [Caffe Implementation](https://github.com/farmingyard/caffe-mobilenet), [Reading Note](https://joshua19881228.github.io/2017-07-19-MobileNet/))
 * Binarized Convolutional Neural Networks with Separable Filters for Efficient Hardware Acceleration ([PDF](https://arxiv.org/abs/1707.04693))
 * Channel Pruning for Accelerating Very Deep Neural Networks ([PDF](https://arxiv.org/abs/1707.06168), [Project/Code](https://github.com/yihui-he/channel-pruning))
+* Quantized Convolutional Neural Networks for Mobile Devices ([PDF](https://arxiv.org/abs/1512.06473), [Project/Code](https://github.com/jiaxiang-wu/quantized-cnn))
 
 ### ReID ###
 
