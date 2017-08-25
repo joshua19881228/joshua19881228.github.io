@@ -364,6 +364,8 @@ I am going to maintain this page to record a few things about computer vision th
 * Residual Attention Network for Image Classification ([PDF](https://arxiv.org/abs/1704.06904), [Project/Code](https://github.com/buptwangfei/residual-attention-network))
 * An Effective Training Method For Deep Convolutional Neural Network ([PDF](https://arxiv.org/abs/1708.01666))
 * Learning to Transfer ([PDF](https://arxiv.org/abs/1708.05629))
+* Learning Efficient Convolutional Networks through Network Slimming ([PDF](https://arxiv.org/abs/1708.06519), [Project/Code](https://github.com/liuzhuang13/slimming))
+* Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates ([PDF](https://arxiv.org/pdf/1506.01186.pdf), [Project/Code](https://github.com/lnsmith54/super-convergence))
 
 ### GAN ###
 
@@ -390,7 +392,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Pose Guided Person Image Generation ([PDF](https://arxiv.org/abs/1705.09368))
 * On the Effects of Batch and Weight Normalization in Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1704.03971), [Project/Code](https://github.com/stormraiser/GAN-weight-norm))
 * Aesthetic-Driven Image Enhancement by Adversarial Learning ([PDF](https://arxiv.org/abs/1707.05251))
-* Learning Efficient Convolutional Networks through Network Slimming ([PDF](https://arxiv.org/abs/1708.06519), [Project/Code](https://github.com/liuzhuang13/slimming))
+
 
 ### MACHINE LEARNING ###
 
