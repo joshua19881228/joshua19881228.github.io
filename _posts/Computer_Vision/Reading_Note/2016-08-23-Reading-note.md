@@ -12,12 +12,12 @@ tag: ["Reading Note", "Semantic Segmentation"]
 
 **FROM**: [arXiv:1606.02147](http://arxiv.org/abs/1606.02147)
 
-###CONTRIBUTIONS###
+### CONTRIBUTIONS ###
 
 1. A novel deep neural network architecture named ENet (efficient neural network) is propsed, which is quite efficient.
 2. A serie of designing strategies is discussed.
 
-###Design Choices###
+### Design Choices ###
 
 **Network Architecture**
 
@@ -36,10 +36,10 @@ Readers could refer to the paper to have a look at the network architecture. The
 7. **Dilated convolutions:** Dilated convolutions is a good way of maintaining feature resolution while boosting efficiency.
 8. **Regularization:** Spatial Dropout is used to prevent overfitting.
 
-###ADVANTAGES###
+### ADVANTAGES ###
 
 1. The network processes fast.
 
-###DISADVANTAGES###
+### DISADVANTAGES ###
 
 1. The performance is comparatively inferior.
