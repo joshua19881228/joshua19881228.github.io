@@ -1,7 +1,7 @@
 ---
 title: "《在这世界的角落》"
 category: "Life Discovery"
-tag: "Miscellaneous"
+tag: ["Miscellaneous", "Movie"]
 ---
 
 在日本战败日看了一部反映战时日本国内情形的动画电影，导演为片渊须直。
