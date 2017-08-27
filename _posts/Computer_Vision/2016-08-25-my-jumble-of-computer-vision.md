@@ -65,6 +65,8 @@ I am going to maintain this page to record a few things about computer vision th
 * Optimizing Region Selection for Weakly Supervised Object Detection ([PDF](https://arxiv.org/abs/1708.01723))
 * Kill Two Birds With One Stone: Boosting Both Object Detection Accuracy and Speed With adaptive Patch-of-Interest Composition ([PDF](https://arxiv.org/abs/1708.03795))
 * Flow-Guided Feature Aggregation for Video Object Detection ([PDF](https://arxiv.org/abs/1703.10025))
+* BlitzNet: A Real-Time Deep Network for Scene Understanding ([PDF]( BlitzNet: A Real-Time Deep Network for Scene Understanding), [Project/Code](http://thoth.inrialpes.fr/research/blitznet/))
+*  RON: Reverse Connection with Objectness Prior Networks for Object Detection ([PDF](https://arxiv.org/abs/1707.01691))
 
 ### SEGMENTATION/PARSING ###
 
@@ -361,6 +363,9 @@ I am going to maintain this page to record a few things about computer vision th
 * Memory-Efficient Implementation of DenseNets ([PDF](https://arxiv.org/abs/1707.06990))
 * Residual Attention Network for Image Classification ([PDF](https://arxiv.org/abs/1704.06904), [Project/Code](https://github.com/buptwangfei/residual-attention-network))
 * An Effective Training Method For Deep Convolutional Neural Network ([PDF](https://arxiv.org/abs/1708.01666))
+* Learning to Transfer ([PDF](https://arxiv.org/abs/1708.05629))
+* Learning Efficient Convolutional Networks through Network Slimming ([PDF](https://arxiv.org/abs/1708.06519), [Project/Code](https://github.com/liuzhuang13/slimming))
+* Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates ([PDF](https://arxiv.org/pdf/1506.01186.pdf), [Project/Code](https://github.com/lnsmith54/super-convergence))
 
 ### GAN ###
 
@@ -388,6 +393,7 @@ I am going to maintain this page to record a few things about computer vision th
 * On the Effects of Batch and Weight Normalization in Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1704.03971), [Project/Code](https://github.com/stormraiser/GAN-weight-norm))
 * Aesthetic-Driven Image Enhancement by Adversarial Learning ([PDF](https://arxiv.org/abs/1707.05251))
 
+
 ### MACHINE LEARNING ###
 
 * [计算机视觉与机器学习 【随机森林】](http://joshua881228.webfactional.com/blog_ji-suan-ji-shi-jue-yu-ji-qi-xue-xi-sui-ji-sen-lin_129/)
@@ -396,7 +402,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [Bayesian Reasoning and Machine Learning](http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage)
 * Stochastic Gradient Descent as Approximate Bayesian Inference ([PDF](https://arxiv.org/abs/1704.04289))
 
-### EMBEDDED ###
+### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE ###
 
 * Caffeinated FPGAs: FPGA Framework For Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1609.09671))
 * Comprehensive Evaluation of OpenCL-based Convolutional Neural Network Accelerators in Xilinx and Altera FPGAs  ([PDF](https://arxiv.org/abs/1609.09296))
@@ -405,7 +411,8 @@ I am going to maintain this page to record a few things about computer vision th
 * SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB model size ([PDF](https://arxiv.org/abs/1602.07360), [Project/Code](https://github.com/DeepScale/SqueezeNet))
 * MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications ([PDF](https://arxiv.org/abs/1704.04861), [Caffe Implementation](https://github.com/farmingyard/caffe-mobilenet), [Reading Note](https://joshua19881228.github.io/2017-07-19-MobileNet/))
 * Binarized Convolutional Neural Networks with Separable Filters for Efficient Hardware Acceleration ([PDF](https://arxiv.org/abs/1707.04693))
-* Channel Pruning for Accelerating Very Deep Neural Networks ([PDF](https://arxiv.org/abs/1707.06168))
+* Channel Pruning for Accelerating Very Deep Neural Networks ([PDF](https://arxiv.org/abs/1707.06168), [Project/Code](https://github.com/yihui-he/channel-pruning))
+* Quantized Convolutional Neural Networks for Mobile Devices ([PDF](https://arxiv.org/abs/1512.06473), [Project/Code](https://github.com/jiaxiang-wu/quantized-cnn))
 
 ### ReID ###
 
