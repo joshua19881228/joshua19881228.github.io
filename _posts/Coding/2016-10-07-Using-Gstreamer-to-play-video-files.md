@@ -1,6 +1,7 @@
 ---
 title: "Using Gstreamer to Play Video Files"
 category: "Coding"
+tag: ["Gstreamer"]
 ---
 
 # Gstreamer #
