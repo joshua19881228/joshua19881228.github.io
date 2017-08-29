@@ -164,6 +164,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Coarse-to-Fine Volumetric Prediction for Single-Image 3D Human Pose ([PDF](https://arxiv.org/abs/1611.07828), [Project/Code](https://www.seas.upenn.edu/~pavlakos/projects/volumetric/))
 * Learning Feature Pyramids for Human Pose Estimation ([PDF](https://arxiv.org/abs/1708.01101), [Project/Code](https://github.com/bearpaw/PyraNet))
 * Joint Multi-Person Pose Estimation and Semantic Part Segmentation ([PDF](https://arxiv.org/abs/1708.03383))
+* DeepPrior++: Improving Fast and Accurate 3D Hand Pose Estimation ([PDF](https://arxiv.org/abs/1708.08325))
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
