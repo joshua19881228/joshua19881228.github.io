@@ -458,6 +458,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Learning a Repression Network for Precise Vehicle Search ([PDF](https://arxiv.org/abs/1708.02386))
 * Visual Graph Mining ([PDF](https://arxiv.org/abs/1708.03921))
 * Style2Vec: Representation Learning for Fashion Items from Style Sets ([PDF](https://arxiv.org/abs/1708.04014))
+* A Deep Multimodal Approach for Cold-start Music Recommendation ([PDF](https://arxiv.org/abs/1706.09739))
 
 ## INTERESTING FINDS ##
 
