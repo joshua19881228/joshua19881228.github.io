@@ -637,6 +637,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [ML notes: Why the log-likelihood?](https://blog.metaflow.fr/ml-notes-why-the-log-likelihood-24f7b6c40f83)
 * [Generative Adversarial Networks (GANs): Engine and Applications](https://blog.statsbot.co/generative-adversarial-networks-gans-engine-and-applications-f96291965b47)
 * [Compressing deep neural nets](http://machinethink.net/blog/compressing-deep-neural-nets/)
+* [Sigmoidal](https://sigmoidal.io/)
 	
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
