@@ -749,6 +749,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [Learning To See（机器学习计算机视觉入门）（英文字幕）](https://www.bilibili.com/video/av12532910/)
 * [37 Reasons why your Neural Network is not working](https://medium.com/@slavivanov/4020854bd607)
 * [My Neural Network isn't working! What should I do?](http://theorangeduck.com/page/neural-network-not-working)
+* [Tutorial on Deep Generative Models](http://www.shakirm.com/slides/DeepGenModelsTutorial.pdf)
 
 ## SKILLS ##
 
