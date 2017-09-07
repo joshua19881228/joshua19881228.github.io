@@ -367,6 +367,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Learning to Transfer ([PDF](https://arxiv.org/abs/1708.05629))
 * Learning Efficient Convolutional Networks through Network Slimming ([PDF](https://arxiv.org/abs/1708.06519), [Project/Code](https://github.com/liuzhuang13/slimming))
 * Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates ([PDF](https://arxiv.org/pdf/1506.01186.pdf), [Project/Code](https://github.com/lnsmith54/super-convergence))
+* Hierarchical loss for classification ([PDF](https://arxiv.org/abs/1709.01062))
 
 ### GAN ###
 
@@ -394,7 +395,6 @@ I am going to maintain this page to record a few things about computer vision th
 * On the Effects of Batch and Weight Normalization in Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1704.03971), [Project/Code](https://github.com/stormraiser/GAN-weight-norm))
 * Aesthetic-Driven Image Enhancement by Adversarial Learning ([PDF](https://arxiv.org/abs/1707.05251))
 
-
 ### MACHINE LEARNING ###
 
 * [计算机视觉与机器学习 【随机森林】](http://joshua881228.webfactional.com/blog_ji-suan-ji-shi-jue-yu-ji-qi-xue-xi-sui-ji-sen-lin_129/)
@@ -414,6 +414,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Binarized Convolutional Neural Networks with Separable Filters for Efficient Hardware Acceleration ([PDF](https://arxiv.org/abs/1707.04693))
 * Channel Pruning for Accelerating Very Deep Neural Networks ([PDF](https://arxiv.org/abs/1707.06168), [Project/Code](https://github.com/yihui-he/channel-pruning))
 * Quantized Convolutional Neural Networks for Mobile Devices ([PDF](https://arxiv.org/abs/1512.06473), [Project/Code](https://github.com/jiaxiang-wu/quantized-cnn))
+* Squeeze-and-Excitation Networks ([PDF](https://arxiv.org/abs/1709.01507))
 
 ### ReID ###
 
@@ -424,7 +425,6 @@ I am going to maintain this page to record a few things about computer vision th
 * Unsupervised Person Re-identification: Clustering and Fine-tuning ([PDF](https://arxiv.org/abs/1705.10444), [Project/Code](https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning))
 * Jointly Attentive Spatial-Temporal Pooling Networks for Video-based Person Re-Identification ([PDF](https://arxiv.org/abs/1708.02286))
 * Divide and Fuse: A Re-ranking Approach for Person Re-identification ([PDF](https://arxiv.org/abs/1708.04169))
-
 
 ### OTHER ###
 
@@ -637,6 +637,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [ML notes: Why the log-likelihood?](https://blog.metaflow.fr/ml-notes-why-the-log-likelihood-24f7b6c40f83)
 * [Generative Adversarial Networks (GANs): Engine and Applications](https://blog.statsbot.co/generative-adversarial-networks-gans-engine-and-applications-f96291965b47)
 * [Compressing deep neural nets](http://machinethink.net/blog/compressing-deep-neural-nets/)
+* [Sigmoidal](https://sigmoidal.io/)
 	
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
@@ -747,6 +748,8 @@ I am going to maintain this page to record a few things about computer vision th
 * [A Gentle Introduction to Mini-Batch Gradient Descent and How to Configure Batch Size](http://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/)
 * [Learning To See（机器学习计算机视觉入门）（英文字幕）](https://www.bilibili.com/video/av12532910/)
 * [37 Reasons why your Neural Network is not working](https://medium.com/@slavivanov/4020854bd607)
+* [My Neural Network isn't working! What should I do?](http://theorangeduck.com/page/neural-network-not-working)
+* [Tutorial on Deep Generative Models](http://www.shakirm.com/slides/DeepGenModelsTutorial.pdfg)
 
 ## SKILLS ##
 
