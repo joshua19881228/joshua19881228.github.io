@@ -368,6 +368,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Learning Efficient Convolutional Networks through Network Slimming ([PDF](https://arxiv.org/abs/1708.06519), [Project/Code](https://github.com/liuzhuang13/slimming))
 * Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates ([PDF](https://arxiv.org/pdf/1506.01186.pdf), [Project/Code](https://github.com/lnsmith54/super-convergence))
 * Hierarchical loss for classification ([PDF](https://arxiv.org/abs/1709.01062))
+* Convolutional Gaussian Processes ([PDF](https://arxiv.org/abs/1709.01894), [Code/Project](https://github.com/markvdw/convgp))
 
 ### GAN ###
 
@@ -668,6 +669,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [Person Re-identification Datasets](http://robustsystems.coe.neu.edu/sites/robustsystems.coe.neu.edu/files/systems/projectpages/reiddataset.html)
     >Person re-identification has drawn intensive attention in the computer vision society in recent decades. As far as we know, this page collects all public datasets that have been tested by person re-identification algorithms.
 * [MIT Saliency Benchmark](http://saliency.mit.edu/home.html)
+* [How far are we from solving the 2D & 3D Face Alignment problem? (and a dataset of 230,000 3D facial landmarks)](https://www.adrianbulat.com/face-alignment/)
 
 ### TOOLKITS ###
 
