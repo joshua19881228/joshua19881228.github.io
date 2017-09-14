@@ -66,7 +66,8 @@ I am going to maintain this page to record a few things about computer vision th
 * Kill Two Birds With One Stone: Boosting Both Object Detection Accuracy and Speed With adaptive Patch-of-Interest Composition ([PDF](https://arxiv.org/abs/1708.03795))
 * Flow-Guided Feature Aggregation for Video Object Detection ([PDF](https://arxiv.org/abs/1703.10025))
 * BlitzNet: A Real-Time Deep Network for Scene Understanding ([PDF]( BlitzNet: A Real-Time Deep Network for Scene Understanding), [Project/Code](http://thoth.inrialpes.fr/research/blitznet/))
-*  RON: Reverse Connection with Objectness Prior Networks for Object Detection ([PDF](https://arxiv.org/abs/1707.01691))
+* RON: Reverse Connection with Objectness Prior Networks for Object Detection ([PDF](https://arxiv.org/abs/1707.01691))
+* Soft Proposal Networks for Weakly Supervised Object Localization ([PDF](https://arxiv.org/pdf/1709.01829.pdf), [Project/Code](https://github.com/ZhouYanzhao/SPN/))
 
 ### SEGMENTATION/PARSING ###
 
@@ -395,6 +396,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Pose Guided Person Image Generation ([PDF](https://arxiv.org/abs/1705.09368))
 * On the Effects of Batch and Weight Normalization in Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1704.03971), [Project/Code](https://github.com/stormraiser/GAN-weight-norm))
 * Aesthetic-Driven Image Enhancement by Adversarial Learning ([PDF](https://arxiv.org/abs/1707.05251))
+* VEEGAN: Reducing Mode Collapse in GANs using Implicit Variational Learning ([PDF](https://arxiv.org/abs/1705.07761), [Project/Code](https://akashgit.github.io/VEEGAN/))
 
 ### MACHINE LEARNING ###
 
@@ -404,7 +406,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [Bayesian Reasoning and Machine Learning](http://web4.cs.ucl.ac.uk/staff/D.Barber/pmwiki/pmwiki.php?n=Brml.HomePage)
 * Stochastic Gradient Descent as Approximate Bayesian Inference ([PDF](https://arxiv.org/abs/1704.04289))
 
-### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE ###
+### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
 * Caffeinated FPGAs: FPGA Framework For Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1609.09671))
 * Comprehensive Evaluation of OpenCL-based Convolutional Neural Network Accelerators in Xilinx and Altera FPGAs  ([PDF](https://arxiv.org/abs/1609.09296))
@@ -416,6 +418,8 @@ I am going to maintain this page to record a few things about computer vision th
 * Channel Pruning for Accelerating Very Deep Neural Networks ([PDF](https://arxiv.org/abs/1707.06168), [Project/Code](https://github.com/yihui-he/channel-pruning))
 * Quantized Convolutional Neural Networks for Mobile Devices ([PDF](https://arxiv.org/abs/1512.06473), [Project/Code](https://github.com/jiaxiang-wu/quantized-cnn))
 * Squeeze-and-Excitation Networks ([PDF](https://arxiv.org/abs/1709.01507))
+* Domain-adaptive deep network compression ([PDF](https://arxiv.org/abs/1709.01041))
+* Embedded Binarized Neural Networks ([PDF](https://arxiv.org/abs/1709.02260))
 
 ### ReID ###
 
@@ -460,6 +464,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Visual Graph Mining ([PDF](https://arxiv.org/abs/1708.03921))
 * Style2Vec: Representation Learning for Fashion Items from Style Sets ([PDF](https://arxiv.org/abs/1708.04014))
 * A Deep Multimodal Approach for Cold-start Music Recommendation ([PDF](https://arxiv.org/abs/1706.09739))
+* A Multilayer-Based Framework for Online Background Subtraction with Freely Moving Cameras ([PDF](https://arxiv.org/abs/1709.01140))
 
 ## INTERESTING FINDS ##
 
