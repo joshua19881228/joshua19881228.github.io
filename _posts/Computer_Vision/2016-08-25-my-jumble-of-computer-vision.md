@@ -131,7 +131,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Semantic Instance Segmentation with a Discriminative Loss Function ([PDF](https://arxiv.org/abs/1708.02551))
 * A Cost-Sensitive Visual Question-Answer Framework for Mining a Deep And-OR Object Semantics from Web Images ([PDF](https://arxiv.org/abs/1708.03911))
 * ICNet for Real-Time Semantic Segmentation on High-Resolution Images ([PDF](https://arxiv.org/abs/1704.08545), [Project/Code](https://hszhao.github.io/projects/icnet/))
-* Pyramid Scene Parsing Network ([PDF](https://arxiv.org/abs/1612.01105), [Project/Code](https://github.com/hszhao/PSPNet))
+* Pyramid Scene Parsing Network ([PDF](https://arxiv.org/abs/1612.01105), [Project/Code](https://github.com/hszhao/PSPNet), [Reading Note](https://joshua19881228.github.io/2017-09-19-PSPNet/))
 
 ### TRACKING ###
 
