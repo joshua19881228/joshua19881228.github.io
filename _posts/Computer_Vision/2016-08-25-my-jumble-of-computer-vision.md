@@ -68,6 +68,7 @@ I am going to maintain this page to record a few things about computer vision th
 * BlitzNet: A Real-Time Deep Network for Scene Understanding ([PDF]( BlitzNet: A Real-Time Deep Network for Scene Understanding), [Project/Code](http://thoth.inrialpes.fr/research/blitznet/))
 * RON: Reverse Connection with Objectness Prior Networks for Object Detection ([PDF](https://arxiv.org/abs/1707.01691))
 * Soft Proposal Networks for Weakly Supervised Object Localization ([PDF](https://arxiv.org/pdf/1709.01829.pdf), [Project/Code](https://github.com/ZhouYanzhao/SPN/))
+* Feature-Fused SSD: Fast Detection for Small Objects ([PDF](https://arxiv.org/abs/1709.05054))
 
 ### SEGMENTATION/PARSING ###
 
@@ -168,6 +169,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Learning Feature Pyramids for Human Pose Estimation ([PDF](https://arxiv.org/abs/1708.01101), [Project/Code](https://github.com/bearpaw/PyraNet))
 * Joint Multi-Person Pose Estimation and Semantic Part Segmentation ([PDF](https://arxiv.org/abs/1708.03383))
 * DeepPrior++: Improving Fast and Accurate 3D Hand Pose Estimation ([PDF](https://arxiv.org/abs/1708.08325))
+* Lifting from the Deep: Convolutional 3D Pose Estimation from a Single Image ([PDF](https://arxiv.org/abs/1701.00295))
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
