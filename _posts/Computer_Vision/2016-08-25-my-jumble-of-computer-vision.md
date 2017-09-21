@@ -469,6 +469,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Style2Vec: Representation Learning for Fashion Items from Style Sets ([PDF](https://arxiv.org/abs/1708.04014))
 * A Deep Multimodal Approach for Cold-start Music Recommendation ([PDF](https://arxiv.org/abs/1706.09739))
 * A Multilayer-Based Framework for Online Background Subtraction with Freely Moving Cameras ([PDF](https://arxiv.org/abs/1709.01140))
+* The Conditional Analogy GAN: Swapping Fashion Articles on People Images ([PDF](https://arxiv.org/abs/1709.04695))
 
 ## INTERESTING FINDS ##
 
