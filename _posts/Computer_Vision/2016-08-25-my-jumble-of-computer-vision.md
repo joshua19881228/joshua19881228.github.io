@@ -375,6 +375,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates ([PDF](https://arxiv.org/pdf/1506.01186.pdf), [Project/Code](https://github.com/lnsmith54/super-convergence))
 * Hierarchical loss for classification ([PDF](https://arxiv.org/abs/1709.01062))
 * Convolutional Gaussian Processes ([PDF](https://arxiv.org/abs/1709.01894), [Code/Project](https://github.com/markvdw/convgp))
+* Interpretable Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1710.00935))
 
 ### GAN ###
 
