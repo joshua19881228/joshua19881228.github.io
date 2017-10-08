@@ -158,6 +158,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Simple Online and Realtime Tracking with a Deep Association Metric ([PDF](https://arxiv.org/abs/1703.07402))
 * Learning Policies for Adaptive Tracking with Deep Feature Cascades ([PDF](https://arxiv.org/abs/1708.02973))
 * Recurrent Filter Learning for Visual Tracking ([PDF](https://arxiv.org/abs/1708.03874))
+* Tracking Persons-of-Interest via Unsupervised Representation Adaptation  ([PDF](https://arxiv.org/abs/1710.02139))
 
 ### POSE ESTIMATION ###
 
