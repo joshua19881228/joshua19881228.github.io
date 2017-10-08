@@ -69,6 +69,7 @@ I am going to maintain this page to record a few things about computer vision th
 * RON: Reverse Connection with Objectness Prior Networks for Object Detection ([PDF](https://arxiv.org/abs/1707.01691))
 * Soft Proposal Networks for Weakly Supervised Object Localization ([PDF](https://arxiv.org/pdf/1709.01829.pdf), [Project/Code](https://github.com/ZhouYanzhao/SPN/))
 * Feature-Fused SSD: Fast Detection for Small Objects ([PDF](https://arxiv.org/abs/1709.05054))
+* Light Cascaded Convolutional Neural Networks for Accurate Player Detection ([PDF](https://arxiv.org/abs/1709.10230))
 
 ### SEGMENTATION/PARSING ###
 
@@ -272,6 +273,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Real-Time Neural Style Transfer for Videos ([PDF](http://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Real-Time_Neural_Style_CVPR_2017_paper.pdf))
 * Creatism: A deep-learning photographer capable of creating professional work ([PDF](https://arxiv.org/abs/1707.03491))
 * Deep Image Harmonization ([PDF](https://arxiv.org/abs/1703.00069), [Project/Code](https://github.com/wasidennis/DeepHarmonization))
+* Neural Color Transfer between Images ([PDF](https://arxiv.org/abs/1710.00756))
 
 ### CNN AND DEEP LEARNING ###
 
@@ -376,6 +378,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Hierarchical loss for classification ([PDF](https://arxiv.org/abs/1709.01062))
 * Convolutional Gaussian Processes ([PDF](https://arxiv.org/abs/1709.01894), [Code/Project](https://github.com/markvdw/convgp))
 * Interpretable Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1710.00935))
+* What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision? ([PDF](https://arxiv.org/abs/1703.04977))
 
 ### GAN ###
 
@@ -403,6 +406,7 @@ I am going to maintain this page to record a few things about computer vision th
 * On the Effects of Batch and Weight Normalization in Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1704.03971), [Project/Code](https://github.com/stormraiser/GAN-weight-norm))
 * Aesthetic-Driven Image Enhancement by Adversarial Learning ([PDF](https://arxiv.org/abs/1707.05251))
 * VEEGAN: Reducing Mode Collapse in GANs using Implicit Variational Learning ([PDF](https://arxiv.org/abs/1705.07761), [Project/Code](https://akashgit.github.io/VEEGAN/))
+* The Conditional Analogy GAN: Swapping Fashion Articles on People Images ([PDF](https://arxiv.org/abs/1709.04695))
 
 ### MACHINE LEARNING ###
 
@@ -471,7 +475,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Style2Vec: Representation Learning for Fashion Items from Style Sets ([PDF](https://arxiv.org/abs/1708.04014))
 * A Deep Multimodal Approach for Cold-start Music Recommendation ([PDF](https://arxiv.org/abs/1706.09739))
 * A Multilayer-Based Framework for Online Background Subtraction with Freely Moving Cameras ([PDF](https://arxiv.org/abs/1709.01140))
-* The Conditional Analogy GAN: Swapping Fashion Articles on People Images ([PDF](https://arxiv.org/abs/1709.04695))
+* A self-organizing neural network architecture for learning human-object interactions ([PDF](https://arxiv.org/abs/1710.01916))
 
 ## INTERESTING FINDS ##
 
