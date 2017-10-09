@@ -656,7 +656,8 @@ I am going to maintain this page to record a few things about computer vision th
 * [Generative Adversarial Networks (GANs): Engine and Applications](https://blog.statsbot.co/generative-adversarial-networks-gans-engine-and-applications-f96291965b47)
 * [Compressing deep neural nets](http://machinethink.net/blog/compressing-deep-neural-nets/)
 * [Sigmoidal](https://sigmoidal.io/)
-	
+* [A Gentle Introduction to the Bag-of-Words Model](https://machinelearningmastery.com/gentle-introduction-bag-words-model/)
+
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
 * [Visual Tracker Benchmark](http://cvlab.hanyang.ac.kr/tracker_benchmark/index.html)
