@@ -70,6 +70,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Soft Proposal Networks for Weakly Supervised Object Localization ([PDF](https://arxiv.org/pdf/1709.01829.pdf), [Project/Code](https://github.com/ZhouYanzhao/SPN/))
 * Feature-Fused SSD: Fast Detection for Small Objects ([PDF](https://arxiv.org/abs/1709.05054))
 * Light Cascaded Convolutional Neural Networks for Accurate Player Detection ([PDF](https://arxiv.org/abs/1709.10230))
+* Personalized Saliency and its Prediction ([PDF](https://arxiv.org/abs/1710.03011))
 
 ### SEGMENTATION/PARSING ###
 
@@ -173,6 +174,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Joint Multi-Person Pose Estimation and Semantic Part Segmentation ([PDF](https://arxiv.org/abs/1708.03383))
 * DeepPrior++: Improving Fast and Accurate 3D Hand Pose Estimation ([PDF](https://arxiv.org/abs/1708.08325))
 * Lifting from the Deep: Convolutional 3D Pose Estimation from a Single Image ([PDF](https://arxiv.org/abs/1701.00295))
+* Human Pose Regression by Combining Indirect Part Detection and Contextual Information ([PDF](https://arxiv.org/abs/1710.02322))
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
@@ -247,6 +249,8 @@ I am going to maintain this page to record a few things about computer vision th
 * SSH: Single Stage Headless Face Detector ([PDF](https://arxiv.org/abs/1708.03979))
 * AffectNet: A Database for Facial Expression, Valence, and Arousal Computing in the Wild ([PDF](https://arxiv.org/abs/1708.03985))
 * SphereFace: Deep Hypersphere Embedding for Face Recognition ([PDF](https://arxiv.org/abs/1704.08063), [Project/Code](https://github.com/wy1iu/sphereface))
+* Age Group and Gender Estimation in the Wild with Deep RoR Architecture ([PDF](https://arxiv.org/abs/1710.02985))
+* Island Loss for Learning Discriminative Features in Facial Expression Recognition ([PDF](https://arxiv.org/abs/1710.03144))
 
 ### OPTICAL FLOW ###
 
@@ -275,6 +279,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Creatism: A deep-learning photographer capable of creating professional work ([PDF](https://arxiv.org/abs/1707.03491))
 * Deep Image Harmonization ([PDF](https://arxiv.org/abs/1703.00069), [Project/Code](https://github.com/wasidennis/DeepHarmonization))
 * Neural Color Transfer between Images ([PDF](https://arxiv.org/abs/1710.00756))
+* Deeper, Broader and Artier Domain Generalization ([PDF](https://arxiv.org/abs/1710.03077))
 
 ### CNN AND DEEP LEARNING ###
 
@@ -380,6 +385,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Convolutional Gaussian Processes ([PDF](https://arxiv.org/abs/1709.01894), [Code/Project](https://github.com/markvdw/convgp))
 * Interpretable Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1710.00935))
 * What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision? ([PDF](https://arxiv.org/abs/1703.04977))
+* Porcupine Neural Networks: (Almost) All Local Optima are Global ([PDF](https://arxiv.org/abs/1710.02196))
 
 ### GAN ###
 
@@ -431,6 +437,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Squeeze-and-Excitation Networks ([PDF](https://arxiv.org/abs/1709.01507))
 * Domain-adaptive deep network compression ([PDF](https://arxiv.org/abs/1709.01041))
 * Embedded Binarized Neural Networks ([PDF](https://arxiv.org/abs/1709.02260))
+* Keynote: Small Neural Nets Are Beautiful: Enabling Embedded Systems with Small Deep-Neural-Network Architectures ([PDF](https://arxiv.org/abs/1710.02759))
 
 ### ReID ###
 
