@@ -136,6 +136,7 @@ I am going to maintain this page to record a few things about computer vision th
 * ICNet for Real-Time Semantic Segmentation on High-Resolution Images ([PDF](https://arxiv.org/abs/1704.08545), [Project/Code](https://hszhao.github.io/projects/icnet/))
 * Pyramid Scene Parsing Network ([PDF](https://arxiv.org/abs/1612.01105), [Project/Code](https://github.com/hszhao/PSPNet), [Reading Note](https://joshua19881228.github.io/2017-09-19-PSPNet/))
 * Learning to Segment Instances in Videos with Spatial Propagation Network ([PDF](http://davischallenge.org/challenge2017/papers/DAVIS-Challenge-6th-Team.pdf), [Project/Code](https://github.com/JingchunCheng/Seg-with-SPN))
+* Learning Affinity via Spatial Propagation Networks ([PDF](https://arxiv.org/abs/1710.01020))
 
 ### TRACKING ###
 
