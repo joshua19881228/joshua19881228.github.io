@@ -498,9 +498,11 @@ I am going to maintain this page to record a few things about computer vision th
 * [Awesome Deep Vision](https://github.com/kjw0612/awesome-deep-vision)
     A curated list of deep learning resources for computer vision.
 * [Awesome MXNet](https://github.com/dmlc/mxnet/blob/master/example/README.md)
-    This page contains a curated list of awesome MXnet examples, tutorials and blogs. 
+    This page contains a curated list of awesome MXnet examples, tutorials and blogs.
 * [Awesome TensorFlow](https://github.com/jtoy/awesome-tensorflow)
     A curated list of awesome TensorFlow experiments, libraries, and projects.
+* [gans-awesome-applications](https://github.com/nashory/gans-awesome-applications)
+    Curated list of awesome GAN applications and demonstrations.
 * [Deep Reinforcement Learning survey](https://github.com/andrewliao11/Deep-Reinforcement-Learning-Survey)
     This paper list is a bit different from others. The author puts some opinion and summary on it. However, to understand the whole paper, you still have to read it by yourself!
 * [TensorFlow 官方文档中文版](https://github.com/jikexueyuanwiki/tensorflow-zh)
