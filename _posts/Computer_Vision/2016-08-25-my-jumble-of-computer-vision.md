@@ -71,6 +71,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Feature-Fused SSD: Fast Detection for Small Objects ([PDF](https://arxiv.org/abs/1709.05054))
 * Light Cascaded Convolutional Neural Networks for Accurate Player Detection ([PDF](https://arxiv.org/abs/1709.10230))
 * Personalized Saliency and its Prediction ([PDF](https://arxiv.org/abs/1710.03011))
+* WeText: Scene Text Detection under Weak Supervision ([PDF](https://arxiv.org/abs/1710.04826))
 
 ### SEGMENTATION/PARSING ###
 
