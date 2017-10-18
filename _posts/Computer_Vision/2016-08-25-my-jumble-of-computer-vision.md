@@ -389,6 +389,8 @@ I am going to maintain this page to record a few things about computer vision th
 * Interpretable Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1710.00935))
 * What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision? ([PDF](https://arxiv.org/abs/1703.04977))
 * Porcupine Neural Networks: (Almost) All Local Optima are Global ([PDF](https://arxiv.org/abs/1710.02196))
+* Generalization in Deep Learning ([PDF](https://arxiv.org/abs/1710.05468))
+* A systematic study of the class imbalance problem in convolutional neural networks ([PDF](https://arxiv.org/abs/1710.05381))
 
 ### GAN ###
 
@@ -417,6 +419,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Aesthetic-Driven Image Enhancement by Adversarial Learning ([PDF](https://arxiv.org/abs/1707.05251))
 * VEEGAN: Reducing Mode Collapse in GANs using Implicit Variational Learning ([PDF](https://arxiv.org/abs/1705.07761), [Project/Code](https://akashgit.github.io/VEEGAN/))
 * The Conditional Analogy GAN: Swapping Fashion Articles on People Images ([PDF](https://arxiv.org/abs/1709.04695))
+* MoCoGAN: Decomposing Motion and Content for Video Generation ([PDF](https://arxiv.org/abs/1707.04993), [Project/Code](https://github.com/sergeytulyakov/mocogan))
 
 ### MACHINE LEARNING ###
 
