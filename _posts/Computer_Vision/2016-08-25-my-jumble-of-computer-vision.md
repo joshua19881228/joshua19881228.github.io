@@ -417,8 +417,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Pose Guided Person Image Generation ([PDF](https://arxiv.org/abs/1705.09368))
 * On the Effects of Batch and Weight Normalization in Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1704.03971), [Project/Code](https://github.com/stormraiser/GAN-weight-norm))
 * Aesthetic-Driven Image Enhancement by Adversarial Learning ([PDF](https://arxiv.org/abs/1707.05251))
-* VEEGAN: Reducing Mode Collapse in GANs using Implicit Variational Learning ([PDF](https://arxiv.org/abs/1705.07761), [Project/Code](https://akashgit.github.io/VEEGAN/))
-* The Conditional Analogy GAN: Swapping Fashion Articles on People Images ([PDF](https://arxiv.org/abs/1709.04695))
+* VEEGAN: Reducing Mode Collapse in GANs using Implicit Variational Learning ([PDF](https://arxiv.org/abs/1705.07761), [Project/Code](https://akashgit.github.io/VEEGAN/)
 * MoCoGAN: Decomposing Motion and Content for Video Generation ([PDF](https://arxiv.org/abs/1707.04993), [Project/Code](https://github.com/sergeytulyakov/mocogan))
 * Generative Adversarial Networks: An Overview ([https://arxiv.org/abs/1710.07035])
 
@@ -457,6 +456,13 @@ I am going to maintain this page to record a few things about computer vision th
 * Divide and Fuse: A Re-ranking Approach for Person Re-identification ([PDF](https://arxiv.org/abs/1708.04169))
 * Learning Deep Context-aware Features over Body and Latent Parts for Person Re-identification ([PDF](https://arxiv.org/abs/1710.06555))
 
+### Fashion ###
+
+* Be Your Own Prada: Fashion Synthesis with Structural Coherence ([PDF](https://arxiv.org/abs/1710.07346), [Project/Code](http://mmlab.ie.cuhk.edu.hk/projects/FashionGAN/))
+* Style2Vec: Representation Learning for Fashion Items from Style Sets ([PDF](https://arxiv.org/abs/1708.04014))
+* Dress like a Star: Retrieving Fashion Products from Videos ([PDF](https://arxiv.org/abs/1710.07198))
+* The Conditional Analogy GAN: Swapping Fashion Articles on People Images ([PDF](https://arxiv.org/abs/1709.04695))
+
 ### OTHER ###
 
 * Learning Aligned Cross-Modal Representations from Weakly Aligned Data ([PDF](http://cmplaces.csail.mit.edu/content/paper.pdf), [Project/Code](http://cmplaces.csail.mit.edu/))
@@ -488,11 +494,9 @@ I am going to maintain this page to record a few things about computer vision th
 * Understanding Black-box Predictions via Influence Functions ([PDF](https://arxiv.org/abs/1703.04730))
 * Learning a Repression Network for Precise Vehicle Search ([PDF](https://arxiv.org/abs/1708.02386))
 * Visual Graph Mining ([PDF](https://arxiv.org/abs/1708.03921))
-* Style2Vec: Representation Learning for Fashion Items from Style Sets ([PDF](https://arxiv.org/abs/1708.04014))
 * A Deep Multimodal Approach for Cold-start Music Recommendation ([PDF](https://arxiv.org/abs/1706.09739))
 * A Multilayer-Based Framework for Online Background Subtraction with Freely Moving Cameras ([PDF](https://arxiv.org/abs/1709.01140))
 * A self-organizing neural network architecture for learning human-object interactions ([PDF](https://arxiv.org/abs/1710.01916))
-* Dress like a Star: Retrieving Fashion Products from Videos ([PDF](https://arxiv.org/abs/1710.07198))
 
 ## INTERESTING FINDS ##
 
