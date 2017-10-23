@@ -420,6 +420,7 @@ I am going to maintain this page to record a few things about computer vision th
 * VEEGAN: Reducing Mode Collapse in GANs using Implicit Variational Learning ([PDF](https://arxiv.org/abs/1705.07761), [Project/Code](https://akashgit.github.io/VEEGAN/))
 * The Conditional Analogy GAN: Swapping Fashion Articles on People Images ([PDF](https://arxiv.org/abs/1709.04695))
 * MoCoGAN: Decomposing Motion and Content for Video Generation ([PDF](https://arxiv.org/abs/1707.04993), [Project/Code](https://github.com/sergeytulyakov/mocogan))
+* Generative Adversarial Networks: An Overview ([https://arxiv.org/abs/1710.07035])
 
 ### MACHINE LEARNING ###
 
@@ -454,6 +455,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Unsupervised Person Re-identification: Clustering and Fine-tuning ([PDF](https://arxiv.org/abs/1705.10444), [Project/Code](https://github.com/hehefan/Unsupervised-Person-Re-identification-Clustering-and-Fine-tuning))
 * Jointly Attentive Spatial-Temporal Pooling Networks for Video-based Person Re-Identification ([PDF](https://arxiv.org/abs/1708.02286))
 * Divide and Fuse: A Re-ranking Approach for Person Re-identification ([PDF](https://arxiv.org/abs/1708.04169))
+* Learning Deep Context-aware Features over Body and Latent Parts for Person Re-identification ([PDF](https://arxiv.org/abs/1710.06555))
 
 ### OTHER ###
 
@@ -490,6 +492,7 @@ I am going to maintain this page to record a few things about computer vision th
 * A Deep Multimodal Approach for Cold-start Music Recommendation ([PDF](https://arxiv.org/abs/1706.09739))
 * A Multilayer-Based Framework for Online Background Subtraction with Freely Moving Cameras ([PDF](https://arxiv.org/abs/1709.01140))
 * A self-organizing neural network architecture for learning human-object interactions ([PDF](https://arxiv.org/abs/1710.01916))
+* Dress like a Star: Retrieving Fashion Products from Videos ([PDF](https://arxiv.org/abs/1710.07198))
 
 ## INTERESTING FINDS ##
 
