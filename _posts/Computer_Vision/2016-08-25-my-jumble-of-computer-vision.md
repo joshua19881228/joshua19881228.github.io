@@ -391,6 +391,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Porcupine Neural Networks: (Almost) All Local Optima are Global ([PDF](https://arxiv.org/abs/1710.02196))
 * Generalization in Deep Learning ([PDF](https://arxiv.org/abs/1710.05468))
 * A systematic study of the class imbalance problem in convolutional neural networks ([PDF](https://arxiv.org/abs/1710.05381))
+* Interpretable Transformations with Encoder-Decoder Networks ([PDF](https://arxiv.org/abs/1710.07307), [Project/Code](http://visual.cs.ucl.ac.uk/pubs/interpTransform/))
 
 ### GAN ###
 
@@ -526,6 +527,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [Adversarial Nets Papers](https://github.com/chihyaoma/AdversarialNetsPapers)
 * [cv-tricks.com](http://cv-tricks.com/)
 * [Find deep learning models for your mobile platform](http://mlmodelzoo.com/)
+* [ICCV 2017 Open Access Repository](http://openaccess.thecvf.com/ICCV2017.py)
 
 ### PROJECTS ###
 
