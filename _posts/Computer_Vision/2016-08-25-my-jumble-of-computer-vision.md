@@ -162,7 +162,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Learning Policies for Adaptive Tracking with Deep Feature Cascades ([PDF](https://arxiv.org/abs/1708.02973))
 * Recurrent Filter Learning for Visual Tracking ([PDF](https://arxiv.org/abs/1708.03874))
 * Tracking Persons-of-Interest via Unsupervised Representation Adaptation  ([PDF](https://arxiv.org/abs/1710.02139))
-* Detect to Track and Track to Detect ([PDF](https://arxiv.org/abs/1710.03958), [Project/Code](https://www.robots.ox.ac.uk/~vgg/research/detect-track/))
+* Detect to Track and Track to Detect ([PDF](https://arxiv.org/abs/1710.03958), [Project/Code](https://www.robots.ox.ac.uk/~vgg/research/detect-track/), [Reading Note](https://joshua19881228.github.io/2017-10-25-D2TT2D/))
 
 ### POSE ESTIMATION ###
 
