@@ -456,6 +456,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Jointly Attentive Spatial-Temporal Pooling Networks for Video-based Person Re-Identification ([PDF](https://arxiv.org/abs/1708.02286))
 * Divide and Fuse: A Re-ranking Approach for Person Re-identification ([PDF](https://arxiv.org/abs/1708.04169))
 * Learning Deep Context-aware Features over Body and Latent Parts for Person Re-identification ([PDF](https://arxiv.org/abs/1710.06555))
+* HydraPlus-Net: Attentive Deep Features for Pedestrian Analysis ([PDF](https://arxiv.org/abs/1709.09930), [Project/Code](https://github.com/xh-liu/HydraPlus-Net))
 
 ### Fashion ###
 
