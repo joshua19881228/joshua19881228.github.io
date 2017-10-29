@@ -229,6 +229,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Fast-Forward Video Based on Semantic Extraction ([PDF](https://arxiv.org/abs/1708.04160))
 * Emotion Detection on TV Show Transcripts with Sequence-based Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1708.04299))
 * ConvNet Architecture Search for Spatiotemporal Feature Learning ([PDF](https://arxiv.org/abs/1708.05038), [Project/Code](http://vlg.cs.dartmouth.edu/c3d/), [Github](https://github.com/facebook/C3D))
+* Fully Context-Aware Video Prediction ([PDF](https://arxiv.org/abs/1710.08518))
 
 ### FACE ###
 
@@ -254,6 +255,7 @@ I am going to maintain this page to record a few things about computer vision th
 * SphereFace: Deep Hypersphere Embedding for Face Recognition ([PDF](https://arxiv.org/abs/1704.08063), [Project/Code](https://github.com/wy1iu/sphereface))
 * Age Group and Gender Estimation in the Wild with Deep RoR Architecture ([PDF](https://arxiv.org/abs/1710.02985))
 * Island Loss for Learning Discriminative Features in Facial Expression Recognition ([PDF](https://arxiv.org/abs/1710.03144))
+* Temporal Non-Volume Preserving Approach to Facial Age-Progression and Age-Invariant Face Recognition ([PDF](https://arxiv.org/abs/1703.08617))
 
 ### OPTICAL FLOW ###
 
@@ -392,6 +394,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Generalization in Deep Learning ([PDF](https://arxiv.org/abs/1710.05468))
 * A systematic study of the class imbalance problem in convolutional neural networks ([PDF](https://arxiv.org/abs/1710.05381))
 * Interpretable Transformations with Encoder-Decoder Networks ([PDF](https://arxiv.org/abs/1710.07307), [Project/Code](http://visual.cs.ucl.ac.uk/pubs/interpTransform/))
+* One pixel attack for fooling deep neural networks ([PDF](https://arxiv.org/abs/1710.08864))
 
 ### GAN ###
 
@@ -445,6 +448,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Domain-adaptive deep network compression ([PDF](https://arxiv.org/abs/1709.01041))
 * Embedded Binarized Neural Networks ([PDF](https://arxiv.org/abs/1709.02260))
 * Keynote: Small Neural Nets Are Beautiful: Enabling Embedded Systems with Small Deep-Neural-Network Architectures ([PDF](https://arxiv.org/abs/1710.02759))
+* A Survey of Model Compression and Acceleration for Deep Neural Networks ([https://arxiv.org/abs/1710.09282])
 
 ### ReID ###
 
