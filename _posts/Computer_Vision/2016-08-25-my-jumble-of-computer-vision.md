@@ -531,7 +531,6 @@ I am going to maintain this page to record a few things about computer vision th
     Object tracking benchmark
 * [Adversarial Nets Papers](https://github.com/zhangqianhui/AdversarialNetsPapers)
 * [Creating Human-Level AI](https://www.youtube.com/watch?v=ZHYXp3gJCaI)
-* [Adversarial Nets Papers](https://github.com/chihyaoma/AdversarialNetsPapers)
 * [cv-tricks.com](http://cv-tricks.com/)
 * [Find deep learning models for your mobile platform](http://mlmodelzoo.com/)
 * [ICCV 2017 Open Access Repository](http://openaccess.thecvf.com/ICCV2017.py)
