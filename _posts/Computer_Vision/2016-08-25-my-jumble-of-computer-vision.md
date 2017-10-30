@@ -179,6 +179,7 @@ I am going to maintain this page to record a few things about computer vision th
 * DeepPrior++: Improving Fast and Accurate 3D Hand Pose Estimation ([PDF](https://arxiv.org/abs/1708.08325))
 * Lifting from the Deep: Convolutional 3D Pose Estimation from a Single Image ([PDF](https://arxiv.org/abs/1701.00295))
 * Human Pose Regression by Combining Indirect Part Detection and Contextual Information ([PDF](https://arxiv.org/abs/1710.02322))
+* Dual Path Networks for Multi-Person Human Pose Estimation ([PDF](https://arxiv.org/abs/1710.10192))
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
@@ -718,6 +719,7 @@ I am going to maintain this page to record a few things about computer vision th
     >Person re-identification has drawn intensive attention in the computer vision society in recent decades. As far as we know, this page collects all public datasets that have been tested by person re-identification algorithms.
 * [MIT Saliency Benchmark](http://saliency.mit.edu/home.html)
 * [How far are we from solving the 2D & 3D Face Alignment problem? (and a dataset of 230,000 3D facial landmarks)](https://www.adrianbulat.com/face-alignment/)
+* [PoseTrack: A Benchmark for Human Pose Estimation and Tracking](https://posetrack.net/workshops/iccv2017/posetrack-challenge-results.html)
 
 ### TOOLKITS ###
 
