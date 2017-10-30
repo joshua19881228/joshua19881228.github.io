@@ -72,6 +72,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Light Cascaded Convolutional Neural Networks for Accurate Player Detection ([PDF](https://arxiv.org/abs/1709.10230))
 * Personalized Saliency and its Prediction ([PDF](https://arxiv.org/abs/1710.03011))
 * WeText: Scene Text Detection under Weak Supervision ([PDF](https://arxiv.org/abs/1710.04826))
+* VPGNet: Vanishing Point Guided Network for Lane and Road Marking Detection and Recognition ([PDF](https://arxiv.org/abs/1710.06288), [Project/Code](https://github.com/SeokjuLee/VPGNet))
 
 ### SEGMENTATION/PARSING ###
 
