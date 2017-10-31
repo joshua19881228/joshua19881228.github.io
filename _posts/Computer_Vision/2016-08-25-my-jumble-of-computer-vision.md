@@ -15,6 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Cascade Region Proposal and Global Context for Deep Object Detection ([PDF](https://arxiv.org/abs/1710.10749))
 * PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection ([PDF](http://arxiv.org/abs/1608.08021), [Project/Code](https://github.com/sanghoon/pva-faster-rcnn), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection_137/))
 * Inside-Outside Net: Detecting Objects in Context with Skip Pooling and Recurrent Neural Networks ([PDF](http://arxiv.org/abs/1512.04143), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-inside-outside-net-detecting-objects-in-context-with-skip-pooling-and-recurrent-neural-networks_111/))
 * Object Detection from Video Tubelets with Convolutional Neural Networks ([PDF](http://arxiv.org/abs/1604.04053), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-object-detection-from-video-tubelets-with-convolutional-neural-networks_109/))
@@ -39,7 +40,6 @@ I am going to maintain this page to record a few things about computer vision th
 * Finding Tiny Faces ([PDF](https://arxiv.org/abs/1612.04402v1))
 * Beyond Skip Connections: Top-Down Modulation for Object Detection ([PDF](https://arxiv.org/abs/1612.06851), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-beyond-skip-connections-top-down-modulation-for-object-detection_184/))
 * YOLO9000: Better, Faster, Stronger ([PDF](https://arxiv.org/abs/1612.08242), [Project/Code](http://pjreddie.com/darknet/yolo/), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-yolo9000-better-faster-stronger_193/))
-* SalGAN: Visual Saliency Prediction with Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1701.01081), [Project/Code](https://github.com/imatge-upc/saliency-salgan-2017))
 * Quantitative Analysis of Automatic Image Cropping Algorithms: A Dataset and Comparative Study ([PDF](https://arxiv.org/abs/1701.01480))
 * To Boost or Not to Boost? On the Limits of Boosted Trees for Object Detection ([PDF](https://arxiv.org/abs/1701.01692))
 * Pixel Objectness ([PDF](https://arxiv.org/abs/1701.05349), [Project/Code](http://vision.cs.utexas.edu/projects/pixelobjectness/), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-pixel-objectness_196/))
@@ -400,6 +400,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* StackGAN++: Realistic Image Synthesis with Stacked Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1710.10916))
 * Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1406.2661))
 * Stacked Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1612.04357))
 * Unsupervised Pixel-Level Domain Adaptation with Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1612.05424))
@@ -425,7 +426,8 @@ I am going to maintain this page to record a few things about computer vision th
 * Aesthetic-Driven Image Enhancement by Adversarial Learning ([PDF](https://arxiv.org/abs/1707.05251))
 * VEEGAN: Reducing Mode Collapse in GANs using Implicit Variational Learning ([PDF](https://arxiv.org/abs/1705.07761), [Project/Code](https://akashgit.github.io/VEEGAN/)
 * MoCoGAN: Decomposing Motion and Content for Video Generation ([PDF](https://arxiv.org/abs/1707.04993), [Project/Code](https://github.com/sergeytulyakov/mocogan))
-* Generative Adversarial Networks: An Overview ([https://arxiv.org/abs/1710.07035])
+* Generative Adversarial Networks: An Overview ((PDF)[https://arxiv.org/abs/1710.07035])
+* SalGAN: Visual Saliency Prediction with Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1701.01081), [Project/Code](https://github.com/imatge-upc/saliency-salgan-2017))
 
 ### MACHINE LEARNING ###
 
