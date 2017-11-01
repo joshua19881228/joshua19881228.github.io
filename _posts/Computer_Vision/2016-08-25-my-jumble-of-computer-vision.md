@@ -468,7 +468,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FASHION ###
 
-* Be Your Own Prada: Fashion Synthesis with Structural Coherence ([PDF](https://arxiv.org/abs/1710.07346), [Project/Code](http://mmlab.ie.cuhk.edu.hk/projects/FashionGAN/), [Project/Code](https://joshua19881228.github.io/2017-10-31-DeepFashion/))
+* Be Your Own Prada: Fashion Synthesis with Structural Coherence ([PDF](https://arxiv.org/abs/1710.07346), [Project/Code](http://mmlab.ie.cuhk.edu.hk/projects/FashionGAN/), [Reading Note](https://joshua19881228.github.io/2017-10-31-DeepFashion/))
 * Style2Vec: Representation Learning for Fashion Items from Style Sets ([PDF](https://arxiv.org/abs/1708.04014))
 * Dress like a Star: Retrieving Fashion Products from Videos ([PDF](https://arxiv.org/abs/1710.07198))
 * The Conditional Analogy GAN: Swapping Fashion Articles on People Images ([PDF](https://arxiv.org/abs/1709.04695))
