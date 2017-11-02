@@ -113,7 +113,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Adversarial Examples for Semantic Image Segmentation ([PDF](https://arxiv.org/abs/1703.01101))
 * Large Kernel Matters -- Improve Semantic Segmentation by Global Convolutional Network ([PDF](https://arxiv.org/abs/1703.02719))
 * Deep Image Matting ([PDF](https://arxiv.org/abs/1703.03872), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-deep-image-matting_217/))
-* Mask R-CNN ([PDF](https://arxiv.org/abs/1703.06870), [Caffe Implementation](https://github.com/jasjeetIM/Mask-RCNN), [TuSimple Implementation on MXNet](https://github.com/TuSimple/mx-maskrcnn), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-mask-r-cnn_226/))
+* Mask R-CNN ([PDF](https://arxiv.org/abs/1703.06870), [Caffe Implementation](https://github.com/jasjeetIM/Mask-RCNN), [TuSimple Implementation on MXNet](https://github.com/TuSimple/mx-maskrcnn), [TensorFlow Implementation](https://github.com/matterport/Mask_RCNN), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-mask-r-cnn_226/))
 * Predicting Deeper into the Future of Semantic Segmentation ([PDF](https://arxiv.org/abs/1703.07684))
 * Convolutional Oriented Boundaries: From Image Segmentation to High-Level Tasks ([PDF](https://arxiv.org/abs/1701.04658), [Project/Code](http://www.vision.ee.ethz.ch/~cvlsegmentation/cob/))
 * One-Shot Video Object Segmentation ([PDF](https://arxiv.org/abs/1611.05198), [Project/Code](https://github.com/kmaninis/OSVOS-caffe))
@@ -290,6 +290,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Guarding Against Adversarial Domain Shifts with Counterfactual Regularization ([PDF](https://arxiv.org/abs/1710.11469))
 * UberNet: Training a 'Universal' Convolutional Neural Network for Low-, Mid-, and High-Level Vision using Diverse Datasets and Limited Memory ([PDF](http://arxiv.org/abs/1609.02132), [Project/Code](http://cvn.ecp.fr/ubernet/))
 * What makes ImageNet good for transfer learning? ([PDF](http://arxiv.org/abs/1608.08614), [Project/Code](http://minyounghuh.com/papers/analysis/), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-what-makes-imagenet-good-for-transfer-learning_138/))
 
@@ -475,6 +476,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* LIFT: Learned Invariant Feature Transform ([PDF](https://arxiv.org/abs/1603.09114))
 * Learning Aligned Cross-Modal Representations from Weakly Aligned Data ([PDF](http://cmplaces.csail.mit.edu/content/paper.pdf), [Project/Code](http://cmplaces.csail.mit.edu/))
 * Multi-Task Curriculum Transfer Deep Learning of Clothing Attributes ([PDF](https://arxiv.org/abs/1610.03670))
 * End-to-end Learning of Deep Visual Representations for Image Retrieval ([PDF](https://arxiv.org/abs/1610.07940))
