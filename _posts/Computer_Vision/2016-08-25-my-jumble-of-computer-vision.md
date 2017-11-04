@@ -290,6 +290,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Don't Decay the Learning Rate, Increase the Batch Size ([PDF](https://arxiv.org/abs/1711.00489))
 * Guarding Against Adversarial Domain Shifts with Counterfactual Regularization ([PDF](https://arxiv.org/abs/1710.11469))
 * UberNet: Training a 'Universal' Convolutional Neural Network for Low-, Mid-, and High-Level Vision using Diverse Datasets and Limited Memory ([PDF](http://arxiv.org/abs/1609.02132), [Project/Code](http://cvn.ecp.fr/ubernet/))
 * What makes ImageNet good for transfer learning? ([PDF](http://arxiv.org/abs/1608.08614), [Project/Code](http://minyounghuh.com/papers/analysis/), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-what-makes-imagenet-good-for-transfer-learning_138/))
@@ -401,6 +402,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Semantically Decomposing the Latent Spaces of Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1705.07904))
+* Multi-View Data Generation Without View Supervision ([PDF](https://arxiv.org/abs/1711.00305))
 * StackGAN++: Realistic Image Synthesis with Stacked Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1710.10916))
 * Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1406.2661))
 * Stacked Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1612.04357))
