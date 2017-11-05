@@ -402,6 +402,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Data Augmentation in Classification using GAN ([PDF](https://arxiv.org/abs/1711.00648))
 * Semantically Decomposing the Latent Spaces of Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1705.07904))
 * Multi-View Data Generation Without View Supervision ([PDF](https://arxiv.org/abs/1711.00305))
 * StackGAN++: Realistic Image Synthesis with Stacked Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1710.10916))
