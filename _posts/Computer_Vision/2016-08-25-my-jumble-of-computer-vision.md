@@ -290,6 +290,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Log-DenseNet: How to Sparsify a DenseNet ([PDF](https://arxiv.org/abs/1711.00002))
 * Don't Decay the Learning Rate, Increase the Batch Size ([PDF](https://arxiv.org/abs/1711.00489))
 * Guarding Against Adversarial Domain Shifts with Counterfactual Regularization ([PDF](https://arxiv.org/abs/1710.11469))
 * UberNet: Training a 'Universal' Convolutional Neural Network for Low-, Mid-, and High-Level Vision using Diverse Datasets and Limited Memory ([PDF](http://arxiv.org/abs/1609.02132), [Project/Code](http://cvn.ecp.fr/ubernet/))
@@ -402,6 +403,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Flexible Prior Distributions for Deep Generative Models ([PDF](https://arxiv.org/abs/1710.11383))
 * Data Augmentation in Classification using GAN ([PDF](https://arxiv.org/abs/1711.00648))
 * Semantically Decomposing the Latent Spaces of Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1705.07904))
 * Multi-View Data Generation Without View Supervision ([PDF](https://arxiv.org/abs/1711.00305))
@@ -480,6 +482,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* Semantic Image Retrieval via Active Grounding of Visual Situations ([PDF](https://arxiv.org/abs/1711.00088))
 * LIFT: Learned Invariant Feature Transform ([PDF](https://arxiv.org/abs/1603.09114))
 * Learning Aligned Cross-Modal Representations from Weakly Aligned Data ([PDF](http://cmplaces.csail.mit.edu/content/paper.pdf), [Project/Code](http://cmplaces.csail.mit.edu/))
 * Multi-Task Curriculum Transfer Deep Learning of Clothing Attributes ([PDF](https://arxiv.org/abs/1610.03670))
