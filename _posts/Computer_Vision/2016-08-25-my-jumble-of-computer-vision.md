@@ -290,7 +290,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
-* Log-DenseNet: How to Sparsify a DenseNet ([PDF](https://arxiv.org/abs/1711.00002))
+* Log-DenseNet: How to Sparsify a DenseNet ([PDF](https://arxiv.org/abs/1711.00002g))
 * Don't Decay the Learning Rate, Increase the Batch Size ([PDF](https://arxiv.org/abs/1711.00489))
 * Guarding Against Adversarial Domain Shifts with Counterfactual Regularization ([PDF](https://arxiv.org/abs/1710.11469))
 * UberNet: Training a 'Universal' Convolutional Neural Network for Low-, Mid-, and High-Level Vision using Diverse Datasets and Limited Memory ([PDF](http://arxiv.org/abs/1609.02132), [Project/Code](http://cvn.ecp.fr/ubernet/))
