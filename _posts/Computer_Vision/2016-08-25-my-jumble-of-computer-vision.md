@@ -404,6 +404,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Bayesian GAN ([PDF](https://arxiv.org/abs/1705.09558), [Project/Code](https://github.com//andrewgordonwilson/bayesgan/))
+* Metric Learning-based Generative Adversarial Network ([PDF](https://arxiv.org/abs/1711.02792))
 * Flexible Prior Distributions for Deep Generative Models ([PDF](https://arxiv.org/abs/1710.11383))
 * Data Augmentation in Classification using GAN ([PDF](https://arxiv.org/abs/1711.00648))
 * Semantically Decomposing the Latent Spaces of Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1705.07904))
