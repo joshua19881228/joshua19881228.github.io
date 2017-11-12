@@ -267,6 +267,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### IMAGE PROCESSING ###
 
+* Real-time video stabilization and mosaicking for monitoring and surveillance ([PDF](http://ieeexplore.ieee.org/document/7886813/?reload=true), [Project/Code](https://github.com//a-jahani/Real-time-Video-Mosaic))
 * Learning Recursive Filter for Low-Level Vision via a Hybrid Neural Network ([PDF](http://faculty.ucmerced.edu/mhyang/papers/eccv16_rnn_filter.pdf), [Project/Code](https://github.com/Liusifei/caffe-lowlevel))
 * Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding([PDF](https://arxiv.org/abs/1510.00149), [Project/Code](https://github.com/songhan/Deep-Compression-AlexNet))
 * A Learned Representation For Artistic Style([PDF](https://arxiv.org/abs/1610.07629))
