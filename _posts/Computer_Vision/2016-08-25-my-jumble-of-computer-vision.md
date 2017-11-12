@@ -405,6 +405,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Progressive Growing of GANs for Improved Quality, Stability, and Variation ([PDF](https://arxiv.org/abs/1710.10196), [Project/Code](https://github.com/tkarras/progressive_growing_of_gans), [Torch](https://github.com/nashory/progressive-growing-torch))
 * Bayesian GAN ([PDF](https://arxiv.org/abs/1705.09558), [Project/Code](https://github.com//andrewgordonwilson/bayesgan/))
 * Metric Learning-based Generative Adversarial Network ([PDF](https://arxiv.org/abs/1711.02792))
 * Flexible Prior Distributions for Deep Generative Models ([PDF](https://arxiv.org/abs/1710.11383))
