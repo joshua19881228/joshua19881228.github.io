@@ -1,5 +1,5 @@
 ---
-title: "Reading Note:  Be Your Own Prada: Fashion Synthesis with Structural Coherence"
+title: "Reading Note: Be Your Own Prada: Fashion Synthesis with Structural Coherence"
 category: ["Computer Vision"]
 tag: ["Reading Note", "CNN", "GAN", "Fashion"]
 ---
