@@ -407,7 +407,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 * Data Augmentation Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1711.04340))
 * Conditional Autoencoders with Adversarial Information Factorization ([PDF](https://arxiv.org/abs/1711.05175), [Project/Code](https://github.com/ToniCreswell/attribute-cVAEGAN))
-* Progressive Growing of GANs for Improved Quality, Stability, and Variation ([PDF](https://arxiv.org/abs/1710.10196), [Project/Code](https://github.com/tkarras/progressive_growing_of_gans), [Torch](https://github.com/nashory/progressive-growing-torch), [Reading Note](https://joshua19881228.github.io/2017-11-12-ProgressiveGrowing/))
+* Progressive Growing of GANs for Improved Quality, Stability, and Variation ([PDF](https://arxiv.org/abs/1710.10196), [Project/Code](https://github.com/tkarras/progressive_growing_of_gans), [Torch](https://github.com/nashory/progressive-growing-torch), [PyTorch](https://github.com//github-pengge/PyTorch-progressive_growing_of_gans), [Reading Note](https://joshua19881228.github.io/2017-11-12-ProgressiveGrowing/))
 * Bayesian GAN ([PDF](https://arxiv.org/abs/1705.09558), [Project/Code](https://github.com//andrewgordonwilson/bayesgan/))
 * Metric Learning-based Generative Adversarial Network ([PDF](https://arxiv.org/abs/1711.02792))
 * Flexible Prior Distributions for Deep Generative Models ([PDF](https://arxiv.org/abs/1710.11383))
