@@ -15,6 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Interpretable R-CNN ([PDF](https://arxiv.org/abs/1711.05226))
 * Cascade Region Proposal and Global Context for Deep Object Detection ([PDF](https://arxiv.org/abs/1710.10749))
 * PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection ([PDF](http://arxiv.org/abs/1608.08021), [Project/Code](https://github.com/sanghoon/pva-faster-rcnn), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-pvanet-deep-but-lightweight-neural-networks-for-real-time-object-detection_137/))
 * Inside-Outside Net: Detecting Objects in Context with Skip Pooling and Recurrent Neural Networks ([PDF](http://arxiv.org/abs/1512.04143), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-inside-outside-net-detecting-objects-in-context-with-skip-pooling-and-recurrent-neural-networks_111/))
@@ -183,6 +184,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
+* Making a long story short: A Multi-Importance Semantic for Fast-Forwarding Egocentric Videos ([PDF](https://arxiv.org/abs/1711.03473))
 * Attentional Pooling for Action Recognition ([PDF](https://arxiv.org/abs/1711.01467), [Project/Code](https://github.com/rohitgirdhar/AttentionalPoolingAction))
 * Pooling the Convolutional Layers in Deep ConvNets for Action Recognition ([PDF](http://arxiv.org/abs/1511.02126), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-pooling-the-convolutional-layers-in-deep-convnets-for-action-recognition_73/))
 * Two-Stream Convolutional Networks for Action Recognition in Videos ([PDF](http://arxiv.org/abs/1406.2199), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-two-stream-convolutional-networks-for-action-recognition-in-videos_71/))
@@ -405,6 +407,10 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* XGAN: Unsupervised Image-to-Image Translation for many-to-many Mappings ([PDF](https://arxiv.org/abs/1711.05139))
+* How Generative Adversarial Nets and its variants Work: An Overview of GAN ([PDF](https://arxiv.org/abs/1711.05914))
+* DNA-GAN: Learning Disentangled Representations from Multi-Attribute Images ([PDF](https://arxiv.org/abs/1711.05415), [Project/Code](https://github.com//Prinsphield/DNA-GAN))
+* Sobolev GAN ([PDF](https://arxiv.org/abs/1711.04894))
 * Data Augmentation Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1711.04340))
 * Conditional Autoencoders with Adversarial Information Factorization ([PDF](https://arxiv.org/abs/1711.05175), [Project/Code](https://github.com/ToniCreswell/attribute-cVAEGAN))
 * Progressive Growing of GANs for Improved Quality, Stability, and Variation ([PDF](https://arxiv.org/abs/1710.10196), [Project/Code](https://github.com/tkarras/progressive_growing_of_gans), [Torch](https://github.com/nashory/progressive-growing-torch), [PyTorch](https://github.com//github-pengge/PyTorch-progressive_growing_of_gans), [Reading Note](https://joshua19881228.github.io/2017-11-12-ProgressiveGrowing/))
@@ -453,6 +459,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* NISP: Pruning Networks using Neuron Importance Score Propagation ([PDF](https://arxiv.org/abs/1711.05908))
 * Caffeinated FPGAs: FPGA Framework For Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1609.09671))
 * Comprehensive Evaluation of OpenCL-based Convolutional Neural Network Accelerators in Xilinx and Altera FPGAs  ([PDF](https://arxiv.org/abs/1609.09296))
 * FINN: A Framework for Fast, Scalable Binarized Neural Network Inference ([PDF](http://www.idi.ntnu.no/~yamanu/2017-fpga-finn-preprint.pdf))
@@ -636,6 +643,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [Neural Networks For Recommender Systems](https://www.bilibili.com/video/av16499811/)
 * [MIT Technology Review](https://www.technologyreview.com/)
     A good place to keep up the trends.
 * [LAB41](https://gab41.lab41.org/)
@@ -707,6 +715,8 @@ I am going to maintain this page to record a few things about computer vision th
 * [Compressing deep neural nets](http://machinethink.net/blog/compressing-deep-neural-nets/)
 * [Sigmoidal](https://sigmoidal.io/)
 * [A Gentle Introduction to the Bag-of-Words Model](https://machinelearningmastery.com/gentle-introduction-bag-words-model/)
+* [Fantastic GANs and where to find them](http://guimperarnau.com/blog/2017/03/Fantastic-GANs-and-where-to-find-them)
+* [Fantastic GANs and where to find them II](http://guimperarnau.com/blog/2017/11/Fantastic-GANs-and-where-to-find-them-II)
 
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
