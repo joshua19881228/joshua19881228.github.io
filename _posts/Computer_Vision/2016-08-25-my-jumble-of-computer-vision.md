@@ -297,6 +297,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Non-local Neural Networks ([PDF](https://arxiv.org/abs/1711.07971))
 * Log-DenseNet: How to Sparsify a DenseNet ([PDF](https://arxiv.org/abs/1711.00002g))
 * Don't Decay the Learning Rate, Increase the Batch Size ([PDF](https://arxiv.org/abs/1711.00489))
 * Guarding Against Adversarial Domain Shifts with Counterfactual Regularization ([PDF](https://arxiv.org/abs/1710.11469))
@@ -307,10 +308,10 @@ I am going to maintain this page to record a few things about computer vision th
 
 * Understanding and Improving Convolutional Neural Networks via Concatenated Rectified Linear Units ([PDF](http://arxiv.org/abs/1603.05201))
 * Densely Connected Convolutional Networks ([PDF](http://arxiv.org/abs/1608.06993), [Project/Code](https://github.com/liuzhuang13/DenseNet), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-densely-connected-convolutional-networks_168/))
-* Decoupled Neural Interfaces using Synthetic Gradients ([PDF](https://arxiv.org/pdf/1608.05343.pdf)) 
+* Decoupled Neural Interfaces using Synthetic Gradients ([PDF](https://arxiv.org/pdf/1608.05343.pdf))
 
     >Training directed neural networks typically requires forward-propagating data through a computation graph, followed by backpropagating error signal, to produce weight updates. All layers, or more generally, modules, of the network are therefore locked, in the sense that they must wait for the remainder of the network to execute forwards and propagate error backwards before they can be updated. In this work we break this constraint by decoupling modules by introducing a model of the future computation of the network graph.  These models predict what the result of the modeled sub-graph will produce using only local information. In particular we focus on modeling error gradients: by using the modeled synthetic gradient in place of true backpropagated error gradients we decouple subgraphs, and can update them independently and asynchronously.
-    
+
 * Rethinking the Inception Architecture for Computer Vision ([PDF](http://arxiv.org/abs/1512.00567), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-rethinking-the-inception-architecture-for-computer-vision_136/))
 
     In this paper, several network designing choices are discussed, including *factorizing convolutions into smaller kernels and asymmetric kernels*, *utility of auxiliary classifiers* and *reducing grid size using convolution stride rather than pooling*.
@@ -410,6 +411,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Spectral Normalization for Generative Adversarial Networks ([PDF](https://openreview.net/pdf?id=B1QRgziT-))
 * XGAN: Unsupervised Image-to-Image Translation for many-to-many Mappings ([PDF](https://arxiv.org/abs/1711.05139))
 * How Generative Adversarial Nets and its variants Work: An Overview of GAN ([PDF](https://arxiv.org/abs/1711.05914))
 * DNA-GAN: Learning Disentangled Representations from Multi-Attribute Images ([PDF](https://arxiv.org/abs/1711.05415), [Project/Code](https://github.com//Prinsphield/DNA-GAN))
