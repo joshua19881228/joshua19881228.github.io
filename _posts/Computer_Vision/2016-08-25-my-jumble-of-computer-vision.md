@@ -15,6 +15,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Single-Shot Refinement Neural Network for Object Detection ([PDF](https://arxiv.org/abs/1711.06897), [Project/Code](https://github.com//sfzhang15/RefineDet))
+* $S^3$FD: Single Shot Scale-invariant Face Detector ([PDF](https://arxiv.org/abs/1708.05237))
 * MegDet: A Large Mini-Batch Object Detector ([PDF](https://arxiv.org/abs/1711.07240))
 * Light-Head R-CNN: In Defense of Two-Stage Object Detector ([PDF](https://arxiv.org/abs/1711.07264))
 * Interpretable R-CNN ([PDF](https://arxiv.org/abs/1711.05226))
@@ -297,6 +299,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Knowledge Concentration: Learning 100K Object Classifiers in a Single CNN ([PDF](https://arxiv.org/abs/1711.07607))
+* Shift: A Zero FLOP, Zero Parameter Alternative to Spatial Convolutions ([PDF](https://arxiv.org/abs/1711.08141))
+* Unleashing the Potential of CNNs for Interpretable Few-Shot Learning ([PDF](https://arxiv.org/abs/1711.08277))
 * Non-local Neural Networks ([PDF](https://arxiv.org/abs/1711.07971))
 * Log-DenseNet: How to Sparsify a DenseNet ([PDF](https://arxiv.org/abs/1711.00002g))
 * Don't Decay the Learning Rate, Increase the Batch Size ([PDF](https://arxiv.org/abs/1711.00489))
