@@ -258,7 +258,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 * Ablation on RPN
 
-    ![Ablation on RPN](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_ablation_on_rpn.png "Ablation on RPN"){: .center-image .image-width-320}
+    ![Ablation on RPN](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_ablation_on_rpn.png "Ablation on RPN"){: .center-image .image-width-480}
 
     1. Sharing: Detector feature helps RPN
     2. RPN generate quite good proposals
@@ -267,14 +267,14 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 * Timing
 
-    ![Timing](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_timing.png "Timing"){: .center-image .image-width-320}
+    ![Timing](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_timing.png "Timing"){: .center-image .image-width-480}
 
     1. Nearly cost free
     2. Less proposal
 
 * Anchors
 
-    ![Setting of Anchors](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_setting_of_anchor.png "Setting of Anchors"){: .center-image .image-width-320}
+    ![Setting of Anchors](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_setting_of_anchor.png "Setting of Anchors"){: .center-image .image-width-480}
 
     1. Scale is more effective
 
@@ -285,7 +285,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 4.1.1 You Only Look Once ###
 
-![YOLO](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_framework.png "YOLO"){: .center-image .image-width-320}
+![YOLO](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_framework.png "YOLO"){: .center-image .image-width-480}
 
 * A simple forward on the full image (almost same with a classification task)
 * Frame object detection as a regression problem (bounding box coordinates, class probabilities)
@@ -295,12 +295,12 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 4.1.2 Unified Detection ###
 
-![YOLO model](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_model.png "YOLO model"){: .center-image .image-width-320}
+![YOLO model](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_model.png "YOLO model"){: .center-image .image-width-480}
 
 * The input is divided into S x S grid
 * Each grid cell predicts B bounding boxes
 
-![YOLO architecture](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_architecture.png "YOLO architecture"){: .center-image .image-width-320}
+![YOLO architecture](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_architecture.png "YOLO architecture"){: .center-image .image-width-480}
 
 * 5 predictions for one bounding box: x, y, w, h, score
 
@@ -315,7 +315,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 4.1.3 Experiment Result ###
 
-![YOLO Result](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_result.png "YOLO Result"){: .center-image .image-width-320}
+![YOLO Result](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_result.png "YOLO Result"){: .center-image .image-width-480}
 
 * Most effective among real-time detectors
 * Most efficient among near real-time detectors
