@@ -191,12 +191,16 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 3.3.2 Fast-RCNN with RPN (Region Proposal Network) ###
 
+![softmax vs. SVM](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_framework.png "softmax vs. SVM"){: .center-image .image-width-480}
+
 * Region proposals (RPN, ~300)
 * Classifier (sub-network softmax)
 * Bounding box (RPN regressor, sub-network regressor)
 * Run-time speed (VGG-16, 0.198 s/img on single K40 GPU)
 
 ### 3.3.3 Region Proposal Network ###
+
+![Anchors](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_anchors.png "Anchors"){: .center-image .image-width-480}
 
 * Anchors
 
@@ -223,6 +227,8 @@ The overall root scores at each level can be expressed by the sum of the root fi
     3. Bounding box regression
 
 ### 3.3.4 Experiment Result ###
+
+![Result](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_result.png "Result"){: .center-image .image-width-640}
 
 ### 3.3.5 Interesting Details – Training ###
 
@@ -252,6 +258,8 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 * Ablation on RPN
 
+    ![Ablation on RPN](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_ablation_on_rpn.png "Ablation on RPN"){: .center-image .image-width-320}
+
     1. Sharing: Detector feature helps RPN
     2. RPN generate quite good proposals
     3. No cls, randomly selecting proposal, score matters
@@ -259,10 +267,14 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 * Timing
 
+    ![Timing](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_timing.png "Timing"){: .center-image .image-width-320}
+
     1. Nearly cost free
     2. Less proposal
 
 * Anchors
+
+    ![Setting of Anchors](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_setting_of_anchor.png "Setting of Anchors"){: .center-image .image-width-320}
 
     1. Scale is more effective
 
@@ -273,6 +285,8 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 4.1.1 You Only Look Once ###
 
+![YOLO](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_framework.png "YOLO"){: .center-image .image-width-320}
+
 * A simple forward on the full image (almost same with a classification task)
 * Frame object detection as a regression problem (bounding box coordinates, class probabilities)
 * Extremely fast (45 fps for base network, or 150 fps for fast version)
@@ -281,8 +295,13 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 4.1.2 Unified Detection ###
 
+![YOLO model](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_model.png "YOLO model"){: .center-image .image-width-320}
+
 * The input is divided into S x S grid
 * Each grid cell predicts B bounding boxes
+
+![YOLO architecture](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_architecture.png "YOLO architecture"){: .center-image .image-width-320}
+
 * 5 predictions for one bounding box: x, y, w, h, score
 
     1. (x, y) center of the box relative to the bounds of grid
@@ -296,6 +315,8 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 4.1.3 Experiment Result ###
 
+![YOLO Result](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_result.png "YOLO Result"){: .center-image .image-width-320}
+
 * Most effective among real-time detectors
 * Most efficient among near real-time detectors
 
@@ -304,7 +325,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 * Too few bounding boxes
 
     1. Nearby objects
-    2.  Small objects
+    2. Small objects
 
 * Data driven
 
