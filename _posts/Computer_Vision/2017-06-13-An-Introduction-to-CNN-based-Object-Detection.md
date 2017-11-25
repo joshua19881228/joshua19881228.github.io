@@ -343,6 +343,9 @@ The overall root scores at each level can be expressed by the sum of the root fi
     2. Weight: positive vs. negative of objectness
     3. Square root: large object vs. small object
 
+    ![YOLO Loss Function](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_loss_function.png "YOLO Loss Function"){: .center-image .image-width-480}
+    
+
 * “Warm up” to start training
 
     1. For first epoch, raise 0.001 to 0.01
@@ -354,14 +357,20 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 4.2.1 Single Shot MultiBox Detector ###
 
+![SSD framework](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_framework.png "SSD framework"){: .center-image .image-width-480}
+
 * Combine anchor and one-shot prediction
 * Extract multi-scale features
 * Refine multi-scale and multi-ratio anchors
 * Dilated convolution
 
+![SSD Dilated convolution](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_dilated_convolution.png "SSD Dilated convolution"){: .center-image .image-width-480}
+
 ### 4.2.2 Multi-scale Prediction ###
 
 * Multi-scale and Multi-ratio anchors
+
+    ![SSD Model](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_model.png "SSD Model"){: .center-image .image-width-480}
 
     1. Each feature map cell corresponds to k anchors
     2. Similar to Faster-RCNN, but in multi-scale feature map and directly output category info
@@ -374,6 +383,14 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 4.2.3 Experiment Result ###
 
+* VOC2012
+
+![SSD VOC2012](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_result_voc2012.png "SSD VOC2012"){: .center-image .image-width-640}
+
+* COCO2015
+
+![SSD COCO2015](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_result_coco2015.png "SSD COCO2015"){: .center-image .image-width-480}
+
 ### 4.2.4 Interesting Details – Training ###
 
 * Matching anchors with ground-truth
@@ -382,6 +399,9 @@ The overall root scores at each level can be expressed by the sum of the root fi
     2. Match the anchor to any ground truth with IOU higher than a threshold
 
 * Training objective
+
+    ![SSD Training objective](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_loss_function.png "SSD Training objective"){: .center-image .image-width-480}
+
 * Scales and aspect ratios for anchors
 
     1. Regularly spaced scales 
@@ -403,31 +423,31 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 # 5 Others #
 
-* PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection
+* PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection ([Reading Note](https://joshua19881228.github.io/2016-08-30-Reading-note/))
 
     1. Variant of Faster-RCNN
     2. Design of architecture
 
-* Inside-Outside Net: Detecting Objects in Context with Skip Pooling and Recurrent Neural Networks
+* Inside-Outside Net: Detecting Objects in Context with Skip Pooling and Recurrent Neural Networks ([Reading Note](https://joshua19881228.github.io/2016-06-01-ION/))
 
     1. Both local and global information are take into account
     2. Skip pooling uses the information of different scales
 
-* R-FCN: Object Detection via Region-based Fully Convolutional Networks
+* R-FCN: Object Detection via Region-based Fully Convolutional Networks ([Reading Note](https://joshua19881228.github.io/2016-05-23-RFCN/))
 
     1. Position-sensitive RoI pooling
 
-* Feature Pyramid Networks for Object Detection
+* Feature Pyramid Networks for Object Detection ([Reading Note](https://joshua19881228.github.io/2016-12-15-FPN/))
 
     1. lateral connections is developed for building high-level semantic feature maps at all scales
 
-* Beyond Skip Connections: Top-Down Modulation for Object Detection
+* Beyond Skip Connections: Top-Down Modulation for Object Detection ([Reading Note](https://joshua19881228.github.io/2016-12-21-TDM/))
 
     1. Similar with FPN
 
-* YOLO9000: Better, Faster, Stronger
+* YOLO9000: Better, Faster, Stronger ([Reading Note](https://joshua19881228.github.io/2017-01-11-YOLO9000/))
 
     1. Better, Faster, Stronger
 
-* DSSD: Deconvolutional Single Shot Detector
+* DSSD: Deconvolutional Single Shot Detector ([Reading Note](https://joshua19881228.github.io/2017-02-10-DSSD/))
 
