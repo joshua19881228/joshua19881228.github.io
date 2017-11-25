@@ -357,7 +357,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 4.2.1 Single Shot MultiBox Detector ###
 
-![SSD framework](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_framework.png "SSD framework"){: .center-image .image-width-480}
+![SSD framework](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_framework.png "SSD framework"){: .center-image .image-width-640}
 
 * Combine anchor and one-shot prediction
 * Extract multi-scale features
