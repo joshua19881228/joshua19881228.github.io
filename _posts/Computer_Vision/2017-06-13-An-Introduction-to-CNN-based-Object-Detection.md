@@ -169,9 +169,17 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 3.2.6 Interesting Details – Design evaluation ###
 
-* Does multi-task training help? Yes, it does!
-* Test with multiple scales? Yes but with cost.
-* Do SVMs outperform softmax? Interesting…
+* Does multi-task training help? *Yes, it does!*
+
+![Multi-task Training](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_multitask_training.png "Multi-task Training"){: .center-image .image-width-640}
+
+* Test with multiple scales? *Yes but with cost.*
+
+![Multi-scale vs. single scale](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_multiscale.png "Multi-scale vs. single scale"){: .center-image .image-width-480}
+
+* Do SVMs outperform softmax? *Interesting…*
+
+![softmax vs. SVM](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_softmax_svm.png "softmax vs. SVM"){: .center-image .image-width-480}
 
 ## 3.3 Faster-RCNN ##
 
