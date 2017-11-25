@@ -28,13 +28,13 @@ category: "Computer Vision"
 
 ## Others ##
 
-![Goal of Object Detection](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Goal_of_Detection.png "Goal of Object Detection =480")
+![Goal of Object Detection](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Goal_of_Detection.png "Goal of Object Detection"){: .center-image .image-width-480}
 
 # 2. Brief Revisit to the "Ancient" Algorithm #
 
 ## 2.1 Histograms of Gradients (HOG) ##
 
-![Histograms of Gradients](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/HOG.png "Histograms of Gradients =640")
+![Histograms of Gradients](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/HOG.png "Histograms of Gradients"){: .center-image .image-width-480}
 
 * Calculate gradient for each pixel
 * For each **Cell**, a histogram of gradient is computed
@@ -44,7 +44,7 @@ If Block size = 16\*16, Block stride = 8, Cell size = 8\*8, Bin size = 9, Slide-
 
 ## 2.2 Deformable Part Models (DPM) ##
 
-![DPM](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/DPM.png "DPM =480")
+![DPM](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/DPM.png "DPM"){: .center-image .image-width-480}
 
 $$ D_{i,l}(x,y) = \max \limits_{dx,dy} (R_{i,l}(x+dx, y+dy)-d_{i}\cdot \phi_{d}(dx,dy)) $$
 
@@ -60,7 +60,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 3.1.1 Regions with CNN Features ###
 
-![RCNN](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/RCNN.png "RCNN =640")
+![RCNN](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/RCNN.png "RCNN"){: .center-image .image-width-640}
 
 * Region proposals (Selective Search, ~2k)
 * CNN features (AlexNet, VGG-16, warped region in image)
@@ -70,7 +70,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 3.1.2 Experiment Result (AlexNet) ###
 
-![RCNN_Result](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/RCNN_Result.png "RCNN_Result =640")
+![RCNN_Result](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/RCNN_Result.png "RCNN_Result"){: .center-image .image-width-640}
 
 * Without FT, fc7 is worse than fc6, pool5 is quite competitive. Much of the CNN’s representational power comes from its convolutional layers, rather than from the much larger densely connected layers.
 * With FT, The boost from fine-tuning is much larger for fc6 and fc7 than for pool5. Pool5 features are general. Learning domain-specific non-linear classifiers helps a lot.
@@ -99,7 +99,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 3.1.4 Interesting Details – FP Error Types ###
 
-![RCNN_Error](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/RCNN_Error.png "RCNN_Error =640")
+![RCNN_Error](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/RCNN_Error.png "RCNN_Error"){: .center-image .image-width-640}
 
 * Loc: poor localization, 0.1 < IOU < 0.5
 * Sim: confusion with a similar category
@@ -116,7 +116,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 3.2.2 R-CNN with ROI Pooling ###
 
-![Fast_RCNN](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN.png "Fast_RCNN =640")
+![Fast_RCNN](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN.png "Fast_RCNN"){: .center-image .image-width-640}
 
 * Region proposals (Selective Search, ~2k)
 * CNN features (AlexNet, VGG-16, ROI in feature map)
@@ -126,7 +126,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 3.2.3 ROI Pooling ###
 
-![SPP](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SPP.png "SPP =640")
+![SPP](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SPP.png "SPP"){: .center-image .image-width-640}
 
 * Inspired by Spatial Pyramid Pooling (SPPNet)
 * Convert arbitrary input size to fixed length
@@ -137,14 +137,14 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 ### 3.2.4 Experiment Result (VGG16) ###
 
-![Fast_RCNN_Result](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_Result.png "Fast_RCNN_Result =640")
+![Fast_RCNN_Result](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_Result.png "Fast_RCNN_Result"){: .center-image .image-width-640}
 
 ### 3.2.5 Interesting Details – Training ###
 
 * Pre-trained on ILSVRC2012 classification task
 * Fine-tuned with N+1 classes and two sibling layers
 
-    ![Fast_RCNN_Finetune](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_Finetune.png "Fast_RCNN_Finetune =480")
+    ![Fast_RCNN_Finetune](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_Finetune.png "Fast_RCNN_Finetune"){: .center-image .image-width-480}
 
     1. Fine-tune the whole network
     2. Each mini-batch has 2 images and 64 ROIs from each images
@@ -158,7 +158,7 @@ The overall root scores at each level can be expressed by the sum of the root fi
 
 * Accelerate using truncated SVD
 
-    ![Fast_RCNN_SVD](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_SVD.png "Fast_RCNN_SVD =480")
+    ![Fast_RCNN_SVD](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_SVD.png "Fast_RCNN_SVD"){: .center-image .image-width-480}
 
     Implemented by using two FCs without non-linear activation
 
