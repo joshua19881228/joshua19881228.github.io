@@ -13,8 +13,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ## PAPERS AND PROJECTS
 
-### OBJECT/SALIENCY DETECTOIN
+### OBJECT/SALIENCY DETECTION
 
+* Zero-Annotation Object Detection with Web Knowledge Transfer ([PDF](https://arxiv.org/abs/1711.05954))
 * Single-Shot Refinement Neural Network for Object Detection ([PDF](https://arxiv.org/abs/1711.06897), [Project/Code](https://github.com//sfzhang15/RefineDet))
 * $S^3$FD: Single Shot Scale-invariant Face Detector ([PDF](https://arxiv.org/abs/1708.05237))
 * MegDet: A Large Mini-Batch Object Detector ([PDF](https://arxiv.org/abs/1711.07240))
@@ -299,6 +300,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* The Promise and Peril of Human Evaluation for Model Interpretability ([PDF](https://arxiv.org/abs/1711.07414))
 * Knowledge Concentration: Learning 100K Object Classifiers in a Single CNN ([PDF](https://arxiv.org/abs/1711.07607))
 * Shift: A Zero FLOP, Zero Parameter Alternative to Spatial Convolutions ([PDF](https://arxiv.org/abs/1711.08141))
 * Unleashing the Potential of CNNs for Interpretable Few-Shot Learning ([PDF](https://arxiv.org/abs/1711.08277))
@@ -416,6 +418,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Two Birds with One Stone: Iteratively Learn Facial Attributes with GANs ([PDF](https://arxiv.org/abs/1711.06078))
 * Spectral Normalization for Generative Adversarial Networks ([PDF](https://openreview.net/pdf?id=B1QRgziT-))
 * XGAN: Unsupervised Image-to-Image Translation for many-to-many Mappings ([PDF](https://arxiv.org/abs/1711.05139))
 * How Generative Adversarial Nets and its variants Work: An Overview of GAN ([PDF](https://arxiv.org/abs/1711.05914))
@@ -487,6 +490,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ReID ###
 
+* AlignedReID: Surpassing Human-Level Performance in Person Re-Identification ([PDF](https://arxiv.org/abs/1711.08184))
 * A Discriminatively Learned CNN Embedding for Person Re-identification ([PDF](https://arxiv.org/abs/1611.05666), [Project/Code](https://github.com/layumi/2016_person_re-ID))
 * Learning Deep Neural Networks for Vehicle Re-ID with Visual-spatio-temporal Path Proposals ([PDF](https://arxiv.org/abs/1708.03918))
 * Beyond triplet loss: a deep quadruplet network for person re-identification ([PDF](https://arxiv.org/abs/1704.01719))
@@ -508,6 +512,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* Image Matters: Jointly Train Advertising CTR Model with Image Representation of Ad and User Behavior ([PDF](https://arxiv.org/abs/1711.06505))
 * Semantic Image Retrieval via Active Grounding of Visual Situations ([PDF](https://arxiv.org/abs/1711.00088))
 * LIFT: Learned Invariant Feature Transform ([PDF](https://arxiv.org/abs/1603.09114))
 * Learning Aligned Cross-Modal Representations from Weakly Aligned Data ([PDF](http://cmplaces.csail.mit.edu/content/paper.pdf), [Project/Code](http://cmplaces.csail.mit.edu/))
