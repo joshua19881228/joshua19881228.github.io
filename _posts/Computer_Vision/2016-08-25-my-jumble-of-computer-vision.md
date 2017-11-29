@@ -10,13 +10,12 @@ I am going to maintain this page to record a few things about computer vision th
 * Content
 {:toc}
 
-
 ## PAPERS AND PROJECTS
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Single Shot Text Detector with Regional Attention ([PDF](https://arxiv.org/abs/1709.00138), [Project/Code](https://github.com//BestSonny/SSTD))
 * Single-Shot Refinement Neural Network for Object Detection ([PDF](https://arxiv.org/abs/1711.06897), [Project/Code](https://github.com//sfzhang15/RefineDet))
-* $S^3$FD: Single Shot Scale-invariant Face Detector ([PDF](https://arxiv.org/abs/1708.05237))
 * MegDet: A Large Mini-Batch Object Detector ([PDF](https://arxiv.org/abs/1711.07240))
 * Light-Head R-CNN: In Defense of Two-Stage Object Detector ([PDF](https://arxiv.org/abs/1711.07264))
 * Interpretable R-CNN ([PDF](https://arxiv.org/abs/1711.05226))
@@ -81,6 +80,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Deep Extreme Cut: From Extreme Points to Object Segmentation ([PDF](https://arxiv.org/abs/1711.09081))
 * Instance-aware Semantic Segmentation via Multi-task Network Cascades ([PDF](http://arxiv.org/abs/1512.04412), [Project/Code](https://github.com/daijifeng001/MNC))
 * ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation ([PDF](http://arxiv.org/abs/1606.02147), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-enet-a-deep-neural-network-architecture-for-real-time-semantic-segmentation_134/))
 * Learning Deconvolution Network for Semantic Segmentation ([PDF](http://arxiv.org/abs/1505.04366), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-learning-deconvolution-network-for-semantic-segmentation_119/))
@@ -243,6 +243,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* $S^3$FD: Single Shot Scale-invariant Face Detector ([PDF](https://arxiv.org/abs/1708.05237))
 * Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks ([PDF](https://arxiv.org/abs/1604.02878), [Project/Code](https://github.com/kpzhang93/MTCNN_face_detection_alignment), [Code Caffe](https://github.com/foreverYoungGitHub/MTCNN))
 * Deep Architectures for Face Attributes ([PDF](http://arxiv.org/abs/1609.09018))
 * Face Detection with End-to-End Integration of a ConvNet and a 3D Model ([PDF](https://www.arxiv.org/abs/1606.00850), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-face-detection-with-end-to-end-integration-of-a-convnet-and-a-3d-model_145/), [Project/Code](https://github.com/tfwu/FaceDetection-ConvNet-3D))
@@ -299,6 +300,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Population Based Training of Neural Networks ([PDF](https://arxiv.org/abs/1711.09846))
+* CondenseNet: An Efficient DenseNet using Learned Group Convolutions ([PDF](http://www.cs.cornell.edu/~gaohuang/papers/condensenet.pdf), [Project/Code](https://github.com//ShichenLiu/CondenseNet))
 * Knowledge Concentration: Learning 100K Object Classifiers in a Single CNN ([PDF](https://arxiv.org/abs/1711.07607))
 * Shift: A Zero FLOP, Zero Parameter Alternative to Spatial Convolutions ([PDF](https://arxiv.org/abs/1711.08141))
 * Unleashing the Potential of CNNs for Interpretable Few-Shot Learning ([PDF](https://arxiv.org/abs/1711.08277))
@@ -416,6 +419,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Two Birds with One Stone: Iteratively Learn Facial Attributes with GANs ([PDF](https://arxiv.org/abs/1711.06078), [Project/Code](https://github.com//punkcure/Iterative-GAN))
+* StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation ([PDF](https://arxiv.org/abs/1711.09020), [Project/Code](https://github.com//yunjey/StarGAN))
 * Spectral Normalization for Generative Adversarial Networks ([PDF](https://openreview.net/pdf?id=B1QRgziT-))
 * XGAN: Unsupervised Image-to-Image Translation for many-to-many Mappings ([PDF](https://arxiv.org/abs/1711.05139))
 * How Generative Adversarial Nets and its variants Work: An Overview of GAN ([PDF](https://arxiv.org/abs/1711.05914))
@@ -487,6 +492,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ReID ###
 
+* AlignedReID: Surpassing Human-Level Performance in Person Re-Identification ([PDF](https://arxiv.org/abs/1711.08184))
 * A Discriminatively Learned CNN Embedding for Person Re-identification ([PDF](https://arxiv.org/abs/1611.05666), [Project/Code](https://github.com/layumi/2016_person_re-ID))
 * Learning Deep Neural Networks for Vehicle Re-ID with Visual-spatio-temporal Path Proposals ([PDF](https://arxiv.org/abs/1708.03918))
 * Beyond triplet loss: a deep quadruplet network for person re-identification ([PDF](https://arxiv.org/abs/1704.01719))
