@@ -82,6 +82,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Learning to Segment Every Thing ([PDF](https://arxiv.org/abs/1711.10370))
 * Deep Extreme Cut: From Extreme Points to Object Segmentation ([PDF](https://arxiv.org/abs/1711.09081))
 * Instance-aware Semantic Segmentation via Multi-task Network Cascades ([PDF](http://arxiv.org/abs/1512.04412), [Project/Code](https://github.com/daijifeng001/MNC))
 * ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation ([PDF](http://arxiv.org/abs/1606.02147), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-enet-a-deep-neural-network-architecture-for-real-time-semantic-segmentation_134/))
@@ -301,6 +302,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Gradual Tuning: a better way of Fine Tuning the parameters of a Deep Neural Network ([PDF](https://arxiv.org/abs/1711.10177))
 * CondenseNet: An Efficient DenseNet using Learned Group Convolutions ([PDF](http://www.cs.cornell.edu/~gaohuang/papers/condensenet.pdf), [Project/Code](https://github.com//ShichenLiu/CondenseNet))
 * Population Based Training of Neural Networks ([PDF](https://arxiv.org/abs/1711.09846))
 * Knowledge Concentration: Learning 100K Object Classifiers in a Single CNN ([PDF](https://arxiv.org/abs/1711.07607))
@@ -420,6 +422,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Are GANs Created Equal? A Large-Scale Study ([PDF](https://arxiv.org/abs/1711.10337))
 * StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation ([PDF](https://arxiv.org/abs/1711.09020), [Project/Code](https://github.com//yunjey/StarGAN))
 * Two Birds with One Stone: Iteratively Learn Facial Attributes with GANs ([PDF](https://arxiv.org/abs/1711.06078), [Project/Code](https://github.com//punkcure/Iterative-GAN))
 * Spectral Normalization for Generative Adversarial Networks ([PDF](https://openreview.net/pdf?id=B1QRgziT-))
@@ -467,6 +470,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### MACHINE LEARNING ###
 
+* Accelerated Gradient Descent Escapes Saddle Points Faster than Gradient Descent ([PDF](https://arxiv.org/abs/1711.10456))
 * [计算机视觉与机器学习 【随机森林】](http://joshua881228.webfactional.com/blog_ji-suan-ji-shi-jue-yu-ji-qi-xue-xi-sui-ji-sen-lin_129/)
 * [计算机视觉与机器学习 【深度学习中的激活函数】](http://joshua881228.webfactional.com/blog_ji-suan-ji-shi-jue-yu-ji-qi-xue-xi-shen-du-xue-xi-zhong-de-ji-huo-han-shu_128/)
 * [我爱机器学习](https://www.52ml.net/) 机器学习干货站
@@ -805,6 +809,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [CaffeMex](https://github.com/sciencefans/CaffeMex_v2)
     A multi-GPU & memory-reduced MAT-Caffe on LINUX and WINDOWS
 * [ARCore](https://developers.google.com/ar/) ARCore is a platform for building augmented reality apps on Android. ARCore uses three key technologies to integrate virtual content with the real world as seen through your phone's camera
+* [CNTK](https://github.com/Microsoft/CNTK) Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit.
 
 ### LEARNING/TRICKS ###
 
