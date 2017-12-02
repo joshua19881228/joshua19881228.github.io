@@ -13,7 +13,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ## PAPERS AND PROJECTS
 
-### OBJECT/SALIENCY DETECTOIN
+### OBJECT/SALIENCY DETECTION
 
 * Single Shot Text Detector with Regional Attention ([PDF](https://arxiv.org/abs/1709.00138), [Project/Code](https://github.com//BestSonny/SSTD))
 * Single-Shot Refinement Neural Network for Object Detection ([PDF](https://arxiv.org/abs/1711.06897), [Project/Code](https://github.com//sfzhang15/RefineDet))
