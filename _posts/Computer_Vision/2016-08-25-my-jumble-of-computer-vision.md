@@ -497,6 +497,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ReID ###
 
+* A Pose-Sensitive Embedding for Person Re-Identification with Expanded Cross Neighborhood Re-Ranking ([PDF](https://arxiv.org/abs/1711.10378), [Project/Code](https://github.com/pse-ecn/expanded-cross-neighborhood))
 * AlignedReID: Surpassing Human-Level Performance in Person Re-Identification ([PDF](https://arxiv.org/abs/1711.08184))
 * A Discriminatively Learned CNN Embedding for Person Re-identification ([PDF](https://arxiv.org/abs/1611.05666), [Project/Code](https://github.com/layumi/2016_person_re-ID))
 * Learning Deep Neural Networks for Vehicle Re-ID with Visual-spatio-temporal Path Proposals ([PDF](https://arxiv.org/abs/1708.03918))
@@ -511,6 +512,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FASHION ###
 
+* VITON: An Image-based Virtual Try-on Network ([PDF](https://arxiv.org/abs/1711.08447))
 * Visually-Aware Fashion Recommendation and Design with Generative Image Models ([PDF](Visually-Aware Fashion Recommendation and Design with Generative Image Models))
 * Be Your Own Prada: Fashion Synthesis with Structural Coherence ([PDF](https://arxiv.org/abs/1710.07346), [Project/Code](http://mmlab.ie.cuhk.edu.hk/projects/FashionGAN/), [Reading Note](https://joshua19881228.github.io/2017-10-31-DeepFashion/))
 * Style2Vec: Representation Learning for Fashion Items from Style Sets ([PDF](https://arxiv.org/abs/1708.04014))
@@ -863,6 +865,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ABOUT CAFFE ###
 
+* [在Caffe中加Python Layer的方法](http://www.jianshu.com/p/e05d1b210fcb)
 * [Set Up Caffe on Ubuntu14.04 64bit+NVIDIA GTX970M+CUDA7.0](http://joshua881228.webfactional.com/blog_set-up-caffe-on-ubuntu1404-64bitnvidia-gtx970mcuda70_55/)
 * [VS2013配置Caffe卷积神经网络工具（64位Windows 7）——建立工程](http://blog.csdn.net/joshua_1988/article/details/45048871)
 * [VS2013配置Caffe卷积神经网络工具（64位Windows 7）——准备依赖库](http://blog.csdn.net/joshua_1988/article/details/45036993)
