@@ -426,6 +426,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* High-Resolution Image Synthesis and Semantic Manipulation with Conditional GANs ([PDF](https://arxiv.org/abs/1711.11585))
 * Are GANs Created Equal? A Large-Scale Study ([PDF](https://arxiv.org/abs/1711.10337))
 * StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation ([PDF](https://arxiv.org/abs/1711.09020), [Project/Code](https://github.com//yunjey/StarGAN))
 * Two Birds with One Stone: Iteratively Learn Facial Attributes with GANs ([PDF](https://arxiv.org/abs/1711.06078), [Project/Code](https://github.com//punkcure/Iterative-GAN))
