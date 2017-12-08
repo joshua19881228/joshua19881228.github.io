@@ -15,6 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Detecting Curve Text in the Wild: New Dataset and New Solution ([PDF](https://arxiv.org/abs/1712.02170), [Project/Code](https://github.com//Yuliang-Liu/Curve-Text-Detector#curve-text-detector))
 * Single Shot Text Detector with Regional Attention ([PDF](https://arxiv.org/abs/1709.00138), [Project/Code](https://github.com//BestSonny/SSTD))
 * Single-Shot Refinement Neural Network for Object Detection ([PDF](https://arxiv.org/abs/1711.06897), [Project/Code](https://github.com//sfzhang15/RefineDet))
 * $S^3$FD: Single Shot Scale-invariant Face Detector ([PDF](https://arxiv.org/abs/1708.05237))
@@ -302,6 +303,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* AdaBatch: Adaptive Batch Sizes for Training Deep Neural Networks ([PDF](https://arxiv.org/abs/1712.02029))
 * Gradual Tuning: a better way of Fine Tuning the parameters of a Deep Neural Network ([PDF](https://arxiv.org/abs/1711.10177))
 * CondenseNet: An Efficient DenseNet using Learned Group Convolutions ([PDF](http://www.cs.cornell.edu/~gaohuang/papers/condensenet.pdf), [Project/Code](https://github.com//ShichenLiu/CondenseNet))
 * Population Based Training of Neural Networks ([PDF](https://arxiv.org/abs/1711.09846))
@@ -520,6 +522,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* Dual-Path Convolutional Image-Text Embedding ([PDF](https://arxiv.org/abs/1711.05535), [Project/Code](https://github.com//layumi/Image-Text-Embedding))
 * The Promise and Peril of Human Evaluation for Model Interpretability ([PDF](https://arxiv.org/abs/1711.07414))
 * Semantic Image Retrieval via Active Grounding of Visual Situations ([PDF](https://arxiv.org/abs/1711.00088))
 * LIFT: Learned Invariant Feature Transform ([PDF](https://arxiv.org/abs/1603.09114))
