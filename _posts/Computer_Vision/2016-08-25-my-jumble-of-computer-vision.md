@@ -303,6 +303,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates ([PDF](https://arxiv.org/abs/1708.07120), [Project/Code](https://github.com/lnsmith54/super-convergence))
+* Data Distillation: Towards Omni-Supervised Learning ([PDF](https://arxiv.org/abs/1712.04440))
+* Peephole: Predicting Network Performance Before Training ([PDF](https://arxiv.org/abs/1712.03351))
 * AdaBatch: Adaptive Batch Sizes for Training Deep Neural Networks ([PDF](https://arxiv.org/abs/1712.02029))
 * Gradual Tuning: a better way of Fine Tuning the parameters of a Deep Neural Network ([PDF](https://arxiv.org/abs/1711.10177))
 * CondenseNet: An Efficient DenseNet using Learned Group Convolutions ([PDF](http://www.cs.cornell.edu/~gaohuang/papers/condensenet.pdf), [Project/Code](https://github.com//ShichenLiu/CondenseNet))
@@ -482,6 +485,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* Net-Trim: Convex Pruning of Deep Neural Networks with Performance Guarantee ([pdf](https://arxiv.org/abs/1611.05162))
 * NISP: Pruning Networks using Neuron Importance Score Propagation ([PDF](https://arxiv.org/abs/1711.05908))
 * Caffeinated FPGAs: FPGA Framework For Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1609.09671))
 * Comprehensive Evaluation of OpenCL-based Convolutional Neural Network Accelerators in Xilinx and Altera FPGAs  ([PDF](https://arxiv.org/abs/1609.09296))
@@ -522,6 +526,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* Dense Optical Flow based Change Detection Network Robust to Difference of Camera Viewpoints ([PDF](https://arxiv.org/abs/1712.02941))
 * Dual-Path Convolutional Image-Text Embedding ([PDF](https://arxiv.org/abs/1711.05535), [Project/Code](https://github.com//layumi/Image-Text-Embedding))
 * The Promise and Peril of Human Evaluation for Model Interpretability ([PDF](https://arxiv.org/abs/1711.07414))
 * Semantic Image Retrieval via Active Grounding of Visual Situations ([PDF](https://arxiv.org/abs/1711.00088))
