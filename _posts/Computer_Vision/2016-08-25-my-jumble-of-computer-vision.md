@@ -15,6 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Learning a Rotation Invariant Detector with Rotatable Bounding Box ([PDF](https://arxiv.org/abs/1711.09405), [Project/Code](https://github.com//liulei01/DRBox))
 * Detecting Curve Text in the Wild: New Dataset and New Solution ([PDF](https://arxiv.org/abs/1712.02170), [Project/Code](https://github.com//Yuliang-Liu/Curve-Text-Detector#curve-text-detector))
 * Single Shot Text Detector with Regional Attention ([PDF](https://arxiv.org/abs/1709.00138), [Project/Code](https://github.com//BestSonny/SSTD))
 * Single-Shot Refinement Neural Network for Object Detection ([PDF](https://arxiv.org/abs/1711.06897), [Project/Code](https://github.com//sfzhang15/RefineDet))
@@ -303,6 +304,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* CNNs are Globally Optimal Given Multi-Layer Support ([PDF](https://arxiv.org/abs/1712.02501))
+* Take it in your stride: Do we need striding in CNNs? ([PDF](https://arxiv.org/abs/1712.02502))
+* Gradients explode - Deep Networks are shallow - ResNet explained ([PDF](https://arxiv.org/abs/1712.05577))
 * Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates ([PDF](https://arxiv.org/abs/1708.07120), [Project/Code](https://github.com/lnsmith54/super-convergence))
 * Data Distillation: Towards Omni-Supervised Learning ([PDF](https://arxiv.org/abs/1712.04440))
 * Peephole: Predicting Network Performance Before Training ([PDF](https://arxiv.org/abs/1712.03351))
@@ -427,6 +431,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Eye In-Painting with Exemplar Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1712.03999))
+* Disentangled Person Image Generation ([PDF](https://arxiv.org/abs/1712.02621))
 * Fader Networks: Manipulating Images by Sliding Attributes ([PDF](https://arxiv.org/abs/1706.00409), [Code/Project](https://github.com/facebookresearch/FaderNetworks))
 * Are GANs Created Equal? A Large-Scale Study ([PDF](https://arxiv.org/abs/1711.10337))
 * StarGAN: Unified Generative Adversarial Networks for Multi-Domain Image-to-Image Translation ([PDF](https://arxiv.org/abs/1711.09020), [Project/Code](https://github.com//yunjey/StarGAN))
@@ -568,6 +574,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES ###
 
+* [GAN Timeline](https://github.com//dongb5/GAN-Timeline)
+    A timeline showing the development of Generative Adversarial Networks (GAN).
 * [arXiv(Computer Vision and Pattern Recognition)](http://arxiv.org/list/cs.CV/recent) 
     A good place to explore latest papers.
 * [Awesome Computer Vision](https://github.com/jbhuang0604/awesome-computer-vision)
@@ -676,6 +684,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [ResNet, AlexNet, VGG, Inception: Understanding various architectures of Convolutional Networks](http://cv-tricks.com/cnn/understand-resnet-alexnet-vgg-inception/)
 * [Neural Networks For Recommender Systems](https://www.bilibili.com/video/av16499811/)
 * [MIT Technology Review](https://www.technologyreview.com/)
     A good place to keep up the trends.
