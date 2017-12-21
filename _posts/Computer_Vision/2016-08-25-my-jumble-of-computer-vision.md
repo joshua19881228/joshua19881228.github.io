@@ -431,6 +431,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* ComboGAN: Unrestrained Scalability for Image Domain Translation ([PDF](https://arxiv.org/abs/1712.06909), [Project/Code](https://github.com//AAnoosheh/ComboGAN))
 * Eye In-Painting with Exemplar Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1712.03999))
 * Disentangled Person Image Generation ([PDF](https://arxiv.org/abs/1712.02621))
 * Fader Networks: Manipulating Images by Sliding Attributes ([PDF](https://arxiv.org/abs/1706.00409), [Code/Project](https://github.com/facebookresearch/FaderNetworks))
@@ -532,6 +533,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* End-to-end weakly-supervised semantic alignment ([PDF](https://arxiv.org/abs/1712.06861), [Project/Code](http://www.di.ens.fr/willow/research/weakalign/))
 * Dense Optical Flow based Change Detection Network Robust to Difference of Camera Viewpoints ([PDF](https://arxiv.org/abs/1712.02941))
 * Dual-Path Convolutional Image-Text Embedding ([PDF](https://arxiv.org/abs/1711.05535), [Project/Code](https://github.com//layumi/Image-Text-Embedding))
 * The Promise and Peril of Human Evaluation for Model Interpretability ([PDF](https://arxiv.org/abs/1711.07414))
@@ -574,6 +576,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES ###
 
+* [A Gentle Introduction to Transfer Learning for Image Classification](https://github.com/miguelgfierro/sciblog_support/blob/master/A_Gentle_Introduction_to_Transfer_Learning/Intro_Transfer_Learning.ipynb)
 * [GAN Timeline](https://github.com//dongb5/GAN-Timeline)
     A timeline showing the development of Generative Adversarial Networks (GAN).
 * [arXiv(Computer Vision and Pattern Recognition)](http://arxiv.org/list/cs.CV/recent) 
@@ -832,6 +835,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LEARNING/TRICKS ###
 
+* [Deep Learning Courses](https://machinelearningmastery.com/deep-learning-courses/)
 * [Backpropagation Algorithm](http://deeplearning.stanford.edu/wiki/index.php/Backpropagation_Algorithm)
     A website that explain how Backpropagation Algorithm works.
 * [Deep Learning (textbook authored by Ian Goodfellow and Yoshua Bengio and Aaron Courville)](http://www.deeplearningbook.org/)
