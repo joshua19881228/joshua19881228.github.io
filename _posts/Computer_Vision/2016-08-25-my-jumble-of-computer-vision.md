@@ -152,6 +152,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TRACKING ###
 
+* Detect-and-Track: Efficient Pose Estimation in Videos ([PDF](https://arxiv.org/abs/1712.09184))
+* Track, then Decide: Category-Agnostic Vision-based Multi-Object Tracking ([PDF](https://arxiv.org/abs/1712.07920))
 * Spatially Supervised Recurrent Convolutional Neural Networks for Visual Object Tracking ([PDF](http://arxiv.org/abs/1607.05781), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-spatially-supervised-recurrent-convolutional-neural-networks-for-visual-object-tracking_125/))
 * Joint Tracking and Segmentation of Multiple Targets ([PDF](http://milanton.de/files/cvpr2015/cvpr2015-ext-abstr-anton.pdf), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-joint-tracking-and-segmentation-of-multiple-targets_70/))
 * Deep Tracking on the Move: Learning to Track the World from a Moving Vehicle using Recurrent Neural Networks ([PDF](https://arxiv.org/abs/1609.09365))
@@ -279,6 +281,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### IMAGE PROCESSING ###
 
+* Automatic Image Cropping for Visual Aesthetic Enhancement Using Deep Neural Networks and Cascaded Regression ([PDF](https://arxiv.org/abs/1712.09048))
+* Learning Intelligent Dialogs for Bounding Box Annotation ([PDF](https://arxiv.org/abs/1712.08087))
 * Real-time video stabilization and mosaicking for monitoring and surveillance ([PDF](http://ieeexplore.ieee.org/document/7886813/?reload=true), [Project/Code](https://github.com//a-jahani/Real-time-Video-Mosaic))
 * Learning Recursive Filter for Low-Level Vision via a Hybrid Neural Network ([PDF](http://faculty.ucmerced.edu/mhyang/papers/eccv16_rnn_filter.pdf), [Project/Code](https://github.com/Liusifei/caffe-lowlevel))
 * Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding([PDF](https://arxiv.org/abs/1510.00149), [Project/Code](https://github.com/songhan/Deep-Compression-AlexNet))
