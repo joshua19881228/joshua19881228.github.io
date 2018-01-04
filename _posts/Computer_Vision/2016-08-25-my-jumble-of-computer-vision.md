@@ -152,6 +152,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TRACKING ###
 
+* Multi-Target, Multi-Camera Tracking by Hierarchical Clustering: Recent Progress on DukeMTMC Project ([PDF](https://arxiv.org/abs/1712.09531))
 * Detect-and-Track: Efficient Pose Estimation in Videos ([PDF](https://arxiv.org/abs/1712.09184))
 * Track, then Decide: Category-Agnostic Vision-based Multi-Object Tracking ([PDF](https://arxiv.org/abs/1712.07920))
 * Spatially Supervised Recurrent Convolutional Neural Networks for Visual Object Tracking ([PDF](http://arxiv.org/abs/1607.05781), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-spatially-supervised-recurrent-convolutional-neural-networks-for-visual-object-tracking_125/))
@@ -196,6 +197,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
+* Deep Reinforcement Learning for Unsupervised Video Summarization with Diversity-Representativeness Reward ([PDF](https://arxiv.org/abs/1801.00054), [Project/Code](https://github.com//KaiyangZhou/vsumm-reinforce))
 * Making a long story short: A Multi-Importance Semantic for Fast-Forwarding Egocentric Videos ([PDF](https://arxiv.org/abs/1711.03473))
 * Attentional Pooling for Action Recognition ([PDF](https://arxiv.org/abs/1711.01467), [Project/Code](https://github.com/rohitgirdhar/AttentionalPoolingAction))
 * Pooling the Convolutional Layers in Deep ConvNets for Action Recognition ([PDF](http://arxiv.org/abs/1511.02126), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-pooling-the-convolutional-layers-in-deep-convnets-for-action-recognition_73/))
@@ -308,6 +310,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Threat of Adversarial Attacks on Deep Learning in Computer Vision: A Survey ([PDF](https://arxiv.org/abs/1801.00553))
 * CNNs are Globally Optimal Given Multi-Layer Support ([PDF](https://arxiv.org/abs/1712.02501))
 * Take it in your stride: Do we need striding in CNNs? ([PDF](https://arxiv.org/abs/1712.02502))
 * Gradients explode - Deep Networks are shallow - ResNet explained ([PDF](https://arxiv.org/abs/1712.05577))
@@ -435,6 +438,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Deformable GANs for Pose-based Human Image Generation ([PDF](https://arxiv.org/abs/1801.00055), [Project/Code](https://github.com//AliaksandrSiarohin/pose-gan))
 * ComboGAN: Unrestrained Scalability for Image Domain Translation ([PDF](https://arxiv.org/abs/1712.06909), [Project/Code](https://github.com//AAnoosheh/ComboGAN))
 * Eye In-Painting with Exemplar Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1712.03999))
 * Disentangled Person Image Generation ([PDF](https://arxiv.org/abs/1712.02621))
