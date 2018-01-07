@@ -84,6 +84,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Panoptic Segmentation ([PDF](https://arxiv.org/abs/1801.00868))
 * Learning to Segment Every Thing ([PDF](https://arxiv.org/abs/1711.10370))
 * Deep Extreme Cut: From Extreme Points to Object Segmentation ([PDF](https://arxiv.org/abs/1711.09081))
 * Instance-aware Semantic Segmentation via Multi-task Network Cascades ([PDF](http://arxiv.org/abs/1512.04412), [Project/Code](https://github.com/daijifeng001/MNC))
@@ -519,6 +520,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ReID ###
 
+* Deep Spatial Feature Reconstruction for Partial Person Re-identification: Alignment-Free Approach ([PDF](https://arxiv.org/abs/1801.00881))
 * AlignedReID: Surpassing Human-Level Performance in Person Re-Identification ([PDF](https://arxiv.org/abs/1711.08184))
 * A Discriminatively Learned CNN Embedding for Person Re-identification ([PDF](https://arxiv.org/abs/1611.05666), [Project/Code](https://github.com/layumi/2016_person_re-ID))
 * Learning Deep Neural Networks for Vehicle Re-ID with Visual-spatio-temporal Path Proposals ([PDF](https://arxiv.org/abs/1708.03918))
@@ -695,6 +697,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [Why is it hard to train deep neural networks? Degeneracy, not vanishing gradients, is the key](https://severelytheoretical.wordpress.com/2018/01/01/why-is-it-hard-to-train-deep-neural-networks-degeneracy-not-vanishing-gradients-is-the-key/)
 * [ResNet, AlexNet, VGG, Inception: Understanding various architectures of Convolutional Networks](http://cv-tricks.com/cnn/understand-resnet-alexnet-vgg-inception/)
 * [Neural Networks For Recommender Systems](https://www.bilibili.com/video/av16499811/)
 * [MIT Technology Review](https://www.technologyreview.com/)
