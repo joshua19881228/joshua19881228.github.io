@@ -1,7 +1,7 @@
 ---
 title: "Reading Note: Panoptic Segmentation"
 category: ["Computer Vision"]
-tag: ["Reading Note"]
+tag: ["Reading Note", "Segmentation"]
 ---
 
 **TITLE**: Panoptic Segmentation
@@ -44,4 +44,4 @@ where the first term can be seen as SQ and the second term can be seen as DQ.
 
 ### Human vs. Machine ###
 
-![Framework](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180109_human-vs-machine.png "Framework"){: .center-image .image-width-640}
+![Human vs. Machine](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180109_human-vs-machine.png "Human vs. Machine"){: .center-image .image-width-640}
