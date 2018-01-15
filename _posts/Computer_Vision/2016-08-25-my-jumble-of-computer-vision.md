@@ -501,6 +501,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* Multi-Scale Dense Networks for Resource Efficient Image Classification ([PDF](https://arxiv.org/abs/1703.09844))
 * Net-Trim: Convex Pruning of Deep Neural Networks with Performance Guarantee ([pdf](https://arxiv.org/abs/1611.05162))
 * NISP: Pruning Networks using Neuron Importance Score Propagation ([PDF](https://arxiv.org/abs/1711.05908))
 * Caffeinated FPGAs: FPGA Framework For Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1609.09671))
@@ -520,6 +521,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ReID ###
 
+* In Defense of the Triplet Loss for Person Re-Identification ([PDF](https://arxiv.org/abs/1703.07737))
 * Deep Spatial Feature Reconstruction for Partial Person Re-identification: Alignment-Free Approach ([PDF](https://arxiv.org/abs/1801.00881))
 * AlignedReID: Surpassing Human-Level Performance in Person Re-Identification ([PDF](https://arxiv.org/abs/1711.08184))
 * A Discriminatively Learned CNN Embedding for Person Re-identification ([PDF](https://arxiv.org/abs/1611.05666), [Project/Code](https://github.com/layumi/2016_person_re-ID))
