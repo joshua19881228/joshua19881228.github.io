@@ -198,6 +198,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
+* Real-world Anomaly Detection in Surveillance Videos ([PDF](https://arxiv.org/abs/1801.04264))
+* Fully-Coupled Two-Stream Spatiotemporal Networks for Extremely Low Resolution Action Recognition ([PDF](https://arxiv.org/abs/1801.03983))
 * Deep Reinforcement Learning for Unsupervised Video Summarization with Diversity-Representativeness Reward ([PDF](https://arxiv.org/abs/1801.00054), [Project/Code](https://github.com//KaiyangZhou/vsumm-reinforce))
 * Making a long story short: A Multi-Importance Semantic for Fast-Forwarding Egocentric Videos ([PDF](https://arxiv.org/abs/1711.03473))
 * Attentional Pooling for Action Recognition ([PDF](https://arxiv.org/abs/1711.01467), [Project/Code](https://github.com/rohitgirdhar/AttentionalPoolingAction))
