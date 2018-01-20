@@ -64,3 +64,7 @@ For conv3_3 detection layer, a max-out background label is applied. For each of 
 1. Training dataset and data augmentation, including color distort, random crop and horizontal flip.
 2. Loss function is a multi-task loss defined in RPN.
 3. Hard negative mining.
+
+The experiment result on WIDER FACE is illustrated in the following figure.
+
+![Experiment](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180120_S3FD_expr.png "Experiment"){: .center-image .image-width-640}
