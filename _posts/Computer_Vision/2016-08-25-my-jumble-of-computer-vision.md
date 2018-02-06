@@ -183,6 +183,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### POSE ESTIMATION ###
 
+* DensePose: Dense Human Pose Estimation In The Wild ([PDF](https://arxiv.org/abs/1802.00434), [Project/Code](http://densepose.org/))
 * Cascaded Pyramid Network for Multi-Person Pose Estimation ([PDF](https://arxiv.org/abs/1711.07319))
 * Chained Predictions Using Convolutional Neural Networks ([PDF](http://arxiv.org/abs/1605.02346), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-chained-predictions-using-convolutional-neural-networks_108/))
 * CRF-CNN: Modeling Structured Information in Human Pose Estimation ([PDF](https://arxiv.org/abs/1611.00468))
