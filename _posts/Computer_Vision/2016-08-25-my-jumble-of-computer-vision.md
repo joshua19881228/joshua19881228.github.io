@@ -15,6 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Object Detection in Videos by Short and Long Range Object Linking ([PDF](https://arxiv.org/abs/1801.09823))
 * Learning a Rotation Invariant Detector with Rotatable Bounding Box ([PDF](https://arxiv.org/abs/1711.09405), [Project/Code](https://github.com//liulei01/DRBox))
 * Detecting Curve Text in the Wild: New Dataset and New Solution ([PDF](https://arxiv.org/abs/1712.02170), [Project/Code](https://github.com//Yuliang-Liu/Curve-Text-Detector#curve-text-detector))
 * Single Shot Text Detector with Regional Attention ([PDF](https://arxiv.org/abs/1709.00138), [Project/Code](https://github.com//BestSonny/SSTD))
@@ -84,6 +85,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Learning random-walk label propagation for weakly-supervised semantic segmentation ([PDF](https://arxiv.org/abs/1802.00470))
 * Panoptic Segmentation ([PDF](https://arxiv.org/abs/1801.00868), [Reading Note](https://joshua19881228.github.io/2018-01-08-Panoptic_Segmentation/))
 * Learning to Segment Every Thing ([PDF](https://arxiv.org/abs/1711.10370))
 * Deep Extreme Cut: From Extreme Points to Object Segmentation ([PDF](https://arxiv.org/abs/1711.09081))
@@ -198,6 +200,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
+* Learning Video-Story Composition via Recurrent Neural Network ([PDF](https://arxiv.org/abs/1801.10281))
 * Real-world Anomaly Detection in Surveillance Videos ([PDF](https://arxiv.org/abs/1801.04264))
 * Fully-Coupled Two-Stream Spatiotemporal Networks for Extremely Low Resolution Action Recognition ([PDF](https://arxiv.org/abs/1801.03983))
 * Deep Reinforcement Learning for Unsupervised Video Summarization with Diversity-Representativeness Reward ([PDF](https://arxiv.org/abs/1801.00054), [Project/Code](https://github.com//KaiyangZhou/vsumm-reinforce))
@@ -313,6 +316,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Visual Interpretability for Deep Learning: a Survey ([PDF]())
 * Threat of Adversarial Attacks on Deep Learning in Computer Vision: A Survey ([PDF](https://arxiv.org/abs/1801.00553))
 * CNNs are Globally Optimal Given Multi-Layer Support ([PDF](https://arxiv.org/abs/1712.02501))
 * Take it in your stride: Do we need striding in CNNs? ([PDF](https://arxiv.org/abs/1712.02502))
