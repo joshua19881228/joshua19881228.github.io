@@ -446,6 +446,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Face Aging with Contextual Generative Adversarial Nets ([PDF](https://arxiv.org/abs/1802.00237), [Project/Code](https://www.arxiv-vanity.com/papers/1802.00237/))
 * Deformable GANs for Pose-based Human Image Generation ([PDF](https://arxiv.org/abs/1801.00055), [Project/Code](https://github.com//AliaksandrSiarohin/pose-gan))
 * ComboGAN: Unrestrained Scalability for Image Domain Translation ([PDF](https://arxiv.org/abs/1712.06909), [Project/Code](https://github.com//AAnoosheh/ComboGAN))
 * Eye In-Painting with Exemplar Generative Adversarial Networks ([PDF](https://arxiv.org/abs/1712.03999))
@@ -785,6 +786,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
+* [Low-Power Image Recognition Challenge](https://rebootingcomputing.ieee.org/lpirc)
 * [Open Images Dataset](https://github.com//openimages/dataset)
     Open Images is a dataset of ~9 million URLs to images that have been annotated with image-level labels and bounding boxes spanning thousands of classes.
 * [Visual Tracker Benchmark](http://cvlab.hanyang.ac.kr/tracker_benchmark/index.html)
