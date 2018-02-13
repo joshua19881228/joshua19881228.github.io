@@ -259,6 +259,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification ([PDF](http://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf), [Project/Code](http://gendershades.org/))
 * Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks ([PDF](https://arxiv.org/abs/1604.02878), [Project/Code](https://github.com/kpzhang93/MTCNN_face_detection_alignment), [Code Caffe](https://github.com/foreverYoungGitHub/MTCNN))
 * Deep Architectures for Face Attributes ([PDF](http://arxiv.org/abs/1609.09018))
 * Face Detection with End-to-End Integration of a ConvNet and a 3D Model ([PDF](https://www.arxiv.org/abs/1606.00850), [Reading Note](http://joshua881228.webfactional.com/blog_reading-note-face-detection-with-end-to-end-integration-of-a-convnet-and-a-3d-model_145/), [Project/Code](https://github.com/tfwu/FaceDetection-ConvNet-3D))
@@ -707,6 +708,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [The Root Cause of Slow Neural Net Training](https://medium.com/south-park-commons/otodscinos-the-root-cause-of-slow-neural-net-training-fec7295c364c)
 * [Why is it hard to train deep neural networks? Degeneracy, not vanishing gradients, is the key](https://severelytheoretical.wordpress.com/2018/01/01/why-is-it-hard-to-train-deep-neural-networks-degeneracy-not-vanishing-gradients-is-the-key/)
 * [ResNet, AlexNet, VGG, Inception: Understanding various architectures of Convolutional Networks](http://cv-tricks.com/cnn/understand-resnet-alexnet-vgg-inception/)
 * [Neural Networks For Recommender Systems](https://www.bilibili.com/video/av16499811/)
@@ -786,6 +788,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
+* [Large-Scale Landmark Recognition: A Challenge](https://landmarkscvprw18.github.io/)
 * [Low-Power Image Recognition Challenge](https://rebootingcomputing.ieee.org/lpirc)
 * [Open Images Dataset](https://github.com//openimages/dataset)
     Open Images is a dataset of ~9 million URLs to images that have been annotated with image-level labels and bounding boxes spanning thousands of classes.
