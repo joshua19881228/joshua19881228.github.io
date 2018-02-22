@@ -15,6 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Tiny SSD: A Tiny Single-shot Detection Deep Convolutional Neural Network for Real-time Embedded Object Detection ([PDF](https://arxiv.org/abs/1802.06488))
 * Object Detection in Videos by Short and Long Range Object Linking ([PDF](https://arxiv.org/abs/1801.09823))
 * Learning a Rotation Invariant Detector with Rotatable Bounding Box ([PDF](https://arxiv.org/abs/1711.09405), [Project/Code](https://github.com//liulei01/DRBox))
 * Detecting Curve Text in the Wild: New Dataset and New Solution ([PDF](https://arxiv.org/abs/1712.02170), [Project/Code](https://github.com//Yuliang-Liu/Curve-Text-Detector#curve-text-detector))
@@ -259,6 +260,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* Training Deep Face Recognition Systems with Synthetic Data ([PDF](https://arxiv.org/abs/1802.05891))
 * Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification ([PDF](http://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf), [Project/Code](http://gendershades.org/))
 * Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks ([PDF](https://arxiv.org/abs/1604.02878), [Project/Code](https://github.com/kpzhang93/MTCNN_face_detection_alignment), [Code Caffe](https://github.com/foreverYoungGitHub/MTCNN))
 * Deep Architectures for Face Attributes ([PDF](http://arxiv.org/abs/1609.09018))
