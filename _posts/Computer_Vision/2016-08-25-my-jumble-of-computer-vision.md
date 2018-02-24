@@ -156,6 +156,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TRACKING ###
 
+* Machine Learning Methods for Solving Assignment Problems in Multi-Target Tracking ([PDF](https://arxiv.org/abs/1802.06897))
 * Multi-Target, Multi-Camera Tracking by Hierarchical Clustering: Recent Progress on DukeMTMC Project ([PDF](https://arxiv.org/abs/1712.09531))
 * Detect-and-Track: Efficient Pose Estimation in Videos ([PDF](https://arxiv.org/abs/1712.09184))
 * Track, then Decide: Category-Agnostic Vision-based Multi-Object Tracking ([PDF](https://arxiv.org/abs/1712.07920))
