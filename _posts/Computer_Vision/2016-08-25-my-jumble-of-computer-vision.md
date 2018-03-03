@@ -321,7 +321,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
-* Visual Interpretability for Deep Learning: a Survey ([PDF]())
+* Convolutional Neural Networks with Alternately Updated Clique ([PDF](https://arxiv.org/abs/1802.10419), [Project/Code](https://github.com/iboing/CliqueNet))
+* Visual Interpretability for Deep Learning: a Survey ([PDF](https://arxiv.org/abs/1802.00614))
 * Threat of Adversarial Attacks on Deep Learning in Computer Vision: A Survey ([PDF](https://arxiv.org/abs/1801.00553))
 * CNNs are Globally Optimal Given Multi-Layer Support ([PDF](https://arxiv.org/abs/1712.02501))
 * Take it in your stride: Do we need striding in CNNs? ([PDF](https://arxiv.org/abs/1712.02502))
@@ -513,6 +514,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* Building Efficient ConvNets using Redundant Feature Pruning ([PDF](https://arxiv.org/abs/1802.07653), [Project/Code](https://github.com/babajide07/Redundant-Feature-Pruning-Pytorch-Implementation))
 * Multi-Scale Dense Networks for Resource Efficient Image Classification ([PDF](https://arxiv.org/abs/1703.09844))
 * Net-Trim: Convex Pruning of Deep Neural Networks with Performance Guarantee ([pdf](https://arxiv.org/abs/1611.05162))
 * NISP: Pruning Networks using Neuron Importance Score Propagation ([PDF](https://arxiv.org/abs/1711.05908))
@@ -711,6 +713,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [Setting the learning rate of your neural network.](https://www.jeremyjordan.me/nn-learning-rate/)
 * [The Root Cause of Slow Neural Net Training](https://medium.com/south-park-commons/otodscinos-the-root-cause-of-slow-neural-net-training-fec7295c364c)
 * [Why is it hard to train deep neural networks? Degeneracy, not vanishing gradients, is the key](https://severelytheoretical.wordpress.com/2018/01/01/why-is-it-hard-to-train-deep-neural-networks-degeneracy-not-vanishing-gradients-is-the-key/)
 * [ResNet, AlexNet, VGG, Inception: Understanding various architectures of Convolutional Networks](http://cv-tricks.com/cnn/understand-resnet-alexnet-vgg-inception/)
