@@ -4,7 +4,7 @@ category: ["Computer Vision"]
 tag: ["Reading Note", "Face Detection"]
 ---
 
-**TITLE**: S$S^3FD$: Single Shot Scale-invariant Face Detector
+**TITLE**: $S^3FD$: Single Shot Scale-invariant Face Detector
 
 **AUTHOR**: Shifeng Zhang, Xiangyu Zhu, Zhen Lei, Hailin Shi, Xiaobo Wang, Stan Z. Li
 
