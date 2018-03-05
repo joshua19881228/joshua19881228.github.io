@@ -15,6 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* TSSD: Temporal Single-Shot Detector Based on Attention and LSTM for Robotic Intelligent Perception ([PDF](https://arxiv.org/abs/1803.00197))
 * Tiny SSD: A Tiny Single-shot Detection Deep Convolutional Neural Network for Real-time Embedded Object Detection ([PDF](https://arxiv.org/abs/1802.06488))
 * Object Detection in Videos by Short and Long Range Object Linking ([PDF](https://arxiv.org/abs/1801.09823))
 * Learning a Rotation Invariant Detector with Rotatable Bounding Box ([PDF](https://arxiv.org/abs/1711.09405), [Project/Code](https://github.com//liulei01/DRBox))
@@ -203,6 +204,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
+* 2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning ([PDF](https://arxiv.org/abs/1802.09232))
+* Real-Time End-to-End Action Detection with Two-Stream Networks ([PDF](https://arxiv.org/abs/1802.08362))
 * Learning Video-Story Composition via Recurrent Neural Network ([PDF](https://arxiv.org/abs/1801.10281))
 * Real-world Anomaly Detection in Surveillance Videos ([PDF](https://arxiv.org/abs/1801.04264))
 * Fully-Coupled Two-Stream Spatiotemporal Networks for Extremely Low Resolution Action Recognition ([PDF](https://arxiv.org/abs/1801.03983))
@@ -294,6 +297,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### IMAGE PROCESSING ###
 
+* Neural Aesthetic Image Reviewer ([PDF](https://arxiv.org/abs/1802.10240))
 * Automatic Image Cropping for Visual Aesthetic Enhancement Using Deep Neural Networks and Cascaded Regression ([PDF](https://arxiv.org/abs/1712.09048))
 * Learning Intelligent Dialogs for Bounding Box Annotation ([PDF](https://arxiv.org/abs/1712.08087))
 * Real-time video stabilization and mosaicking for monitoring and surveillance ([PDF](http://ieeexplore.ieee.org/document/7886813/?reload=true), [Project/Code](https://github.com//a-jahani/Real-time-Video-Mosaic))
@@ -321,6 +325,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Tell Me Where to Look: Guided Attention Inference Network ([PDF](https://arxiv.org/abs/1802.10171))
 * Convolutional Neural Networks with Alternately Updated Clique ([PDF](https://arxiv.org/abs/1802.10419), [Project/Code](https://github.com/iboing/CliqueNet))
 * Visual Interpretability for Deep Learning: a Survey ([PDF](https://arxiv.org/abs/1802.00614))
 * Threat of Adversarial Attacks on Deep Learning in Computer Vision: A Survey ([PDF](https://arxiv.org/abs/1801.00553))
@@ -535,6 +540,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ReID ###
 
+* Video Person Re-identification by Temporal Residual Learning ([PDF](https://arxiv.org/abs/1802.07918))
+* Harmonious Attention Network for Person Re-Identification ([PDF](https://arxiv.org/abs/1802.08122))
 * In Defense of the Triplet Loss for Person Re-Identification ([PDF](https://arxiv.org/abs/1703.07737))
 * Deep Spatial Feature Reconstruction for Partial Person Re-identification: Alignment-Free Approach ([PDF](https://arxiv.org/abs/1801.00881))
 * AlignedReID: Surpassing Human-Level Performance in Person Re-Identification ([PDF](https://arxiv.org/abs/1711.08184))
