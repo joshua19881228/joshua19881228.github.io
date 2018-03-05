@@ -16,7 +16,7 @@ I am going to maintain this page to record a few things about computer vision th
 ### OBJECT/SALIENCY DETECTOIN
 
 * TSSD: Temporal Single-Shot Detector Based on Attention and LSTM for Robotic Intelligent Perception ([PDF](https://arxiv.org/abs/1803.00197))
-* Tiny SSD: A Tiny Single-shot Detection Deep Convolutional Neural Network for Real-time Embedded Object Detection ([PDF](https://arxiv.org/abs/1802.06488))
+* Tiny SSD: A Tiny Single-shot Detection Deep Convolutional Neural Network for Real-time Embedded Object Detection ([PDF](https://arxiv.org/abs/1802.06488), [Reading Note](https://joshua19881228.github.io/2018-03-04-Tiny_SSD/))
 * Object Detection in Videos by Short and Long Range Object Linking ([PDF](https://arxiv.org/abs/1801.09823))
 * Learning a Rotation Invariant Detector with Rotatable Bounding Box ([PDF](https://arxiv.org/abs/1711.09405), [Project/Code](https://github.com//liulei01/DRBox))
 * Detecting Curve Text in the Wild: New Dataset and New Solution ([PDF](https://arxiv.org/abs/1712.02170), [Project/Code](https://github.com//Yuliang-Liu/Curve-Text-Detector#curve-text-detector))
@@ -297,7 +297,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### IMAGE PROCESSING ###
 
-* Neural Aesthetic Image Reviewer ([PDF](https://arxiv.org/abs/1802.10240))
+* Neural Aesthetic Image Reviewer ([PDF](https://arxiv.org/abs/1802.10240), [Reading Note](https://joshua19881228.github.io/2018-03-05-Neural_Aesthetic_Image_Reviewer/))
 * Automatic Image Cropping for Visual Aesthetic Enhancement Using Deep Neural Networks and Cascaded Regression ([PDF](https://arxiv.org/abs/1712.09048))
 * Learning Intelligent Dialogs for Bounding Box Annotation ([PDF](https://arxiv.org/abs/1712.08087))
 * Real-time video stabilization and mosaicking for monitoring and surveillance ([PDF](http://ieeexplore.ieee.org/document/7886813/?reload=true), [Project/Code](https://github.com//a-jahani/Real-time-Video-Mosaic))
