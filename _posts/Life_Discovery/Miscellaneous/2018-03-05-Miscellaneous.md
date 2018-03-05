@@ -1,7 +1,7 @@
 ---
 title: "《极简主义》读书笔记"
 category: "Life Discovery"
-tag: "Miscellaneous", "Reading"
+tag: ["Miscellaneous", "Reading"]
 ---
 
 # 《极简主义》读书笔记
