@@ -325,6 +325,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Understanding the Loss Surface of Neural Networks for Binary Classification ([PDF](https://arxiv.org/abs/1803.00909))
 * Tell Me Where to Look: Guided Attention Inference Network ([PDF](https://arxiv.org/abs/1802.10171))
 * Convolutional Neural Networks with Alternately Updated Clique ([PDF](https://arxiv.org/abs/1802.10419), [Project/Code](https://github.com/iboing/CliqueNet))
 * Visual Interpretability for Deep Learning: a Survey ([PDF](https://arxiv.org/abs/1802.00614))
