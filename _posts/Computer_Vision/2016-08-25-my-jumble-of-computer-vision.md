@@ -721,6 +721,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [The Building Blocks of Interpretability]([PDF](https://distill.pub/2018/building-blocks/))
 * [Setting the learning rate of your neural network.](https://www.jeremyjordan.me/nn-learning-rate/)
 * [The Root Cause of Slow Neural Net Training](https://medium.com/south-park-commons/otodscinos-the-root-cause-of-slow-neural-net-training-fec7295c364c)
 * [Why is it hard to train deep neural networks? Degeneracy, not vanishing gradients, is the key](https://severelytheoretical.wordpress.com/2018/01/01/why-is-it-hard-to-train-deep-neural-networks-degeneracy-not-vanishing-gradients-is-the-key/)
@@ -871,6 +872,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [ARCore](https://developers.google.com/ar/) ARCore is a platform for building augmented reality apps on Android. ARCore uses three key technologies to integrate virtual content with the real world as seen through your phone's camera
 * [CNTK](https://github.com/Microsoft/CNTK) Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit.
 * [ONNX](http://onnx.ai/) ONNX is a open format to represent deep learning models. With ONNX, AI developers can more easily move models between state-of-the-art tools and choose the combination that is best for them. ONNX is developed and supported by a community of partners.
+* [PyToune](http://pytoune.org/en/latest/) is a Keras-like framework for PyTorch and handles much of the boilerplating code needed to train neural networks.
 
 ### LEARNING/TRICKS ###
 
