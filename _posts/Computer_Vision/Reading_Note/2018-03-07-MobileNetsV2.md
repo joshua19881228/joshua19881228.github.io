@@ -50,6 +50,6 @@ And the following table gives the basic implementation structure.
 
 ![Classification](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180307_Classification.png "Classification"){: .center-image .image-width-480}
 
-![Object Detection](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/ObjectDetection.png "Object Detection"){: .center-image .image-width-480}
+![Object Detection](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180307_ObjectDetection.png "Object Detection"){: .center-image .image-width-480}
 
-![Semantic Segmentation](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/SemanticSegmentation.png "Semantic Segmentation"){: .center-image .image-width-480}
+![Semantic Segmentation](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180307_SemanticSegmentation.png "Semantic Segmentation"){: .center-image .image-width-480}
