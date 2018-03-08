@@ -264,6 +264,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* Detecting and counting tiny faces ([PDF](https://arxiv.org/abs/1801.06504), [Project/Code](https://github.com/alexattia/ExtendedTinyFaces))
 * Training Deep Face Recognition Systems with Synthetic Data ([PDF](https://arxiv.org/abs/1802.05891))
 * Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification ([PDF](http://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf), [Project/Code](http://gendershades.org/))
 * Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks ([PDF](https://arxiv.org/abs/1604.02878), [Project/Code](https://github.com/kpzhang93/MTCNN_face_detection_alignment), [Code Caffe](https://github.com/foreverYoungGitHub/MTCNN))
