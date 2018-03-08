@@ -18,7 +18,6 @@ tag: ["Reading Note", "Face Detection"]
 2. Presenting a scale compensation anchor matching strategy to improve the recall rate of small faces.
 3. Introducing a max-out background label to reduce the high false positive rate of small faces.
 4. Achieving state-of-the-art results on AFW, PASCAL face, FDDB and WIDER FACE with real-time speed.
-2.
 
 ## METHOD ##
 
