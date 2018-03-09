@@ -15,6 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Chinese Text in the Wild ([PDF](https://arxiv.org/abs/1803.00085), [Project/Code](https://ctwdataset.github.io/))
 * TSSD: Temporal Single-Shot Detector Based on Attention and LSTM for Robotic Intelligent Perception ([PDF](https://arxiv.org/abs/1803.00197))
 * Tiny SSD: A Tiny Single-shot Detection Deep Convolutional Neural Network for Real-time Embedded Object Detection ([PDF](https://arxiv.org/abs/1802.06488), [Reading Note](https://joshua19881228.github.io/2018-03-04-Tiny_SSD/))
 * Object Detection in Videos by Short and Long Range Object Linking ([PDF](https://arxiv.org/abs/1801.09823))
@@ -560,6 +561,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FASHION ###
 
+* Billion-scale Commodity Embedding for E-commerce Recommendation in Alibaba ([PDF](https://arxiv.org/abs/1803.02349))
 * Visually-Aware Fashion Recommendation and Design with Generative Image Models ([PDF](Visually-Aware Fashion Recommendation and Design with Generative Image Models))
 * Be Your Own Prada: Fashion Synthesis with Structural Coherence ([PDF](https://arxiv.org/abs/1710.07346), [Project/Code](http://mmlab.ie.cuhk.edu.hk/projects/FashionGAN/), [Reading Note](https://joshua19881228.github.io/2017-10-31-DeepFashion/))
 * Style2Vec: Representation Learning for Fashion Items from Style Sets ([PDF](https://arxiv.org/abs/1708.04014))
