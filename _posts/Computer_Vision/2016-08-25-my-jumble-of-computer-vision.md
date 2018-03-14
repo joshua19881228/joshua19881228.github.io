@@ -88,6 +88,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation ([PDF](https://arxiv.org/abs/1802.02611), [Project/Code](https://github.com/tensorflow/models/tree/master/research/deeplab))
 * Learning random-walk label propagation for weakly-supervised semantic segmentation ([PDF](https://arxiv.org/abs/1802.00470))
 * Panoptic Segmentation ([PDF](https://arxiv.org/abs/1801.00868), [Reading Note](https://joshua19881228.github.io/2018-01-08-Panoptic_Segmentation/))
 * Learning to Segment Every Thing ([PDF](https://arxiv.org/abs/1711.10370))
@@ -513,6 +514,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### MACHINE LEARNING ###
 
+* Metric Learning with Adaptive Density Discrimination ([PDF](https://arxiv.org/abs/1511.05939), [PyTorch](https://github.com/vithursant/MagnetLoss-PyTorch/), [TF](https://github.com/pumpikano/tf-magnet-loss))
 * Accelerated Gradient Descent Escapes Saddle Points Faster than Gradient Descent ([PDF](https://arxiv.org/abs/1711.10456))
 * [计算机视觉与机器学习 【随机森林】](https://joshua19881228.github.io/2016-08-03-CV-ML/)
 * [计算机视觉与机器学习 【深度学习中的激活函数】](https://joshua19881228.github.io/2016-08-01-CV-ML/)
