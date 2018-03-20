@@ -889,7 +889,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [CNTK](https://github.com/Microsoft/CNTK) Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit.
 * [ONNX](http://onnx.ai/) ONNX is a open format to represent deep learning models. With ONNX, AI developers can more easily move models between state-of-the-art tools and choose the combination that is best for them. ONNX is developed and supported by a community of partners.
 * [PyToune](http://pytoune.org/en/latest/) is a Keras-like framework for PyTorch and handles much of the boilerplating code needed to train neural networks.
-* [Deep Learning Studio - Desktop | DeepCognition.ai] (http://deepcognition.ai/desktop/) is a single user solution that runs locally on your hardware.  Desktop version allows you to train models on your GPU(s) without uploading data to the cloud.   The platform supports transparent multi-GPU training for up to 4 GPUs.  Additional GPUs are supported in Deep Learning Studio – Enterprise.
+* [Deep Learning Studio - Desktop DeepCognition.ai] (http://deepcognition.ai/desktop/) is a single user solution that runs locally on your hardware.  Desktop version allows you to train models on your GPU(s) without uploading data to the cloud.   The platform supports transparent multi-GPU training for up to 4 GPUs.  Additional GPUs are supported in Deep Learning Studio – Enterprise.
 
 ### LEARNING/TRICKS ###
 
