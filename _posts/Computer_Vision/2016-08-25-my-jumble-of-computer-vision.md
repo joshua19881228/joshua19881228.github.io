@@ -15,6 +15,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Complex-YOLO: Real-time 3D Object Detection on Point Clouds ([PDF](https://arxiv.org/abs/1803.06199))
+* Zero-Shot Object Detection: Learning to Simultaneously Recognize and Localize Novel Concepts ([PDF](https://arxiv.org/abs/1803.06049))
+* Domain Adaptive Faster R-CNN for Object Detection in the Wild ([PDF](https://arxiv.org/abs/1803.03243))
 * Chinese Text in the Wild ([PDF](https://arxiv.org/abs/1803.00085), [Project/Code](https://ctwdataset.github.io/))
 * TSSD: Temporal Single-Shot Detector Based on Attention and LSTM for Robotic Intelligent Perception ([PDF](https://arxiv.org/abs/1803.00197))
 * Tiny SSD: A Tiny Single-shot Detection Deep Convolutional Neural Network for Real-time Embedded Object Detection ([PDF](https://arxiv.org/abs/1802.06488), [Reading Note](https://joshua19881228.github.io/2018-03-04-Tiny_SSD/))
@@ -88,6 +91,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Fusing Hierarchical Convolutional Features for Human Body Segmentation and Clothing Fashion Classification ([PDF](https://arxiv.org/abs/1803.03415))
+* ShuffleSeg: Real-time Semantic Segmentation Network ([PDF](https://arxiv.org/abs/1803.03816))
 * Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation ([PDF](https://arxiv.org/abs/1802.02611), [Project/Code](https://github.com/tensorflow/models/tree/master/research/deeplab))
 * Learning random-walk label propagation for weakly-supervised semantic segmentation ([PDF](https://arxiv.org/abs/1802.00470))
 * Panoptic Segmentation ([PDF](https://arxiv.org/abs/1801.00868), [Reading Note](https://joshua19881228.github.io/2018-01-08-Panoptic_Segmentation/))
@@ -266,6 +271,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* Deep Semantic Face Deblurring ([PDF](https://arxiv.org/abs/1803.03345), [Project/Code](https://sites.google.com/site/ziyishenmi/cvpr18_face_deblur))
+* Evaluation of Dense 3D Reconstruction from 2D Face Images in the Wild ([PDF](https://arxiv.org/abs/1803.05536))
+* SSH: Single Stage Headless Face Detector ([PDF](https://arxiv.org/abs/1708.03979), [Project/Code](https://github.com/mahyarnajibi/SSH))
 * Detecting and counting tiny faces ([PDF](https://arxiv.org/abs/1801.06504), [Project/Code](https://github.com/alexattia/ExtendedTinyFaces))
 * Training Deep Face Recognition Systems with Synthetic Data ([PDF](https://arxiv.org/abs/1802.05891))
 * Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification ([PDF](http://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf), [Project/Code](http://gendershades.org/))
@@ -328,6 +336,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Studying Invariances of Trained Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1803.05963))
+* Deep Residual Networks and Weight Initialization ([PDF](https://arxiv.org/abs/1709.02956))
+* WNGrad: Learn the Learning Rate in Gradient Descent ([PDF](https://arxiv.org/abs/1803.02865))
 * Understanding the Loss Surface of Neural Networks for Binary Classification ([PDF](https://arxiv.org/abs/1803.00909))
 * Tell Me Where to Look: Guided Attention Inference Network ([PDF](https://arxiv.org/abs/1802.10171))
 * Convolutional Neural Networks with Alternately Updated Clique ([PDF](https://arxiv.org/abs/1802.10419), [Project/Code](https://github.com/iboing/CliqueNet))
