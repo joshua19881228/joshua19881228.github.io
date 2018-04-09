@@ -15,6 +15,10 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Cascade R-CNN: Delving into High Quality Object Detection ([PDF](https://arxiv.org/abs/1712.00726), [PROJECT/CODE](https://github.com/zhaoweicai/cascade-rcnn))
+* Path Aggregation Network for Instance Segmentation ([PDF](https://arxiv.org/abs/1803.01534))
+* ClickBAIT-v2: Training an Object Detector in Real-Time ([PDF](https://arxiv.org/abs/1803.10358))
+* Single-Shot Bidirectional Pyramid Networks for High-Quality Object Detection ([PDF](https://arxiv.org/abs/1803.08208))
 * Complex-YOLO: Real-time 3D Object Detection on Point Clouds ([PDF](https://arxiv.org/abs/1803.06199))
 * Zero-Shot Object Detection: Learning to Simultaneously Recognize and Localize Novel Concepts ([PDF](https://arxiv.org/abs/1803.06049))
 * Domain Adaptive Faster R-CNN for Object Detection in the Wild ([PDF](https://arxiv.org/abs/1803.03243))
@@ -193,6 +197,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### POSE ESTIMATION ###
 
+* End-to-end Recovery of Human Shape and Pose ([PDF](https://arxiv.org/abs/1712.06584), [PROJECT/CODE](https://akanazawa.github.io/hmr/))
+* PersonLab: Person Pose Estimation and Instance Segmentation with a Bottom-Up, Part-Based, Geometric Embedding Model ([PDF](https://arxiv.org/abs/1803.08225))
 * DensePose: Dense Human Pose Estimation In The Wild ([PDF](https://arxiv.org/abs/1802.00434), [Project/Code](http://densepose.org/))
 * Cascaded Pyramid Network for Multi-Person Pose Estimation ([PDF](https://arxiv.org/abs/1711.07319))
 * Chained Predictions Using Convolutional Neural Networks ([PDF](http://arxiv.org/abs/1605.02346), [Reading Note](https://joshua19881228.github.io/2016-05-24-chainedPredictions/))
@@ -336,6 +342,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Hierarchical Novelty Detection for Visual Object Recognition ([PDF](https://arxiv.org/abs/1804.00722))
+* Guide Me: Interacting with Deep Networks ([PDF](https://arxiv.org/abs/1803.11544))
 * Studying Invariances of Trained Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1803.05963))
 * Deep Residual Networks and Weight Initialization ([PDF](https://arxiv.org/abs/1709.02956))
 * WNGrad: Learn the Learning Rate in Gradient Descent ([PDF](https://arxiv.org/abs/1803.02865))
