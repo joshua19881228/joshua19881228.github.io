@@ -342,6 +342,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Regularizing Deep Networks by Modeling and Predicting Label Structure ([PDF](https://arxiv.org/abs/1804.02009))
 * Hierarchical Novelty Detection for Visual Object Recognition ([PDF](https://arxiv.org/abs/1804.00722))
 * Guide Me: Interacting with Deep Networks ([PDF](https://arxiv.org/abs/1803.11544))
 * Studying Invariances of Trained Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1803.05963))
@@ -479,6 +480,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Pedestrian-Synthesis-GAN: Generating Pedestrian Data in Real Scene and Beyond ([PDF](https://arxiv.org/abs/1804.02047))
 * Face Aging with Contextual Generative Adversarial Nets ([PDF](https://arxiv.org/abs/1802.00237), [Project/Code](https://www.arxiv-vanity.com/papers/1802.00237/))
 * Deformable GANs for Pose-based Human Image Generation ([PDF](https://arxiv.org/abs/1801.00055), [Project/Code](https://github.com//AliaksandrSiarohin/pose-gan))
 * ComboGAN: Unrestrained Scalability for Image Domain Translation ([PDF](https://arxiv.org/abs/1712.06909), [Project/Code](https://github.com//AAnoosheh/ComboGAN))
@@ -564,6 +566,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ReID ###
 
+* Features for Multi-Target Multi-Camera Tracking and Re-Identification ([PDF](https://arxiv.org/abs/1803.10859))
 * Video Person Re-identification by Temporal Residual Learning ([PDF](https://arxiv.org/abs/1802.07918))
 * Harmonious Attention Network for Person Re-Identification ([PDF](https://arxiv.org/abs/1802.08122))
 * In Defense of the Triplet Loss for Person Re-Identification ([PDF](https://arxiv.org/abs/1703.07737))
