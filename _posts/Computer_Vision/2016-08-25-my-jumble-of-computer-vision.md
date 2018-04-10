@@ -950,6 +950,7 @@ I am going to maintain this page to record a few things about computer vision th
 * [37 Reasons why your Neural Network is not working](https://medium.com/@slavivanov/4020854bd607)
 * [My Neural Network isn't working! What should I do?](http://theorangeduck.com/page/neural-network-not-working)
 * [Tutorial on Deep Generative Models](http://www.shakirm.com/slides/DeepGenModelsTutorial.pdfg)
+* [卷积神经网络：从基础技术到研究前景](https://mp.weixin.qq.com/s?__biz=MzA3MzI4MjgzMw==&mid=2650740517&idx=1&sn=0b69d9a42f5ca18ed513cee309cc27a1&chksm=871ad35bb06d5a4d9f4d30e848c023247358db64af5b6d3fe6453412d992c1c5c49d4fe3aca6#rd)
 
 ## SKILLS ##
 
