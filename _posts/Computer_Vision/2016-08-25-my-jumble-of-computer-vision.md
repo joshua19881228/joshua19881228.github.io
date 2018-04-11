@@ -366,7 +366,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Knowledge Concentration: Learning 100K Object Classifiers in a Single CNN ([PDF](https://arxiv.org/abs/1711.07607))
 * Shift: A Zero FLOP, Zero Parameter Alternative to Spatial Convolutions ([PDF](https://arxiv.org/abs/1711.08141))
 * Unleashing the Potential of CNNs for Interpretable Few-Shot Learning ([PDF](https://arxiv.org/abs/1711.08277))
-* Non-local Neural Networks ([PDF](https://arxiv.org/abs/1711.07971))
+* Non-local Neural Networks ([PDF](https://arxiv.org/abs/1711.07971), [Caffe2](https://github.com/facebookresearch/video-nonlocal-net))
 * Log-DenseNet: How to Sparsify a DenseNet ([PDF](https://arxiv.org/abs/1711.00002g))
 * Don't Decay the Learning Rate, Increase the Batch Size ([PDF](https://arxiv.org/abs/1711.00489))
 * Guarding Against Adversarial Domain Shifts with Counterfactual Regularization ([PDF](https://arxiv.org/abs/1710.11469))
@@ -545,6 +545,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* FitNets: Hints for Thin Deep Nets ([PDF](https://arxiv.org/abs/1412.6550))
 * Building Efficient ConvNets using Redundant Feature Pruning ([PDF](https://arxiv.org/abs/1802.07653), [Project/Code](https://github.com/babajide07/Redundant-Feature-Pruning-Pytorch-Implementation))
 * Multi-Scale Dense Networks for Resource Efficient Image Classification ([PDF](https://arxiv.org/abs/1703.09844))
 * Net-Trim: Convex Pruning of Deep Neural Networks with Performance Guarantee ([pdf](https://arxiv.org/abs/1611.05162))
