@@ -342,6 +342,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Discovering Hidden Factors of Variation in Deep Networks ([PDF](https://arxiv.org/abs/1412.6583))
 * Regularizing Deep Networks by Modeling and Predicting Label Structure ([PDF](https://arxiv.org/abs/1804.02009))
 * Hierarchical Novelty Detection for Visual Object Recognition ([PDF](https://arxiv.org/abs/1804.00722))
 * Guide Me: Interacting with Deep Networks ([PDF](https://arxiv.org/abs/1803.11544))
@@ -749,6 +750,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [Depthwise separable convolutions for machine learning](https://eli.thegreenplace.net/2018/depthwise-separable-convolutions-for-machine-learning/)
 * [The Building Blocks of Interpretability]([PDF](https://distill.pub/2018/building-blocks/))
 * [Setting the learning rate of your neural network.](https://www.jeremyjordan.me/nn-learning-rate/)
 * [The Root Cause of Slow Neural Net Training](https://medium.com/south-park-commons/otodscinos-the-root-cause-of-slow-neural-net-training-fec7295c364c)
@@ -831,6 +833,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
+* [EPIC-Kitchens](https://epic-kitchens.github.io/2018)
+    The largest dataset in first-person (egocentric) vision; multi-faceted non-scripted recordings in native environments - i.e. the wearers' homes, capturing all daily activities in the kitchen over multiple days. Annotations are collected using a novel `live' audio commentary approach.
 * [Large-Scale Landmark Recognition: A Challenge](https://landmarkscvprw18.github.io/)
 * [Low-Power Image Recognition Challenge](https://rebootingcomputing.ieee.org/lpirc)
 * [Open Images Dataset](https://github.com//openimages/dataset)
