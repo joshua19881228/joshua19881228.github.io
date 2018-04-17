@@ -340,8 +340,13 @@ I am going to maintain this page to record a few things about computer vision th
 * Neural Color Transfer between Images ([PDF](https://arxiv.org/abs/1710.00756))
 * Deeper, Broader and Artier Domain Generalization ([PDF](https://arxiv.org/abs/1710.03077))
 
+### 3D ###
+
+* Pix3D: Dataset and Methods for Single-Image 3D Shape Modeling ([PDF](https://arxiv.org/abs/1804.04610), [Project/Code](https://github.com/xingyuansun/pix3d))
+
 ### CNN AND DEEP LEARNING ###
 
+* The unreasonable effectiveness of the forget gate ([PDF](https://arxiv.org/abs/1804.04849))
 * Discovering Hidden Factors of Variation in Deep Networks ([PDF](https://arxiv.org/abs/1412.6583))
 * Regularizing Deep Networks by Modeling and Predicting Label Structure ([PDF](https://arxiv.org/abs/1804.02009))
 * Hierarchical Novelty Detection for Visual Object Recognition ([PDF](https://arxiv.org/abs/1804.00722))
@@ -481,6 +486,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Multimodal Unsupervised Image-to-Image Translation ([PDF](https://arxiv.org/abs/1804.04732), [Project/Code](https://github.com/nvlabs/MUNIT))
 * Pedestrian-Synthesis-GAN: Generating Pedestrian Data in Real Scene and Beyond ([PDF](https://arxiv.org/abs/1804.02047))
 * Face Aging with Contextual Generative Adversarial Nets ([PDF](https://arxiv.org/abs/1802.00237), [Project/Code](https://www.arxiv-vanity.com/papers/1802.00237/))
 * Deformable GANs for Pose-based Human Image Generation ([PDF](https://arxiv.org/abs/1801.00055), [Project/Code](https://github.com//AliaksandrSiarohin/pose-gan))
