@@ -1,0 +1,24 @@
+---
+title: "Useful Git Commands"
+category: "Coding"
+tag: ["git"]
+---
+
+1. list the different files in two branches
+
+    ```bash
+    git diff branch1 branch2 --stat
+    ```
+
+2. list the differences in detail in two branches
+
+    ```bash
+    git diff branch1 branch2
+    ```
+
+3. Relpace one file from branch1 to branch2
+
+    ```bash
+    git checkout branch2
+    git checkout --patch branch1 filename
+    ```

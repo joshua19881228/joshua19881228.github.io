@@ -1,24 +1,25 @@
 ---
-title: "Useful Git Commands"
+title: "Using Evermonkey"
 category: "Coding"
-tag: ["git"]
+tag: ["evermonkey", "evernote"]
 ---
 
-1. list the different files in two branches
+# Using Evermonkey #
 
-    ```bash
-    git diff branch1 branch2 --stat
-    ```
+## Installation ##
 
-2. list the differences in detail in two branches
+I've been using VSCode for a while and used to Markdown, which has not been supported by EverNote yet. Thus, I wonder whether there's any extension that can help. Luckily, [evermonkey](https://github.com/michalyao/evermonkey) shows up. There are 3 steps to use this extension.
 
-    ```bash
-    git diff branch1 branch2
-    ```
+1. Get a developer token. Currently, EverNote does not accept applications for tokens on their official website. But we can get a token by sending emails to their costumer service. I got a token in only one or two days.
+2. Install evermonkey extension to VSCODE.
+3. Set `evermonkey.token` and `evermonkey.noteStoreUrl` in settings.
 
-3. Relpace one file from branch1 to branch2
+## Usage ##
 
-    ```bash
-    git checkout branch2
-    git checkout --patch branch1 filename
-    ```
+Open command panel by F1 or ctrl+shift+p then type
+
+* `ever new` to start a new blank note.
+* `ever open` to open a note in a tree-like structure.
+* `ever search` to search note in EverNote grammar.
+* `ever publish` to publish current editing note to EverNote server.
+* `ever sync` to synchronizing EverNote account.
