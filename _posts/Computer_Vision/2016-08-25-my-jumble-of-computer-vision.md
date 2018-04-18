@@ -839,6 +839,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
+* [Revisiting Oxford and Paris: Large-Scale Image Retrieval Benchmarking](http://cmp.felk.cvut.cz/revisitop/)
 * [EPIC-Kitchens](https://epic-kitchens.github.io/2018)
     The largest dataset in first-person (egocentric) vision; multi-faceted non-scripted recordings in native environments - i.e. the wearers' homes, capturing all daily activities in the kitchen over multiple days. Annotations are collected using a novel `live' audio commentary approach.
 * [Large-Scale Landmark Recognition: A Challenge](https://landmarkscvprw18.github.io/)
