@@ -95,6 +95,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Deep Object Co-Segmentation ([PDF](https://arxiv.org/abs/1804.06423))
 * Fusing Hierarchical Convolutional Features for Human Body Segmentation and Clothing Fashion Classification ([PDF](https://arxiv.org/abs/1803.03415))
 * ShuffleSeg: Real-time Semantic Segmentation Network ([PDF](https://arxiv.org/abs/1803.03816))
 * Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation ([PDF](https://arxiv.org/abs/1802.02611), [Project/Code](https://github.com/tensorflow/models/tree/master/research/deeplab))
@@ -217,6 +218,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
+* Superframes, A Temporal Video Segmentation ([PDF](https://arxiv.org/abs/1804.06642))
+* Co-occurrence Feature Learning from Skeleton Data for Action Recognition and Detection with Hierarchical Aggregation ([PDF](https://arxiv.org/abs/1804.06055))
 * 2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning ([PDF](https://arxiv.org/abs/1802.09232))
 * Real-Time End-to-End Action Detection with Two-Stream Networks ([PDF](https://arxiv.org/abs/1802.08362))
 * Learning Video-Story Composition via Recurrent Neural Network ([PDF](https://arxiv.org/abs/1801.10281))
@@ -277,6 +280,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* SFace: An Efficient Network for Face Detection in Large Scale Variations ([PDF](SFace: An Efficient Network for Face Detection in Large Scale Variations))
+* Deep Face Recognition: A Survey ([PDF](https://arxiv.org/abs/1804.06655))
 * Deep Semantic Face Deblurring ([PDF](https://arxiv.org/abs/1803.03345), [Project/Code](https://sites.google.com/site/ziyishenmi/cvpr18_face_deblur))
 * Evaluation of Dense 3D Reconstruction from 2D Face Images in the Wild ([PDF](https://arxiv.org/abs/1803.05536))
 * SSH: Single Stage Headless Face Detector ([PDF](https://arxiv.org/abs/1708.03979), [Project/Code](https://github.com/mahyarnajibi/SSH))
@@ -552,6 +557,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* IGCV2: Interleaved Structured Sparse Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1804.06202))
 * FitNets: Hints for Thin Deep Nets ([PDF](https://arxiv.org/abs/1412.6550))
 * Building Efficient ConvNets using Redundant Feature Pruning ([PDF](https://arxiv.org/abs/1802.07653), [Project/Code](https://github.com/babajide07/Redundant-Feature-Pruning-Pytorch-Implementation))
 * Multi-Scale Dense Networks for Resource Efficient Image Classification ([PDF](https://arxiv.org/abs/1703.09844))
