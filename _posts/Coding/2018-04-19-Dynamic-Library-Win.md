@@ -4,8 +4,6 @@ category: "Coding"
 tag: ["Dynamic Library", "Windows"]
 ---
 
-# Using Evermonkey #
-
 最近在给封装一个动态库，需要支持古老的windows xp系统。而我的开发系统是windows 10，使用visual studio 2013作为IDE。
 
 一通谷歌百度之后，我采用了曝光度最高的方法。具体来说包括两个步骤：
