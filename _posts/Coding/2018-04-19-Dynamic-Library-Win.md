@@ -15,7 +15,7 @@ tag: ["Dynamic Library", "Windows"]
 
 最初并没有发现这样做有什么问题，后来写了一个接口函数，release模式下没有发现问题，但是debug模式下调用该接口的函数在出栈时一直崩溃，错误如下
 
-![Error](https://https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Coding/20180419/error.png "Error"){: .center-image .image-width-320}
+![Error](https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Coding/20180419/error.png "Error"){: .center-image .image-width-320}
 
 因为对这一块儿实在不熟悉，就抱着死马当活马医的态度，把所有MT/MTd都改成了MD/MDd，又把所有依赖库和自己的库编译了一遍。在目标测试机上安装，居然成功了。
 
