@@ -198,7 +198,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### POSE ESTIMATION ###
 
-* End-to-end Recovery of Human Shape and Pose ([PDF](https://arxiv.org/abs/1712.06584), [PROJECT/CODE](https://akanazawa.github.io/hmr/))
+* End-to-end Recovery of Human Shape and Pose ([PDF](https://arxiv.org/abs/1712.06584), [PROJECT/CODE](https://akanazawa.github.io/hmr/), [Code](https://github.com/akanazawa/hmr))
 * PersonLab: Person Pose Estimation and Instance Segmentation with a Bottom-Up, Part-Based, Geometric Embedding Model ([PDF](https://arxiv.org/abs/1803.08225))
 * DensePose: Dense Human Pose Estimation In The Wild ([PDF](https://arxiv.org/abs/1802.00434), [Project/Code](http://densepose.org/))
 * Cascaded Pyramid Network for Multi-Person Pose Estimation ([PDF](https://arxiv.org/abs/1711.07319))
@@ -218,6 +218,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
+* PHD-GIFs: Personalized Highlight Detection for Automatic GIF Creation ([PDF](https://arxiv.org/abs/1804.06604), [Project/Code](https://github.com/gyglim/personalized-highlights-dataset))
 * Superframes, A Temporal Video Segmentation ([PDF](https://arxiv.org/abs/1804.06642))
 * Co-occurrence Feature Learning from Skeleton Data for Action Recognition and Detection with Hierarchical Aggregation ([PDF](https://arxiv.org/abs/1804.06055))
 * 2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning ([PDF](https://arxiv.org/abs/1802.09232))
@@ -351,6 +352,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Understanding Convolutional Neural Network Training with Information Theory ([PDF](https://arxiv.org/abs/1804.06537))
 * The unreasonable effectiveness of the forget gate ([PDF](https://arxiv.org/abs/1804.04849))
 * Discovering Hidden Factors of Variation in Deep Networks ([PDF](https://arxiv.org/abs/1412.6583))
 * Regularizing Deep Networks by Modeling and Predicting Label Structure ([PDF](https://arxiv.org/abs/1804.02009))
@@ -557,6 +559,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* SBNet: Sparse Blocks Network for Fast Inference ([PDF](https://arxiv.org/abs/1801.02108), [Project/Code](https://github.com/uber/sbnet))
 * IGCV2: Interleaved Structured Sparse Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1804.06202))
 * FitNets: Hints for Thin Deep Nets ([PDF](https://arxiv.org/abs/1412.6550))
 * Building Efficient ConvNets using Redundant Feature Pruning ([PDF](https://arxiv.org/abs/1802.07653), [Project/Code](https://github.com/babajide07/Redundant-Feature-Pruning-Pytorch-Implementation))
