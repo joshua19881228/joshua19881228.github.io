@@ -15,7 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
-* Pelee: A Real-Time Object Detection System on Mobile Devices ([PDF](https://arxiv.org/abs/1804.06882), [https://github.com/Robert-JunWang/Pelee])
+* Pelee: A Real-Time Object Detection System on Mobile Devices ([PDF](https://arxiv.org/abs/1804.06882), [Project/Code](https://github.com/Robert-JunWang/Pelee))
 * Cascade R-CNN: Delving into High Quality Object Detection ([PDF](https://arxiv.org/abs/1712.00726), [PROJECT/CODE](https://github.com/zhaoweicai/cascade-rcnn))
 * Path Aggregation Network for Instance Segmentation ([PDF](https://arxiv.org/abs/1803.01534))
 * ClickBAIT-v2: Training an Object Detector in Real-Time ([PDF](https://arxiv.org/abs/1803.10358))
