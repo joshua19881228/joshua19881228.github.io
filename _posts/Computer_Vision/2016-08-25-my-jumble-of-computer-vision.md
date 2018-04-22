@@ -17,7 +17,6 @@ I am going to maintain this page to record a few things about computer vision th
 
 * Zero-Shot Object Detection ([PDF](https://arxiv.org/abs/1804.04340))
 * Unsupervised Discovery of Object Landmarks as Structural Representations ([PDF](https://arxiv.org/abs/1804.04412), [Project/Code](http://www.ytzhang.net/projects/lmdis-rep/))
-* Pelee: A Real-Time Object Detection System on Mobile Devices ([PDF](https://arxiv.org/abs/1804.06882), [Project/Code](https://github.com/Robert-JunWang/Pelee))
 * Cascade R-CNN: Delving into High Quality Object Detection ([PDF](https://arxiv.org/abs/1712.00726), [PROJECT/CODE](https://github.com/zhaoweicai/cascade-rcnn))
 * Path Aggregation Network for Instance Segmentation ([PDF](https://arxiv.org/abs/1803.01534))
 * ClickBAIT-v2: Training an Object Detector in Real-Time ([PDF](https://arxiv.org/abs/1803.10358))
@@ -563,6 +562,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* Pelee: A Real-Time Object Detection System on Mobile Devices ([PDF](https://arxiv.org/abs/1804.06882), [Project/Code](https://github.com/Robert-JunWang/Pelee), [Reading Note](https://joshua19881228.github.io/2018-04-22-Pelee/))
 * MobileNetV2: Inverted Residuals and Linear Bottlenecks ([PDF](https://arxiv.org/abs/1801.04381), [Reading Note](https://joshua19881228.github.io/2018-03-07-MobileNetsV2/))
 * SBNet: Sparse Blocks Network for Fast Inference ([PDF](https://arxiv.org/abs/1801.02108), [Project/Code](https://github.com/uber/sbnet))
 * IGCV2: Interleaved Structured Sparse Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1804.06202))
