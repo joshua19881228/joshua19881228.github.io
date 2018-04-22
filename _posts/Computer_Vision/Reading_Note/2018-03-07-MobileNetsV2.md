@@ -1,10 +1,10 @@
 ---
-title: "Reading Note: Inverted Residuals and Linear Bottlenecks: Mobile Networks for Classification, Detection and Segmentation"
+title: "Reading Note: MobileNetV2: Inverted Residuals and Linear Bottlenecks"
 category: ["Computer Vision"]
 tag: ["Reading Note", "CNN", "Mobile Models"]
 ---
 
-**TITLE**: Inverted Residuals and Linear Bottlenecks: Mobile Networks for Classification, Detection and Segmentation
+**TITLE**: MobileNetV2: Inverted Residuals and Linear Bottlenecks
 
 **AUTHOR**: Mark Sandler, Andrew Howard, Menglong Zhu, Andrey Zhmoginov, Liang-Chieh Chen
 

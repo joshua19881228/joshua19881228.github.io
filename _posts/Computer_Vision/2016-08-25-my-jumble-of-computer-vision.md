@@ -563,6 +563,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* MobileNetV2: Inverted Residuals and Linear Bottlenecks ([PDF](https://arxiv.org/abs/1801.04381), [Reading Note](https://joshua19881228.github.io/2018-03-07-MobileNetsV2/))
 * SBNet: Sparse Blocks Network for Fast Inference ([PDF](https://arxiv.org/abs/1801.02108), [Project/Code](https://github.com/uber/sbnet))
 * IGCV2: Interleaved Structured Sparse Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1804.06202))
 * FitNets: Hints for Thin Deep Nets ([PDF](https://arxiv.org/abs/1412.6550))
