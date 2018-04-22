@@ -15,6 +15,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* Zero-Shot Object Detection ([PDF](https://arxiv.org/abs/1804.04340))
+* Unsupervised Discovery of Object Landmarks as Structural Representations ([PDF](https://arxiv.org/abs/1804.04412), [Project/Code](http://www.ytzhang.net/projects/lmdis-rep/))
 * Pelee: A Real-Time Object Detection System on Mobile Devices ([PDF](https://arxiv.org/abs/1804.06882), [Project/Code](https://github.com/Robert-JunWang/Pelee))
 * Cascade R-CNN: Delving into High Quality Object Detection ([PDF](https://arxiv.org/abs/1712.00726), [PROJECT/CODE](https://github.com/zhaoweicai/cascade-rcnn))
 * Path Aggregation Network for Instance Segmentation ([PDF](https://arxiv.org/abs/1803.01534))
@@ -199,6 +201,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### POSE ESTIMATION ###
 
+* Simple Baselines for Human Pose Estimation and Tracking ([PDF](https://arxiv.org/abs/1804.06208))
 * End-to-end Recovery of Human Shape and Pose ([PDF](https://arxiv.org/abs/1712.06584), [PROJECT/CODE](https://akanazawa.github.io/hmr/), [Code](https://github.com/akanazawa/hmr))
 * PersonLab: Person Pose Estimation and Instance Segmentation with a Bottom-Up, Part-Based, Geometric Embedding Model ([PDF](https://arxiv.org/abs/1803.08225))
 * DensePose: Dense Human Pose Estimation In The Wild ([PDF](https://arxiv.org/abs/1802.00434), [Project/Code](http://densepose.org/))
