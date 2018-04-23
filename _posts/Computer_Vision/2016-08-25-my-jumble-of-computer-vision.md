@@ -15,6 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
+* DetNet: A Backbone network for Object Detection ([PDF](https://arxiv.org/abs/1804.06215))
 * Zero-Shot Object Detection ([PDF](https://arxiv.org/abs/1804.04340))
 * Unsupervised Discovery of Object Landmarks as Structural Representations ([PDF](https://arxiv.org/abs/1804.04412), [Project/Code](http://www.ytzhang.net/projects/lmdis-rep/))
 * Cascade R-CNN: Delving into High Quality Object Detection ([PDF](https://arxiv.org/abs/1712.00726), [PROJECT/CODE](https://github.com/zhaoweicai/cascade-rcnn))
@@ -171,6 +172,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TRACKING ###
 
+* Trajectory Factory: Tracklet Cleaving and Re-connection by Deep Siamese Bi-GRU for Multiple Object Tracking ([PDF](https://arxiv.org/abs/1804.04555))
 * Machine Learning Methods for Solving Assignment Problems in Multi-Target Tracking ([PDF](https://arxiv.org/abs/1802.06897))
 * Multi-Target, Multi-Camera Tracking by Hierarchical Clustering: Recent Progress on DukeMTMC Project ([PDF](https://arxiv.org/abs/1712.09531))
 * Detect-and-Track: Efficient Pose Estimation in Videos ([PDF](https://arxiv.org/abs/1712.09184))
@@ -284,6 +286,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* PyramidBox: A Context-assisted Single Shot Face Detector ([PDF](https://arxiv.org/abs/1803.07737))
 * SFace: An Efficient Network for Face Detection in Large Scale Variations ([PDF](SFace: An Efficient Network for Face Detection in Large Scale Variations))
 * Deep Face Recognition: A Survey ([PDF](https://arxiv.org/abs/1804.06655))
 * Deep Semantic Face Deblurring ([PDF](https://arxiv.org/abs/1803.03345), [Project/Code](https://sites.google.com/site/ziyishenmi/cvpr18_face_deblur))
@@ -355,6 +358,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Understanding Individual Neuron Importance Using Information Theory ([PDF](https://arxiv.org/abs/1804.06679))
 * Understanding Convolutional Neural Network Training with Information Theory ([PDF](https://arxiv.org/abs/1804.06537))
 * The unreasonable effectiveness of the forget gate ([PDF](https://arxiv.org/abs/1804.04849))
 * Discovering Hidden Factors of Variation in Deep Networks ([PDF](https://arxiv.org/abs/1412.6583))
@@ -496,6 +500,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* MGGAN: Solving Mode Collapse using Manifold Guided Training ([PDF](https://arxiv.org/abs/1804.04391))
 * Multimodal Unsupervised Image-to-Image Translation ([PDF](https://arxiv.org/abs/1804.04732), [Project/Code](https://github.com/nvlabs/MUNIT))
 * Pedestrian-Synthesis-GAN: Generating Pedestrian Data in Real Scene and Beyond ([PDF](https://arxiv.org/abs/1804.02047))
 * Face Aging with Contextual Generative Adversarial Nets ([PDF](https://arxiv.org/abs/1802.00237), [Project/Code](https://www.arxiv-vanity.com/papers/1802.00237/))
@@ -853,6 +858,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
+* [STAIR Actions: A Video Dataset of Everyday Home Actions](https://stair-lab-cit.github.io/STAIR-actions-web/)
+    STAIR Actions is a video dataset consisting of 100 everyday human action categories.  
 * [Revisiting Oxford and Paris: Large-Scale Image Retrieval Benchmarking](http://cmp.felk.cvut.cz/revisitop/)
 * [EPIC-Kitchens](https://epic-kitchens.github.io/2018)
     The largest dataset in first-person (egocentric) vision; multi-faceted non-scripted recordings in native environments - i.e. the wearers' homes, capturing all daily activities in the kitchen over multiple days. Annotations are collected using a novel `live' audio commentary approach.
