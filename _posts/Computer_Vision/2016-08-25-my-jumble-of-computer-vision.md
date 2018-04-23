@@ -500,6 +500,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Painting Generation Using Conditional Generative Adversarial Net ([PDF](http://adeel.io/sncgan/mlp_cw4.pdf), [Project/Code](https://github.com/AdeelMufti/SNcGAN))
 * MGGAN: Solving Mode Collapse using Manifold Guided Training ([PDF](https://arxiv.org/abs/1804.04391))
 * Multimodal Unsupervised Image-to-Image Translation ([PDF](https://arxiv.org/abs/1804.04732), [Project/Code](https://github.com/nvlabs/MUNIT))
 * Pedestrian-Synthesis-GAN: Generating Pedestrian Data in Real Scene and Beyond ([PDF](https://arxiv.org/abs/1804.02047))
