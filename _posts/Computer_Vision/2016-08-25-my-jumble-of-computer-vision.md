@@ -288,6 +288,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 * PyramidBox: A Context-assisted Single Shot Face Detector ([PDF](https://arxiv.org/abs/1803.07737))
 * SFace: An Efficient Network for Face Detection in Large Scale Variations ([PDF](SFace: An Efficient Network for Face Detection in Large Scale Variations))
+* Deep Facial Expression Recognition: A Survey ([PDF](https://arxiv.org/abs/1804.08348))
 * Deep Face Recognition: A Survey ([PDF](https://arxiv.org/abs/1804.06655))
 * Deep Semantic Face Deblurring ([PDF](https://arxiv.org/abs/1803.03345), [Project/Code](https://sites.google.com/site/ziyishenmi/cvpr18_face_deblur))
 * Evaluation of Dense 3D Reconstruction from 2D Face Images in the Wild ([PDF](https://arxiv.org/abs/1803.05536))
