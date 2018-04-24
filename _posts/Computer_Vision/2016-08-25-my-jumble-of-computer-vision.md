@@ -326,6 +326,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### IMAGE PROCESSING ###
 
+* Image Inpainting for Irregular Holes Using Partial Convolutions ([PDF](https://arxiv.org/abs/1804.07723))
 * Neural Aesthetic Image Reviewer ([PDF](https://arxiv.org/abs/1802.10240), [Reading Note](https://joshua19881228.github.io/2018-03-05-Neural_Aesthetic_Image_Reviewer/))
 * Automatic Image Cropping for Visual Aesthetic Enhancement Using Deep Neural Networks and Cascaded Regression ([PDF](https://arxiv.org/abs/1712.09048))
 * Learning Intelligent Dialogs for Bounding Box Annotation ([PDF](https://arxiv.org/abs/1712.08087))
@@ -665,6 +666,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES ###
 
+* [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN)
+    PyTorch implementations of Generative Adversarial Networks.
 * [A Gentle Introduction to Transfer Learning for Image Classification](https://github.com/miguelgfierro/sciblog_support/blob/master/A_Gentle_Introduction_to_Transfer_Learning/Intro_Transfer_Learning.ipynb)
 * [GAN Timeline](https://github.com//dongb5/GAN-Timeline)
     A timeline showing the development of Generative Adversarial Networks (GAN).
