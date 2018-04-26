@@ -360,6 +360,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* An Information-Theoretic View for Deep Learning ([PDF](https://arxiv.org/abs/1804.09060))
 * Understanding Individual Neuron Importance Using Information Theory ([PDF](https://arxiv.org/abs/1804.06679))
 * Understanding Convolutional Neural Network Training with Information Theory ([PDF](https://arxiv.org/abs/1804.06537))
 * The unreasonable effectiveness of the forget gate ([PDF](https://arxiv.org/abs/1804.04849))
@@ -624,6 +625,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* Synthesizing Images of Humans in Unseen Poses ([PDF](https://arxiv.org/abs/1804.07739v1))
 * End-to-end weakly-supervised semantic alignment ([PDF](https://arxiv.org/abs/1712.06861), [Project/Code](http://www.di.ens.fr/willow/research/weakalign/))
 * Dense Optical Flow based Change Detection Network Robust to Difference of Camera Viewpoints ([PDF](https://arxiv.org/abs/1712.02941))
 * Dual-Path Convolutional Image-Text Embedding ([PDF](https://arxiv.org/abs/1711.05535), [Project/Code](https://github.com//layumi/Image-Text-Embedding))
