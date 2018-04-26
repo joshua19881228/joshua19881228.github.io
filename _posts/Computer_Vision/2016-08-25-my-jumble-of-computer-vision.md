@@ -286,6 +286,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* MobileFaceNets: Efficient CNNs for Accurate Real-time Face Verification on Mobile Devices ([PDF](https://arxiv.org/abs/1804.07573))
+* Survey of Face Detection on Low-quality Images ([PDF](https://arxiv.org/abs/1804.07362))
 * PyramidBox: A Context-assisted Single Shot Face Detector ([PDF](https://arxiv.org/abs/1803.07737))
 * SFace: An Efficient Network for Face Detection in Large Scale Variations ([PDF](SFace: An Efficient Network for Face Detection in Large Scale Variations))
 * Deep Facial Expression Recognition: A Survey ([PDF](https://arxiv.org/abs/1804.08348))
