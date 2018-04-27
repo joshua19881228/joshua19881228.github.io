@@ -27,7 +27,7 @@ Given an image, all face candidates are obtained according to the sliding window
 PCN progressively calibrates the RIP orientation of each face candidate to upright for better distinguishing faces from non-faces. 
 
 1. PCN-1 first identifies face candidates and calibrates those facing down to facing up, halving the range of RIP angles from [$-180^{\circ}$,$180^{\circ}$] to [$-90^{\circ}$, $90^{\circ}$]. 
-2. Then the rotated face candidates are further distinguished and calibrated to an upright range of [−45◦, 45◦] in PCN-2, shrinking the RIP ranges by half again. 
+2. Then the rotated face candidates are further distinguished and calibrated to an upright range of [$-45^{\circ}$, $45^{\circ}$] in PCN-2, shrinking the RIP ranges by half again. 
 3. Finally, PCN-3 makes the accurate final decision for each face candidate to determine whether it is a face and predict the precise RIP angle. Briefly,
 
 The following figure illustrates the framework.
@@ -40,7 +40,7 @@ For each input window $x$, PCN-1 has three objectives: face or non-face classifi
 
 $$[f, t, g] = F_{1}(x)$$
 
-where $F1$ is the detector in the first stage structured with a small CNN. The $f$ is face confidence score, $t$ is a vector representing the prediction of bounding box regression, and $g$ is orientation score. Overall, the objective for PCN-1 in the first stage is defined as:
+where $F_[1}$ is the detector in the first stage structured with a small CNN. The $f$ is face confidence score, $t$ is a vector representing the prediction of bounding box regression, and $g$ is orientation score. Overall, the objective for PCN-1 in the first stage is defined as:
 
 $$\min L = L_{cls} +\lambda_{reg} \cdot L_{reg} + \lambda_{cal} \cdot L_{cal}$$
 
