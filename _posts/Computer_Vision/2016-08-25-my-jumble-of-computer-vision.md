@@ -286,7 +286,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
-* Real-Time Rotation-Invariant Face Detection with Progressive Calibration Networks ([PDF](https://arxiv.org/abs/1804.06039))
+* Real-Time Rotation-Invariant Face Detection with Progressive Calibration Networks ([PDF](https://arxiv.org/abs/1804.06039), [Reading Note](https://joshua19881228.github.io/2018-04-27-Real-Time-Face-Detection/))
 * MobileFaceNets: Efficient CNNs for Accurate Real-time Face Verification on Mobile Devices ([PDF](https://arxiv.org/abs/1804.07573))
 * Survey of Face Detection on Low-quality Images ([PDF](https://arxiv.org/abs/1804.07362))
 * PyramidBox: A Context-assisted Single Shot Face Detector ([PDF](https://arxiv.org/abs/1803.07737))
