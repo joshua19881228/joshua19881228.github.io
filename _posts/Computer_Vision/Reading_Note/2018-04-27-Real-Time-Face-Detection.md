@@ -40,7 +40,7 @@ For each input window $x$, PCN-1 has three objectives: face or non-face classifi
 
 $$[f, t, g] = F_{1}(x)$$
 
-where $F_[1}$ is the detector in the first stage structured with a small CNN. The $f$ is face confidence score, $t$ is a vector representing the prediction of bounding box regression, and $g$ is orientation score. Overall, the objective for PCN-1 in the first stage is defined as:
+where $F_{1}$ is the detector in the first stage structured with a small CNN. The $f$ is face confidence score, $t$ is a vector representing the prediction of bounding box regression, and $g$ is orientation score. Overall, the objective for PCN-1 in the first stage is defined as:
 
 $$\min L = L_{cls} +\lambda_{reg} \cdot L_{reg} + \lambda_{cal} \cdot L_{cal}$$
 
