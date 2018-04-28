@@ -628,6 +628,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* A Variational U-Net for Conditional Appearance and Shape Generation ([PDF](https://arxiv.org/abs/1804.04694), [Project/Code](https://compvis.github.io/vunet/))
 * Synthesizing Images of Humans in Unseen Poses ([PDF](https://arxiv.org/abs/1804.07739v1))
 * End-to-end weakly-supervised semantic alignment ([PDF](https://arxiv.org/abs/1712.06861), [Project/Code](http://www.di.ens.fr/willow/research/weakalign/))
 * Dense Optical Flow based Change Detection Network Robust to Difference of Camera Viewpoints ([PDF](https://arxiv.org/abs/1712.02941))
