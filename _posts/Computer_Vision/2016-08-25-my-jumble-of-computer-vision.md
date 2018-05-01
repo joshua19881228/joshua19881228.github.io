@@ -15,7 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTOIN
 
-* DetNet: A Backbone network for Object Detection ([PDF](https://arxiv.org/abs/1804.06215))
+* DetNet: A Backbone network for Object Detection ([PDF](https://arxiv.org/abs/1804.06215), [Reading Note](https://joshua19881228.github.io/2018-05-01-DetNet/))
 * Zero-Shot Object Detection ([PDF](https://arxiv.org/abs/1804.04340))
 * Unsupervised Discovery of Object Landmarks as Structural Representations ([PDF](https://arxiv.org/abs/1804.04412), [Project/Code](http://www.ytzhang.net/projects/lmdis-rep/))
 * Cascade R-CNN: Delving into High Quality Object Detection ([PDF](https://arxiv.org/abs/1712.00726), [PROJECT/CODE](https://github.com/zhaoweicai/cascade-rcnn))
