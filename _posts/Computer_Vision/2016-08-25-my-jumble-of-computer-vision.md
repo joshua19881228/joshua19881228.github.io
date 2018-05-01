@@ -363,6 +363,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Network Transplanting ([PDF](https://arxiv.org/abs/1804.10272))
 * An Information-Theoretic View for Deep Learning ([PDF](https://arxiv.org/abs/1804.09060))
 * Understanding Individual Neuron Importance Using Information Theory ([PDF](https://arxiv.org/abs/1804.06679))
 * Understanding Convolutional Neural Network Training with Information Theory ([PDF](https://arxiv.org/abs/1804.06537))
@@ -503,6 +504,10 @@ I am going to maintain this page to record a few things about computer vision th
 * A systematic study of the class imbalance problem in convolutional neural networks ([PDF](https://arxiv.org/abs/1710.05381))
 * Interpretable Transformations with Encoder-Decoder Networks ([PDF](https://arxiv.org/abs/1710.07307), [Project/Code](http://visual.cs.ucl.ac.uk/pubs/interpTransform/))
 * One pixel attack for fooling deep neural networks ([PDF](https://arxiv.org/abs/1710.08864))
+
+### SINGLE-SHOT/UNSUPERVISED LEARNING ###
+
+* Deep Triplet Ranking Networks for One-Shot Recognition ([PDF](https://arxiv.org/abs/1804.07275))
 
 ### GAN ###
 
