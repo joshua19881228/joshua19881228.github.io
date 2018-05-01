@@ -33,7 +33,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Detecting Curve Text in the Wild: New Dataset and New Solution ([PDF](https://arxiv.org/abs/1712.02170), [Project/Code](https://github.com//Yuliang-Liu/Curve-Text-Detector#curve-text-detector))
 * Single Shot Text Detector with Regional Attention ([PDF](https://arxiv.org/abs/1709.00138), [Project/Code](https://github.com//BestSonny/SSTD))
 * Single-Shot Refinement Neural Network for Object Detection ([PDF](https://arxiv.org/abs/1711.06897), [Project/Code](https://github.com//sfzhang15/RefineDet), [Reading Note](https://joshua19881228.github.io/2018-01-10-Single-Shot-Refinement-Neural-Network/))
-* $S^3$FD: Single Shot Scale-invariant Face Detector ([PDF](https://arxiv.org/abs/1708.05237), [Reading Note](https://joshua19881228.github.io/2018-01-20-S-3_Face_Detector/))
+* $S^3$FD: Single Shot Scale-invariant Face Detector ([PDF](https://arxiv.org/abs/1708.05237), [Code/Project](https://github.com/sfzhang15/SFD), [Reading Note](https://joshua19881228.github.io/2018-01-20-S-3_Face_Detector/))
 * MegDet: A Large Mini-Batch Object Detector ([PDF](https://arxiv.org/abs/1711.07240))
 * Light-Head R-CNN: In Defense of Two-Stage Object Detector ([PDF](https://arxiv.org/abs/1711.07264))
 * Interpretable R-CNN ([PDF](https://arxiv.org/abs/1711.05226))
