@@ -605,6 +605,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ReID ###
 
+* Image-Image Domain Adaptation with Preserved Self-Similarity and Domain-Dissimilarity for Person Re-identification ([PDF](https://arxiv.org/abs/1711.07027), [Project/Code](https://github.com/Simon4Yan/Learning-via-Translation))
 * Features for Multi-Target Multi-Camera Tracking and Re-Identification ([PDF](https://arxiv.org/abs/1803.10859))
 * Video Person Re-identification by Temporal Residual Learning ([PDF](https://arxiv.org/abs/1802.07918))
 * Harmonious Attention Network for Person Re-Identification ([PDF](https://arxiv.org/abs/1802.08122))
@@ -951,8 +952,9 @@ I am going to maintain this page to record a few things about computer vision th
 * [PyToune](http://pytoune.org/en/latest/) is a Keras-like framework for PyTorch and handles much of the boilerplating code needed to train neural networks.
 * [Deep Learning Studio - Desktop DeepCognition.ai](http://deepcognition.ai/desktop/) is a single user solution that runs locally on your hardware.  Desktop version allows you to train models on your GPU(s) without uploading data to the cloud.   The platform supports transparent multi-GPU training for up to 4 GPUs.  Additional GPUs are supported in Deep Learning Studio – Enterprise.
 
-### LEARNING/TRICKS ###
+### LEARNING/TRICKS/TIPS ###
 
+* [Training Tips for the Transformer Model](https://arxiv.org/abs/1804.00247)
 * [Deep Learning Courses](https://machinelearningmastery.com/deep-learning-courses/)
 * [Backpropagation Algorithm](http://deeplearning.stanford.edu/wiki/index.php/Backpropagation_Algorithm)
     A website that explain how Backpropagation Algorithm works.
