@@ -98,6 +98,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Stacked U-Nets: A No-Frills Approach to Natural Image Segmentation ([PDF](https://arxiv.org/abs/1804.10343), [Project/Code](https://github.com/shahsohil/sunets))
 * Deep Object Co-Segmentation ([PDF](https://arxiv.org/abs/1804.06423))
 * Fusing Hierarchical Convolutional Features for Human Body Segmentation and Clothing Fashion Classification ([PDF](https://arxiv.org/abs/1803.03415))
 * ShuffleSeg: Real-time Semantic Segmentation Network ([PDF](https://arxiv.org/abs/1803.03816))
@@ -679,6 +680,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES ###
 
+* [Python Regular Expressions Cheat Sheet](https://www.dataquest.io/blog/regex-cheatsheet/)
 * [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN)
     PyTorch implementations of Generative Adversarial Networks.
 * [A Gentle Introduction to Transfer Learning for Image Classification](https://github.com/miguelgfierro/sciblog_support/blob/master/A_Gentle_Introduction_to_Transfer_Learning/Intro_Transfer_Learning.ipynb)
