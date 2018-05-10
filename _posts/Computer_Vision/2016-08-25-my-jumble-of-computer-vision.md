@@ -105,7 +105,7 @@ I am going to maintain this page to record a few things about computer vision th
 * Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation ([PDF](https://arxiv.org/abs/1802.02611), [Project/Code](https://github.com/tensorflow/models/tree/master/research/deeplab))
 * Learning random-walk label propagation for weakly-supervised semantic segmentation ([PDF](https://arxiv.org/abs/1802.00470))
 * Panoptic Segmentation ([PDF](https://arxiv.org/abs/1801.00868), [Reading Note](https://joshua19881228.github.io/2018-01-08-Panoptic_Segmentation/))
-* Learning to Segment Every Thing ([PDF](https://arxiv.org/abs/1711.10370))
+* Learning to Segment Every Thing ([PDF](https://arxiv.org/abs/1711.10370), [Project/Code](http://ronghanghu.com/seg_every_thing/))
 * Deep Extreme Cut: From Extreme Points to Object Segmentation ([PDF](https://arxiv.org/abs/1711.09081))
 * Instance-aware Semantic Segmentation via Multi-task Network Cascades ([PDF](http://arxiv.org/abs/1512.04412), [Project/Code](https://github.com/daijifeng001/MNC))
 * ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation ([PDF](http://arxiv.org/abs/1606.02147), [Reading Note](https://joshua19881228.github.io/2016-08-23-Reading-note/))
