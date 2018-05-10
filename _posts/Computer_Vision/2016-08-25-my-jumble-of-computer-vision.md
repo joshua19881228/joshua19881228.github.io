@@ -364,6 +364,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Fast Feature Extraction with CNNs with Pooling Layers ([PDF](https://arxiv.org/abs/1805.03096))
 * Network Transplanting ([PDF](https://arxiv.org/abs/1804.10272))
 * An Information-Theoretic View for Deep Learning ([PDF](https://arxiv.org/abs/1804.09060))
 * Understanding Individual Neuron Importance Using Information Theory ([PDF](https://arxiv.org/abs/1804.06679))
@@ -580,6 +581,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* Quantization Mimic: Towards Very Tiny CNN for Object Detection ([PDF](https://arxiv.org/abs/1805.02152))
 * Pelee: A Real-Time Object Detection System on Mobile Devices ([PDF](https://arxiv.org/abs/1804.06882), [Project/Code](https://github.com/Robert-JunWang/Pelee), [Reading Note](https://joshua19881228.github.io/2018-04-22-Pelee/))
 * MobileNetV2: Inverted Residuals and Linear Bottlenecks ([PDF](https://arxiv.org/abs/1801.04381), [Reading Note](https://joshua19881228.github.io/2018-03-07-MobileNetsV2/))
 * SBNet: Sparse Blocks Network for Fast Inference ([PDF](https://arxiv.org/abs/1801.02108), [Project/Code](https://github.com/uber/sbnet))
@@ -635,6 +637,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* Learning to See in the Dark([PDF](https://arxiv.org/abs/1805.01934))
 * A Variational U-Net for Conditional Appearance and Shape Generation ([PDF](https://arxiv.org/abs/1804.04694), [Project/Code](https://compvis.github.io/vunet/))
 * Synthesizing Images of Humans in Unseen Poses ([PDF](https://arxiv.org/abs/1804.07739v1))
 * End-to-end weakly-supervised semantic alignment ([PDF](https://arxiv.org/abs/1712.06861), [Project/Code](http://www.di.ens.fr/willow/research/weakalign/))
@@ -713,6 +716,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### PROJECTS ###
 
+* [Data Augmentation for Computer Vision with PyTorch](https://github.com/fabioperez/pytorch-examples/blob/master/notebooks/PyTorch_Data_Augmentation_Image_Classification.ipynb) 
+* [Neural Network Distiller](https://github.com/NervanaSystems/distiller)
+    Distiller is an open-source Python package for neural network compression research.
 * [Neural Network Tools: Converter, Constructor and Analyser](https://github.com//hahnyuan/nn_tools)
     For caffe, pytorch, tensorflow, draknet and so on.
 * [TensorFlow Examples](https://github.com/aymericdamien/TensorFlow-Examples)
@@ -918,6 +924,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TOOLKITS ###
 
+* [FeatherCNN](https://github.com/Tencent/FeatherCNN)
+    FeatherCNN is a high performance inference engine for convolutional neural networks.
 * [Caffe](http://caffe.berkeleyvision.org/)
     Caffe is a deep learning framework made with expression, speed, and modularity in mind. It is developed by the Berkeley Vision and Learning Center (BVLC) and by community contributors. Yangqing Jia created the project during his PhD at UC Berkeley. Caffe is released under the BSD 2-Clause license.
 * [Caffe2](https://github.com/caffe2/caffe2)
