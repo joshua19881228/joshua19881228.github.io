@@ -364,6 +364,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Robust Classification with Convolutional Prototype Learning ([PDF](https://arxiv.org/abs/1805.03438), [Project/Code](https://github.com/YangHM/Convolutional-Prototype-Learning))
 * Fast Feature Extraction with CNNs with Pooling Layers ([PDF](https://arxiv.org/abs/1805.03096))
 * Network Transplanting ([PDF](https://arxiv.org/abs/1804.10272))
 * An Information-Theoretic View for Deep Learning ([PDF](https://arxiv.org/abs/1804.09060))
@@ -683,6 +684,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES ###
 
+* [PyTorch Exercise Codes for Deep Learning Researchers](https://github.com/nmhkahn/pytorch-exercise)
 * [Python Regular Expressions Cheat Sheet](https://www.dataquest.io/blog/regex-cheatsheet/)
 * [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN)
     PyTorch implementations of Generative Adversarial Networks.
