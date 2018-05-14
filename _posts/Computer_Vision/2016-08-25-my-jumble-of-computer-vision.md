@@ -203,6 +203,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### POSE ESTIMATION ###
 
+* Learning to Estimate 3D Human Pose and Shape from a Single Color Image ([PDF](https://arxiv.org/abs/1805.04092), [Project/Code](https://www.seas.upenn.edu/~pavlakos/projects/humanshape/))
+* Ordinal Depth Supervision for 3D Human Pose Estimation ([PDF](https://arxiv.org/abs/1805.04095), [Project/Code](https://www.seas.upenn.edu/~pavlakos/projects/ordinal/))
 * Simple Baselines for Human Pose Estimation and Tracking ([PDF](https://arxiv.org/abs/1804.06208))
 * End-to-end Recovery of Human Shape and Pose ([PDF](https://arxiv.org/abs/1712.06584), [PROJECT/CODE](https://akanazawa.github.io/hmr/), [Code](https://github.com/akanazawa/hmr))
 * PersonLab: Person Pose Estimation and Instance Segmentation with a Bottom-Up, Part-Based, Geometric Embedding Model ([PDF](https://arxiv.org/abs/1803.08225))
@@ -511,9 +513,11 @@ I am going to maintain this page to record a few things about computer vision th
 ### SINGLE-SHOT/UNSUPERVISED LEARNING ###
 
 * Deep Triplet Ranking Networks for One-Shot Recognition ([PDF](https://arxiv.org/abs/1804.07275))
+* Avatar-Net: Multi-scale Zero-shot Style Transfer by Feature Decoration ([PDF](https://arxiv.org/abs/1805.03857))
 
 ### GAN ###
 
+* Transferring GANs: generating images from limited data ([PDF](https://arxiv.org/abs/1805.01677), [Project/Code](https://github.com/yaxingwang/Transferring-GANs))
 * Painting Generation Using Conditional Generative Adversarial Net ([PDF](http://adeel.io/sncgan/mlp_cw4.pdf), [Project/Code](https://github.com/AdeelMufti/SNcGAN))
 * MGGAN: Solving Mode Collapse using Manifold Guided Training ([PDF](https://arxiv.org/abs/1804.04391))
 * Multimodal Unsupervised Image-to-Image Translation ([PDF](https://arxiv.org/abs/1804.04732), [Project/Code](https://github.com/nvlabs/MUNIT))
@@ -609,6 +613,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ReID ###
 
+* Attention-Aware Compositional Network for Person Re-identification ([PDF](https://arxiv.org/abs/1805.03344))
 * Image-Image Domain Adaptation with Preserved Self-Similarity and Domain-Dissimilarity for Person Re-identification ([PDF](https://arxiv.org/abs/1711.07027), [Project/Code](https://github.com/Simon4Yan/Learning-via-Translation))
 * Features for Multi-Target Multi-Camera Tracking and Re-Identification ([PDF](https://arxiv.org/abs/1803.10859))
 * Video Person Re-identification by Temporal Residual Learning ([PDF](https://arxiv.org/abs/1802.07918))
@@ -684,6 +689,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES ###
 
+* [Build your own x](https://github.com/danistefanovic/build-your-own-x)
 * [PyTorch Exercise Codes for Deep Learning Researchers](https://github.com/nmhkahn/pytorch-exercise)
 * [Python Regular Expressions Cheat Sheet](https://www.dataquest.io/blog/regex-cheatsheet/)
 * [PyTorch-GAN](https://github.com/eriklindernoren/PyTorch-GAN)
