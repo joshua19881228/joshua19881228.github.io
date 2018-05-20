@@ -13,8 +13,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ## PAPERS AND PROJECTS
 
-### OBJECT/SALIENCY DETECTOIN
+### OBJECT/SALIENCY DETECTION
 
+* Object detection at 200 Frames Per Second ([PDF](https://arxiv.org/abs/1805.06361), )
 * DetNet: A Backbone network for Object Detection ([PDF](https://arxiv.org/abs/1804.06215), [Reading Note](https://joshua19881228.github.io/2018-05-01-DetNet/))
 * Zero-Shot Object Detection ([PDF](https://arxiv.org/abs/1804.04340))
 * Unsupervised Discovery of Object Landmarks as Structural Representations ([PDF](https://arxiv.org/abs/1804.04412), [Project/Code](http://www.ytzhang.net/projects/lmdis-rep/))
@@ -173,6 +174,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TRACKING ###
 
+* Joint Flow: Temporal Flow Fields for Multi Person Tracking ([PDF](https://arxiv.org/abs/1805.04596))
 * Trajectory Factory: Tracklet Cleaving and Re-connection by Deep Siamese Bi-GRU for Multiple Object Tracking ([PDF](https://arxiv.org/abs/1804.04555))
 * Machine Learning Methods for Solving Assignment Problems in Multi-Target Tracking ([PDF](https://arxiv.org/abs/1802.06897))
 * Multi-Target, Multi-Camera Tracking by Hierarchical Clustering: Recent Progress on DukeMTMC Project ([PDF](https://arxiv.org/abs/1712.09531))
@@ -289,6 +291,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* Arbitrary Facial Attribute Editing: Only Change What You Want ([PDF](https://arxiv.org/abs/1711.10678), [Project/Code](https://github.com/LynnHo/AttGAN-Tensorflow))
+* Anchor Cascade for Efficient Face Detection ([PDF](https://arxiv.org/abs/1805.03363))
 * Real-Time Rotation-Invariant Face Detection with Progressive Calibration Networks ([PDF](https://arxiv.org/abs/1804.06039), [Reading Note](https://joshua19881228.github.io/2018-04-27-Real-Time-Face-Detection/))
 * MobileFaceNets: Efficient CNNs for Accurate Real-time Face Verification on Mobile Devices ([PDF](https://arxiv.org/abs/1804.07573))
 * Survey of Face Detection on Low-quality Images ([PDF](https://arxiv.org/abs/1804.07362))
@@ -512,6 +516,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SINGLE-SHOT/UNSUPERVISED LEARNING ###
 
+* Zero-Shot Object Detection by Hybrid Region Embedding ([PDF](https://arxiv.org/abs/1805.06157), [Project/Code](https://github.com/syb7573330/im2avatar))
 * Deep Triplet Ranking Networks for One-Shot Recognition ([PDF](https://arxiv.org/abs/1804.07275))
 * Avatar-Net: Multi-scale Zero-shot Style Transfer by Feature Decoration ([PDF](https://arxiv.org/abs/1805.03857))
 
