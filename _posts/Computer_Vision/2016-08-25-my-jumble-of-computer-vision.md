@@ -332,6 +332,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OPTICAL FLOW ###
 
+* LiteFlowNet: A Lightweight Convolutional Neural Network for Optical Flow Estimation ([PDF](https://arxiv.org/abs/1805.07036), [Project/Code](https://github.com/twhui/LiteFlowNet))
 * DeepFlow: Large displacement optical flow with deep matching ([PDF](https://hal.inria.fr/hal-00873592), [Project/Code](http://lear.inrialpes.fr/src/deepflow/))
 * Guided Optical Flow Learning ([PDF](https://arxiv.org/abs/1702.02295))
 
@@ -370,6 +371,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Adding One Neuron Can Eliminate All Bad Local Minima ([PDF](https://arxiv.org/abs/1805.08671))
+* Step Size Matters in Deep Learning ([PDF](https://arxiv.org/abs/1805.08890))
+* Do Better ImageNet Models Transfer Better? ([PDF](https://arxiv.org/abs/1805.08974))
 * Robust Classification with Convolutional Prototype Learning ([PDF](https://arxiv.org/abs/1805.03438), [Project/Code](https://github.com/YangHM/Convolutional-Prototype-Learning))
 * Fast Feature Extraction with CNNs with Pooling Layers ([PDF](https://arxiv.org/abs/1805.03096))
 * Network Transplanting ([PDF](https://arxiv.org/abs/1804.10272))
