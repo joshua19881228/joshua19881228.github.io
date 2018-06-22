@@ -596,6 +596,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* FD-MobileNet: Improved MobileNet with a Fast Downsampling Strategy ([PDF](https://arxiv.org/abs/1802.03750))
 * Quantization Mimic: Towards Very Tiny CNN for Object Detection ([PDF](https://arxiv.org/abs/1805.02152))
 * Pelee: A Real-Time Object Detection System on Mobile Devices ([PDF](https://arxiv.org/abs/1804.06882), [Project/Code](https://github.com/Robert-JunWang/Pelee), [Reading Note](https://joshua19881228.github.io/2018-04-22-Pelee/))
 * MobileNetV2: Inverted Residuals and Linear Bottlenecks ([PDF](https://arxiv.org/abs/1801.04381), [Reading Note](https://joshua19881228.github.io/2018-03-07-MobileNetsV2/))
