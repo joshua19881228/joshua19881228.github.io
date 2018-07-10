@@ -15,6 +15,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTION
 
+* Small-scale Pedestrian Detection Based on Somatic Topology Localization and Temporal Feature Aggregation ([PDF](https://arxiv.org/abs/1807.01438))
 * Object detection at 200 Frames Per Second ([PDF](https://arxiv.org/abs/1805.06361), )
 * DetNet: A Backbone network for Object Detection ([PDF](https://arxiv.org/abs/1804.06215), [Reading Note](https://joshua19881228.github.io/2018-05-01-DetNet/))
 * Zero-Shot Object Detection ([PDF](https://arxiv.org/abs/1804.04340))
@@ -372,6 +373,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Differentiable Abstract Interpretation for Provably Robust Neural Networks ([PDF](https://www.sri.inf.ethz.ch/papers/icml18-diffai.pdf), [Project/Code](https://github.com/eth-sri/diffai))
 * Adding One Neuron Can Eliminate All Bad Local Minima ([PDF](https://arxiv.org/abs/1805.08671))
 * Step Size Matters in Deep Learning ([PDF](https://arxiv.org/abs/1805.08890))
 * Do Better ImageNet Models Transfer Better? ([PDF](https://arxiv.org/abs/1805.08974))
@@ -943,6 +945,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TOOLKITS ###
 
+* [Albumentations](https://github.com/albu/albumentations) fast image augmentation library and easy to use wrapper around other libraries.
 * [FeatherCNN](https://github.com/Tencent/FeatherCNN)
     FeatherCNN is a high performance inference engine for convolutional neural networks.
 * [Caffe](http://caffe.berkeleyvision.org/)
