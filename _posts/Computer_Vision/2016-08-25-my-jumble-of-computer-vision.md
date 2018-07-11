@@ -10,7 +10,6 @@ I am going to maintain this page to record a few things about computer vision th
 * Content
 {:toc}
 
-
 ## PAPERS AND PROJECTS
 
 ### OBJECT/SALIENCY DETECTION
@@ -529,6 +528,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* Outfit Generation and Style Extraction via Bidirectional LSTM and Autoencoder ([PDF](https://arxiv.org/abs/1807.03133))
+* Pioneer Networks: Progressively Growing Generative Autoencoder ([PDF](https://arxiv.org/abs/1807.03026))
 * Transferring GANs: generating images from limited data ([PDF](https://arxiv.org/abs/1805.01677), [Project/Code](https://github.com/yaxingwang/Transferring-GANs))
 * Painting Generation Using Conditional Generative Adversarial Net ([PDF](http://adeel.io/sncgan/mlp_cw4.pdf), [Project/Code](https://github.com/AdeelMufti/SNcGAN))
 * MGGAN: Solving Mode Collapse using Manifold Guided Training ([PDF](https://arxiv.org/abs/1804.04391))
@@ -821,6 +822,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [How fast is my model?](http://machinethink.net/blog/how-fast-is-my-model/)
 * [Depthwise separable convolutions for machine learning](https://eli.thegreenplace.net/2018/depthwise-separable-convolutions-for-machine-learning/)
 * [The Building Blocks of Interpretability]([PDF](https://distill.pub/2018/building-blocks/))
 * [Setting the learning rate of your neural network.](https://www.jeremyjordan.me/nn-learning-rate/)
