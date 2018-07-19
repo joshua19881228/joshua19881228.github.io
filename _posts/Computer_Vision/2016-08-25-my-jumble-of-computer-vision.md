@@ -14,6 +14,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTION
 
+* A Single Shot Text Detector with Scale-adaptive Anchors ([PDF](https://arxiv.org/abs/1807.01884))
 * Small-scale Pedestrian Detection Based on Somatic Topology Localization and Temporal Feature Aggregation ([PDF](https://arxiv.org/abs/1807.01438))
 * Object detection at 200 Frames Per Second ([PDF](https://arxiv.org/abs/1805.06361), )
 * DetNet: A Backbone network for Object Detection ([PDF](https://arxiv.org/abs/1804.06215), [Reading Note](https://joshua19881228.github.io/2018-05-01-DetNet/))
@@ -627,6 +628,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ReID ###
 
+* Video-based Person Re-identification via 3D Convolutional Networks and Non-local Attention ([PDF](https://arxiv.org/abs/1807.05073))
 * Attention-Aware Compositional Network for Person Re-identification ([PDF](https://arxiv.org/abs/1805.03344))
 * Image-Image Domain Adaptation with Preserved Self-Similarity and Domain-Dissimilarity for Person Re-identification ([PDF](https://arxiv.org/abs/1711.07027), [Project/Code](https://github.com/Simon4Yan/Learning-via-Translation))
 * Features for Multi-Target Multi-Camera Tracking and Re-Identification ([PDF](https://arxiv.org/abs/1803.10859))
@@ -657,6 +659,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* Zoom-Net: Mining Deep Feature Interactions for Visual Relationship Recognition ([PDF](https://arxiv.org/abs/1807.04979), [Project/Code](https://github.com/gjyin91/ZoomNet))
 * Learning to See in the Dark([PDF](https://arxiv.org/abs/1805.01934))
 * A Variational U-Net for Conditional Appearance and Shape Generation ([PDF](https://arxiv.org/abs/1804.04694), [Project/Code](https://compvis.github.io/vunet/))
 * Synthesizing Images of Humans in Unseen Poses ([PDF](https://arxiv.org/abs/1804.07739v1))
