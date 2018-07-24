@@ -100,6 +100,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Deep Learning for Semantic Segmentation on Minimal Hardware ([PDF](https://arxiv.org/abs/1807.05597))
 * TernausNetV2: Fully Convolutional Network for Instance Segmentation ([PDF](https://arxiv.org/abs/1806.00844), [Project/Code](https://github.com/ternaus/TernausNetV2))
 * Stacked U-Nets: A No-Frills Approach to Natural Image Segmentation ([PDF](https://arxiv.org/abs/1804.10343), [Project/Code](https://github.com/shahsohil/sunets))
 * Deep Object Co-Segmentation ([PDF](https://arxiv.org/abs/1804.06423))
@@ -659,6 +660,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* Deep Clustering for Unsupervised Learning of Visual Features ([PDF](https://arxiv.org/abs/1807.05520))
+* Detecting Visual Relationships Using Box Attention ([PDF](https://arxiv.org/abs/1807.02136))
 * Zoom-Net: Mining Deep Feature Interactions for Visual Relationship Recognition ([PDF](https://arxiv.org/abs/1807.04979), [Project/Code](https://github.com/gjyin91/ZoomNet))
 * Learning to See in the Dark([PDF](https://arxiv.org/abs/1805.01934))
 * A Variational U-Net for Conditional Appearance and Shape Generation ([PDF](https://arxiv.org/abs/1804.04694), [Project/Code](https://compvis.github.io/vunet/))
