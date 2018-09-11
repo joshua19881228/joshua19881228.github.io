@@ -33,9 +33,7 @@ tag: ["Face Detection", "Face Alignment"]
     | Training Set        | Positive      | Negative      | Part          | Landmark      |
     | :----------:        | :------:      | :-------:     | :--:          | :------:      |
     |**Number of Images** | 156728/189530 | 470184/975229 | 156728/547211 | 313456/357604 |
-
-    | Validation Set      | Positive | Negative  | Part  | Landmark |
-    | :----------:        | :------: | :-------: | :--:  | :------: |
+    |**Validation Set**     | Positive | Negative  | Part  | Landmark |
     |**Number of Images** | 10000    | 10000     | 10000 | 10000    |
 
     其中Pos:Neg:Part:Landmark = 1:3:1:2，样本比例参考原作的比例。Pos、Neg、Part来自于[WiderFace](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/index.html)，Landmark来自于[CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)。其中正样本进行了人工的数据筛选，筛选的原因是根据WiderFace生成的正样本，有很多都是质量很差的图像，包含人脸大面积遮挡或十分模糊的情况。之前召回率很差的性能来自没有经过筛选的训练集，因为使用了OHEM，只有loss值在前70%的样本才参与梯度计算，感觉如果质量差的样本占比较大，网络学习到的特征是错误的，那些质量好的图像可能得不到充分的学习。
