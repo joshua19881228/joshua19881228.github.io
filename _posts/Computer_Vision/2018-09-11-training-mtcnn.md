@@ -47,14 +47,14 @@ tag: ["Face Detection", "Face Alignment"]
     momentum: 0.9
     momentum2:0.999
     delta:1e-8
-    base_lr: 0.001
+    base_lr: 0.01
     weight_decay: 0.0005    
     batch_size: 256
     ```
 
     [//]: <> (训练路径在62服务器的/data2/zxli/CODE/caffe_multilabel/examples/mtcnn_12net/下，模型models_20180907，数据data_20180907，记录train_20180911。图像数据存储在/data2/zxli/GIT/mtcnn-caffe/prepare_data/12_20180905/)
 
-    第一轮训练在75000次迭代(17.5 epoch)时停止，测试记录如下
+    第一轮训练在75000次迭代(17.5个epoch)时停止，测试记录如下
 
     ```
     I0911 10:16:25.019253 21722 solver.cpp:347] Iteration 75000, Testing net (#0)
@@ -64,3 +64,18 @@ tag: ["Face Detection", "Face Alignment"]
     I0911 10:16:28.072796 21722 solver.cpp:414]     Test net output #2: pts_loss = 0.008529 (* 0.5 = 0.0042645 loss)
     I0911 10:16:28.072801 21722 solver.cpp:414]     Test net output #3: roi_loss = 0.0221648 (* 0.5 = 0.0110824 loss)
     ```
+
+    **注意：分类测试结果是0.4638是因为测试集没有打乱，1-10000为pos样本，10001-20000为neg样本，20001-30000为part样本，30001-40000为landmark样本。因此，实际分类正确率应该是0.9276**
+    
+    降低学习率至0.001，训练135000次迭代(31.5个epoch)时停止，测试记录如下
+
+    ```
+    I0911 13:14:36.482010 23543 solver.cpp:347] Iteration 135000, Testing net (#0)
+    I0911 13:14:39.629933 23660 data_layer.cpp:89] Restarting data prefetching from start.
+    I0911 13:14:39.645612 23543 solver.cpp:414]     Test net output #0: cls_Acc = 0.4714
+    I0911 13:14:39.645649 23543 solver.cpp:414]     Test net output #1: cls_loss = 0.0765401 (* 1 = 0.0765401 loss)
+    I0911 13:14:39.645656 23543 solver.cpp:414]     Test net output #2: pts_loss = 0.00756469 (* 0.5 = 0.00378234 loss)
+    I0911 13:14:39.645661 23543 solver.cpp:414]     Test net output #3: roi_loss = 0.0201988 (* 0.5 = 0.0100994 loss)
+    ```
+
+    实际分类正确率是0.9428。
