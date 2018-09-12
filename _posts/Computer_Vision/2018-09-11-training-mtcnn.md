@@ -78,4 +78,19 @@ tag: ["Face Detection", "Face Alignment"]
     I0911 13:14:39.645661 23543 solver.cpp:414]     Test net output #3: roi_loss = 0.0201988 (* 0.5 = 0.0100994 loss)
     ```
 
-    实际分类正确率是0.9428。
+    实际分类正确率是0.9428。训练260000次迭代后停止，测试记录如下
+
+    ````
+    I0911 16:58:47.514267 28442 solver.cpp:347] Iteration 260000, Testing net (#0)
+    I0911 16:58:50.624385 28448 data_layer.cpp:89] Restarting data prefetching from start.
+    I0911 16:58:50.639556 28442 solver.cpp:414]     Test net output #0: cls_Acc = 0.471876
+    I0911 16:58:50.639595 28442 solver.cpp:414]     Test net output #1: cls_loss = 0.0750447 (* 1 = 0.0750447 loss)
+    I0911 16:58:50.639602 28442 solver.cpp:414]     Test net output #2: pts_loss = 0.0074394 (* 0.5 = 0.0037197 loss)
+    I0911 16:58:50.639608 28442 solver.cpp:414]     Test net output #3: roi_loss = 0.0199694 (* 0.5 = 0.00998469 loss)
+    ````
+
+    实际分类正确率是0.943752。
+
+    **问题：** 训练结果看似还可以，但是召回率很低，在阈值设置为0.3的情况下，召回率也才将将达到90%。阈值要设置到0.05，才能达到97%-98%的召回率，ROC曲线如下图
+
+    ![1st ROC](/img/TrainMTCNN/12net_roc_1st.png "1st ROC"){: .center-image .image-width-480}
