@@ -94,3 +94,12 @@ tag: ["Face Detection", "Face Alignment"]
     **问题：** 训练结果看似还可以，但是召回率很低，在阈值设置为0.3的情况下，召回率也才将将达到90%。阈值要设置到0.05，才能达到97%-98%的召回率，ROC曲线如下图
 
     ![1st ROC](/img/TrainMTCNN/12net_roc_1st.png "1st ROC"){: .center-image .image-width-480}
+
+* 2018.09.04 
+
+    使用上述12net在WiderFace上提取正负样本，提取结果如下：
+    | Thresholed | Positive | Negative | Part   |
+    | :--------: | :------: | :------: | :---:  |
+    | 0.05        | 85210    | 36745286 | 632861 |
+    | 0.5       | 66224    | 6299420  | 354350 |
+
