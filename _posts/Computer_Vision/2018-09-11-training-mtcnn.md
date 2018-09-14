@@ -95,7 +95,7 @@ tag: ["Face Detection", "Face Alignment"]
 
     ![1st ROC](/img/TrainMTCNN/12net_roc_1st.png "1st ROC"){: .center-image .image-width-480}
 
-* 2018.09.04 
+* 2018.09.14 
 
     使用上述12net在WiderFace上提取正负样本，提取结果如下：
     | Thresholed | Positive | Negative | Part   |
