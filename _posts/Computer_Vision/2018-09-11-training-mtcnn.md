@@ -98,6 +98,7 @@ tag: ["Face Detection", "Face Alignment"]
 * 2018.09.14 
 
     使用上述12net在WiderFace上提取正负样本，提取结果如下：
+    
     | Thresholed | Positive | Negative | Part   |
     | :--------: | :------: | :------: | :---:  |
     | 0.05        | 85210    | 36745286 | 632861 |
