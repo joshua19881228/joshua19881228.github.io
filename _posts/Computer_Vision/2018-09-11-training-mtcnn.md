@@ -93,9 +93,9 @@ tag: ["Face Detection", "Face Alignment"]
 
     实际分类正确率是0.943752。
 
-    **问题：** 训练结果看似还可以，但是召回率很低，在阈值设置为0.3的情况下，召回率也才将将达到90%。阈值要设置到0.05，才能达到97%-98%的召回率，ROC曲线如下图
+    **问题：** 训练结果看似还可以，但是召回率很低，在阈值设置为0.3的情况下，召回率也才将将达到90%。阈值要设置到0.05，才能达到97%-98%的召回率，ROC曲线如下图。严格来说这个测试并不严谨，应该用检测器直接在图像中进行检测，但是为了方便，我直接用val集上的性能画出了ROC曲线，其中的FDDB曲线是将的人脸区域截取出来进行测试得到的。
 
-    ![1st ROC](/img/TrainMTCNN/12net_roc_1st.png "1st ROC"){: .center-image .image-width-480}
+    ![12net 1st ROC](/img/TrainMTCNN/12net_roc_1st.png "12net 1st ROC"){: .center-image .image-width-480}
 
 * 2018.09.14 
 
@@ -128,4 +128,6 @@ tag: ["Face Detection", "Face Alignment"]
     I0917 15:19:03.317879 36330 solver.cpp:414]     Test net output #3: roi_loss = 0.0179083 (* 0.5 = 0.00895414 loss)
     ```
 
-    实际分类正确率是0.963。
+    实际分类正确率是0.963。ROC曲线如下图，同样适用val集上的性能画出曲线。
+
+    ![24net 1st ROC](/img/TrainMTCNN/24net_roc_1st.png "24net 1st ROC"){: .center-image .image-width-480}
