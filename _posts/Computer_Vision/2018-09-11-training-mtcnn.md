@@ -4,6 +4,9 @@ category: "Computer Vision"
 tag: ["Face Detection", "Face Alignment"]
 ---
 
+[//]: <> # 训练步骤 #
+[//]: <> 1. 测试负样本，
+
 # MTCNN训练记录 #
 
 最近尝试使用Caffe复现MTCNN，感觉坑很大，记录一下训练过程，目前还没有好的结果。网上也有很多童鞋在尝试训练MTCNN，普遍反映使用TensorFlow可以得到比较好的结果，但是使用Caffe不是很乐观。
@@ -30,11 +33,10 @@ tag: ["Face Detection", "Face Alignment"]
 
     参考[AITTSMD/MTCNN-Tensorflow](https://github.com/AITTSMD/MTCNN-Tensorflow)提供的prepare_data进行数据生成。数据集情况如下表
 
-    | Training Set        | Positive      | Negative      | Part          | Landmark      |
-    | :----------:        | :------:      | :-------:     | :--:          | :------:      |
-    |**Number of Images** | 156728/189530 | 470184/975229 | 156728/547211 | 313456/357604 |
-    |**Validation Set**     | Positive | Negative  | Part  | Landmark |
-    |**Number of Images** | 10000    | 10000     | 10000 | 10000    |
+    |                   | Positive      | Negative      | Part          | Landmark      |
+    | :----------:      | :------:      | :-------:     | :--:          | :------:      |
+    | **Training Set**  | 156728/189530 | 470184/975229 | 156728/547211 | 313456/357604 |
+    |**Validation Set** | 10000         | 10000         | 10000         | 10000         |
 
     其中Pos:Neg:Part:Landmark = 1:3:1:2，样本比例参考原作的比例。Pos、Neg、Part来自于[WiderFace](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/index.html)，Landmark来自于[CelebA](http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html)。其中正样本进行了人工的数据筛选，筛选的原因是根据WiderFace生成的正样本，有很多都是质量很差的图像，包含人脸大面积遮挡或十分模糊的情况。之前召回率很差的性能来自没有经过筛选的训练集，因为使用了OHEM，只有loss值在前70%的样本才参与梯度计算，感觉如果质量差的样本占比较大，网络学习到的特征是错误的，那些质量好的图像可能得不到充分的学习。
 
@@ -104,3 +106,26 @@ tag: ["Face Detection", "Face Alignment"]
     | 0.05        | 85210    | 36745286 | 632861 |
     | 0.5       | 66224    | 6299420  | 354350 |
 
+* 2018.09.17
+  
+    准备24net的训练样本。由于生成12net检测到的正样本数目有限，训练24net的pos样本包含两部分，一部分是训练12net的正样本，一部分是经过筛选的12net检测到的正样本；neg样本和part样本全部来自12net的难例；landmark与12net共用样本。经过采样后达到样本比例1:3:1:2，样本数目如下表：
+
+    |                    | Positive | Negative | Part   | Landmark |
+    | :----------:       | :------: | :------: | :--:   | :------: |
+    | **Training Set**   | 225172   | 675516   | 225172 | 313456   |
+    | **Validation Set** | 10000    | 10000    | 10000  | 10000    |
+
+    [//]: <> (训练路径在62服务器的/data2/zxli/CODE/caffe_multilabel/examples/mtcnn_24net/下，模型models_20180917，数据data_20180916，记录train_20180917。图像数据存储在/data2/zxli/GIT/mtcnn-caffe/prepare_data/24_20180914/)
+
+    训练过程与12net类似，学习率从0.01下降到0.0001，最终的训练结果如下
+
+    ```
+    I0917 15:19:00.631140 36330 solver.cpp:347] Iteration 70000, Testing net (#0)
+    I0917 15:19:03.305665 36335 data_layer.cpp:89] Restarting data prefetching from start.
+    I0917 15:19:03.317827 36330 solver.cpp:414]     Test net output #0: cls_Acc = 0.481501
+    I0917 15:19:03.317865 36330 solver.cpp:414]     Test net output #1: cls_loss = 0.0479137 (* 1 = 0.0479137 loss)
+    I0917 15:19:03.317874 36330 solver.cpp:414]     Test net output #2: pts_loss = 0.00631254 (* 0.5 = 0.00315627 loss)
+    I0917 15:19:03.317879 36330 solver.cpp:414]     Test net output #3: roi_loss = 0.0179083 (* 0.5 = 0.00895414 loss)
+    ```
+
+    实际分类正确率是0.963。
