@@ -4,8 +4,8 @@ category: "Computer Vision"
 tag: ["Face Detection", "Face Alignment"]
 ---
 
-[//]: <> # 训练步骤 #
-[//]: <> 1. 测试负样本，
+[//]: <> (# 训练步骤 #)
+[//]: <> (1. 测试负样本，)
 
 # MTCNN训练记录 #
 
@@ -128,6 +128,6 @@ tag: ["Face Detection", "Face Alignment"]
     I0917 15:19:03.317879 36330 solver.cpp:414]     Test net output #3: roi_loss = 0.0179083 (* 0.5 = 0.00895414 loss)
     ```
 
-    实际分类正确率是0.963。ROC曲线如下图，同样适用val集上的性能画出曲线。
+    实际分类正确率是0.963。ROC曲线如下图，同样使用val集上的性能画出曲线。
 
     ![24net 1st ROC](/img/TrainMTCNN/24net_roc_1st.png "24net 1st ROC"){: .center-image .image-width-480}
