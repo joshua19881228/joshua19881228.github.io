@@ -103,8 +103,8 @@ tag: ["Face Detection", "Face Alignment"]
     
     | Thresholed | Positive | Negative | Part   |
     | :--------: | :------: | :------: | :---:  |
-    | 0.05        | 85210    | 36745286 | 632861 |
-    | 0.5       | 66224    | 6299420  | 354350 |
+    | 0.05       | 85210    | 36745286 | 632861 |
+    | 0.5        | 66224    | 6299420  | 354350 |
 
 * 2018.09.17
   
@@ -131,3 +131,18 @@ tag: ["Face Detection", "Face Alignment"]
     实际分类正确率是0.963。ROC曲线如下图，同样使用val集上的性能画出曲线。
 
     ![24net 1st ROC](/img/TrainMTCNN/24net_roc_1st.png "24net 1st ROC"){: .center-image .image-width-480}
+
+* 2018.09.18
+
+    使用24net在WiderFace上提取正负样本，提取结果如下：
+
+    | Thresholed | Positive | Negative | Part   |
+    | :--------: | :------: | :------: | :---:  |
+    | 0.5, 0.5   | 86396    | 83212    | 225285 |
+
+    利用以上数据生成48net的训练样本，由于24net生成的样本数量有限，结合前两次训练所用的数据，生成训练集：
+
+    |                    | Positive | Negative | Part   | Landmark |
+    | :----------:       | :------: | :------: | :--:   | :------: |
+    | **Training Set**   | 283616   |  850848  | 283616 | 567232   |
+    | **Validation Set** | 10000    | 10000    | 10000  | 10000    |
