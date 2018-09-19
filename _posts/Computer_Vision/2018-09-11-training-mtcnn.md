@@ -27,7 +27,7 @@ tag: ["Face Detection", "Face Alignment"]
 
 ## 训练记录 ##
 
- * 2018.09.11
+* 2018.09.11
 
     **训练数据生成** 
 
@@ -44,7 +44,7 @@ tag: ["Face Detection", "Face Alignment"]
 
     初始训练参数如下
 
-    ```
+    ```prototxt
     type:"Adam"    
     momentum: 0.9
     momentum2:0.999
@@ -58,7 +58,7 @@ tag: ["Face Detection", "Face Alignment"]
 
     第一轮训练在75000次迭代(17.5个epoch)时停止，测试记录如下
 
-    ```
+    ```txt
     I0911 10:16:25.019253 21722 solver.cpp:347] Iteration 75000, Testing net (#0)
     I0911 10:16:28.057858 21727 data_layer.cpp:89] Restarting data prefetching from start.
     I0911 10:16:28.072748 21722 solver.cpp:414]     Test net output #0: cls_Acc = 0.4638
@@ -71,7 +71,7 @@ tag: ["Face Detection", "Face Alignment"]
     
     降低学习率至0.001，训练135000次迭代(31.5个epoch)时停止，测试记录如下
 
-    ```
+    ```txt
     I0911 13:14:36.482010 23543 solver.cpp:347] Iteration 135000, Testing net (#0)
     I0911 13:14:39.629933 23660 data_layer.cpp:89] Restarting data prefetching from start.
     I0911 13:14:39.645612 23543 solver.cpp:414]     Test net output #0: cls_Acc = 0.4714
@@ -82,14 +82,14 @@ tag: ["Face Detection", "Face Alignment"]
 
     实际分类正确率是0.9428。训练260000次迭代后停止，测试记录如下
 
-    ````
+    ```txt
     I0911 16:58:47.514267 28442 solver.cpp:347] Iteration 260000, Testing net (#0)
     I0911 16:58:50.624385 28448 data_layer.cpp:89] Restarting data prefetching from start.
     I0911 16:58:50.639556 28442 solver.cpp:414]     Test net output #0: cls_Acc = 0.471876
     I0911 16:58:50.639595 28442 solver.cpp:414]     Test net output #1: cls_loss = 0.0750447 (* 1 = 0.0750447 loss)
     I0911 16:58:50.639602 28442 solver.cpp:414]     Test net output #2: pts_loss = 0.0074394 (* 0.5 = 0.0037197 loss)
     I0911 16:58:50.639608 28442 solver.cpp:414]     Test net output #3: roi_loss = 0.0199694 (* 0.5 = 0.00998469 loss)
-    ````
+    ```
 
     实际分类正确率是0.943752。
 
@@ -119,7 +119,7 @@ tag: ["Face Detection", "Face Alignment"]
 
     训练过程与12net类似，学习率从0.01下降到0.0001，最终的训练结果如下
 
-    ```
+    ```txt
     I0917 15:19:00.631140 36330 solver.cpp:347] Iteration 70000, Testing net (#0)
     I0917 15:19:03.305665 36335 data_layer.cpp:89] Restarting data prefetching from start.
     I0917 15:19:03.317827 36330 solver.cpp:414]     Test net output #0: cls_Acc = 0.481501
