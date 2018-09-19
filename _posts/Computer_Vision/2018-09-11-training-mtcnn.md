@@ -58,7 +58,7 @@ tag: ["Face Detection", "Face Alignment"]
 
     第一轮训练在75000次迭代(17.5个epoch)时停止，测试记录如下
 
-    ```txt
+    ```vim
     I0911 10:16:25.019253 21722 solver.cpp:347] Iteration 75000, Testing net (#0)
     I0911 10:16:28.057858 21727 data_layer.cpp:89] Restarting data prefetching from start.
     I0911 10:16:28.072748 21722 solver.cpp:414]     Test net output #0: cls_Acc = 0.4638
