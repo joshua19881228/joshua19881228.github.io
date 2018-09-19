@@ -157,3 +157,22 @@ tag: ["Face Detection", "Face Alignment"]
     momentum: 0.9
     weight_decay: 0.0005
     ```
+
+    48net的训练结果比较一般，性能如下:
+
+    ```vim
+    I0919 18:02:22.318362  3822 solver.cpp:347] Iteration 165000, Testing net (#0)
+    I0919 18:02:25.877437  3827 data_layer.cpp:89] Restarting data prefetching from start.
+    I0919 18:02:25.894898  3822 solver.cpp:414]     Test net output #0: cls_Acc = 0.4662
+    I0919 18:02:25.894937  3822 solver.cpp:414]     Test net output #1: cls_loss = 0.0917524 (* 1 = 0.0917524 loss)
+    I0919 18:02:25.894943  3822 solver.cpp:414]     Test net output #2: pts_loss = 0.00566356 (* 1 = 0.00566356 loss)
+    I0919 18:02:25.894948  3822 solver.cpp:414]     Test net output #3: roi_loss = 0.0177907 (* 0.5 = 0.00889534 loss)
+    ```
+
+    实际的分类精度为0.9324。整体来看基本实现了文章中[参考文献[19]](http://users.eecs.northwestern.edu/~xsh835/assets/cvpr2015_cascnn.pdf)在验证集上的性能，性能对比如下表
+
+    | CNN   | 12-net | 24-net | 48-net |
+    | :---: | :----: | :----: | :----: |
+    | [19]  | 94.4%  | 95.1%  | 93.2%  |
+    | MTCNN | 94.6%  | 95.4%  | 95.4%  |
+    | Ours  | 94.3%  | 96.3%  | 93.2%  |
