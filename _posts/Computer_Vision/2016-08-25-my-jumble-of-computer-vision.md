@@ -14,6 +14,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTION
 
+* Acquisition of Localization Confidence for Accurate Object Detectinon ([PDF](https://arxiv.org/abs/1807.11590), [Project/Code](https://github.com/vacancy/PreciseRoIPooling))
 * A Single Shot Text Detector with Scale-adaptive Anchors ([PDF](https://arxiv.org/abs/1807.01884))
 * Small-scale Pedestrian Detection Based on Somatic Topology Localization and Temporal Feature Aggregation ([PDF](https://arxiv.org/abs/1807.01438))
 * Object detection at 200 Frames Per Second ([PDF](https://arxiv.org/abs/1805.06361), )
