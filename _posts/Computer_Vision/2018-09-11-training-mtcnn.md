@@ -204,4 +204,4 @@ tag: ["Face Detection", "Face Alignment"]
 
     |          | 12-net | 24-net | 48-net |
     | :------: | :----: | :----: | :----: |
-    | Accuracy | 94.35% | 97.45% |        |
+    | Accuracy | 94.35% | 97.45% | 94.67% |
