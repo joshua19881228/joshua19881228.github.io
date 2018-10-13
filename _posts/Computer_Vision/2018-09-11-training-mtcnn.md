@@ -217,3 +217,63 @@ tag: ["Face Detection", "Face Alignment"]
     1. 之前的训练为了快速验证思路，并没有严格按照后一阶段数据是前一阶段数据中的难例的原则，接下来需要重新走这个流程。
     2. 探索48net的训练过程。具体来说有几个点需要尝试，首先，是刚刚提到的难例挖掘；其次，调整各个loss的权重；最后，除了阶段间的难例挖掘，也应注意阶段内的难例挖掘。
     3. 以24net在landmark数据集上进行检测，将其输出作为48net进行landmark回归的输入。
+
+* 2018.10.13
+
+    最近一次训练的记录如下：
+
+    **12net**：
+
+    12net的样本由随机采样得来。
+
+    |                   | Positive | Negative | Part   |
+    | :----------:      | :------: | :------: | :--:   |
+    | **Training Set**  | 156728   | 470184   | 156728 |
+    |**Validation Set** | 10000    | 10000    | 10000  |
+    
+    验证集上的性能为：
+
+    ```vim
+    Test net output #0: cls_Acc = 0.9435
+    Test net output #1: cls_loss = 0.0747717 (* 1 = 0.0747717 loss)
+    Test net output #2: roi_loss = 0.0168385 (* 0.5 = 0.00841924 loss)    
+    ```
+    
+    **24net**
+
+    24net的样本全部来自12net的检测结果。
+
+    |                   | Positive | Negative | Part   |
+    | :----------:      | :------: | :------: | :--:   |
+    | **Training Set**  | 60149    | 180447   | 120298 |
+    |**Validation Set** | 1500     | 1500     | 1500   |
+
+    验证集上的性能为：
+
+    ```vim
+    Test net output #0: cls_Acc = 0.977588
+    Test net output #1: cls_loss = 0.0648633 (* 1 = 0.0648633 loss)
+    Test net output #2: roi_loss = 0.0192365 (* 5 = 0.0961826 loss)
+    ```
+
+    **48net**
+
+    48net的正样本和part样本来自于24net在widerface上的检测结果，负样本来自于24net在widerface和celeba上的检测结果，landmark样本来自于24net在celeba上的检测结果。
+
+    |                   | Positive | Negative | Part   | landmark |
+    | :----------:      | :------: | :------: | :--:   | :------: |
+    | **Training Set**  | 242862   | 728586   | 242862 | 485724   |
+    |**Validation Set** | 5000     | 5000     | 5000   | 5000     |
+
+    在验证集上的性能为：
+
+    ```vim
+    Test net output #0: cls_Acc = 0.978155
+    Test net output #1: cls_loss = 0.0694968 (* 1 = 0.0694968 loss)
+    Test net output #2: pts_loss = 0.00119616 (* 5 = 0.00598078 loss)
+    Test net output #3: roi_loss = 0.0111277 (* 1 = 0.0111277 loss)
+    ```
+
+    使用0.5,0.5,0.5作为阈值，在FDDB上测得的discROC曲线如下图
+
+    ![ROC 20181013](/img/TrainMTCNN/discROC_20181013.png "ROC 20181013"){: .center-image .image-width-480}
