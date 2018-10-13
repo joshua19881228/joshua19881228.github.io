@@ -21,7 +21,7 @@ tag: ["Face Detection", "Face Alignment"]
 
     这个效果很不错，但是我自己生成样本后训练12net，召回率有明显下降。性能对比如下图
 
-    ![FDDB 12net Compare](/img/TrainMTCNN/12net_fddb.png "FDDB 12net Compare"){: .center-image .image-width-480}
+    ![FDDB 12net Compare](https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/12net_fddb.png "FDDB 12net Compare"){: .center-image .image-width-480}
 
     暂且不管12net的测试结果为什么会这么差，两个模型的性能差距是可以反映的。
 
@@ -95,7 +95,7 @@ tag: ["Face Detection", "Face Alignment"]
 
     **问题：** 训练结果看似还可以，但是召回率很低，在阈值设置为0.3的情况下，召回率也才将将达到90%。阈值要设置到0.05，才能达到97%-98%的召回率，ROC曲线如下图。严格来说这个测试并不严谨，应该用检测器直接在图像中进行检测，但是为了方便，我直接用val集上的性能画出了ROC曲线，其中的FDDB曲线是将的人脸区域截取出来进行测试得到的。
 
-    ![12net 1st ROC](/img/TrainMTCNN/12net_roc_1st.png "12net 1st ROC"){: .center-image .image-width-480}
+    ![12net 1st ROC](https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/12net_roc_1st.png "12net 1st ROC"){: .center-image .image-width-480}
 
 * 2018.09.14
 
@@ -130,7 +130,7 @@ tag: ["Face Detection", "Face Alignment"]
 
     实际分类正确率是0.963。ROC曲线如下图，同样使用val集上的性能画出曲线。
 
-    ![24net 1st ROC](/img/TrainMTCNN/24net_roc_1st.png "24net 1st ROC"){: .center-image .image-width-480}
+    ![24net 1st ROC](https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/24net_roc_1st.png "24net 1st ROC"){: .center-image .image-width-480}
 
 * 2018.09.18
 
@@ -276,4 +276,4 @@ tag: ["Face Detection", "Face Alignment"]
 
     使用0.5,0.5,0.5作为阈值，在FDDB上测得的discROC曲线如下图
 
-    ![ROC 20181013](/img/TrainMTCNN/discROC_20181013.png "ROC 20181013"){: .center-image .image-width-480}
+    ![ROC 20181013](https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/discROC_20181013.png "ROC 20181013"){: .center-image .image-width-480}
