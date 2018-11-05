@@ -101,6 +101,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Fast Neural Architecture Search of Compact Semantic Segmentation Models via Auxiliary Cells ([PDF](https://arxiv.org/abs/1810.10804))
 * Deep Learning for Semantic Segmentation on Minimal Hardware ([PDF](https://arxiv.org/abs/1807.05597))
 * TernausNetV2: Fully Convolutional Network for Instance Segmentation ([PDF](https://arxiv.org/abs/1806.00844), [Project/Code](https://github.com/ternaus/TernausNetV2))
 * Stacked U-Nets: A No-Frills Approach to Natural Image Segmentation ([PDF](https://arxiv.org/abs/1804.10343), [Project/Code](https://github.com/shahsohil/sunets))
@@ -178,6 +179,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TRACKING ###
 
+* Fully-Convolutional Siamese Networks for Object Tracking ([PDF](https://arxiv.org/abs/1606.09549))
 * Joint Flow: Temporal Flow Fields for Multi Person Tracking ([PDF](https://arxiv.org/abs/1805.04596))
 * Trajectory Factory: Tracklet Cleaving and Re-connection by Deep Siamese Bi-GRU for Multiple Object Tracking ([PDF](https://arxiv.org/abs/1804.04555))
 * Machine Learning Methods for Solving Assignment Problems in Multi-Target Tracking ([PDF](https://arxiv.org/abs/1802.06897))
@@ -342,6 +344,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### IMAGE PROCESSING ###
 
+* CartoonGAN: Generative Adversarial Networks for Photo Cartoonization ([PDF](http://openaccess.thecvf.com/content_cvpr_2018/html/2205.html))
 * Image Inpainting for Irregular Holes Using Partial Convolutions ([PDF](https://arxiv.org/abs/1804.07723))
 * Neural Aesthetic Image Reviewer ([PDF](https://arxiv.org/abs/1802.10240), [Reading Note](https://joshua19881228.github.io/2018-03-05-Neural_Aesthetic_Image_Reviewer/))
 * Automatic Image Cropping for Visual Aesthetic Enhancement Using Deep Neural Networks and Cascaded Regression ([PDF](https://arxiv.org/abs/1712.09048))
@@ -375,6 +378,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* DropBlock: A regularization method for convolutional networks ([PDF](https://arxiv.org/abs/1810.12890))
 * Differentiable Abstract Interpretation for Provably Robust Neural Networks ([PDF](https://www.sri.inf.ethz.ch/papers/icml18-diffai.pdf), [Project/Code](https://github.com/eth-sri/diffai))
 * Adding One Neuron Can Eliminate All Bad Local Minima ([PDF](https://arxiv.org/abs/1805.08671))
 * Step Size Matters in Deep Learning ([PDF](https://arxiv.org/abs/1805.08890))
@@ -954,6 +958,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TOOLKITS ###
 
+* [Bring Deep Learning to small devices](https://blue-oil.org/) An open source deep learning platform for low bit computation
 * [Albumentations](https://github.com/albu/albumentations) fast image augmentation library and easy to use wrapper around other libraries.
 * [FeatherCNN](https://github.com/Tencent/FeatherCNN)
     FeatherCNN is a high performance inference engine for convolutional neural networks.
