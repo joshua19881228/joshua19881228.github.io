@@ -833,6 +833,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [Intel’s Neural Compute Stick 2 is 8 times faster than its predecessor](https://venturebeat.com/2018/11/14/intels-neural-compute-stick-2-is-8-times-faster-than-its-predecessor/)
 * [How fast is my model?](http://machinethink.net/blog/how-fast-is-my-model/)
 * [Depthwise separable convolutions for machine learning](https://eli.thegreenplace.net/2018/depthwise-separable-convolutions-for-machine-learning/)
 * [The Building Blocks of Interpretability]([PDF](https://distill.pub/2018/building-blocks/))
