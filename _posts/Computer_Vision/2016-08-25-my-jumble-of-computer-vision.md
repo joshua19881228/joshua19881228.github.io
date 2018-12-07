@@ -179,6 +179,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TRACKING ###
 
+* Multiple People Tracking Using Hierarchical Deep Tracklet Re-identification ([PDF](https://arxiv.org/abs/1811.04091))
 * Fully-Convolutional Siamese Networks for Object Tracking ([PDF](https://arxiv.org/abs/1606.09549))
 * Joint Flow: Temporal Flow Fields for Multi Person Tracking ([PDF](https://arxiv.org/abs/1805.04596))
 * Trajectory Factory: Tracklet Cleaving and Re-connection by Deep Siamese Bi-GRU for Multiple Object Tracking ([PDF](https://arxiv.org/abs/1804.04555))
@@ -297,6 +298,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* Learning towards Minimum Hyperspherical Energy ([PDF](https://arxiv.org/abs/1805.09298), [Project/Code](https://github.com/wy1iu/sphereface-plus))
+* Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition ([PDF](http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaohang_Zhan_Consensus-Driven_Propagation_in_ECCV_2018_paper.pdf), [Code/Project](https://github.com/XiaohangZhan/cdp/))
 * Arbitrary Facial Attribute Editing: Only Change What You Want ([PDF](https://arxiv.org/abs/1711.10678), [Project/Code](https://github.com/LynnHo/AttGAN-Tensorflow))
 * Anchor Cascade for Efficient Face Detection ([PDF](https://arxiv.org/abs/1805.03363))
 * Real-Time Rotation-Invariant Face Detection with Progressive Calibration Networks ([PDF](https://arxiv.org/abs/1804.06039), [Reading Note](https://joshua19881228.github.io/2018-04-27-Real-Time-Face-Detection/))
@@ -378,6 +381,10 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* https://arxiv.org/abs/1805.07883 ([PDF](https://arxiv.org/abs/1805.07883))
+* Rethinking ImageNet Pre-training ([PDF](https://arxiv.org/abs/1811.08883))
+* Learning From Positive and Unlabeled Data: A Survey ([PDF](https://arxiv.org/abs/1811.04820))
+* Gather-Excite: Exploiting Feature Context in Convolutional Neural Networks ([PDF](https://arxiv.org/pdf/1810.12348.pdf), [Project/Code](https://github.com/hujie-frank/GENet))
 * DropBlock: A regularization method for convolutional networks ([PDF](https://arxiv.org/abs/1810.12890))
 * Differentiable Abstract Interpretation for Provably Robust Neural Networks ([PDF](https://www.sri.inf.ethz.ch/papers/icml18-diffai.pdf), [Project/Code](https://github.com/eth-sri/diffai))
 * Adding One Neuron Can Eliminate All Bad Local Minima ([PDF](https://arxiv.org/abs/1805.08671))
@@ -606,6 +613,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware ([PDF](https://arxiv.org/abs/1812.00332), [Project/Code](https://github.com/MIT-HAN-LAB/ProxylessNAS))
 * FD-MobileNet: Improved MobileNet with a Fast Downsampling Strategy ([PDF](https://arxiv.org/abs/1802.03750))
 * Quantization Mimic: Towards Very Tiny CNN for Object Detection ([PDF](https://arxiv.org/abs/1805.02152))
 * Pelee: A Real-Time Object Detection System on Mobile Devices ([PDF](https://arxiv.org/abs/1804.06882), [Project/Code](https://github.com/Robert-JunWang/Pelee), [Reading Note](https://joshua19881228.github.io/2018-04-22-Pelee/))
@@ -833,6 +841,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [A Comprehensive Hands-on Guide to Transfer Learning with Real-World Applications in Deep Learning](https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a)
+* [Attention? Attention!](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)
 * [Intel’s Neural Compute Stick 2 is 8 times faster than its predecessor](https://venturebeat.com/2018/11/14/intels-neural-compute-stick-2-is-8-times-faster-than-its-predecessor/)
 * [How fast is my model?](http://machinethink.net/blog/how-fast-is-my-model/)
 * [Depthwise separable convolutions for machine learning](https://eli.thegreenplace.net/2018/depthwise-separable-convolutions-for-machine-learning/)
