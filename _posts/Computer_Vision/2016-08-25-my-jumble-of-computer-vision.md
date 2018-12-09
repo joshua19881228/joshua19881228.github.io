@@ -381,6 +381,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* How Does Batch Normalization Help Optimization? ([PDF](https://arxiv.org/abs/1805.11604), [VIDEO](https://www.youtube.com/watch?v=ZOabsYbmBRM))
 * https://arxiv.org/abs/1805.07883 ([PDF](https://arxiv.org/abs/1805.07883))
 * Rethinking ImageNet Pre-training ([PDF](https://arxiv.org/abs/1811.08883))
 * Learning From Positive and Unlabeled Data: A Survey ([PDF](https://arxiv.org/abs/1811.04820))
@@ -673,6 +674,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OTHER ###
 
+* GaitSet: Regarding Gait as a Set for Cross-View Gait Recognition ([PDF](https://arxiv.org/abs/1811.06186), [Project/Code](https://github.com/AbnerHqC/GaitSet))
 * Deep Clustering for Unsupervised Learning of Visual Features ([PDF](https://arxiv.org/abs/1807.05520))
 * Detecting Visual Relationships Using Box Attention ([PDF](https://arxiv.org/abs/1807.02136))
 * Zoom-Net: Mining Deep Feature Interactions for Visual Relationship Recognition ([PDF](https://arxiv.org/abs/1807.04979), [Project/Code](https://github.com/gjyin91/ZoomNet))
@@ -722,6 +724,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES ###
 
+* [PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet) Latex code for making neural networks diagrams
 * [Build your own x](https://github.com/danistefanovic/build-your-own-x)
 * [PyTorch Exercise Codes for Deep Learning Researchers](https://github.com/nmhkahn/pytorch-exercise)
 * [Python Regular Expressions Cheat Sheet](https://www.dataquest.io/blog/regex-cheatsheet/)
@@ -928,6 +931,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
+* [State of the Art](https://www.stateoftheart.ai/)
 * [STAIR Actions: A Video Dataset of Everyday Home Actions](https://stair-lab-cit.github.io/STAIR-actions-web/)
     STAIR Actions is a video dataset consisting of 100 everyday human action categories.  
 * [Revisiting Oxford and Paris: Large-Scale Image Retrieval Benchmarking](http://cmp.felk.cvut.cz/revisitop/)
