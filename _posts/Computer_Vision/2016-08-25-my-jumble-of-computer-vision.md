@@ -235,6 +235,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
+* SlowFast Networks for Video Recognition ([PDF](https://arxiv.org/abs/1812.03982))
 * PHD-GIFs: Personalized Highlight Detection for Automatic GIF Creation ([PDF](https://arxiv.org/abs/1804.06604), [Project/Code](https://github.com/gyglim/personalized-highlights-dataset))
 * Superframes, A Temporal Video Segmentation ([PDF](https://arxiv.org/abs/1804.06642))
 * Co-occurrence Feature Learning from Skeleton Data for Action Recognition and Detection with Hierarchical Aggregation ([PDF](https://arxiv.org/abs/1804.06055))
@@ -381,6 +382,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Bag of Tricks for Image Classification with Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1812.01187))
 * How Does Batch Normalization Help Optimization? ([PDF](https://arxiv.org/abs/1805.11604), [VIDEO](https://www.youtube.com/watch?v=ZOabsYbmBRM))
 * https://arxiv.org/abs/1805.07883 ([PDF](https://arxiv.org/abs/1805.07883))
 * Rethinking ImageNet Pre-training ([PDF](https://arxiv.org/abs/1811.08883))
