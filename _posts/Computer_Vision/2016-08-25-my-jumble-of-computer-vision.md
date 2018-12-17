@@ -616,6 +616,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* EFFICIENT METHODS AND HARDWARE FOR DEEP LEARNING ([PDF](https://stacks.stanford.edu/file/druid:qf934gh3708/EFFICIENT%20METHODS%20AND%20HARDWARE%20FOR%20DEEP%20LEARNING-augmented.pdf))
 * ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware ([PDF](https://arxiv.org/abs/1812.00332), [Project/Code](https://github.com/MIT-HAN-LAB/ProxylessNAS))
 * FD-MobileNet: Improved MobileNet with a Fast Downsampling Strategy ([PDF](https://arxiv.org/abs/1802.03750))
 * Quantization Mimic: Towards Very Tiny CNN for Object Detection ([PDF](https://arxiv.org/abs/1805.02152))
