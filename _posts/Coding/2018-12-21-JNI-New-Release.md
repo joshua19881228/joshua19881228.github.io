@@ -6,7 +6,7 @@ tag: ["JNI", "OpenCV"]
 
 最近开发一个需要从Java端将图像传至native层的功能，发现了一个奇怪现象，native层每次获取到的图像都会有一些像素值发生随机变化。原始代码类似如下
 
-```C++
+```C
 cv::Mat imgbuf2mat(JNIEnv *env, jbyteArray buf, int width, int height){
     jbyte *ptr = env->GetByteArrayElements(buf, 0);
     cv::Mat img(height, width, img_type, (unsigned char *)ptr);
@@ -28,7 +28,7 @@ static void nativeProcessImageBuff
 
 简单来说就是先把图像内容转成cv::Mat，然后对图像做一些处理，但是即使传入相同的一张图像，处理结果每次都不一样。后来发现其实应该先处理图像，再释放引用，修改后的代码类似如下
 
-```C++
+```C
 cv::Mat imgbuf2mat(JNIEnv *env, jbyte *ptr, int width, int height){
     cv::Mat img(height, width, img_type, (unsigned char *)ptr);
     return img;
