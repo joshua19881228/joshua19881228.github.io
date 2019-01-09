@@ -14,6 +14,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTION
 
+* Scale-Aware Trident Networks for Object Detection ([PDF](https://arxiv.org/abs/1901.01892))
 * Acquisition of Localization Confidence for Accurate Object Detectinon ([PDF](https://arxiv.org/abs/1807.11590), [Project/Code](https://github.com/vacancy/PreciseRoIPooling))
 * A Single Shot Text Detector with Scale-adaptive Anchors ([PDF](https://arxiv.org/abs/1807.01884))
 * Small-scale Pedestrian Detection Based on Somatic Topology Localization and Temporal Feature Aggregation ([PDF](https://arxiv.org/abs/1807.01438))
@@ -101,6 +102,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Panoptic Feature Pyramid Networks ([PDF](https://arxiv.org/abs/1901.02446))
 * Fast Neural Architecture Search of Compact Semantic Segmentation Models via Auxiliary Cells ([PDF](https://arxiv.org/abs/1810.10804))
 * Deep Learning for Semantic Segmentation on Minimal Hardware ([PDF](https://arxiv.org/abs/1807.05597))
 * TernausNetV2: Fully Convolutional Network for Instance Segmentation ([PDF](https://arxiv.org/abs/1806.00844), [Project/Code](https://github.com/ternaus/TernausNetV2))
@@ -179,6 +181,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TRACKING ###
 
+* Deeper and Wider Siamese Networks for Real-Time Visual Tracking ([PDF](https://arxiv.org/abs/1901.01660))
 * Multiple People Tracking Using Hierarchical Deep Tracklet Re-identification ([PDF](https://arxiv.org/abs/1811.04091))
 * Fully-Convolutional Siamese Networks for Object Tracking ([PDF](https://arxiv.org/abs/1606.09549))
 * Joint Flow: Temporal Flow Fields for Multi Person Tracking ([PDF](https://arxiv.org/abs/1805.04596))
@@ -212,6 +215,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### POSE ESTIMATION ###
 
+* Human Pose Estimation with Spatial Contextual Information ([PDF](https://arxiv.org/abs/1901.01760))
+* Rethinking on Multi-Stage Networks for Human Pose Estimation ([PDF](https://arxiv.org/abs/1901.00148))
 * Learning to Estimate 3D Human Pose and Shape from a Single Color Image ([PDF](https://arxiv.org/abs/1805.04092), [Project/Code](https://www.seas.upenn.edu/~pavlakos/projects/humanshape/))
 * Ordinal Depth Supervision for 3D Human Pose Estimation ([PDF](https://arxiv.org/abs/1805.04095), [Project/Code](https://www.seas.upenn.edu/~pavlakos/projects/ordinal/))
 * Simple Baselines for Human Pose Estimation and Tracking ([PDF](https://arxiv.org/abs/1804.06208))
@@ -382,6 +387,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### CNN AND DEEP LEARNING ###
 
+* Interpretable CNNs ([PDF](https://arxiv.org/abs/1901.02413))
 * Bag of Tricks for Image Classification with Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1812.01187))
 * How Does Batch Normalization Help Optimization? ([PDF](https://arxiv.org/abs/1805.11604), [VIDEO](https://www.youtube.com/watch?v=ZOabsYbmBRM))
 * https://arxiv.org/abs/1805.07883 ([PDF](https://arxiv.org/abs/1805.07883))
