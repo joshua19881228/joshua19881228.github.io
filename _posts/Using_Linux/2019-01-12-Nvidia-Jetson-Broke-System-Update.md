@@ -1,6 +1,6 @@
 ---
 title: "Nvidia JetPack Breaks Update on Host System"
-category: ["Using Linux", "Nvidia"]
+category: ["Using Linux"]
 ---
 
 Rencently I've been trying to update my Ubuntu16.04 using `apt` and it failed again and again. At first, I thought it was because of the GFW and the sources. It turned out that any effort on these settings was in vain.
