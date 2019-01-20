@@ -14,6 +14,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTION
 
+* CornerNet: Detecting Objects as Paired Keypoints ([PDF](https://arxiv.org/abs/1808.01244), [Code/Project](https://github.com/princeton-vl/CornerNet))
 * Scale-Aware Trident Networks for Object Detection ([PDF](https://arxiv.org/abs/1901.01892))
 * Acquisition of Localization Confidence for Accurate Object Detectinon ([PDF](https://arxiv.org/abs/1807.11590), [Project/Code](https://github.com/vacancy/PreciseRoIPooling))
 * A Single Shot Text Detector with Scale-adaptive Anchors ([PDF](https://arxiv.org/abs/1807.01884))
