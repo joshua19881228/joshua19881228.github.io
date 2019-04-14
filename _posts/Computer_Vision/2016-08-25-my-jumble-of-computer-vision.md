@@ -246,7 +246,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
-* CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes ([PDF](https://arxiv.org/abs/1802.10062), [Project/Code](https://github.com/leeyeehoo/CSRNet), [MxNet Version](https://github.com/wkcn/CSRNet-mx))
+* CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes ([PDF](https://arxiv.org/abs/1802.10062), [Project/Code](https://github.com/leeyeehoo/CSRNet), [MxNet Version](https://github.com/wkcn/CSRNet-mx), [Reading Note](https://joshua19881228.github.io/2019-04-14-CSRNet/))
 * SlowFast Networks for Video Recognition ([PDF](https://arxiv.org/abs/1812.03982))
 * PHD-GIFs: Personalized Highlight Detection for Automatic GIF Creation ([PDF](https://arxiv.org/abs/1804.06604), [Project/Code](https://github.com/gyglim/personalized-highlights-dataset))
 * Superframes, A Temporal Video Segmentation ([PDF](https://arxiv.org/abs/1804.06642))
