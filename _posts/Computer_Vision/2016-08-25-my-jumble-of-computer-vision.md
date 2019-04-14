@@ -14,6 +14,10 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTION
 
+* Augmentation for small object detection ([PDF](https://arxiv.org/abs/1902.07296))
+* ThunderNet: Towards Real-time Generic Object Detection ([PDF](https://arxiv.org/abs/1903.11752))
+* Pyramid Mask Text Detector ([PDF](https://arxiv.org/abs/1903.11800))
+* Gaussian YOLOv3: An Accurate and Fast Object Detector Using Localization Uncertainty for Autonomous Driving ([PDF](https://arxiv.org/abs/1904.04620))
 * CornerNet: Detecting Objects as Paired Keypoints ([PDF](https://arxiv.org/abs/1808.01244), [Code/Project](https://github.com/princeton-vl/CornerNet), [Reading Note](https://joshua19881228.github.io/2019-01-20-CornerNet/))
 * Scale-Aware Trident Networks for Object Detection ([PDF](https://arxiv.org/abs/1901.01892))
 * Acquisition of Localization Confidence for Accurate Object Detectinon ([PDF](https://arxiv.org/abs/1807.11590), [Project/Code](https://github.com/vacancy/PreciseRoIPooling))
@@ -103,6 +107,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### SEGMENTATION/PARSING ###
 
+* Towards Real-Time Automatic Portrait Matting on Mobile Devices ([PDF](https://arxiv.org/abs/1904.03816v1), [Project/Code](https://github.com/hyperconnect/MMNet))
 * Panoptic Feature Pyramid Networks ([PDF](https://arxiv.org/abs/1901.02446))
 * Fast Neural Architecture Search of Compact Semantic Segmentation Models via Auxiliary Cells ([PDF](https://arxiv.org/abs/1810.10804))
 * Deep Learning for Semantic Segmentation on Minimal Hardware ([PDF](https://arxiv.org/abs/1807.05597))
@@ -382,9 +387,11 @@ I am going to maintain this page to record a few things about computer vision th
 * Neural Color Transfer between Images ([PDF](https://arxiv.org/abs/1710.00756))
 * Deeper, Broader and Artier Domain Generalization ([PDF](https://arxiv.org/abs/1710.03077))
 
-### 3D ###
+### 3D/DEPTH ###
 
 * Pix3D: Dataset and Methods for Single-Image 3D Shape Modeling ([PDF](https://arxiv.org/abs/1804.04610), [Project/Code](https://github.com/xingyuansun/pix3d))
+* Depth from Videos in the Wild: Unsupervised Monocular Depth Learning from Unknown Cameras ([PDF](https://arxiv.org/abs/1904.04998))
+
 
 ### CNN AND DEEP LEARNING ###
 
@@ -623,11 +630,12 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* MetaPruning: Meta Learning for Automatic Neural Network Channel Pruning ([PDF](https://arxiv.org/abs/1903.10258))
 * EFFICIENT METHODS AND HARDWARE FOR DEEP LEARNING ([PDF](https://stacks.stanford.edu/file/druid:qf934gh3708/EFFICIENT%20METHODS%20AND%20HARDWARE%20FOR%20DEEP%20LEARNING-augmented.pdf))
 * ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware ([PDF](https://arxiv.org/abs/1812.00332), [Project/Code](https://github.com/MIT-HAN-LAB/ProxylessNAS))
 * FD-MobileNet: Improved MobileNet with a Fast Downsampling Strategy ([PDF](https://arxiv.org/abs/1802.03750))
 * Quantization Mimic: Towards Very Tiny CNN for Object Detection ([PDF](https://arxiv.org/abs/1805.02152))
-* Pelee: A Real-Time Object Detection System on Mobile Devices ([PDF](https://arxiv.org/abs/1804.06882), [Project/Code](https://github.com/Robert-JunWang/Pelee), [Reading Note](https://joshua19881228.github.io/2018-04-22-Pelee/))
+* Pelee: A Real-Time Object Detection System on Mobile Devices ([PDF](https://arxiv.org/abs/1804.06882), [Project/Code](https://github.com/Robert-JunWang/Pelee), [TensorRT Implemented](https://github.com/ginn24/Pelee-TensorRT), [Reading Note](https://joshua19881228.github.io/2018-04-22-Pelee/))
 * MobileNetV2: Inverted Residuals and Linear Bottlenecks ([PDF](https://arxiv.org/abs/1801.04381), [Reading Note](https://joshua19881228.github.io/2018-03-07-MobileNetsV2/))
 * SBNet: Sparse Blocks Network for Fast Inference ([PDF](https://arxiv.org/abs/1801.02108), [Project/Code](https://github.com/uber/sbnet))
 * IGCV2: Interleaved Structured Sparse Convolutional Neural Networks ([PDF](https://arxiv.org/abs/1804.06202))
@@ -770,6 +778,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### PROJECTS ###
 
+* [TensorStream](https://tensorstream.argus-ai.com/) is a C++ library for real-time video stream (e.g. RTMP) decoding to CUDA memory
 * [Data Augmentation for Computer Vision with PyTorch](https://github.com/fabioperez/pytorch-examples/blob/master/notebooks/PyTorch_Data_Augmentation_Image_Classification.ipynb) 
 * [Neural Network Distiller](https://github.com/NervanaSystems/distiller)
     Distiller is an open-source Python package for neural network compression research.
