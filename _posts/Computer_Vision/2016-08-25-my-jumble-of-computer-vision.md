@@ -13,7 +13,7 @@ I am going to maintain this page to record a few things about computer vision th
 ## PAPERS AND PROJECTS
 
 ### OBJECT/SALIENCY DETECTION
-
+* Objects as Points ([PDF](https://arxiv.org/abs/1904.07850), [Code/Projects](https://github.com/xingyizhou/CenterNet))
 * Augmentation for small object detection ([PDF](https://arxiv.org/abs/1902.07296))
 * ThunderNet: Towards Real-time Generic Object Detection ([PDF](https://arxiv.org/abs/1903.11752))
 * Pyramid Mask Text Detector ([PDF](https://arxiv.org/abs/1903.11800))
