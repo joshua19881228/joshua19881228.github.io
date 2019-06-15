@@ -13,11 +13,11 @@ set the correct path using environment path, or modify USE_CUDA_PATH in config.m
 
 It's because of lack of memory when compiling. We need to add a swap file in size 2G
 
-````bash
+```bash
 dd if=/dev/zero of=/swapfile bs=1k count=2048000
-mkswap /swapfile```
+mkswap /swapfile
 swapon /swapfile
-````
+```
 
 **3. openblas link error**
 
