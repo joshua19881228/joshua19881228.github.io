@@ -38,6 +38,4 @@ sudo apt-get install libjpeg-dev
 
 **6. image.io error when testing GluonCV**
 
-Need to compile libmxnet.so with OpenCV. Modify USE_OPENCV in config.mk
-
-`USE_OPENCV = 1`
+Need to compile libmxnet.so with OpenCV. Modify USE_OPENCV in config.mk. set `USE_OPENCV = 1`
