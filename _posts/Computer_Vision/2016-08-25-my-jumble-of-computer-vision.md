@@ -311,6 +311,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* A Dataset and Benchmark for Large-scale Multi-modal Face Anti-spoofing ([PDF](https://arxiv.org/abs/1812.00408), [Project/Code](https://github.com/AlexanderParkin/ChaLearn_liveness_challenge))
 * Learning towards Minimum Hyperspherical Energy ([PDF](https://arxiv.org/abs/1805.09298), [Project/Code](https://github.com/wy1iu/sphereface-plus))
 * Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition ([PDF](http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaohang_Zhan_Consensus-Driven_Propagation_in_ECCV_2018_paper.pdf), [Code/Project](https://github.com/XiaohangZhan/cdp/))
 * Arbitrary Facial Attribute Editing: Only Change What You Want ([PDF](https://arxiv.org/abs/1711.10678), [Project/Code](https://github.com/LynnHo/AttGAN-Tensorflow))
@@ -360,6 +361,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### IMAGE PROCESSING ###
 
+* R2D2: Repeatable and Reliable Detector and Descriptor ([PDF](https://arxiv.org/abs/1906.06195))
 * CartoonGAN: Generative Adversarial Networks for Photo Cartoonization ([PDF](http://openaccess.thecvf.com/content_cvpr_2018/html/2205.html))
 * Image Inpainting for Irregular Holes Using Partial Convolutions ([PDF](https://arxiv.org/abs/1804.07723))
 * Neural Aesthetic Image Reviewer ([PDF](https://arxiv.org/abs/1802.10240), [Reading Note](https://joshua19881228.github.io/2018-03-05-Neural_Aesthetic_Image_Reviewer/))
@@ -779,6 +781,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### PROJECTS ###
 
+* [RetinaFace-Cpp](https://github.com/Charrin/RetinaFace-Cpp) RetinaFace detector with C++
 * [TensorStream](https://tensorstream.argus-ai.com/) is a C++ library for real-time video stream (e.g. RTMP) decoding to CUDA memory
 * [Data Augmentation for Computer Vision with PyTorch](https://github.com/fabioperez/pytorch-examples/blob/master/notebooks/PyTorch_Data_Augmentation_Image_Classification.ipynb) 
 * [Neural Network Distiller](https://github.com/NervanaSystems/distiller)
@@ -951,6 +954,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
+* [VeRi dataset](https://github.com/VehicleReId/VeRidataset) is a large scale image dataset for vehicle re-identification in urban traffic surveillance.
 * [State of the Art](https://www.stateoftheart.ai/)
 * [STAIR Actions: A Video Dataset of Everyday Home Actions](https://stair-lab-cit.github.io/STAIR-actions-web/)
     STAIR Actions is a video dataset consisting of 100 everyday human action categories.  
