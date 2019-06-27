@@ -14,6 +14,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### OBJECT/SALIENCY DETECTION
 
+* Learning Data Augmentation Strategies for Object Detection ([PDF](https://arxiv.org/abs/1906.11172), [Project/Code](https://github.com/tensorflow/tpu/tree/master/models/official/detection))
 * Light-Weight RetinaNet for Object Detection ([PDF](https://arxiv.org/abs/1905.10011)) 
 * Objects as Points ([PDF](https://arxiv.org/abs/1904.07850), [Code/Projects](https://github.com/xingyizhou/CenterNet))
 * Augmentation for small object detection ([PDF](https://arxiv.org/abs/1902.07296))
@@ -635,6 +636,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION ###
 
+* Importance Estimation for Neural Network Pruning ([PDF](https://arxiv.org/abs/1906.10771), [Project/Code](https://github.com/NVlabs/Taylor_pruning))
 * MetaPruning: Meta Learning for Automatic Neural Network Channel Pruning ([PDF](https://arxiv.org/abs/1903.10258))
 * EFFICIENT METHODS AND HARDWARE FOR DEEP LEARNING ([PDF](https://stacks.stanford.edu/file/druid:qf934gh3708/EFFICIENT%20METHODS%20AND%20HARDWARE%20FOR%20DEEP%20LEARNING-augmented.pdf))
 * ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware ([PDF](https://arxiv.org/abs/1812.00332), [Project/Code](https://github.com/MIT-HAN-LAB/ProxylessNAS))
