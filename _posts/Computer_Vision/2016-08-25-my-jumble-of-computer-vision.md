@@ -13,6 +13,8 @@ I am going to maintain this page to record a few things about computer vision th
 ## PAPERS AND PROJECTS
 
 ### OBJECT/SALIENCY DETECTION
+
+* Light-Weight RetinaNet for Object Detection ([PDF](https://arxiv.org/abs/1905.10011)) 
 * Objects as Points ([PDF](https://arxiv.org/abs/1904.07850), [Code/Projects](https://github.com/xingyizhou/CenterNet))
 * Augmentation for small object detection ([PDF](https://arxiv.org/abs/1902.07296))
 * ThunderNet: Towards Real-time Generic Object Detection ([PDF](https://arxiv.org/abs/1903.11752))
@@ -781,6 +783,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### PROJECTS ###
 
+* [Human Pose Estimation 101](https://github.com/cbsudux/Human-Pose-Estimation-101) Basics of 2D and 3D Human Pose Estimation.
+* [Mobile Computer Vision @ Facebook](https://github.com/facebookresearch/mobile-vision)
+* [Video Classification](https://github.com/HHTseng/video-classification) builds a quick and simple code for video classification (or action recognition) using UCF101 with PyTorch.
 * [RetinaFace-Cpp](https://github.com/Charrin/RetinaFace-Cpp) RetinaFace detector with C++
 * [TensorStream](https://tensorstream.argus-ai.com/) is a C++ library for real-time video stream (e.g. RTMP) decoding to CUDA memory
 * [Data Augmentation for Computer Vision with PyTorch](https://github.com/fabioperez/pytorch-examples/blob/master/notebooks/PyTorch_Data_Augmentation_Image_Classification.ipynb) 
