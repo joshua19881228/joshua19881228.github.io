@@ -249,6 +249,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### ACTION RECOGNITION/EVENT DETECTION/VIDEO ###
 
+* Two-Stream Adaptive Graph Convolutional Networks for Skeleton-Based Action Recognition ([PDF](http://openaccess.thecvf.com/content_CVPR_2019/papers/Shi_Two-Stream_Adaptive_Graph_Convolutional_Networks_for_Skeleton-Based_Action_Recognition_CVPR_2019_paper.pdf), [Project/Code](https://github.com/lshiwjx/2s-AGCN))
 * CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes ([PDF](https://arxiv.org/abs/1802.10062), [Project/Code](https://github.com/leeyeehoo/CSRNet), [MxNet Version](https://github.com/wkcn/CSRNet-mx), [Reading Note](https://joshua19881228.github.io/2019-04-14-CSRNet/))
 * SlowFast Networks for Video Recognition ([PDF](https://arxiv.org/abs/1812.03982))
 * PHD-GIFs: Personalized Highlight Detection for Automatic GIF Creation ([PDF](https://arxiv.org/abs/1804.06604), [Project/Code](https://github.com/gyglim/personalized-highlights-dataset))
@@ -565,6 +566,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### GAN ###
 
+* A Survey on GANs for Anomaly Detection ([PDF](https://arxiv.org/abs/1906.11632))
 * Outfit Generation and Style Extraction via Bidirectional LSTM and Autoencoder ([PDF](https://arxiv.org/abs/1807.03133))
 * Pioneer Networks: Progressively Growing Generative Autoencoder ([PDF](https://arxiv.org/abs/1807.03026))
 * Transferring GANs: generating images from limited data ([PDF](https://arxiv.org/abs/1805.01677), [Project/Code](https://github.com/yaxingwang/Transferring-GANs))
@@ -749,6 +751,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES ###
 
+* [Pedestrian Attribute Recognition Paper List](https://github.com/wangxiao5791509/Pedestrian-Attribute-Recognition-Paper-List)
 * [PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet) Latex code for making neural networks diagrams
 * [Build your own x](https://github.com/danistefanovic/build-your-own-x)
 * [PyTorch Exercise Codes for Deep Learning Researchers](https://github.com/nmhkahn/pytorch-exercise)
@@ -961,6 +964,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### BENCHMARK/LEADERBOARD/DATASET ###
 
+* [VERI-Wild](https://github.com/PKU-IMRE/VERI-Wild) A Large-Scale Dataset for Vehicle Re-Identification in the Wild
 * [VeRi dataset](https://github.com/VehicleReId/VeRidataset) is a large scale image dataset for vehicle re-identification in urban traffic surveillance.
 * [State of the Art](https://www.stateoftheart.ai/)
 * [STAIR Actions: A Video Dataset of Everyday Home Actions](https://stair-lab-cit.github.io/STAIR-actions-web/)
