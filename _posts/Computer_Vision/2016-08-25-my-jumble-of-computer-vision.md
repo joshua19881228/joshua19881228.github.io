@@ -315,6 +315,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### FACE ###
 
+* BlazeFace: Sub-millisecond Neural Face Detection on Mobile GPUs ([PDF](https://arxiv.org/abs/1907.05047))
 * A Dataset and Benchmark for Large-scale Multi-modal Face Anti-spoofing ([PDF](https://arxiv.org/abs/1812.00408), [Project/Code](https://github.com/AlexanderParkin/ChaLearn_liveness_challenge))
 * Learning towards Minimum Hyperspherical Energy ([PDF](https://arxiv.org/abs/1805.09298), [Project/Code](https://github.com/wy1iu/sphereface-plus))
 * Consensus-Driven Propagation in Massive Unlabeled Data for Face Recognition ([PDF](http://openaccess.thecvf.com/content_ECCV_2018/papers/Xiaohang_Zhan_Consensus-Driven_Propagation_in_ECCV_2018_paper.pdf), [Code/Project](https://github.com/XiaohangZhan/cdp/))
@@ -1008,6 +1009,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### TOOLKITS ###
 
+* [XGBoostLSS](https://github.com/StatMixedML/XGBoostLSS) An extension of XGBoost to probabilistic forecasting
 * [Netron](https://github.com/lutzroeder/netron) is a viewer for neural network, deep learning and machine learning models.
 * [Bring Deep Learning to small devices](https://blue-oil.org/) An open source deep learning platform for low bit computation
 * [Albumentations](https://github.com/albu/albumentations) fast image augmentation library and easy to use wrapper around other libraries.
