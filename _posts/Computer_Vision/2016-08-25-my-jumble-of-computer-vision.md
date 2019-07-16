@@ -395,8 +395,9 @@ I am going to maintain this page to record a few things about computer vision th
 * Neural Color Transfer between Images ([PDF](https://arxiv.org/abs/1710.00756))
 * Deeper, Broader and Artier Domain Generalization ([PDF](https://arxiv.org/abs/1710.03077))
 
-### 3D/DEPTH ###
+### 3D/DEPTH/POINT CLOUD ###
 
+* The Perfect Match: 3D Point Cloud Matching with Smoothed Densities ([PDF](http://openaccess.thecvf.com/content_CVPR_2019/papers/Gojcic_The_Perfect_Match_3D_Point_Cloud_Matching_With_Smoothed_Densities_CVPR_2019_paper.pdf), [Project/Code](https://github.com/zgojcic/3DSmoothNet))
 * Pix3D: Dataset and Methods for Single-Image 3D Shape Modeling ([PDF](https://arxiv.org/abs/1804.04610), [Project/Code](https://github.com/xingyuansun/pix3d))
 * Depth from Videos in the Wild: Unsupervised Monocular Depth Learning from Unknown Cameras ([PDF](https://arxiv.org/abs/1904.04998))
 
