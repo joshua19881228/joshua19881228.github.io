@@ -753,6 +753,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES ###
 
+* [High Performance Face Recognition](https://github.com/ZhaoJ9014/High-Performance-Face-Recognition) This repository provides several high performance models for unconstrained / large-scale / low-shot face recognition.
+* [Awesome-Trajectory-Prediction](https://github.com/xuehaouwa/Awesome-Trajectory-Prediction) This is a list of useful information about trajectory prediction. Related papers, datasets and codes are included.
 * [Pedestrian Attribute Recognition Paper List](https://github.com/wangxiao5791509/Pedestrian-Attribute-Recognition-Paper-List)
 * [PlotNeuralNet](https://github.com/HarisIqbal88/PlotNeuralNet) Latex code for making neural networks diagrams
 * [Build your own x](https://github.com/danistefanovic/build-your-own-x)
@@ -790,6 +792,9 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### PROJECTS ###
 
+* [vtkplotter](https://github.com/marcomusy/vtkplotter) A python module for scientific visualization, analysis and animation of 3D objects and point clouds based on VTK and numpy.
+* [pptk](https://heremaps.github.io/pptk/) The Point Processing Toolkit (pptk) is a Python package for visualizing and processing 2-d/3-d point clouds.
+* [ffmpeg-cpp](https://github.com/Raveler/ffmpeg-cpp) A clean C++ wrapper around the ffmpeg libraries.
 * [Human Pose Estimation 101](https://github.com/cbsudux/Human-Pose-Estimation-101) Basics of 2D and 3D Human Pose Estimation.
 * [Mobile Computer Vision @ Facebook](https://github.com/facebookresearch/mobile-vision)
 * [Video Classification](https://github.com/HHTseng/video-classification) builds a quick and simple code for video classification (or action recognition) using UCF101 with PyTorch.
