@@ -753,6 +753,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES ###
 
+* [Generative Deep Learning](https://www.oreilly.com/library/view/generative-deep-learning/9781492041931/) Generative modeling is one of the hottest topics in AI. It’s now possible to teach a machine to excel at human endeavors such as painting, writing, and composing music. With this practical book, machine-learning engineers and data scientists will discover how to re-create some of the most impressive examples of generative deep learning models, such as variational autoencoders,generative adversarial networks (GANs), encoder-decoder models and world models.
 * [High Performance Face Recognition](https://github.com/ZhaoJ9014/High-Performance-Face-Recognition) This repository provides several high performance models for unconstrained / large-scale / low-shot face recognition.
 * [Awesome-Trajectory-Prediction](https://github.com/xuehaouwa/Awesome-Trajectory-Prediction) This is a list of useful information about trajectory prediction. Related papers, datasets and codes are included.
 * [Pedestrian Attribute Recognition Paper List](https://github.com/wangxiao5791509/Pedestrian-Attribute-Recognition-Paper-List)
