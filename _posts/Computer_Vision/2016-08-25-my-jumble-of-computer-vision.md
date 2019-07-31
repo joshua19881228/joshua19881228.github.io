@@ -885,6 +885,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS ###
 
+* [Lil'Log](https://lilianweng.github.io/) A very informative blog.
 * [A Comprehensive Hands-on Guide to Transfer Learning with Real-World Applications in Deep Learning](https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a)
 * [Attention? Attention!](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)
 * [Intel’s Neural Compute Stick 2 is 8 times faster than its predecessor](https://venturebeat.com/2018/11/14/intels-neural-compute-stick-2-is-8-times-faster-than-its-predecessor/)
