@@ -639,6 +639,8 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### LIGHT-WEIGHT MODEL/EMBEDDED/MOBILE/MODEL COMPRESSION
 
+- MetaPruning: Meta Learning for Automatic Neural Network Channel Pruning ([PDF](https://arxiv.org/abs/1903.10258), [Project/Code](https://github.com/liuzechun/MetaPruning))
+- PyTorch Network Slimming ([PDF](https://arxiv.org/abs/1708.06519), [Project/Code](https://github.com/yeyun11/pytorch-network-slimming))
 - Importance Estimation for Neural Network Pruning ([PDF](https://arxiv.org/abs/1906.10771), [Project/Code](https://github.com/NVlabs/Taylor_pruning))
 - MetaPruning: Meta Learning for Automatic Neural Network Channel Pruning ([PDF](https://arxiv.org/abs/1903.10258))
 - EFFICIENT METHODS AND HARDWARE FOR DEEP LEARNING ([PDF](https://stacks.stanford.edu/file/druid:qf934gh3708/EFFICIENT%20METHODS%20AND%20HARDWARE%20FOR%20DEEP%20LEARNING-augmented.pdf))
@@ -752,6 +754,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES
 
+- [Real-time network for mobile devices](https://github.com/wpf535236337/real-time-network) real-time network architecture for mobile devices and semantic segmentation
 - [The Art of C++](https://taocpp.github.io/) A collection of high-quality C++ libraries
 - [Reinforcement Learning Algorithms](https://github.com/dennybritz/reinforcement-learning) Implementation of Reinforcement Learning Algorithms. Python, OpenAI Gym, Tensorflow. Exercises and Solutions to accompany Sutton's Book and David Silver's course.
 - [Generative Deep Learning](https://www.oreilly.com/library/view/generative-deep-learning/9781492041931/) Generative modeling is one of the hottest topics in AI. It’s now possible to teach a machine to excel at human endeavors such as painting, writing, and composing music. With this practical book, machine-learning engineers and data scientists will discover how to re-create some of the most impressive examples of generative deep learning models, such as variational autoencoders,generative adversarial networks (GANs), encoder-decoder models and world models.
@@ -796,6 +799,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### PROJECTS
 
+- [Real-Time ArcFace Multiplex Recognition](https://github.com/1996scarlet/ArcFace-Multiplex-Recognition) Face Detection and Recognition using RetinaFace and ArcFace, can reach nearly 24 fps at GTX1660ti.
 - [vtkplotter](https://github.com/marcomusy/vtkplotter) A python module for scientific visualization, analysis and animation of 3D objects and point clouds based on VTK and numpy.
 - [pptk](https://heremaps.github.io/pptk/) The Point Processing Toolkit (pptk) is a Python package for visualizing and processing 2-d/3-d point clouds.
 - [ffmpeg-cpp](https://github.com/Raveler/ffmpeg-cpp) A clean C++ wrapper around the ffmpeg libraries.
