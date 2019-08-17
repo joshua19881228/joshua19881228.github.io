@@ -799,6 +799,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### PROJECTS
 
+- [Knowledge-Distillation-Zoo](https://github.com/AberHu/Knowledge-Distillation-Zoo) Pytorch implementation of various Knowledge Distillation methods.
 - [mxnet-insightface-cpp](https://github.com/njvisionpower/mxnet-insightface-cpp) This project implement an easy deployable face recognition pipeline with mxnet c++ framework.
 - [Real-Time ArcFace Multiplex Recognition](https://github.com/1996scarlet/ArcFace-Multiplex-Recognition) Face Detection and Recognition using RetinaFace and ArcFace, can reach nearly 24 fps at GTX1660ti.
 - [vtkplotter](https://github.com/marcomusy/vtkplotter) A python module for scientific visualization, analysis and animation of 3D objects and point clouds based on VTK and numpy.
