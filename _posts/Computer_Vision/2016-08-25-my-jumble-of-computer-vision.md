@@ -893,6 +893,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### NEWS/BLOGS
 
+- [The Complete Guide to Time Series Analysis and Forecasting](https://towardsdatascience.com/the-complete-guide-to-time-series-analysis-and-forecasting-70d476bfe775)
 - [Lil'Log](https://lilianweng.github.io/) A very informative blog.
 - [A Comprehensive Hands-on Guide to Transfer Learning with Real-World Applications in Deep Learning](https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a)
 - [Attention? Attention!](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)
