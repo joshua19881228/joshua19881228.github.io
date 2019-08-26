@@ -753,7 +753,7 @@ I am going to maintain this page to record a few things about computer vision th
 ## INTERESTING FINDS
 
 ### RESOURCES/PERSPECTIVES
-
+- [Awesome Computer Vision Models](https://github.com/nerox8664/awesome-computer-vision-models) This is the list with popular classification and segmentation models related with corresponding evaluation metrics.
 - [Real-time network for mobile devices](https://github.com/wpf535236337/real-time-network) real-time network architecture for mobile devices and semantic segmentation
 - [The Art of C++](https://taocpp.github.io/) A collection of high-quality C++ libraries
 - [Reinforcement Learning Algorithms](https://github.com/dennybritz/reinforcement-learning) Implementation of Reinforcement Learning Algorithms. Python, OpenAI Gym, Tensorflow. Exercises and Solutions to accompany Sutton's Book and David Silver's course.
