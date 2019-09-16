@@ -38,7 +38,9 @@ In order to deploy MXNet based vision engine to projects develped in C++, we nee
 
 3. Use CMake to generate VS solution
 
-   ``
+   `cmake -G "Visual Studio 14 2015 Win64" -DUSE_CUDA=0 -DUSE_CUDNN=0 -DUSE_NVRTC=0 -DUSE_OPENCV=1 -DUSE_OPENMP=1 -DUSE_BLAS=open -DUSE_LAPACK=0 -DUSE_DIST_KVSTORE=0 -DUSE_CPP_PACKAGE=1 -DCMAKE_INSTALL_PREFIX=install ..`
+
+   Above command can be used to generate a solution without GPU support. By modifying config `-DUSE_CUDA` and `-DUSE_CUDNN`, we can generate a solution with GPU support.
 
 4. Generate `op.h`
 
