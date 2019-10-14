@@ -753,6 +753,10 @@ I am going to maintain this page to record a few things about computer vision th
 ## INTERESTING FINDS
 
 ### RESOURCES/PERSPECTIVES
+
+- [Ultra-Light-Fast-Generic-Face-Detector-1MB](https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB) 超轻量级通用人脸检测模型
+- [Towards-Realtime-MOT](https://github.com/Zhongdao/Towards-Realtime-MOT) Joint Detection and Embedding for fast multi-object tracking
+- [RFSong-7993](https://github.com/songwsx/RFSong-7993) 设计的轻量级RFB进行行人检测，AP达到0.7993，参数量仅有3.1MB，200 FPS
 - [Awesome Computer Vision Models](https://github.com/nerox8664/awesome-computer-vision-models) This is the list with popular classification and segmentation models related with corresponding evaluation metrics.
 - [Real-time network for mobile devices](https://github.com/wpf535236337/real-time-network) real-time network architecture for mobile devices and semantic segmentation
 - [The Art of C++](https://taocpp.github.io/) A collection of high-quality C++ libraries
