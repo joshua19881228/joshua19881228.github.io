@@ -754,9 +754,12 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### RESOURCES/PERSPECTIVES
 
+- [Network-acceleration](https://github.com/mrgloom/Network-Speed-and-Compression)
+- [Awesome-Skeleton-based-Action-Recognition](https://github.com/niais/Awesome-Skeleton-based-Action-Recognition)
+- [AI at the edge](https://github.com/crespum/edge-ai) A curated list of hardware, software, frameworks and other resources for Artificial Intelligence at the edge. Inspired by awesome-dataviz.
 - [Ultra-Light-Fast-Generic-Face-Detector-1MB](https://github.com/Linzaer/Ultra-Light-Fast-Generic-Face-Detector-1MB) 超轻量级通用人脸检测模型
 - [Towards-Realtime-MOT](https://github.com/Zhongdao/Towards-Realtime-MOT) Joint Detection and Embedding for fast multi-object tracking
-- [RFSong-7993](https://github.com/songwsx/RFSong-7993) 设计的轻量级RFB进行行人检测，AP达到0.7993，参数量仅有3.1MB，200 FPS
+- [RFSong-7993](https://github.com/songwsx/RFSong-7993) 设计的轻量级 RFB 进行行人检测，AP 达到 0.7993，参数量仅有 3.1MB，200 FPS
 - [Awesome Computer Vision Models](https://github.com/nerox8664/awesome-computer-vision-models) This is the list with popular classification and segmentation models related with corresponding evaluation metrics.
 - [Real-time network for mobile devices](https://github.com/wpf535236337/real-time-network) real-time network architecture for mobile devices and semantic segmentation
 - [The Art of C++](https://taocpp.github.io/) A collection of high-quality C++ libraries
@@ -984,6 +987,7 @@ I am going to maintain this page to record a few things about computer vision th
 
 ### BENCHMARK/LEADERBOARD/DATASET
 
+- [AI Benchmark: All About Deep Learning on Smartphones in 2019](https://arxiv.org/abs/1910.06663)
 - [LVIS API](https://github.com/lvis-dataset/lvis-api) LVIS: is a new dataset for Large Vocabulary Instance Segmentation.
 - [VERI-Wild](https://github.com/PKU-IMRE/VERI-Wild) A Large-Scale Dataset for Vehicle Re-Identification in the Wild
 - [VeRi dataset](https://github.com/VehicleReId/VeRidataset) is a large scale image dataset for vehicle re-identification in urban traffic surveillance.
