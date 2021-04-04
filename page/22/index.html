@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Joshua&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/22/index.html">
+<meta property="og:site_name" content="Joshua&#39;s Blog">
+<meta property="og:description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Joshua LI">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/page/22/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Joshua's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Joshua's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-my-jumble-of-computer-vision">
+
+    <a href="/2016/08/25/Computer_Vision/2016-08-25-my-jumble-of-computer-vision/" rel="section"><i class=" fa-fw"></i>My Jumble of Computer Vision</a>
+
+  </li>
+        <li class="menu-item menu-item-an-introduction-to-cnn-based-object-detection">
+
+    <a href="/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/" rel="section"><i class=" fa-fw"></i>An Introduction to CNN based Object Detection</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/05/Life_Discovery/Miscellaneous/2016-02-05-Miscellaneous/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/02/05/Life_Discovery/Miscellaneous/2016-02-05-Miscellaneous/" class="post-title-link" itemprop="url">How to read and understand a scientific paper: a guide for non-scientists</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-02-05 00:00:00" itemprop="dateCreated datePublished" datetime="2016-02-05T00:00:00+08:00">2016-02-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>The article is partially quoted from a <a href="http://violentmetaphors.com/2013/08/25/how-to-read-and-understand-a-scientific-paper-2/" target="_blank" rel="noopener">blog</a>, which is written by Jennifer Raff, Assistant Professor of Physical Anthropology.</p>
+<blockquote>
+<p>What constitutes enough proof? Obviously everyone has a different answer to that question. But to form a truly educated opinion on a scientific subject, you need to become familiar with current research in that field.  And to do that, you have to read the “primary research literature” (often just called “the literature”). You might have tried to read scientific papers before and been frustrated by the dense, stilted writing and the unfamiliar jargon. I remember feeling this way!  Reading and understanding research papers is a skill which every single doctor and scientist has had to learn during graduate school.  You can learn it too, but like any skill it takes patience and practice.</p>
+<p>I want to help people become more scientifically literate, so I wrote this guide for how a layperson can approach reading and understanding a scientific research paper. It’s appropriate for someone who has no background whatsoever in science or medicine, and based on the assumption that he or she is doing this for the purpose of getting a basic understanding of a paper and deciding whether or not it’s a reputable study.</p>
+<p>The type of scientific paper I’m discussing here is referred to as a <strong>primary research article</strong>. It’s a peer-reviewed report of new research on a specific question (or questions). Another useful type of publication is a <strong>review article</strong>. Review articles are also peer-reviewed, and don’t present new information, but summarize multiple primary research articles, to give a sense of the consensus, debates, and unanswered questions within a field.  (I’m not going to say much more about them here, but be cautious about which review articles you read. Remember that they are only a snapshot of the research at the time they are published.  A review article on, say, genome-wide association studies from 2001 is not going to be very informative in 2013. So much research has been done in the intervening years that the field has changed considerably).</p>
+<h3 id="Before-you-begin-some-general-advice"><a href="#Before-you-begin-some-general-advice" class="headerlink" title="Before you begin: some general advice"></a>Before you begin: some general advice</h3><p>Reading a scientific paper is a completely different process than reading an article about science in a blog or newspaper. Not only do you read the sections in a different order than they’re presented, but you also have to take notes, read it multiple times, and probably go look up other papers for some of the details. Reading a single paper may take you a very long time at first. Be patient with yourself. The process will go much faster as you gain experience.</p>
+<p>Most primary research papers will be divided into the following sections: Abstract, Introduction, Methods, Results, and Conclusions/Interpretations/Discussion. The order will depend on which journal it’s published in. Some journals have additional files (called Supplementary Online Information) which contain important details of the research, but are published online instead of in the article itself (make sure you don’t skip these files).</p>
+<p>Before you begin reading, take note of the authors and their institutional affiliations. Some institutions (e.g. University of Texas) are well-respected; others (e.g. the Discovery Institute) may appear to be legitimate research institutions but are actually agenda-driven. Tip: google “Discovery Institute” to see why you don’t want to use it as a scientific authority on evolutionary theory.</p>
+<p>Also take note of the journal in which it’s published. Reputable (biomedical) journals will be indexed by Pubmed. <strong>[EDIT: Several people have reminded me that non-biomedical journals won’t be on Pubmed, and they’re absolutely correct! (thanks for catching that, I apologize for being sloppy here). Check out Web of Science for a more complete index of science journals. And please feel free to share other resources in the comments!]</strong> Beware of questionable journals.</p>
+<p>As you read, write down <strong>every single word</strong> that you don’t understand. You’re going to have to look them all up (yes, every one. I know it’s a total pain. But you won’t understand the paper if you don’t understand the vocabulary. Scientific words have extremely precise meanings).</p>
+<h3 id="Step-by-step-instructions-for-reading-a-primary-research-article"><a href="#Step-by-step-instructions-for-reading-a-primary-research-article" class="headerlink" title="Step-by-step instructions for reading a primary research article"></a>Step-by-step instructions for reading a primary research article</h3><h3 id="1-Begin-by-reading-the-introduction-not-the-abstract"><a href="#1-Begin-by-reading-the-introduction-not-the-abstract" class="headerlink" title="1. Begin by reading the introduction, not the abstract."></a>1. Begin by reading the introduction, not the abstract.</h3><p>The abstract is that dense first paragraph at the very beginning of a paper. In fact, that’s often the <strong>only</strong> part of a paper that many non-scientists read when they’re trying to build a scientific argument. (This is a terrible practice—don’t do it.).  When I’m choosing papers to read, I decide what’s relevant to my interests based on a combination of the title and abstract. But when I’ve got a collection of papers assembled for deep reading, I always read the abstract <strong>last</strong>. I do this because abstracts contain a succinct summary of the entire paper, and I’m concerned about inadvertently becoming biased by the authors’ interpretation of the results.</p>
+<h3 id="2-Identify-the-BIG-QUESTION"><a href="#2-Identify-the-BIG-QUESTION" class="headerlink" title="2. Identify the BIG QUESTION."></a>2. Identify the BIG QUESTION.</h3><p>Not “What is this paper about”, but “What problem is this entire field trying to solve?”</p>
+<p><em>This helps you focus on why this research is being done.  Look closely for evidence of agenda-motivated research.</em></p>
+<h3 id="3-Summarize-the-background-in-five-sentences-or-less"><a href="#3-Summarize-the-background-in-five-sentences-or-less" class="headerlink" title="3. Summarize the background in five sentences or less."></a>3. Summarize the background in five sentences or less.</h3><p>Here are some questions to guide you:</p>
+<p>What work has been done before in this field to answer the BIG QUESTION? What are the limitations of that work? What, according to the authors, needs to be done next?</p>
+<p><em>The five sentences part is a little arbitrary, but it forces you to be concise and really think about the context of this research. You need to be able to explain why this research has been done in order to understand it.</em></p>
+<h3 id="4-Identify-the-SPECIFIC-QUESTION-S"><a href="#4-Identify-the-SPECIFIC-QUESTION-S" class="headerlink" title="4. Identify the SPECIFIC QUESTION(S)"></a>4. Identify the SPECIFIC QUESTION(S)</h3><p>What <strong>exactly</strong> are the authors trying to answer with their research? There may be multiple questions, or just one. Write them down.  If it’s the kind of research that tests one or more null hypotheses, identify it/them.</p>
+<h3 id="5-Identify-the-approach"><a href="#5-Identify-the-approach" class="headerlink" title="5. Identify the approach"></a>5. Identify the approach</h3><p>What are the authors going to do to answer the SPECIFIC QUESTION(S)?</p>
+<h3 id="6-Now-read-the-methods-section-Draw-a-diagram-for-each-experiment-showing-exactly-what-the-authors-did"><a href="#6-Now-read-the-methods-section-Draw-a-diagram-for-each-experiment-showing-exactly-what-the-authors-did" class="headerlink" title="6. Now read the methods section. Draw a diagram for each experiment, showing exactly what the authors did."></a>6. Now read the methods section. Draw a diagram for each experiment, showing exactly what the authors did.</h3><p>I mean <em>literally</em> draw it. Include as much detail as you need to fully understand the work.</p>
+<p><em>You don’t need to understand the methods in enough detail to replicate the experiment—that’s something reviewers have to do—but you’re not ready to move on to the results until you can explain the basics of the methods to someone else.</em></p>
+<h3 id="7-Read-the-results-section-Write-one-or-more-paragraphs-to-summarize-the-results-for-each-experiment-each-figure-and-each-table-Don’t-yet-try-to-decide-what-the-results-mean-just-write-down-what-they-are"><a href="#7-Read-the-results-section-Write-one-or-more-paragraphs-to-summarize-the-results-for-each-experiment-each-figure-and-each-table-Don’t-yet-try-to-decide-what-the-results-mean-just-write-down-what-they-are" class="headerlink" title="7. Read the results section. Write one or more paragraphs to summarize the results for each experiment, each figure, and each table. Don’t yet try to decide what the results mean, just write down what they are."></a>7. Read the results section. Write one or more paragraphs to summarize the results for each experiment, each figure, and each table. Don’t yet try to decide what the results mean, just write down what they are.</h3><p>You’ll find that, particularly in good papers, the majority of the results are summarized in the figures and tables. Pay careful attention to them!  You may also need to go to the Supplementary Online Information file to find some of the results.</p>
+<p><em>It is at this point where difficulties can arise if statistical tests are employed in the paper and you don’t have enough of a background to understand them. I STRONGLY advise you to become familiar with them.</em></p>
+<h3 id="THINGS-TO-PAY-ATTENTION-TO-IN-THE-RESULTS-SECTION"><a href="#THINGS-TO-PAY-ATTENTION-TO-IN-THE-RESULTS-SECTION" class="headerlink" title="THINGS TO PAY ATTENTION TO IN THE RESULTS SECTION:"></a>THINGS TO PAY ATTENTION TO IN THE RESULTS SECTION:</h3><ul>
+<li><p>Any time the words “<strong>significant</strong>“ or “<strong>non-significant</strong>“ are used. These have precise statistical meanings. Read more about this <a href="http://www.dcscience.net/2014/03/24/on-the-hazards-of-significance-testing-part-2-the-false-discovery-rate-or-how-not-to-make-a-fool-of-yourself-with-p-values/" target="_blank" rel="noopener">here</a>.</p>
+</li>
+<li><p>If there are graphs, do they have error bars on them? For certain types of studies, a lack of confidence intervals is a major red flag.</p>
+</li>
+<li><p>The sample size. Has the study been conducted on 10, or 10,000 people? (For some research purposes, a sample size of 10 is sufficient, but for most studies larger is better).</p>
+</li>
+</ul>
+<h3 id="8-Do-the-results-answer-the-SPECIFIC-QUESTION-S-What-do-you-think-they-mean"><a href="#8-Do-the-results-answer-the-SPECIFIC-QUESTION-S-What-do-you-think-they-mean" class="headerlink" title="8. Do the results answer the SPECIFIC QUESTION(S)? What do you think they mean?"></a>8. Do the results answer the SPECIFIC QUESTION(S)? What do you think they mean?</h3><p><em>Don’t move on until you have thought about this. It’s okay to change your mind in light of the authors’ interpretation—in fact you probably will if you’re still a beginner at this kind of analysis—but it’s a really good habit to start forming your own interpretations before you read those of others.</em></p>
+<h3 id="9-Read-the-conclusion-discussion-Interpretation-section"><a href="#9-Read-the-conclusion-discussion-Interpretation-section" class="headerlink" title="9. Read the conclusion/discussion/Interpretation section."></a>9. Read the conclusion/discussion/Interpretation section.</h3><p>What do the authors <strong>think</strong> the results mean? Do you agree with them? Can you come up with any <strong>alternative</strong> way of interpreting them? Do the authors identify any weaknesses in their own study? Do you see any that the authors missed? (Don’t assume they’re infallible!) What do they propose to do as a next step? Do you agree with that?</p>
+<h3 id="10-Now-go-back-to-the-beginning-and-read-the-abstract"><a href="#10-Now-go-back-to-the-beginning-and-read-the-abstract" class="headerlink" title="10. Now, go back to the beginning and read the abstract."></a>10. Now, go back to the beginning and read the abstract.</h3><p>Does it match what the authors said in the paper? Does it fit with your interpretation of the paper?</p>
+<h3 id="11-FINAL-STEP-Don’t-neglect-doing-this-What-do-other-researchers-say-about-this-paper"><a href="#11-FINAL-STEP-Don’t-neglect-doing-this-What-do-other-researchers-say-about-this-paper" class="headerlink" title="11. FINAL STEP: (Don’t neglect doing this) What do other researchers say about this paper?"></a>11. FINAL STEP: (Don’t neglect doing this) What do other researchers say about this paper?</h3><p>Who are the (acknowledged or self-proclaimed) experts in this particular field? Do they have criticisms of the study that you haven’t thought of, or do they generally support it?</p>
+<p><em>Here’s a place where I do recommend you use google! But do it last, so you are better prepared to think critically about what other people say.</em></p>
+<p>(12. This step may be optional for you, depending on why you’re reading a particular paper. But for me, it’s critical! I go through the “Literature cited” section to see what other papers the authors cited. This allows me to better identify the important papers in a particular field, see if the authors cited my own papers (KIDDING!….mostly), and find sources of useful ideas or techniques.)</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/12/03/Computer_Vision/Reading_Note/2015-12-03-Object-Detection-by-Labelling-Superpixels/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/12/03/Computer_Vision/Reading_Note/2015-12-03-Object-Detection-by-Labelling-Superpixels/" class="post-title-link" itemprop="url">READING NOTE: Object Detection by Labelling Superpixels</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-12-03 00:00:00" itemprop="dateCreated datePublished" datetime="2015-12-03T00:00:00+08:00">2015-12-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Object Detection by Labelling Superpixels</p>
+<p><strong>AUTHOR</strong>: Yan, Junjie and Yu, Yinan and Zhu, Xiangyu and Lei, Zhen and Li, Stan Z.</p>
+<p><strong>FROM</strong>: CVPR2015</p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>Convert object detection problem into super-pixel labelling problem, which could avoid false negatives caused by proposals and could take advantages from global contexts.</li>
+<li>Conduct an energy function considering appearance, spatial context and numbers of labels.</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/ODLS.png" alt="" width="640"/></p>
+<ol>
+<li>The image is partitioned into a set of super-pixels, denoted as \(\mathcal{P}=\lbrace p<em>{1},p</em>{2},…,p_{N}\rbrace\).</li>
+<li>An energy function \(E(\mathcal{L})\) is calculated to measure the corresponding label configuration for each super-pixels, where \(\mathcal{L}=\lbrace l<em>{1},l</em>{2},…,l_{N}\rbrace\).</li>
+<li>The problem is transfered to select an \(\mathcal{L}\) to minimise \(E(\mathcal{L})\).</li>
+</ol>
+<p><strong>SOME DETAILS</strong></p>
+<p>The energy function is conducted as</p>
+<script type="math/tex; mode=display">E(\mathcal{L})=\sum_{\mathcal{p_{i}}\in\mathcal{P}}D(l_{i},p_{i})+\sum_{(p_{i},p_{j})\in\mathcal{N}}V(l_{i},l_{j},p_{i},p_{j})+C(\mathcal{L})</script><p>where \(D(l<em>{i},p</em>{i})\) is the <strong>data cost</strong> to capture the appearance of \(p<em>{i}\) and measure its cost of belonging to label \(l</em>{i}\), \(V(l<em>{i},l</em>{j},p<em>{i},p</em>{j})\) is the pairwise <strong>smooth cost</strong> in the local area \(\mathcal{N}\) and \(C(\mathcal{L})\) is the <strong>label cost</strong> to encourage compact detection and to punish the number of labels.</p>
+<p><strong>Data Cost</strong></p>
+<p>Super-pixels usually does not have enough semantic information, so corresponding regions are classified and their costs are propagated to super-pixels. In this work, RCNN is used to generate and classify semantic regions. The region set of \(T\) elements is denoted as \(\mathcal{R}=\lbrace r<em>{1},..,r</em>{T}\rbrace\) and the classifier score is \(s_{t}\), thus we can map the scores into \((0,1)\) by</p>
+<script type="math/tex; mode=display">D(l_{t},r_{t})= \begin{cases} \frac{1}{1+\mathit{exp}(-\alpha\cdot s_{t})}& \text{if }l_{t}>0 \\\ \frac{\mathit{exp}(-\alpha\cdot s_{t})}{1+\mathit{exp}(-\alpha\cdot s_{t})}& \text{if }l_{t}=0 \\\ \end{cases}</script><p>where \(\alpha\) is set to 1.5 empirically. For each super-pixel the data cost is the weighted sum of T smallest costs,</p>
+<script type="math/tex; mode=display">D(l_{i},p_{i})= \sum_{t=1}^{T}\omega_{d_{t}}\cdot D(l_{t}, R(p_{i})_{t})</script><p>where <script type="math/tex">R(p_{i})_{t}</script> is the region <script type="math/tex">p_{i}</script> belongs to with the \(t\)-th smallest cost.</p>
+<p><strong>Smooth Cost</strong></p>
+<p>The smooth cost is conducted for the reason that 1) adjacent super-pixels often have the same label and 2) super-pixels belonging to the same label should have similar apprearance. This attribute is measured by</p>
+<script type="math/tex; mode=display">V(l_{i},l_{j},p_{i},p_{j})=\omega_{s_{l}}V_{l}(l_{i}, l_{j})+V_{a}(l_{i},l_{j},p_{i},p_{j})</script><p>where \(V<em>{l}\) is a boolean variable and is set to \(1\) when \(l</em>{i}=l<em>{j}\) and \((p</em>{i},p<em>{j})\in \mathcal{N}\). \(V</em>{a}\) is defined as</p>
+<script type="math/tex; mode=display">V_{a}(l_{i},l_{j},p_{i},p_{j})=\omega_{s_{c}}(1-\sum_{q}\mathit{min}(c_{i}^{q}), c_{j}^{q})+\omega_{s_{t}}(1-\sum_{q}\mathit{min}(t_{i}^{q}), t_{j}^{q})</script><p>where \(c<em>{i}^{q}\) and \(t</em>{i}^{q}\) are the values in the \(q\)-th bin of color and texture histogram of super-pixel \(p_{i}\). In this work color histogram and SIFT histogram are calculated to describe color and texture information.</p>
+<p><strong>Label Cost</strong></p>
+<p>The label cost is used to encourage less number of labels and its defination is</p>
+<script type="math/tex; mode=display">C(\mathcal{L})=\sum_{i=1}^{K}\omega_{l_{i}}\cdot \delta(i, \mathcal{L})</script><p>where \(\delta(\cdot)\) is defined as</p>
+<script type="math/tex; mode=display">\delta(i, \mathcal{L})=\begin{cases} 1& \text{if }i\in \mathcal{L} \\\ 0& \text{if otherwise} \\\ \end{cases}</script><h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>Super-pixels are compact and perceptually meaningful atomic regions for images.</li>
+<li>Avoid false negatives caused by inappropriate proposals generated by algorithms suchas Selective Search and BING.</li>
+<li>Super-pixel based method is a trade-off of Pixel based and Proposal based algorithm, leading to accurate and fast results.</li>
+</ol>
+<h3 id="DISADVANTAGES"><a href="#DISADVANTAGES" class="headerlink" title="DISADVANTAGES"></a>DISADVANTAGES</h3><ol>
+<li>The CNN used in RCNN and the parameters in the energy function are learned separately.</li>
+<li>The region generated might not cover all the super-pixels.</li>
+<li>Time consumption is high. Its speed is 1fps for each 128 proposals on a NVIDIA Telsa K40 GPU. However, 128 proposals might not be enough.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/15/Computer_Vision/Reading_Note/2015-11-15-PoolConvNet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/11/15/Computer_Vision/Reading_Note/2015-11-15-PoolConvNet/" class="post-title-link" itemprop="url">READING NOTE: Pooling the Convolutional Layers in Deep ConvNets for Action Recognition</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-11-15 00:00:00" itemprop="dateCreated datePublished" datetime="2015-11-15T00:00:00+08:00">2015-11-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Pooling the Convolutional Layers in Deep ConvNets for Action Recognition</p>
+<p><strong>AUTHOR</strong>: Zhao, Shichao  and Liu, Yanbin and Han, Yahong and Hong, Richang</p>
+<p><strong>FROM</strong>: <a href="http://arxiv.org/abs/1511.02126" target="_blank" rel="noopener">arXiv:1511.02126</a></p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>Propose an efficient video representation framework basing on VGGNet and Two-Stream ConcNets.</li>
+<li>Trajectory pooling and line pooling are used together to extract features from convolutional layers.</li>
+<li>A frame-diff layer is used to get local descriptors.</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/PoolConvNet.png" alt="" width="640"/></p>
+<ol>
+<li>Two succession frames are sent to a siamese VGGNet and a frame-diff layer is used to extract spatial features.</li>
+<li>Compute temporal feature in one frame using optical-flow net of Two-Stream ConvNet.</li>
+<li>Extract features in ConvNet feature maps along point trajectories or along lines in a dense sampling manner.</li>
+<li>Use BoF method to generate video representation</li>
+<li>Classify video using a SVM classifier.</li>
+</ol>
+<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>Using deeper network to extract features, which are more discriminative.</li>
+<li>Different from Two-Stream ConvNet, in this work spatial features are extracted on every frame, which would provide more information.</li>
+</ol>
+<h3 id="DISADVANTAGES"><a href="#DISADVANTAGES" class="headerlink" title="DISADVANTAGES"></a>DISADVANTAGES</h3><ol>
+<li>The two branches are trained independently. Jointly training in a multi-task manner may benefit.</li>
+</ol>
+<h3 id="OTHERS"><a href="#OTHERS" class="headerlink" title="OTHERS"></a>OTHERS</h3><ol>
+<li>The difficulty of human action recognition is caused by some inherent characteristics of action videos such as intra-class variation, occlusions, view point changes, background noises, motion speed and actor differences.</li>
+<li>Despite the good performance, Dense Trajectory based action recognition algorithms suffer from huge computation costs and large disk affords.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/10/Computer_Vision/Reading_Note/2015-11-10-SegNet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/11/10/Computer_Vision/Reading_Note/2015-11-10-SegNet/" class="post-title-link" itemprop="url">READING NOTE: Bayesian SegNet: Model Uncertainty in Deep Convolutional Encoder-Decoder Architectures for Scene Understanding</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-11-10 00:00:00" itemprop="dateCreated datePublished" datetime="2015-11-10T00:00:00+08:00">2015-11-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Bayesian SegNet: Model Uncertainty in Deep Convolutional Encoder-Decoder Architectures for Scene Understanding</p>
+<p><strong>AUTHOR</strong>: Kendall, Alex and Badrinarayanan, Vijay and Cipolla, Roberto</p>
+<p><strong>FROM</strong>: <a href="http://arxiv.org/abs/1511.02680" target="_blank" rel="noopener">arXiv:1511.02680</a></p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>Extending deep convolutional encoder-decoder neural network architectures to Bayesian convolutional neural networks which can produce a probabilistic output.</li>
+<li>Bayesian SegNet outputs a measure of model uncertainty, which could be used to provide segmentation confidence.</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/two-segNet.png" alt="" width="640"/></p>
+<p>The first half of the network is a traditional convolutional neural network (VGG-16 in this work). The second half is sort of a mirror of the first half, applying upsampling layers to recover the size of output to that of input. The network is trained in an end-to-end method. The probabilistic output is obtained from Monte Carlo samples of the model with dropout at test time.</p>
+<p><strong>SOME DETAILS</strong></p>
+<ol>
+<li>For each pixel, a softmax classifier is utilized to predict class label.</li>
+<li>At test stage, multiple times of forward is applied to simulate Monte Carlo sampling. Thus the mean of the softmax outputs is taken as class label, and the variance is taken as uncertainty.</li>
+<li>Situations of high model uncertainty: 1) different class boundaries, 2) object difficult to identify because of occlusion or distance and 3) vague classes such as dogs and cats, chairs and tables.</li>
+</ol>
+<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>Monte Carlo sampling with dropout performs better than weight averaging after approximately 6 samples.</li>
+<li>No fully connected layers makes the network easier to be trained.</li>
+<li>The network could run in real time when computing in parallel.</li>
+<li>Do not need to convolve in a slide window method, which contributes its fast speed.</li>
+</ol>
+<h3 id="OTHERS"><a href="#OTHERS" class="headerlink" title="OTHERS"></a>OTHERS</h3><ol>
+<li>Applying Bayesian weights to lower layers does not result in a better performance, because low level features are consistent across the distribution of models.</li>
+<li>Higher level features, such as shape and contextual relationships, are more effectively modeled with Bayesian weights.</li>
+<li>At training stage, dropout samples from a number of thinned networks with reduced width. At test time, standard dropout approximates the effect of averaging the predictions of all these thinned networks by using the weights of the unthinned network.</li>
+</ol>
+<p>The online demo and codes can be found <a href="http://mi.eng.cam.ac.uk/projects/segnet/" target="_blank" rel="noopener">here</a> and <a href="https://github.com/alexgkendall/caffe-segnet" target="_blank" rel="noopener">here</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/06/Computer_Vision/Reading_Note/2015-11-06-Two-Stream/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/11/06/Computer_Vision/Reading_Note/2015-11-06-Two-Stream/" class="post-title-link" itemprop="url">READING NOTE: Two-Stream Convolutional Networks for Action Recognition in Videos</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-11-06 00:00:00" itemprop="dateCreated datePublished" datetime="2015-11-06T00:00:00+08:00">2015-11-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Two-Stream Convolutional Networks for Action Recognition in Videos</p>
+<p><strong>AUTHOR</strong>: Simonyan, Karen and Zisserman, Andrew</p>
+<p><strong>FROM</strong>: NIPS2014</p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>A two-stream ConvNet combines spatial and temporal networks.</li>
+<li>A ConvNet trained on multi-frame dense optical flow is able to achieve a good performance in spite of small training dataset</li>
+<li>Multi-task training procedure benefits performance on different datasets.</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><p>Two-stream architecture convolutional network:</p>
+<ol>
+<li>Spatial stream ConvNet: take a still frame as input and perform action recognition in this single frame.</li>
+<li>Temporal stream ConvNet: take a 2L-channel optical flow/trajectory stacking corresponding to the still frame as input and perform action recognition in this multi-channel input.</li>
+<li>The two outputs of the streams are concated as a feature to train a SVM classifier to fuse them.</li>
+</ol>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/two-stream.png" alt="" width="640"/></p>
+<p><strong>SOME DETAILS</strong></p>
+<ol>
+<li>Mean flow subtraction is utilized to eliminate displacements caused by camera movement.</li>
+<li>At test stage, 25 frames (time points) are extracted and their corresponding 2L-channel stackings are sent to the network. In addition, 5 patches and their flips are extracted in space domain.</li>
+</ol>
+<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>Simulate bio-structure of human visual cortex.</li>
+<li>Competitive performance with the state of the art representations in spite of small size of training dataset.</li>
+<li>CNN with convolution filters could generalize hand-crafted features.</li>
+</ol>
+<h3 id="DISADVANTAGES"><a href="#DISADVANTAGES" class="headerlink" title="DISADVANTAGES"></a>DISADVANTAGES</h3><ol>
+<li>Can not localize action in neither spatial nor temporal domain.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/05/Computer_Vision/Reading_Note/2015-11-05-Joint-Tracking-and-Segmentation-of-Multiple-Targets/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/11/05/Computer_Vision/Reading_Note/2015-11-05-Joint-Tracking-and-Segmentation-of-Multiple-Targets/" class="post-title-link" itemprop="url">READING NOTE: READING NOTE: Joint Tracking and Segmentation of Multiple Targets</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-11-05 00:00:00" itemprop="dateCreated datePublished" datetime="2015-11-05T00:00:00+08:00">2015-11-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Joint Tracking and Segmentation of Multiple Targets</p>
+<p><strong>AUTHOR</strong>: Milan, Anton and Leal-Taixe, Laura and Schindler, Konrad and Reid, Ian</p>
+<p><strong>FROM</strong>: CVPR2015</p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>A new CRF model taking advantage of both high-level detector responses and low-level superpixel information</li>
+<li>Fully automated segmentation and tracking of an unknown number of targets.</li>
+<li>A complete state representation at every time step could handle occlusions</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><ol>
+<li>Generate an overcomplete set of trajectory hypotheses.</li>
+<li>Solve data association problem by optimizing an objective function, which is a multi-label conditional random field (CRF).</li>
+</ol>
+<h4 id="SOME-DETAILS"><a href="#SOME-DETAILS" class="headerlink" title="SOME DETAILS"></a>SOME DETAILS</h4><p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/MRF.png" alt="" width="480"/></p>
+<p>The goal is to find the most probable labeling for all nodes given the observations, which is equivalent to</p>
+<script type="math/tex; mode=display">v^{*} = \mathrm{argmin_{v}}E(\nu)</script><p>in which</p>
+<script type="math/tex; mode=display">E(\nu) = \sum_{s\in\large{\nu}_{S}}\phi^{\large{\nu}_{S}}(s) + \sum_{d\in\large{\nu}_{D}}\phi^{\large{\nu}_{D}}(d) + \sum_{(v,w)\in\Large{\varepsilon}}\psi(v,w)+\psi^{\lambda}</script><p>where \(\phi^{\large{\nu}<em>{S}}\) and \(\phi^{\large{\nu}</em>{D}}\) are unary potential functions for superpixel and detection nodes, respectively, measuring the cost of one detection node in \(\large{\nu}<em>{D}\) or one superpixel node in \(\large{\nu}</em>{S}\) belonging to a certain target; \(\psi(v,w)\) is pairwise edges among superpixels and detections, including spacial and temporal information among superpixels and information among superpixels and detections in the same frame; \(\psi^{\lambda}\) is trajectory cost, containing several constrains of height, shape, dynamics, persistence, image likelihood and parsimony.</p>
+<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>Taking pixel (superpixel) level information in addition to detection results into consideration could handle partial occlusions, which would lead to higher recall.</li>
+<li>Segments could provide considerable information even no reliable detection result exists.</li>
+<li>Modeling multi-targets tracking problem to graph model could take advantage of existing optimization algorithms.</li>
+</ol>
+<h3 id="DISADVANTAGES"><a href="#DISADVANTAGES" class="headerlink" title="DISADVANTAGES"></a>DISADVANTAGES</h3><ol>
+<li>Solving CRF problem is slow, needing 12 seconds per frame.</li>
+<li>Can not handle ID switch in two adjacent temporal slidewindows.</li>
+</ol>
+<h3 id="OTHER"><a href="#OTHER" class="headerlink" title="OTHER"></a>OTHER</h3><ol>
+<li>Tracking-by-detection has proven to be the most successful strategy to address multi-target tracking problem.</li>
+<li>Noise and imprecise measurements, long-term occlusions, complicated dynamics and target interactions all contributes to the problem’s complexity.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/04/Computer_Vision/Reading_Note/2015-11-04-Learning-to-Segment-Moving-Objects-in-Videos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/11/04/Computer_Vision/Reading_Note/2015-11-04-Learning-to-Segment-Moving-Objects-in-Videos/" class="post-title-link" itemprop="url">READING NOTE: Learning to Segment Moving Objects in Videos</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-11-04 00:00:00" itemprop="dateCreated datePublished" datetime="2015-11-04T00:00:00+08:00">2015-11-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Learning to Segment Moving Objects in Videos</p>
+<p><strong>AUTHOR</strong>: Fragkiadaki, Katerina and Arbelaez, Pablo and Felsen, Panna and Malik, Jitendra</p>
+<p><strong>FROM</strong>: CVPR2015</p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>Moving object proposals from multiple segmentations on optical flow boundaries</li>
+<li>A moving objectness detector for ranking per frame segments and tube proposals</li>
+<li>A method of extending per frame segments into spatial-temporal tubes</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><ol>
+<li>Extract motion boundaries by optical flow</li>
+<li>Generate segment proposals according to motion boundaries, called MOPs (Moving Object Proposal)</li>
+<li>Rank the MOPs using a CNN based regressor</li>
+<li>Combine per frame MOPs to space-time tubes based on pixelwise trajectory clusters</li>
+</ol>
+<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>Using optical flow could reduce the noises caused by inner texture of one object. Optical flow is more suitable for detecting rigid objects.</li>
+<li>Using trajectory tracking could deal with objects that are temporary static.</li>
+<li>Segments are effective to tackle frequent occlusions/dis-occlustions.</li>
+</ol>
+<h3 id="DISADVANTAGES"><a href="#DISADVANTAGES" class="headerlink" title="DISADVANTAGES"></a>DISADVANTAGES</h3><ol>
+<li>Too slow. Every stage would take seconds to process, which is not suitable for practical applications.</li>
+<li>Use several independent method to detect objects. Less computations are shared.</li>
+<li>The power of CNN has not been fully applied.</li>
+</ol>
+<h3 id="OTHER"><a href="#OTHER" class="headerlink" title="OTHER"></a>OTHER</h3><ol>
+<li>RCNN has excellent performance on object detection in static images</li>
+<li>For slidewindow methods, too many patches need to be evaluated.</li>
+<li>MRF methods neglect nearby pixels’ relation and could not separate adjacent instances.</li>
+<li>Methods of object detection in video could be categorized into two types i) top-down tracking and ii) bottom-up segmentation.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/10/25/Life_Discovery/Miscellaneous/2015-10-25-Miscellaneous/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/10/25/Life_Discovery/Miscellaneous/2015-10-25-Miscellaneous/" class="post-title-link" itemprop="url">Miscellaneous [20151025]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-10-25 00:00:00" itemprop="dateCreated datePublished" datetime="2015-10-25T00:00:00+08:00">2015-10-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>好久以前就看过了《碟中谍5：神秘国度》，一直想写一点东西，今天终于整理了一下。虽然很多人都说这是一部四平八稳的电影，甚至觉得这部电影毫无新意，对其嗤之以鼻，但是我却觉得这部电影值得点赞，不管是在剧本还是表演上都值得肯定，算是良心作品。</p>
+<p>从剧情上说，虽然大家都知道”不可能的完成的任务”最终都会被完成，在电影开始以前，任何观众都可以确定这一点。但是整部影片在缜密度、铺垫、节奏和人物关系上，都比第二第三部要好上很多，第二部来说只是吴宇森暴力美学兜售各种血包爆炸的耍帅而已，第三部过于侧重伊森亨特的爱情线，稍稍偏离了不可能完成的任务。第四部开始算是IMF的重启，重新开始了不可能完成的任务，第五部是一个完全的回归。在第一部影片开始的时候，IMF面临着一个几乎灭团的危机，同样，在第五部里，IMF面临解散，给我的感觉就是：”啊！终于开始干活儿了！”；还有一个有意思的地方是片名《碟中谍》，按英文直译应该是”不可能完成的任务”，但是就是因为第一部中任务的分发是由光碟为载体的，所以在大陆就被译成了《碟中谍》，由此一直沿用，在这一部中，任务的载体为一个优盘，也算是”碟”的回归。从画面上来看，虽然第五部比不上第四部，尤其是全景展开迪拜塔那一幕，真的令人惊叹，但是第五部的故事要比第四部还紧凑连贯很多，对观众情感的调节也很到位，执行任务时的紧张与西门佩吉穿插其中的逗逼搞笑搭配得十分到位。</p>
+<p>另外让我十分难忘的两点是老去的阿汤哥和片中的配乐。</p>
+<h3 id="老去的阿汤哥"><a href="#老去的阿汤哥" class="headerlink" title="老去的阿汤哥"></a>老去的阿汤哥</h3><p>《碟中谍》虽然算不上是阿汤哥的独角戏，但是这一系列电影，如果没有了阿汤哥，绝对就不能再叫做《碟中谍》，一个演员在一生中如果有这么一部电影能够以他为标志，那么这个演员的演艺生涯算是极其成功了。</p>
+<p>在第五部中，五十多岁的阿汤哥依然可以上天入地，片头伊森扒着飞机的场景据说是阿汤哥亲身实景拍摄的，没有使用任何电脑特技，以及后面的潜水戏，阿汤哥也是真正参加了水中闭气的训练，阿汤哥对于这部电影的钟情与付出是不言而喻的。即便如此我们不得不说岁月在阿汤哥的身上还是留下了痕迹，整部影片最难能可贵的就在于影片没有回避这一点，而是接受了阿汤哥老去的这一事实。这一部阿汤哥的个人英雄主义有所垮塌，影片中重复了很多以往各部中惊险的场景，但是与以往不同的是，阿汤哥并不是万能的了。尤其是在水下的那一场戏，阿汤哥其实并没有完成任务，而是真的令一个任务不可能完成了，最终是丽贝卡完成了任务并解救了阿汤哥。另一个是与以往无所不能的阿汤哥相比，这一部中当队友不配合的时候，阿汤哥是一点办法都没有的，比如开场的高空戏，西门佩吉打不开机舱门的时候，阿汤哥只能扒着飞机，相比较第四部阿汤哥攀爬迪拜塔同样遇到了西门佩吉这个猪队友，但总算有惊无险地完成了任务。连一些小细节也暗示了老去的阿汤哥，比如阿汤哥已经不能帅气地翻跃一辆汽车了，而是直接摔倒在车上。对比一下昔日的小鲜肉和今天的大叔吧，左边来源于第一部《碟中谍》，右边就是《神秘国度》中的阿汤哥。</p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Miscellaneous/figures/Tom.jpg" alt="" width="480"/></p>
+<h3 id="贯穿始末的《今夜无人入睡》"><a href="#贯穿始末的《今夜无人入睡》" class="headerlink" title="贯穿始末的《今夜无人入睡》"></a>贯穿始末的《今夜无人入睡》</h3><p>在影片中有一段剧情包含了歌剧《图兰朵》的演出，提起《图兰朵》就不得不说《今夜无人入睡》，这首咏叹调可以算作是这部歌剧的代表，在电影中这一段音乐不仅仅作为了那一场戏的配乐，而是作为整部电影音乐的一个主题，贯穿始末，提示着男女主角的感性线。《图兰朵》的剧情中图兰朵直到故事快结束时都是一个冷酷的女人，行为反复无常，最后才感动于王子的真情嫁给了王子。《今夜无人入睡》把《图兰朵》的剧情代入了电影，影射了电影中男女主人公的关系，当我看到丽贝卡所饰演的女间谍在咖啡馆对伊森亨特的表白，联想到她起初的冷酷，对伊森亨特的利用，以及后面的感情变化，我在影院里就感叹：这就是一部《图兰朵》啊！再加上适时响起的《今夜无人入睡》，颇让人情绪激动不能自已。一部好电影应该包含这种值得琢磨的地方，当我们思考为什么电影中要使用这样的配乐后，能有更有意思的东西出来，这才是一部影片不会浮于表面被人遗忘的缘由。最后是电影原声《Finale and Curtain Call》，尤其是前面的一分半融合了《今夜无人入睡》和经典《碟中谍》插曲。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/10/11/Life_Discovery/My_Drawings/2015-10-11-My-Drawings/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/10/11/Life_Discovery/My_Drawings/2015-10-11-My-Drawings/" class="post-title-link" itemprop="url">My Drawings [Lighthouse]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-10-11 00:00:00" itemprop="dateCreated datePublished" datetime="2015-10-11T00:00:00+08:00">2015-10-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/My_Drawings/20151011.jpg" alt="" width="480"/></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/24/Life_Discovery/My_Drawings/2015-09-24-My-Drawings/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/09/24/Life_Discovery/My_Drawings/2015-09-24-My-Drawings/" class="post-title-link" itemprop="url">My Drawings [Steamship]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2015-09-24T00:00:00+08:00">2015-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>基本功不行啊，水平线不平，好像鱼眼成像。烟也不太会画。</p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/My_Drawings/20150924.jpg" alt="" width="480"/></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/21/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/">23</a><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/23/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joshua LI"
+      src="/images/avatar-icon.png">
+  <p class="site-author-name" itemprop="name">Joshua LI</p>
+  <div class="site-description" itemprop="description">Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">57</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/joshua19881228" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;joshua19881228" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhixuan.1988.li@gmail.com" title="E-Mail → mailto:zhixuan.1988.li@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/joshua1988" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;joshua1988" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joshua LI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+</body>
+</html>
