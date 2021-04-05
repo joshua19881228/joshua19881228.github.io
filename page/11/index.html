@@ -172,6 +172,91 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/24/Computer_Vision/Reading_Note/2017-01-24-NINApplication/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/01/24/Computer_Vision/Reading_Note/2017-01-24-NINApplication/" class="post-title-link" itemprop="url">Reading Note: A New Convolutional Network-in-Network Structure and Its Applications in Skin Detection, Semantic Segmentation, and Artifact Reduction</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-01-24 00:00:00" itemprop="dateCreated datePublished" datetime="2017-01-24T00:00:00+08:00">2017-01-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: A New Convolutional Network-in-Network Structure and Its Applications in Skin Detection, Semantic Segmentation, and Artifact Reduction</p>
+<p><strong>AUTHOR</strong>: Yoonsik Kim, Insung Hwang, Nam Ik Cho</p>
+<p><strong>ASSOCIATION</strong>: Seoul National University</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1701.06190" target="_blank" rel="noopener">arXiv:1701.06190</a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><ol>
+<li>a new inception-like convolutional network-in-network structure is proposed, which consists of convolution and rectified linear unit (ReLU) layers only. That is, pooling and subsampling layer are excluded that reduce feature map size, because decimated features are not helpful at the reconstruction stage. Hence, it is able to do one-to-one (pixel wise) matching at the inner network and also intuitive analysis of feature map correlation.</li>
+<li>Proposed architecture is applied to several pixel-wise labeling and restoration problems and it is shown to provide comparable or better performances compared to the state-of-the-art methods.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The network structure is inspired by Inception. The comparison of the structure is illustrated in the following figure.</p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/20170124.jpg" alt="" width="640"/></p>
+<p>Pooling is removed in the proposed inception module and a larger size kernel instead is added to widen the receptive field which might have been reduced by the removal of pooling. The main inspiration of such modification is to maintain the large receptive field while keep the resolution of output same with input resolution at the same time.</p>
+<h2 id="SOME-IDEAS"><a href="#SOME-IDEAS" class="headerlink" title="SOME IDEAS"></a>SOME IDEAS</h2><p>As the network removes the operation that reduces the resolution of the feature maps, both forward and backward propagation could be very slow if the input size is large.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/23/Life_Discovery/Little_Things/2017-01-23-Little-Things/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -941,93 +1026,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/27/Computer_Vision/Reading_Note/2016-12-27-CPM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/12/27/Computer_Vision/Reading_Note/2016-12-27-CPM/" class="post-title-link" itemprop="url">Reading Note: Convolutional Pose Machines</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-12-27 00:00:00" itemprop="dateCreated datePublished" datetime="2016-12-27T00:00:00+08:00">2016-12-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Convolutional Pose Machines</p>
-<p><strong>AUTHOR</strong>: Shih-En Wei, Varun Ramakrishna, Takeo Kanade, Yaser Sheikh</p>
-<p><strong>ASSOCIATION</strong>: CMU</p>
-<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1602.00134" target="_blank" rel="noopener">arXiv:1602.00134</a></p>
-<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><ol>
-<li>learning implicit spatial models via a sequential composition of convolutional architectures</li>
-<li>a systematic approach to designing and training such an architecture to learn both image features and image-dependent spatial models for structured prediction tasks, without the need for any graphical model style inference.</li>
-</ol>
-<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The following figure shows the comparison of traditional Pose Machine and Convolutional Pose Machine</p>
-<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/CPM.jpg" alt="" width="640"/></p>
-<h3 id="Pose-Machines"><a href="#Pose-Machines" class="headerlink" title="Pose Machines"></a>Pose Machines</h3><p>A pose machine consists of a sequence of multi-class predictors, $g<em>{t}(\cdot)$, that are trained to predict the location of each part in each level of the hierarchy. In each $stage$ $t \in {1…T}$, the classifiers $g</em>{t}$ predict beliefs for assigning a location to each part $Y_{p}=z, \forall z \in \mathbb{Z}$, where $\mathbb{Z}$ is the set of all locations in an image.</p>
-<p>As illustrated in the figure (a) and (b), the image is first sent to $Stage$ $1$ and a belief map is predicted. Then the belief map and image features $x’$ are combined to sent to the following stage. As the procedure repeats, final result is predicted from the last $Stage$ $T$.</p>
-<h3 id="Convolutional-Pose-Machines"><a href="#Convolutional-Pose-Machines" class="headerlink" title="Convolutional Pose Machines"></a>Convolutional Pose Machines</h3><p>Convolutional Neural Network is naturally a sequence of stages if multiple losses and predictors are inserted at the intermediate layers. The (c) and (d) in the figure illustrated a convolutional pose machine. The sub-network in (c) plays the role of first stage. The shared network at the top-left corner in (d) is used to extract image features $x’$, which will be combined with the output of every $Stage$ $t-1$ and sent to $Stage$ $t$. In addition, the stacked convolutional layers’ perceptual field increases as deepening, which means that more contextual infomation is taken into consideration helping refine the output.</p>
-<p>When training, every stage has its own loss function to predict parts. These losses work similar with the auxiliary classifiers in GoogleNet, which helps alleviate the problem caused by the vanishing of gradient. The network can be trained end-to-end. Compared with traditional pose machine, CMP is much easier to train. The visualization of the network can be found <a href="http://ethereon.github.io/netscope/#/gist/973fbf0cf73325eea5ced1761d10c8e4" target="_blank" rel="noopener">here</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1099,7 +1097,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-count">233</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

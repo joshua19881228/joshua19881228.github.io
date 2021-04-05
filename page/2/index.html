@@ -172,6 +172,103 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/15/Coding/2019-09-15-Compiling-MXNet-CPP-API/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/15/Coding/2019-09-15-Compiling-MXNet-CPP-API/" class="post-title-link" itemprop="url">Compile MXNet CPP API on Windows10 Using VS2015</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-09-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-15T00:00:00+08:00">2019-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>In order to deploy MXNet based vision engine to projects develped in C++, we need to compile MXNet CPP API. Though the instruction of how to compile is well illustrated in <a href="http://mxnet.incubator.apache.org/versions/master/install/windows_setup.html#build-from-source" target="_blank" rel="noopener"><em>Build from Source</em></a> and <a href="http://mxnet.incubator.apache.org/versions/master/install/c_plus_plus.html" target="_blank" rel="noopener"><em>Build the C++ package</em></a>, I still confronted some difficulties. This blog records some tips for compling MXNet CPP API.</p>
+<ol>
+<li><p>Modify Source Code</p>
+<p>By following the instruction, I could easily complie and get the libmxnet. However, when compling cpp-package, the <code>op.h</code> file can not be generated correctly. In <a href="https://github.com/apache/incubator-mxnet/issues/14116" target="_blank" rel="noopener"><em>issues#14116</em></a>, <a href="https://github.com/Vigilans" target="_blank" rel="noopener">Vigilans</a> provided a solution.</p>
+<blockquote>
+<p>Here: <a href="https://github.com/apache/incubator-mxnet/blob/master/include/mxnet/tuple.h#L744" target="_blank" rel="noopener">https://github.com/apache/incubator-mxnet/blob/master/include/mxnet/tuple.h#L744</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> dmlc &#123;</span><br><span class="line"><span class="comment">/*! \brief description for optional TShape */</span></span><br><span class="line">DMLC_DECLARE_TYPE_NAME(optional&lt;mxnet::TShape&gt;, <span class="string">"Shape or None"</span>);</span><br><span class="line">MLC_DECLARE_TYPE_NAME(optional&lt;mxnet::Tuple&lt;<span class="keyword">int</span>&gt;&gt;, <span class="string">"Shape or None"</span>);</span><br><span class="line"><span class="comment">// avoid low version of MSVC</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> !defined(_MSC_VER) <span class="comment">// &lt;----------- Here !</span></span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">type_name_helper</span>&lt;mxnet::Tuple&lt;T&gt; &gt; &#123;</span></span><br><span class="line"> <span class="function"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">value</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="string">"tuple of &lt;"</span> + type_name&lt;T&gt;() + <span class="string">"&gt;"</span>;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">&#125;  <span class="comment">// namespace dmlc</span></span><br></pre></td></tr></table></figure>
+<p>So the specialization of mxnet::tuple<T> was disabled for Visual Studio in the first place!<br>I removed the #if block, recompile, then everything works fine.</p>
+</blockquote>
+</li>
+<li><p>Set the Environment Variables</p>
+<p>In my own case, I only needed to set <code>OpenBLAS_HOME</code> and <code>OpenCV_DIR</code>. Both of the can be set by <code>set</code> command or <code>-D</code> in cmake config.</p>
+</li>
+<li><p>Use CMake to generate VS solution</p>
+<p><code>cmake -G &quot;Visual Studio 14 2015 Win64&quot; -DUSE_CUDA=0 -DUSE_CUDNN=0 -DUSE_NVRTC=0 -DUSE_OPENCV=1 -DUSE_OPENMP=1 -DUSE_BLAS=open -DUSE_LAPACK=0 -DUSE_DIST_KVSTORE=0 -DUSE_CPP_PACKAGE=1 -DCMAKE_INSTALL_PREFIX=install ..</code></p>
+<p>Above command can be used to generate a solution without GPU support. By modifying config <code>-DUSE_CUDA</code> and <code>-DUSE_CUDNN</code>, we can generate a solution with GPU support.</p>
+</li>
+<li><p>Generate <code>op.h</code></p>
+<p>After generating libmxnet, we should run <code>python OpWrapperGenerator.py libmxnet.dll</code> to generate <code>op.h</code>. Note to place <code>libmxnet.dll</code>, <code>libopenblas.dll</code> and <code>libopencv_world.dll</code> together with <code>OpWrapperGenerator.py</code>.</p>
+</li>
+<li><p>No <code>mxnet_static.lib</code></p>
+<p>The cpp example project failed to link to <code>mxnet_static.lib</code>, which was actually named as <code>libmxnet.lib</code>. I modified the name of the static library. I believe the project settings can be fixed to cope with this problem.</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/23/Life_Discovery/My_Drawings/2019-08-23-My-Drawings/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -942,82 +1039,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/Computer_Vision/2018-11-06-GPU-Comparision/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/11/06/Computer_Vision/2018-11-06-GPU-Comparision/" class="post-title-link" itemprop="url">GPU Comparison</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-11-06 00:00:00" itemprop="dateCreated datePublished" datetime="2018-11-06T00:00:00+08:00">2018-11-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>The statistics are from Tim Dettmers’ blog <a href="http://timdettmers.com/2018/11/05/which-gpu-for-deep-learning/" target="_blank" rel="noopener">Which GPU(s) to Get for Deep Learning: My Experience and Advice for Using GPUs in Deep Learning</a>.</p>
-<p><img src="https://i0.wp.com/timdettmers.com/wp-content/uploads/2018/08/performance_TPU_RTX_GPUs.png" alt="Performance"></p>
-<p><img src="https://i1.wp.com/timdettmers.com/wp-content/uploads/2018/08/cost_performance_RTX_GPUs.png" alt="Performance per Dollar"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1089,7 +1110,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-count">233</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
