@@ -172,6 +172,100 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/29/Computer_Vision/Reading_Note/2016-12-29-PAF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/12/29/Computer_Vision/Reading_Note/2016-12-29-PAF/" class="post-title-link" itemprop="url">Reading Note: Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-12-29 00:00:00" itemprop="dateCreated datePublished" datetime="2016-12-29T00:00:00+08:00">2016-12-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields</p>
+<p><strong>AUTHOR</strong>: Zhe Cao, Tomas Simon, Shih-En Wei, Yaser Sheikh</p>
+<p><strong>ASSOCIATION</strong>: CMU</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1611.08050" target="_blank" rel="noopener">arXiv:1611.08050</a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><ol>
+<li>a method for multi-person pose estimation is proposed that approaches the problem in a bottom-up manner to maintain realtime performance and robustness to early commitment, but utilizes global contextual information in the detection of parts and their association.</li>
+<li>Part Affinity Fields (PAFs), a set of 2D vector fields, is presented, each of which encode the location and orientation of a particular limb at each position in the image domain.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>This work is the successor of <em>Convolutional Pose Machines</em>. The network structure, which predict the part emergence heatmap and part aafinity field jointly, is illustrated in the following figure. We can compare it with <a href="https://joshua19881228.github.io/2016-12-27-CPM/" target="_blank" rel="noopener">previous work</a>.</p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/PAF.jpg" alt="" width="640"/></p>
+<p>Similar with previous work, the network works as sequence learning scheme. One of the branch predicts confidence maps for part detection, while the other one predicts part affinity fields for part association.</p>
+<h3 id="Confidence-Maps-for-Part-Detection"><a href="#Confidence-Maps-for-Part-Detection" class="headerlink" title="Confidence Maps for Part Detection"></a>Confidence Maps for Part Detection</h3><p>At each location $ \mathbf{P} $, the value of the confidence $ S_{j}^{\ast}(\mathbf{P}) $ for a part type $ j $ is defined as</p>
+<script type="math/tex; mode=display">S_{j}^{\ast}(\mathbf{P}) = \max \limits_{k} S_{j,k}^{\ast}(\mathbf{P})</script><p>It means that for every type of part, a heatmap is predicted with multiple highlight areas, indicating the emergence of a part instance.</p>
+<h3 id="Part-Affinity-Fields-for-Part-Association"><a href="#Part-Affinity-Fields-for-Part-Association" class="headerlink" title="Part Affinity Fields for Part Association"></a>Part Affinity Fields for Part Association</h3><p>If we consider a single limb, let <script type="math/tex">\mathbf{x}_{j_1,k}</script> and <script type="math/tex">\mathbf{x}_{j_{2},k}</script> be the position of body parts <script type="math/tex">j_{1}</script> and <script type="math/tex">j_{2}</script> from the limb class <script type="math/tex">c</script> for a person <script type="math/tex">k</script> on the image. <script type="math/tex">l_{c,k} = \Vert \mathbf{x}_{j_{2},k} - \mathbf{x}_{j_{1},k} \Vert_{2}</script> is the length of the limb, and <script type="math/tex">\mathbf{v} = l^{−1}_{c,k}(\mathbf{x}_{j_{2},k} - \mathbf{x}_{j_{1},k})</script> is the unit vector in the direction of the limb. The ideal part affinity vector field, <script type="math/tex">L^{∗}_{c,k}</script>, at an image point <script type="math/tex">\mathbf{P}</script> as</p>
+<script type="math/tex; mode=display">\mathbf{L}^{\ast}_{c,k}(\mathbf{P}) = \begin{cases}
+\mathbf{v}& \text{if } \mathbf{P} \text{ on limb } c,k \\\
+\mathbf{0}& \text{otherwise}
+\end{cases}</script><p>Similar to confidence maps for part detection, part affinity fields are also predicted for all persons</p>
+<script type="math/tex; mode=display">\mathbf{L}^{\ast}_{c}(\mathbf{P}) = \frac{1}{n_{p}} \sum_{k} \mathbf{L}^{\ast}_{c,k}(\mathbf{P})</script><p>where <script type="math/tex">n_{p}</script> is the number of non-zero vectos at point <script type="math/tex">\mathbf{P}</script>. The confidence score of each limb candidate is measured by </p>
+<script type="math/tex; mode=display">E = \int_{u=0}^{u=1} \mathbf{L}_{c}(\mathbf{P}(u)) \cdot \frac{\mathbf{d}_{j_{2}}-\mathbf{d}_{j_{1}}}{\Vert \mathbf{d}_{j_{2}}-\mathbf{d}_{j_{1}} \Vert_{2}}du</script><p>where <script type="math/tex">\mathbf{d}_{j_{1}}</script> and <script type="math/tex">\mathbf{d}_{j_{2}}</script> are two detected body parts.</p>
+<h3 id="Multi-Person-Parsing-using-PAFs"><a href="#Multi-Person-Parsing-using-PAFs" class="headerlink" title="Multi-Person Parsing using PAFs"></a>Multi-Person Parsing using PAFs</h3><p>The last problem is to select different limbs linked in PAFs to combine as one person’s skeleton. This is a classical generalized maximum clique problem. I think in additional to the method mentioned in this paper, many other optimiaztion algorithms can be tried. These algorithms are well discussed in multi-object tracking problem.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/27/Computer_Vision/Reading_Note/2016-12-27-CPM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -887,98 +981,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/06/Computer_Vision/Reading_Note/2016-12-06-WCCN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/12/06/Computer_Vision/Reading_Note/2016-12-06-WCCN/" class="post-title-link" itemprop="url">Reading Note: Weakly Supervised Cascaded Convolutional Networks</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-12-06 00:00:00" itemprop="dateCreated datePublished" datetime="2016-12-06T00:00:00+08:00">2016-12-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Weakly Supervised Cascaded Convolutional Networks</p>
-<p><strong>AUTHOR</strong>: Ali Diba, Vivek Sharma, Ali Pazandeh, Hamed Pirsiavash, Luc Van Gool</p>
-<p><strong>ASSOCIATION</strong>: KU Leuven, Sharif Tech., UMBC, ETH Zürich</p>
-<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1611.08258" target="_blank" rel="noopener">arXiv:1611.08258</a></p>
-<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><p>A new architecture of cascaded networks is proposed to learn a convolutional neural network handling the task without<br>expensive human annotations.</p>
-<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>This work trains a CNN to detect objects using image level annotaion, which tells what are in one image. At training stage, the input of the network are 1) original image, 2) image level labels and 3) object proposals. At inference stage, the image level labels are excluded. The object proposals can be generated by any method, such as Selective Search and EdgeBox. Two differenct cascaded network structures are proposed. </p>
-<h3 id="Two-stage-Cascade"><a href="#Two-stage-Cascade" class="headerlink" title="Two-stage Cascade"></a>Two-stage Cascade</h3><p>The two-stage cascade network structure is illustrated in the following figure.</p>
-<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/WCCN_1.jpeg" alt="" width="640"/></p>
-<p>The first stage is a location network, which is a fully-convolutional CNN with a global average pooling or global maximum pooling. In order to learn multiple classes for single image, an independent loss function for each class is used. The class activation maps are used to select candidate boxes.</p>
-<p>The second stage is multiple instance learning network. Given a bag for instances </p>
-<script type="math/tex; mode=display">x_{c}=\{x_{j}|j=1,...,n\}</script><p>and a label set </p>
-<script type="math/tex; mode=display">y_{c}=\{y_{i}|y_{i} \in \{0,1\}, i=1,..,C \}</script><p>where each <script type="math/tex">x</script> is one of the condidate boxes, <script type="math/tex">n</script> is the number of candidate box, <script type="math/tex">C</script> is the number of categories and <script type="math/tex">\sum_{i=1}^{C}y_{i}</script>, the probabilities and loss can be defined as </p>
-<script type="math/tex; mode=display">Score(I,f_{i})=max(f_{i1},...,f_{in})</script><script type="math/tex; mode=display">P(I, f_{i}) = \frac{exp(Score(I,f_{i}))}{\sum_{k=1}^{C}exp(Score(I,f_{k}))}</script><script type="math/tex; mode=display">L_{MIL}(P,y) = - \sum_{i=1}^{C}y_{i}log(P(I, f_i))</script><p>Im my understanding, only the boxes with the most confidence in each category will be punished if they are wrong. Besides, the equations in the paper have some mistakes.</p>
-<h3 id="Three-stage-Cascade"><a href="#Three-stage-Cascade" class="headerlink" title="Three-stage Cascade"></a>Three-stage Cascade</h3><p>The three-stage cascade network structure adds a weak segmentation network between the two stages in the two-stage cascade network. It is illustrated in the following figure.</p>
-<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/WCCN_2.jpeg" alt="" width="640"/></p>
-<p>The weak segmentation network uses the results of the first stage as supervision signal. <script type="math/tex">s_{ic}</script> is defined as the CNN score for pixel $i$ and class <script type="math/tex">c</script> in image $I$. The score is normalized using softmax</p>
-<script type="math/tex; mode=display">S_{ic}= exp(s_{ic})/\sum_{k=1}^{C}exp(s_{ik})</script><p>Considering <script type="math/tex">y</script> as the label set for image $I$ , the loss function for the weakly supervised segmentation network is given by </p>
-<script type="math/tex; mode=display">L_{seg}(S,G,y)=-\sum_{i=1}^{C}y_{i}log(S_{t_{c}c}) - \sum_{i \in I_{s}} \alpha_{i}log(S_{t_{c}G_{i}})</script><script type="math/tex; mode=display">By \ \ \ \ \  t_{c} = \mathop{argmax}_{i \in I} S_{ic}</script><p>where <script type="math/tex">G_{i}</script> is the supervision map for the segmentation from the first stage.</p>
-<h2 id="SOME-IDEAS"><a href="#SOME-IDEAS" class="headerlink" title="SOME IDEAS"></a>SOME IDEAS</h2><p>This work requires little annotation. The only annotation is the image level label. However, this kind of training still needs complete annotation. For example, we want to detect 20 categories, then we need a 20-d vector to annotate the image. What if we only know 10/20 categories’ status in one image? </p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1050,7 +1052,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">233</span>
+          <span class="site-state-item-count">234</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
