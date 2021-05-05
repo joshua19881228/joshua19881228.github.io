@@ -172,6 +172,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/30/Computer_Vision/Reading_Note/2016-08-30-Reading-note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/30/Computer_Vision/Reading_Note/2016-08-30-Reading-note/" class="post-title-link" itemprop="url">PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-08-30 00:00:00" itemprop="dateCreated datePublished" datetime="2016-08-30T00:00:00+08:00">2016-08-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection</p>
+<p><strong>AUTHER</strong>: Kye-Hyeon Kim, Yeongjae Cheon, Sanghoon Hong, Byungseok Roh, Minje Park</p>
+<p><strong>ASSOCIATION</strong>: Intel Imaging and Camera Technology</p>
+<p><strong>FROM</strong>: <a href="http://arxiv.org/abs/1608.08021" target="_blank" rel="noopener">arXiv:1608.08021</a></p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><p>An efficient object detector based on CNN is proposed, which has the following advantages:</p>
+<ul>
+<li>Computational cost: 7.9GMAC for feature extraction with 1065x640 input (cf. ResNet-101: 80.5GMAC1)</li>
+<li>Runtime performance: 750ms/image (1.3FPS) on Intel i7-6700K CPU with a single core; 46ms/image (21.7FPS) on NVIDIA Titan X GPU</li>
+<li>Accuracy: 81.8% mAP on VOC-2007; 82.5% mAP on VOC-2012 (2nd place)</li>
+</ul>
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><p>The author utilizes the pipline of Faster-RCNN, which is “CNN feature extraction + region proposal + RoI classification”. The author claims that feature extraction part needs to be redesigned, since region proposal part is not computationally expensive and classification part can be efficiently compressed with common techniques like truncated SVD. And the principle is “less channels with more layers” and adoption of some building blocks including concatenated ReLU, Inception, and HyperNet. The structure of the network is as follows:</p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/structure.jpg" alt="" width="640"/></p>
+<p><strong>Some Details</strong></p>
+<ol>
+<li>Concatenated rectified linear unit (C.ReLU) is applied to the early stage of the CNNs (i.e., first several layers from the network input) to reduce the number of computations by half without losing accuracy. In my understanding, the C.ReLU encourages the network to learn Gabor-like filters and helps to accelerate the forward-propagation. If the output of the C.ReLu is 64, its convolution layer only needs 32-channel outputs. And it may harm the performance if it is used to the later stage of the CNNs, because it keeps the negative responses as activated signal, which means that a mad brain is trained.</li>
+<li>Inception is applied to the remaining of the feature generation sub-network. An Inception module produces output activations of different sizes of receptive fields, so that increases the variety of receptive field sizes in the previous layer. All the design policies can be found in this <a href="http://joshua881228.webfactional.com/blog_reading-note-rethinking-the-inception-architecture-for-computer-vision_136/" target="_blank" rel="noopener">related work</a>.</li>
+<li>The author adopted the idea of multi-scale representation like HyperNet that combines several intermediate outputs so that multiple levels of details and non-linearities can be considered simultaneously. Direct concatenation of all abstraction layers may produce redundant information with much higher compute requirement and layers which are too early for object proposal and classification would be little help. The author combines 1) the last layer and 2) two intermediate layers whose scales are 2x and 4x of the last layer, respectively.</li>
+<li>Residual structure is also used in this network, which helps to train very deep CNNs.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/25/Computer_Vision/2016-08-25-my-jumble-of-computer-vision/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2020,83 +2112,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/25/Life_Discovery/Miscellaneous/2016-07-25-Miscellaneous/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/07/25/Life_Discovery/Miscellaneous/2016-07-25-Miscellaneous/" class="post-title-link" itemprop="url">《天空之眼》</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-07-25 00:00:00" itemprop="dateCreated datePublished" datetime="2016-07-25T00:00:00+08:00">2016-07-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>早就想看《天空之眼》，今天终于在A站看了。一部非常值得一看的政治惊悚片，猛一看好像是一个”电车难题”，不过仔细想想也不尽然，”电车难题”中的危机不由人来决定，而电影中是否应该为了消灭恐怖分子而牺牲无辜小女孩的危机却来自于官僚系统，英国军方需要首先与美国确认是否可以消灭持有美国护照的恐怖分子，正是这一次拖延导致了复杂的情况。</p>
-<p>后续的剧情基本都是在这一复杂情况下展开，讽刺感极强，包括讨论牺牲小女孩是否合法时政客之间的踢皮球，担忧袭击的视频资料会外泄至社交网络，相对于咨询美国却毫不犹豫地选择在肯尼亚开展军事行动而不告知肯尼亚政府…在观看影片的过程中，观众会大骂圣母婊、斥责毫无底线可言的政客。而这些又都让观众思考程序正义的民主机制在遇到危机时怎么办，这一点和《寒战》类似。</p>
-<p>角色的强烈对比使影片更有深意，比如将军在指挥室里相对冷血决定牺牲别人的女儿，而出了指挥室却要给自己的女儿更换买错了的娃娃，而我们又不应该指责他，因为这些恐怖分子如果不被消灭，他们可能会杀人更多的平民。对于英国军方的讽刺也挺到位，一个美军的Lieutenant却可以违抗一个英军Colonel的命令…</p>
-<p>影片的矛盾也制造得也很有技巧，在小女孩这一危机产生之前还有特工的危机，不至于让观众犯困。再加上一票像艾伦·里克曼因、海伦·米伦的优秀演员，整个影片都给观众极大的愉悦</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -2168,7 +2183,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">234</span>
+          <span class="site-state-item-count">235</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

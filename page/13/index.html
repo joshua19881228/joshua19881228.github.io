@@ -172,6 +172,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/07/Computer_Vision/Reading_Note/2016-12-07-WiderResNet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/12/07/Computer_Vision/Reading_Note/2016-12-07-WiderResNet/" class="post-title-link" itemprop="url">Reading Note: Wider or Deeper: Revisiting the ResNet Model for Visual Recognition</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-12-07 00:00:00" itemprop="dateCreated datePublished" datetime="2016-12-07T00:00:00+08:00">2016-12-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>:  Wider or Deeper: Revisiting the ResNet Model for Visual Recognition</p>
+<p><strong>AUTHOR</strong>: Zifeng Wu, Chunhua Shen, Anton van den Hengel</p>
+<p><strong>ASSOCIATION</strong>: The University of Adelaide</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1611.10080" target="_blank" rel="noopener">arXiv:1611.10080 </a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><ol>
+<li>A further developed intuitive view of ResNets is introduced, which helps to understand their behaviours and find possible directions to further improvements.</li>
+<li>A group of relatively shallow convolutional networks is proposed based on our new understanding. Some of them achieve the state-of-the-art results on the ImageNet classification dataset.</li>
+<li>The impact of using different networks is evaluated on the performance of semantic image segmentation, and these networks, as pre-trained features, can boost existing algorithms a lot.</li>
+</ol>
+<h2 id="SUMMARY"><a href="#SUMMARY" class="headerlink" title="SUMMARY"></a>SUMMARY</h2><p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/WiderResNet_1.jpg" alt="" width="640"/></p>
+<p>For the residual $unit \ i$, let $y<em>{i-1}$ be the input, and let $f</em>{i}(\cdot)$ be its trainable non-linear mappings, also named $Blok \ i$. The output of $unit \ i$ is recursively defined as </p>
+<script type="math/tex; mode=display">y_{i} = f_{i}(y_{i-1}, \omega_{i})+y_{i-1}</script><p>where $\omega<em>{i}$ denotes the trainalbe parameters, and $f</em>{i}(\cdot)$ is often two or three stacked convolution stages in a ResNet building block. Then top left network can be formulated as</p>
+<script type="math/tex; mode=display">y_{2} = y_{1}+f_{2}(y_{1},\omega_{2})</script><script type="math/tex; mode=display">= y_{0}+f_{1}(y_{0},\omega_{1})+f_{2}(y_{0}+f_{1}(y_{0}, \omega_{1}, \omega_{2})</script><p>Thus, in SGD iteration, the backward gradients are:</p>
+<script type="math/tex; mode=display">\Delta \omega_{2}=\frac{df_{s}}{d\omega_{2}}\cdot \Delta y_{2}</script><script type="math/tex; mode=display">\Delta y_{1}= \Delta y_{2} + f_{2}^{'} \cdot \Delta y_{2}</script><script type="math/tex; mode=display">\Delta \omega_{1} = \frac{df_{1}}{d \omega_{1}} \cdot \Delta y_{2}+ \frac{df_{1}}{d \omega_{1}} \cdot f_{2}^{'} \cdot \Delta y_{2}</script><p>Ideally, when effective depth $l\geq2$, both terms of $\Delta \omega_{1}$ are non-zeros as the bottom-left case illustrated. However, when effective depth $l=1$, the second term goes to zeros, which is illustrated by the bottom-right case. If this case happens, we say that the ResNet is over-deepened, and that it cannot be trained in a fully end-to-end manner, even with those shortcut connections.</p>
+<p>To summarize, shortcut connections enable us to train wider and deeper networks. As they growing to some point, we will face the dilemma between width and depth. From that point, going deep, we will actually get a wider network, with extra features which are not completely end-to-end trained; going wider, we will literally get a wider network, without changing its end-to-end characteristic.</p>
+<p>The author designed three kinds of network structure as illustrated in the following figure</p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/WiderResNet_2.jpg" alt="" width="640"/></p>
+<p>and the classification performance on ImageNet validation set is shown as below</p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/WiderResNet_3.jpg" alt="" width="640"/></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/06/Computer_Vision/Reading_Note/2016-12-06-WCCN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -927,88 +1019,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/24/Computer_Vision/Reading_Note/2016-11-24-DenseNet/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/11/24/Computer_Vision/Reading_Note/2016-11-24-DenseNet/" class="post-title-link" itemprop="url">Reading Note: Densely Connected Convolutional Networks</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-11-24 00:00:00" itemprop="dateCreated datePublished" datetime="2016-11-24T00:00:00+08:00">2016-11-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Densely Connected Convolutional Networks</p>
-<p><strong>AUTHOR</strong>: Gao Huang, Zhuang Liu, Kilian Q. Weinberger</p>
-<p><strong>ASSOCIATION</strong>: Cornell University, Tsinghua University</p>
-<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1608.06993" target="_blank" rel="noopener">arXiv:1608.06993</a></p>
-<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><p>Dense Convolutional Network (DenseNet) is proposed, which embraces the observation that networks can be substantially deeper, more accurate and efficient to train if they contain shorter connections between layers close to the input and those close to the output.</p>
-<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>DenseNet is a network architecture where each layer is directly connected to every other layer in a feed-forward fashion (within each dense block). For each layer, the feature maps of all preceding layers are treated as separate inputs whereas its own feature maps are passed on as inputs to all subsequent layers. The idea can be illustrated as the following figure:</p>
-<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/DenseNet.jpeg" alt="" width="640"/></p>
-<h2 id="SOME-IDEAS"><a href="#SOME-IDEAS" class="headerlink" title="SOME IDEAS"></a>SOME IDEAS</h2><p>In the work of Yoshua Bengio’s Understanding intermediate layers using linear classifier probes, the author claims that the raw input is helpful at the beginning of the training of the network. So maybe the dense connection plays similar role in this work.</p>
-<p>Using Caffe to implement DenseNet, large memory is of need because of the large number of split layers.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1080,7 +1090,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">234</span>
+          <span class="site-state-item-count">235</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
