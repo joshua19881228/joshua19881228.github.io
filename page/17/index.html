@@ -172,6 +172,102 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/06/Computer_Vision/Reading_Note/2016-09-06-Reading-note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/09/06/Computer_Vision/Reading_Note/2016-09-06-Reading-note/" class="post-title-link" itemprop="url">What makes ImageNet good for transfer learning?</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-09-06 00:00:00" itemprop="dateCreated datePublished" datetime="2016-09-06T00:00:00+08:00">2016-09-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: What makes ImageNet good for transfer learning?</p>
+<p><strong>AUTHOR</strong>: Minyoung Huh, Pulkit Agrawal, Alexei A. Efros</p>
+<p><strong>ASSOCIATION</strong>: Berkeley Artificial Intelligence Research (BAIR) Laboratory, UC Berkeley</p>
+<p><strong>FROM</strong>: <a href="http://arxiv.org/abs/1608.08614" target="_blank" rel="noopener">http://arxiv.org/abs/1608.08614</a></p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><p>Several questions about how the dataset affects the training of CNN is discussed, including</p>
+<ul>
+<li>Is more pre-training data always better? How does feature quality depend on the number of training examples per class? </li>
+<li>Does adding more object classes improve performance? </li>
+<li>For the same data budget, how should the data be split into classes?</li>
+<li>Is fine-grained recognition necessary for learning good features?</li>
+<li>Given the same number of training classes, is it better to have coarse classes or fine-grained classes? </li>
+<li>Which is better: more classes or more examples per class?</li>
+</ul>
+<h3 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h3><blockquote>
+<p>The following is a summary of the main findings:</p>
+<ol>
+<li><strong>How many pre-training ImageNet examples are sufficient for transfer learning?</strong> Pre-training with only half the ImageNet data (500 images per class instead of 1000)results in only a small drop in transfer learning performance (1.5 mAP drop on PASCAL-DET). This drop is much smaller than the drop on the ImageNet classification task itself.</li>
+<li><strong>How many pre-training ImageNet classes are sufficient for transfer learning?</strong> Pre-training with an order of magnitude fewer classes (127 classes instead of 1000) results in only a small drop in transfer learning performance (drop of 2.8 mAP on PASCAL-DET). Quite interestingly, we also found that for some transfer tasks, pre-training with fewer number of classes leads to better performance.</li>
+<li><strong>How important is fine-grained recognition for learning good features for transfer learning?</strong> The above experiment also suggests that transferable features are learnt even when a CNN is pre-trained with a set of classes that do not require fine-grained discrimination.</li>
+<li><strong>Given the same budget of pre-training images, should we have more classes or more images per class?</strong> Training with fewer classes but more images per class performs slightly better than training with more classes but fewer images per class.</li>
+<li><strong>Is more data always helpful?</strong> We found that training using 771 ImageNet classes that excludes all PASCAL VOC classes, achieves nearly the same performance on PASCALDET as training on complete ImageNet. Further experiments confirm that blindly adding more training data does not always lead to better performance and can sometimes hurt performance.</li>
+</ol>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/30/Computer_Vision/Reading_Note/2016-08-30-Reading-note/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2038,80 +2134,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/29/Life_Discovery/My_Drawings/2016-07-29-My-Drawings/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/07/29/Life_Discovery/My_Drawings/2016-07-29-My-Drawings/" class="post-title-link" itemprop="url">My Drawings [20160725 Onion]</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-07-29 00:00:00" itemprop="dateCreated datePublished" datetime="2016-07-29T00:00:00+08:00">2016-07-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/My_Drawings/onion.jpg" alt="" width="480"/></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -2183,7 +2205,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">235</span>
+          <span class="site-state-item-count">236</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -2196,7 +2218,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">57</span>
+        <span class="site-state-item-count">58</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

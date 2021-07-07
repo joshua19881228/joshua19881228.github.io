@@ -172,6 +172,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/Computer_Vision/Reading_Note/2018-01-08-Panoptic_Segmentation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/08/Computer_Vision/Reading_Note/2018-01-08-Panoptic_Segmentation/" class="post-title-link" itemprop="url">Reading Note: Panoptic Segmentation</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-01-08 00:00:00" itemprop="dateCreated datePublished" datetime="2018-01-08T00:00:00+08:00">2018-01-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Panoptic Segmentation</p>
+<p><strong>AUTHOR</strong>: Alexander Kirillov, Kaiming He, Ross Girshick, Carsten Rother, Piotr Dollar</p>
+<p><strong>ASSOCIATION</strong>: FAIR, Heidelberg University</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1801.00868" target="_blank" rel="noopener">arXiv:1801.00868</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>A novel ‘Panoptic Segmentation’ (PS) task is proposed and studied.</li>
+<li>A panoptic quality (PQ) measure is introduced to measure performance on the task.</li>
+<li>A basic algorithmic approach to combine instance and semantic segmentation outputs into panoptic outputs is proposed.</li>
+</ol>
+<h2 id="PROBLEM-DEFINATION"><a href="#PROBLEM-DEFINATION" class="headerlink" title="PROBLEM DEFINATION"></a>PROBLEM DEFINATION</h2><p><em>Panoptic</em> refers to a unified, global view of segmentation. Each pixel of an image must be assigned a semantic label and an instance id. Pixels with the same label and id belong to the same object; for stuff labels the instance id is ignored.</p>
+<h3 id="Panoptic-Segmentation"><a href="#Panoptic-Segmentation" class="headerlink" title="Panoptic Segmentation"></a>Panoptic Segmentation</h3><p>Given a predetermined set of $L$ semantic categories encoded by $\mathcal{L} := {1,…,L}$, the task requires a panoptic segmentation algorithm to map each pixel $i$ of an image to a pair $(l<em>{i}, z</em>{i}) \in \mathcal{L} \times N$, where $l<em>{i}$ represents the semantic class of pixel $i$ and $z</em>{i}$ represents its instance id.</p>
+<p>The semantic label set consist of subsets $\mathcal{L}^{St}$ and $\mathcal{L}^{Th}$, such that $\mathcal{L} = \mathcal{L}^{St} \cup \mathcal{L}^{Th}$ and $\mathcal{L}^{St} \cap \mathcal{L}^{Th} = \phi$. These subsets correspond to <em>stuff</em> labels and <em>thing</em> labels, respectively.</p>
+<h3 id="Panoptic-Quality-PQ"><a href="#Panoptic-Quality-PQ" class="headerlink" title="Panoptic Quality (PQ)"></a>Panoptic Quality (PQ)</h3><p>For each class, the unique matching splits the predicted and ground truth segments into three sets: true positives (TP), false positives (FP), and false negatives (FN), representing matched pairs of segments, unmatched predicted segments, and unmatched ground truth segments, respectively. Given these three sets, PQ is defined as:</p>
+<script type="math/tex; mode=display">PQ=\frac{\sum_{(p,g) \in TP} IoU(p,g)}{|TP|+\frac{1}{2}|FP|+\frac{1}{2}|FN|}</script><p>A predicted segment and a ground truth segment can match only if their intersection over union (IoU) is strictly greater than 0.5.</p>
+<p>PQ can be seen as the multiplication of a <em>Segmentation Quality</em> (SQ) term and a <em>Detection Quality</em> (DQ) term:</p>
+<script type="math/tex; mode=display">PQ=\frac{\sum_{(p,g) \in TP} IoU(p,g)}{|TP|} \times \frac{|TP|}{|TP|+\frac{1}{2}|FP|+\frac{1}{2}|FN|}</script><p>where the first term can be seen as SQ and the second term can be seen as DQ.</p>
+<h3 id="Human-vs-Machine"><a href="#Human-vs-Machine" class="headerlink" title="Human vs. Machine"></a>Human vs. Machine</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180109_human-vs-machine.png" alt="Human vs. Machine" title="Human vs. Machine"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/Life_Discovery/Little_Things/2017-12-10-Little-Things/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -926,83 +1016,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/07/Coding/2017-09-07-Installing-Electron/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/09/07/Coding/2017-09-07-Installing-Electron/" class="post-title-link" itemprop="url">Windows 10 x64安装Electron</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2017-09-07 00:00:00" itemprop="dateCreated datePublished" datetime="2017-09-07T00:00:00+08:00">2017-09-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p>从<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">官网</a>下载适合自己系统的安装包并安装。安装完成house可以使用<code>npm -v</code>命令查看node.js版本号，确认其是否正常安装。</p>
-<p>使用node -v命令检查node.js版本，确认node安装；</p>
-<h2 id="安装cnpm工具"><a href="#安装cnpm工具" class="headerlink" title="安装cnpm工具"></a>安装cnpm工具</h2><p>从官方npm下载速度较慢，可以使用淘宝定制的命令行工具cnpm代替默认的npm。安装命令为<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
-<h2 id="安装Electron"><a href="#安装Electron" class="headerlink" title="安装Electron"></a>安装Electron</h2><p>安装命令为<code>cnpm install -g electron</code>。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1074,7 +1087,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">235</span>
+          <span class="site-state-item-count">236</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1087,7 +1100,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">57</span>
+        <span class="site-state-item-count">58</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

@@ -172,6 +172,109 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/04/Computer_Vision/Reading_Note/2015-11-04-Learning-to-Segment-Moving-Objects-in-Videos/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/11/04/Computer_Vision/Reading_Note/2015-11-04-Learning-to-Segment-Moving-Objects-in-Videos/" class="post-title-link" itemprop="url">READING NOTE: Learning to Segment Moving Objects in Videos</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-11-04 00:00:00" itemprop="dateCreated datePublished" datetime="2015-11-04T00:00:00+08:00">2015-11-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Learning to Segment Moving Objects in Videos</p>
+<p><strong>AUTHOR</strong>: Fragkiadaki, Katerina and Arbelaez, Pablo and Felsen, Panna and Malik, Jitendra</p>
+<p><strong>FROM</strong>: CVPR2015</p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>Moving object proposals from multiple segmentations on optical flow boundaries</li>
+<li>A moving objectness detector for ranking per frame segments and tube proposals</li>
+<li>A method of extending per frame segments into spatial-temporal tubes</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><ol>
+<li>Extract motion boundaries by optical flow</li>
+<li>Generate segment proposals according to motion boundaries, called MOPs (Moving Object Proposal)</li>
+<li>Rank the MOPs using a CNN based regressor</li>
+<li>Combine per frame MOPs to space-time tubes based on pixelwise trajectory clusters</li>
+</ol>
+<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>Using optical flow could reduce the noises caused by inner texture of one object. Optical flow is more suitable for detecting rigid objects.</li>
+<li>Using trajectory tracking could deal with objects that are temporary static.</li>
+<li>Segments are effective to tackle frequent occlusions/dis-occlustions.</li>
+</ol>
+<h3 id="DISADVANTAGES"><a href="#DISADVANTAGES" class="headerlink" title="DISADVANTAGES"></a>DISADVANTAGES</h3><ol>
+<li>Too slow. Every stage would take seconds to process, which is not suitable for practical applications.</li>
+<li>Use several independent method to detect objects. Less computations are shared.</li>
+<li>The power of CNN has not been fully applied.</li>
+</ol>
+<h3 id="OTHER"><a href="#OTHER" class="headerlink" title="OTHER"></a>OTHER</h3><ol>
+<li>RCNN has excellent performance on object detection in static images</li>
+<li>For slidewindow methods, too many patches need to be evaluated.</li>
+<li>MRF methods neglect nearby pixels’ relation and could not separate adjacent instances.</li>
+<li>Methods of object detection in video could be categorized into two types i) top-down tracking and ii) bottom-up segmentation.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/10/25/Life_Discovery/Miscellaneous/2015-10-25-Miscellaneous/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -930,84 +1033,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/07/28/Life_Discovery/Miscellaneous/2015-07-28-Miscellaneous/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2015/07/28/Life_Discovery/Miscellaneous/2015-07-28-Miscellaneous/" class="post-title-link" itemprop="url">关于《哈利》系列</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2015-07-28 00:00:00" itemprop="dateCreated datePublished" datetime="2015-07-28T00:00:00+08:00">2015-07-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>最近听电子书，搞了一本英音原本的《哈利波特》，不禁想起“年轻”时写的一篇博文，粘来应应景。</p>
-<p>那时刚刚在影院看了《哈利波特与混血王子》，感觉这是除了第一部和第二部之外拍的最好的一部，不过依旧是观前期待很大，观后略微失望的感觉。这一部仍然延续了前几部灰暗阴冷的风格，即使在比较热情的魁地奇赛场上也没有太多的暖色调，朦胧的爱情也没有沉浸在玫瑰的红艳之中。虽然这一部本来就很阴郁，但缺少暖色总是让电影给人一种沉闷的感觉，紧张的情绪也总得不到调节，对于一部将近三个小时的电影来说难免令人感到精神疲劳。</p>
-<p>最初接触哈利系列是在电影院，应该是初中的时候，那个时候对哈利系列完全是一种不屑的心态，因为不管是《魔法石》还是《密室》都是纯纯粹粹就是儿童影片，没有什么新意，而且剧情雷同。和其他人不同，我连一本哈利系列的小说都没有买，也没用兴趣去读这样一部儿童读物，即使有同学跟我争论说这是一部老少皆宜的作品，我也不以为然。相反，我对另一部英国魔幻作品《指环王》却是出奇的着迷，或许是其磅礴的诗史气魄格外吸引人，所以我也读了《指环王》原著的三部曲及其前传，而对哈利系列始终没有兴趣。</p>
-<p>在大二上学期，花了两个月读完哈利系列，对这部作品有了一些新的看法。这部作品给我最大的印象就是它是一个关于成长的故事，它的出版速度十分符合我们这一代人成长的时间进程，1997年第一部出版到2007年最后一部完结，从十来岁的少年到十八九的青年正好被七部小说的出版所覆盖，小说的内容也逐渐成人化。从小孩子对魔法的好奇与向往开始，第一二部里神奇的魔法世界，诡异的车站，骑着扫把飞翔的魔法师，独特的魁地奇……等等一些新奇的玩意儿给小孩子们很多充满想象力的冲击，这时的电影风格也是暖色调居多，尤其第一二部完全可以当做独立电影来看待，完整的故事情节，绚丽的电脑特技和圆满的结尾都让它成为不错的儿童电影；后来便开始了成长的烦恼，从第三部起，一直到第五部，我认为小说都是在重复第一二部的故事结构，没有什么创新，而且故事之间的连续性很差，估计唯一的联系就是伏地魔逐渐强大起来，给最后两部做个蹩脚的铺垫，在读小说的过程中，读第一二部还觉得不错，但是第三部开始便开始感觉到有一些厌烦。电影也是如此，类似的故事结构，没有什么新意的特效，四平八稳的指导，都没让这三部电影给人留下深刻的印象。到了第六部和第七部，故事才有所转折，而且这里主人公也已经开始体验亲情，友情，爱情，背叛，忠诚，正义，邪恶……小说的高潮也从此开始。但是电影依旧没有什么太大的起色，对原著的改编也并不成功，而且越到最后对于那些没有看过原著的观众来说，电影越来越难以理解。</p>
-<p>对于哈利系列，原著比电影应该更吸引人，而且阅读给人留下的想象空间更广大，也正是因此对于忧郁的中间几部而言，总会有一些令人放松精神的篇章，在这些地方读者不会受困于电影画面的禁锢而不得不继续忧郁着。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1079,7 +1104,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">235</span>
+          <span class="site-state-item-count">236</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1092,7 +1117,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">57</span>
+        <span class="site-state-item-count">58</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

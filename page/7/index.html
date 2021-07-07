@@ -172,6 +172,94 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/20/Computer_Vision/Reading_Note/2017-07-20-ShuffleNet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/07/20/Computer_Vision/Reading_Note/2017-07-20-ShuffleNet/" class="post-title-link" itemprop="url">Reading Note: ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-07-20 00:00:00" itemprop="dateCreated datePublished" datetime="2017-07-20T00:00:00+08:00">2017-07-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile Devices</p>
+<p><strong>AUTHOR</strong>: Xiangyu Zhang, Xinyu Zhou, Mengxiao Lin, Jian Sun</p>
+<p><strong>ASSOCIATION</strong>: Megvii Inc (Face++)</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1707.01083" target="_blank" rel="noopener">arXiv:1707.01083</a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><ol>
+<li>Two operations, pointwise group convolution and channel shuffle, are proposed to greatly reduce computation cost while maintaining accuracy.</li>
+</ol>
+<h2 id="MobileNet-Architecture"><a href="#MobileNet-Architecture" class="headerlink" title="MobileNet Architecture"></a>MobileNet Architecture</h2><p>In <a href="https://joshua19881228.github.io/2017-07-19-MobileNet/" target="_blank" rel="noopener">MobileNet</a> and other works, efficient depthwise separable convolutions or group convolutions  strike an excellent trade-off between representation capability and computational cost. However, both designs do not fully take the $ 1 \times 1 $ convolutions (also called pointwise convolutions in MobileNet) into account, which require considerable complexity. </p>
+<h3 id="Channel-Shuffle-for-Group-Convolutions"><a href="#Channel-Shuffle-for-Group-Convolutions" class="headerlink" title="Channel Shuffle for Group Convolutions"></a>Channel Shuffle for Group Convolutions</h3><p>In order to address the mentioned issue, a straightforward solution is applying group convolutions on $ 1 \times 1 $ layers like what has been done on $ 3 \times 3 $ in MobileNet. However, if multiple group convolutions stack together, there is one side effect: outputs from a certain channel are only derived from a small fraction of input channels. This property blocks information flow between channel groups and weakens representation. To allow group convolution obtaining input data from different groups, for the feature map generated from the previous group layer, we can first divide the channels in each group into several subgroups, then feed each group in the next layer with different subgroups. It can be implemented by reshaping the previous output channel dimension into $ (g, n) $, transposing and then flattening it back as the input of next layer, which is called <em>channel shuffle</em> operation and illustrated in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170720_ShuffleNet_0.png" alt="Channel Shuffle" title="Channel Shuffle"></p>
+<h3 id="ShuffleNet-Unit"><a href="#ShuffleNet-Unit" class="headerlink" title="ShuffleNet Unit"></a>ShuffleNet Unit</h3><p>The following figure shows the ShuffleNet Unit.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170720_ShuffleNet_1.png" alt="ShuffleNet Unit" title="ShuffleNet Unit"></p>
+<p>In the figure, (a) is the building block in ResNeXt, and (b) is the building block in ShuffleNet. Given the input size $ c \times h \times w $ and the bottleneck channels $ m $, ResNext has $ hw(2cm+9m^2/g) $ FLOPs, while ShuffleNet needs $ hw(2cm/g+9m) $ FLOPs.</p>
+<h3 id="Network-Architecture"><a href="#Network-Architecture" class="headerlink" title="Network Architecture"></a>Network Architecture</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170720_ShuffleNet_2.png" alt="Network Architecture" title="Network Architecture"></p>
+<h2 id="Comparison"><a href="#Comparison" class="headerlink" title="Comparison"></a>Comparison</h2><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170720_ShuffleNet_3.png" alt="Comparison" title="Comparison"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/19/Computer_Vision/Reading_Note/2017-07-19-MobileNet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1292,81 +1380,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/08/Life_Discovery/Little_Things/2017-06-08-Little-Things/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/06/08/Life_Discovery/Little_Things/2017-06-08-Little-Things/" class="post-title-link" itemprop="url">Little Things [20170608]</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2017-06-08 00:00:00" itemprop="dateCreated datePublished" datetime="2017-06-08T00:00:00+08:00">2017-06-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Maybe when we are alone we could have an opportunity to look into our deepest corners in our hearts. And we would find that much nasty and evil thoughts there, hatred, jealousy, prejudices and so on. When and how could we find true peace and settlement? And how to be less anxious in this wold of fierce competition.</p>
-<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Little_Things/figures/IMG_1759.JPG" alt="何者" title="何者"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1438,7 +1451,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">235</span>
+          <span class="site-state-item-count">236</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1451,7 +1464,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">57</span>
+        <span class="site-state-item-count">58</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

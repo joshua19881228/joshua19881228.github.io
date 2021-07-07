@@ -172,6 +172,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/03/Computer_Vision/Reading_Note/2016-11-03-OHEM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/11/03/Computer_Vision/Reading_Note/2016-11-03-OHEM/" class="post-title-link" itemprop="url">Reading Note: Training Region-based Object Detectors with Online Hard Example Mining </a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-11-03 00:00:00" itemprop="dateCreated datePublished" datetime="2016-11-03T00:00:00+08:00">2016-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Training Region-based Object Detectors with Online Hard Example Mining</p>
+<p><strong>AUTHOR</strong>: Abhinav Shrivastava, Abhinav Gupta, Ross Girshick</p>
+<p><strong>ASSOCIATION</strong>: Carnegie Mellon University, Facebook AI Research</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1604.03540" target="_blank" rel="noopener">arXiv:1604.03540</a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><p>A novel bootstrapping technique called online hard example mining (OHEM)  for training state-of-the-art detection models based on deep ConvNets is proposed. The algorithm is a simple modification to SGD in which training examples are sampled according to a non-uniform, non-stationary distribution that depends on the current loss of each example under consideration.</p>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="Online-Hard-Example-Mining"><a href="#Online-Hard-Example-Mining" class="headerlink" title="Online Hard Example Mining"></a>Online Hard Example Mining</h3><p>The main idea of the OHEM is illustrated in the following figure:</p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/OHEM.jpg" alt="" width="640"/></p>
+<p>This alogorithm is designed for region proposal based object detector. The top side of the figure, including the Convolutional Network and the green arrows part of the RoI Network is same with Fast-RCNN. The key of the algorithm lies in the red arrows part of the RoI Network.</p>
+<p>For an input image at SGD iteration, a conv feature map using the Convolutional Network is first computed. Then the RoI Network uses this feature map and the all the input RoIs, instead of a sampled mini-batch, to do a forward pass. The loss computated for each RoI represents how well the current network performs on each RoI. Hard examples are selected by sorting the input RoIs by loss and taking the B/N examples for which the current network performs worst.</p>
+<p><strong>Some Details</strong></p>
+<p>The author’s implementation maintains two copies of the RoI network, one of which is readonly. This implies that the <em>readonly RoI network</em> allocates memory only for forward pass of <strong>all</strong> RoIs (R) as opposed to the <em>standard RoI network</em>, which allocates memory for both forward and backward passes. For an SGD iteration, given the conv feature map, the <em>readonly RoI network</em> performs a forward pass and computes loss for all input RoIs (green arrows). Then the hard RoI sampling module selects hard examples, which are input to the <em>regular RoI network</em> (red arrows). This network computes forward and backward passes only for hard RoIs, accumulates the gradients and passes them to the conv network. In practice, the author uses all RoIs from all N images as R, therefore the effective batch size for the <em>readonly RoI network</em> is $\vert R \vert$ and for the <em>regular RoI network</em> is the standard B.</p>
+<h2 id="ADVANTAGE"><a href="#ADVANTAGE" class="headerlink" title="ADVANTAGE"></a>ADVANTAGE</h2><ol>
+<li>It removes the need for several heuristics and hyperparameters commonly used in region-based ConvNets.</li>
+<li>It yields a consistent and significant boosts in mean average precision.</li>
+<li>Its effectiveness increases as the training set becomes larger and more difficult, as demonstrated by results on the MS COCO dataset.</li>
+</ol>
+<h2 id="SOME-IDEAS"><a href="#SOME-IDEAS" class="headerlink" title="SOME IDEAS"></a>SOME IDEAS</h2><ol>
+<li>How to apply data balancing in one-shot method, such as SSD?</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/01/Life_Discovery/Miscellaneous/2016-11-01-Miscellaneous/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -927,82 +1019,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/06/Life_Discovery/Miscellaneous/2016-10-06-Miscellaneous/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/10/06/Life_Discovery/Miscellaneous/2016-10-06-Miscellaneous/" class="post-title-link" itemprop="url">Miscellaneous [20161006]</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-10-06 00:00:00" itemprop="dateCreated datePublished" datetime="2016-10-06T00:00:00+08:00">2016-10-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="First-Post-on-20161006"><a href="#First-Post-on-20161006" class="headerlink" title="First Post on 20161006"></a>First Post on 20161006</h1><p>今天搞了一天<a href="https://gstreamer.freedesktop.org/" target="_blank" rel="noopener">Gstreamer</a>，早晨九点起来，就开始弄，不知不觉就到了午饭时间，吃了饭回来继续，不知不觉又到了晚饭时间。第一次搞这种编解码的库，真是头大，搞了这么整整一天，还是没什么结果。只是大概觉得gstreamer的工作原理就是把一堆element整合到一个pipeline里，然后一个多媒体文件就通过这个pipline把音频、视频解码出来，并送到对应的输出设备里。</p>
-<p>说起来好像不太难，而且用gst命令也可以播放视频，但是如何把它们通过C代码融合到自己的程序里呢，同时又怎么将视频全屏显示也是个问题，网上很多例子都是用GTK，这个又是个新东西。在github上搜了很多，但是也没有发现一个简单易用的例子，真是挠头。看来还是得耐下心来看文档里。</p>
-<h1 id="Update-on-20161007"><a href="#Update-on-20161007" class="headerlink" title="Update on 20161007"></a>Update on 20161007</h1><p>发现了一个很好的Gstreamer教程——<a href="https://arashafiei.files.wordpress.com/2012/12/gst-doc.pdf" target="_blank" rel="noopener">《Gstreamer Small Tutorial》</a>只有十页，读起来很顺畅，作者把Gstreamer的工作原理阐述得十分清晰，而且其中附有一个实例，对于理解有很大帮助。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1074,7 +1090,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">235</span>
+          <span class="site-state-item-count">236</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1087,7 +1103,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">57</span>
+        <span class="site-state-item-count">58</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>

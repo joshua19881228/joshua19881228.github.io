@@ -172,6 +172,106 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/22/Computer_Vision/Reading_Note/2018-04-22-Pelee/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/04/22/Computer_Vision/Reading_Note/2018-04-22-Pelee/" class="post-title-link" itemprop="url">Reading Note: Pelee: A Real-Time Object Detection System on Mobile Devices</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-04-22 00:00:00" itemprop="dateCreated datePublished" datetime="2018-04-22T00:00:00+08:00">2018-04-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Pelee: A Real-Time Object Detection System on Mobile Devicesn</p>
+<p><strong>AUTHOR</strong>: Robert J. Wang, Xiang Li, Shuang Ao, Charles X. Ling</p>
+<p><strong>ASSOCIATION</strong>: University ofWestern Ontario</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1804.06882" target="_blank" rel="noopener">arXiv:1804.06882</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>A variant of DenseNet architecture called <em>PeleeNet</em> for mobile devices is proposed.</li>
+<li>The network architecture of Single Shot MultiBox Detector (SSD) is optimized for speed acceleration and then combine it with PeleeNet.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="BUILDING-BLOCKS"><a href="#BUILDING-BLOCKS" class="headerlink" title="BUILDING BLOCKS"></a>BUILDING BLOCKS</h3><p><strong>Two-Way Dense Layer</strong>. A 2-way dense layer is used to get different scales of receptive fields. One branch uses a small kernel size (3x3) to capture small-size objects. The other branch stacks two 3x3 convolution layers for larger objects. The structure is shown in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180422_Pelee_Dense_Layer.png" alt="Two-Way Dense Layer" title="Two-Way Dense Layer"></p>
+<p><strong>Stem Block</strong>. This block is placed before the first dense layer for the sake of cost efficiency. This stem block can effectively improve the feature expression ability without adding computational cost too much. The structure is shown as follows.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180422_Pelee_Stem_Block.png" alt="Stem Block" title="Stem Block"></p>
+<p><strong>Dynamic Number of Channels in Bottleneck Layer</strong>. The number of channels in the bottleneck layer varies according to the input shape to make sure the number of output channels does not exceed the number of its input channels.</p>
+<p><strong>Transition Layer without Compression</strong>. experiments show that the compression factor proposed by DenseNet hurts the feature expression so that the number of output channels is kept the same as the number of input channels in transition layers.</p>
+<p><strong>Composite Function</strong>. The post-activation (Convolution - Batch Normalization - Relu) is used for speed acceleration. For post-activation, all batch normalization layers can be merged with convolution layer at the inference stage. To compensate for the negative impact on accuracy caused by this change, a shallow and wide network structure is designed. In addition, a 1x1 convolution layer is added to the last dense block to get a stronger representational ability.</p>
+<h3 id="ARCHITECTURE"><a href="#ARCHITECTURE" class="headerlink" title="ARCHITECTURE"></a>ARCHITECTURE</h3><p>The framework of the work is illustrated in the following table. </p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180422_Pelee_Architecture.png" alt="PeleeNet Architecture" title="PeleeNet Architecture"></p>
+<h3 id="OPTIMIZATION-FOR-SSD"><a href="#OPTIMIZATION-FOR-SSD" class="headerlink" title="OPTIMIZATION FOR SSD"></a>OPTIMIZATION FOR SSD</h3><p><strong>Feature Map Selection</strong>. 5 scale feature maps (19x19, 10x10, 5x5, 3x3, and 1x1) are selected. Larger resolution features are discarded for speed acceleration.</p>
+<p><strong>Residual Prediction Block</strong>. For each feature map used for detection, a residual block (ResBlock) is constructed before conducting prediction, shown in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180422_Pelee_SSD.png" alt="PeleeNet SSD" title="PeleeNet SSD"></p>
+<h2 id="PERFORMANCE"><a href="#PERFORMANCE" class="headerlink" title="PERFORMANCE"></a>PERFORMANCE</h2><p>The classification performance on ILSVRC2012 is shown in the following table.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180422_Pelee_ILSVRC2012.png" alt="ILSVRC2012" title="ILSVRC2012"></p>
+<p>The detection performance on VOC2007 is shown in the following table.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180422_Pelee_VOC2007.png" alt="VOC2007" title="VOC2007"></p>
+<p>The detection performance on COCO2015 is shown in the following table.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180422_Pelee_COCO.png" alt="COCO" title="COCO"></p>
+<h2 id="SOME-IDEAS"><a href="#SOME-IDEAS" class="headerlink" title="SOME IDEAS"></a>SOME IDEAS</h2><p>From my own experince, DW convolution is not pruning friendly so that recently pruning methods, such as ThiNet and Net-Trim, works poorly on DW convolution. This work uses conventional convolutional layers, so maybe those pruning methods can play a role.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/19/Coding/2018-04-19-Dynamic-Library-Win/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1084,96 +1184,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/Computer_Vision/Reading_Note/2018-01-08-Panoptic_Segmentation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/01/08/Computer_Vision/Reading_Note/2018-01-08-Panoptic_Segmentation/" class="post-title-link" itemprop="url">Reading Note: Panoptic Segmentation</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-01-08 00:00:00" itemprop="dateCreated datePublished" datetime="2018-01-08T00:00:00+08:00">2018-01-08</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Panoptic Segmentation</p>
-<p><strong>AUTHOR</strong>: Alexander Kirillov, Kaiming He, Ross Girshick, Carsten Rother, Piotr Dollar</p>
-<p><strong>ASSOCIATION</strong>: FAIR, Heidelberg University</p>
-<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1801.00868" target="_blank" rel="noopener">arXiv:1801.00868</a></p>
-<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
-<li>A novel ‘Panoptic Segmentation’ (PS) task is proposed and studied.</li>
-<li>A panoptic quality (PQ) measure is introduced to measure performance on the task.</li>
-<li>A basic algorithmic approach to combine instance and semantic segmentation outputs into panoptic outputs is proposed.</li>
-</ol>
-<h2 id="PROBLEM-DEFINATION"><a href="#PROBLEM-DEFINATION" class="headerlink" title="PROBLEM DEFINATION"></a>PROBLEM DEFINATION</h2><p><em>Panoptic</em> refers to a unified, global view of segmentation. Each pixel of an image must be assigned a semantic label and an instance id. Pixels with the same label and id belong to the same object; for stuff labels the instance id is ignored.</p>
-<h3 id="Panoptic-Segmentation"><a href="#Panoptic-Segmentation" class="headerlink" title="Panoptic Segmentation"></a>Panoptic Segmentation</h3><p>Given a predetermined set of $L$ semantic categories encoded by $\mathcal{L} := {1,…,L}$, the task requires a panoptic segmentation algorithm to map each pixel $i$ of an image to a pair $(l<em>{i}, z</em>{i}) \in \mathcal{L} \times N$, where $l<em>{i}$ represents the semantic class of pixel $i$ and $z</em>{i}$ represents its instance id.</p>
-<p>The semantic label set consist of subsets $\mathcal{L}^{St}$ and $\mathcal{L}^{Th}$, such that $\mathcal{L} = \mathcal{L}^{St} \cup \mathcal{L}^{Th}$ and $\mathcal{L}^{St} \cap \mathcal{L}^{Th} = \phi$. These subsets correspond to <em>stuff</em> labels and <em>thing</em> labels, respectively.</p>
-<h3 id="Panoptic-Quality-PQ"><a href="#Panoptic-Quality-PQ" class="headerlink" title="Panoptic Quality (PQ)"></a>Panoptic Quality (PQ)</h3><p>For each class, the unique matching splits the predicted and ground truth segments into three sets: true positives (TP), false positives (FP), and false negatives (FN), representing matched pairs of segments, unmatched predicted segments, and unmatched ground truth segments, respectively. Given these three sets, PQ is defined as:</p>
-<script type="math/tex; mode=display">PQ=\frac{\sum_{(p,g) \in TP} IoU(p,g)}{|TP|+\frac{1}{2}|FP|+\frac{1}{2}|FN|}</script><p>A predicted segment and a ground truth segment can match only if their intersection over union (IoU) is strictly greater than 0.5.</p>
-<p>PQ can be seen as the multiplication of a <em>Segmentation Quality</em> (SQ) term and a <em>Detection Quality</em> (DQ) term:</p>
-<script type="math/tex; mode=display">PQ=\frac{\sum_{(p,g) \in TP} IoU(p,g)}{|TP|} \times \frac{|TP|}{|TP|+\frac{1}{2}|FP|+\frac{1}{2}|FN|}</script><p>where the first term can be seen as SQ and the second term can be seen as DQ.</p>
-<h3 id="Human-vs-Machine"><a href="#Human-vs-Machine" class="headerlink" title="Human vs. Machine"></a>Human vs. Machine</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180109_human-vs-machine.png" alt="Human vs. Machine" title="Human vs. Machine"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1245,7 +1255,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">235</span>
+          <span class="site-state-item-count">236</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1258,7 +1268,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">57</span>
+        <span class="site-state-item-count">58</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
