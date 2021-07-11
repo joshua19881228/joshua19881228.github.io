@@ -172,6 +172,102 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/18/Computer_Vision/Reading_Note/2017-04-18-FastMask/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/04/18/Computer_Vision/Reading_Note/2017-04-18-FastMask/" class="post-title-link" itemprop="url">Reading Note: FastMask: Segment Multi-scale Object Candidates in One Shot</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-04-18 00:00:00" itemprop="dateCreated datePublished" datetime="2017-04-18T00:00:00+08:00">2017-04-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: FastMask: Segment Multi-scale Object Candidates in One Shot</p>
+<p><strong>AUTHOR</strong>: Hexiang Hu, Shiyi Lan, Yuning Jiang, Zhimin Cao, Fei Sha</p>
+<p><strong>ASSOCIATION</strong>: UCLA, Fudan University, Megvii Inc.</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1703.03872" target="_blank" rel="noopener">arXiv:1703.03872</a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><ol>
+<li>A novel weight-shared residual neck module is proposed to zoom out feature maps of CNN while preserving calibrated feature semantics, which enables efficient multi-scale training and inference.</li>
+<li>A novel scale-tolerant head module is proposed which takes advantage of attention model and significantly reduces the impact of background noises caused by unmatched receptive fields.</li>
+<li>A framework capable for one-shot segment proposal is made up, namely FastMask. The proposed framework achieves the the state-of-the-art results in accuracy while running in near real time on MS COCO benchmark.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="Network-Architecture"><a href="#Network-Architecture" class="headerlink" title="Network Architecture"></a>Network Architecture</h3><p>The network architecture is illustrated in the following figure. </p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170418_FastMask_1.png" alt="" width="640"/></p>
+<p>With the base feature map, a shared neck module is applied recursively to build feature maps with different scales. These feature maps are then fed to a one-by-one convolution to reduce their feature dimensionality. Then we extract dense sliding windows from those feature maps and do a batch normalization across all windows to calibrate and redistribute window feature maps. With a feature map downscaled by factor $m$, a sliding window of size $(k, k)$ corresponds to a patch of $(m \times k, m \times k)$ at original image. Finally, a unified head module is used to decode these window features and produce the output confidence score as well as object mask.</p>
+<h3 id="Residual-Neck"><a href="#Residual-Neck" class="headerlink" title="Residual Neck"></a>Residual Neck</h3><p>The <em>neck</em> module is actually used to downscale the feature maps so that features with different scales can be extracted. </p>
+<p>There are another two choices. One is <em>Max pooling neck</em>, which produces uncalibrated feature in encoding pushing the mean of downscaled feature higher than original. The other one is <em>Average pooling neck</em>, which smoothes out discriminative feature during encoding, making the top feature maps appear to be blurry.</p>
+<p><em>Residual neck</em> is then proposed to learn parametric necks that preserve feature semantics. The following figure illustrates the method.</p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170418_FastMask_2.png" alt="" width="480"/></p>
+<h3 id="Attentional-Head"><a href="#Attentional-Head" class="headerlink" title="Attentional Head"></a>Attentional Head</h3><p>Given the feature map of a sliding window as the input, a spatial attention is generated through a fully connected layer, which takes the entire window feature to generate the attention score for each spatial location on the feature map. The spatial attention is then applied to window feature map via the element-wise multiplication across channels. Such operation enables the head module to enhance features on the salient region, where is supposed to be the rough location of the target object. Finally, the enhanced feature map will be fed into a fully connected laye to decode the segmentation mask of the object. This module is illustrated in the following figure.</p>
+<p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170418_FastMask_2.png" alt="" width="640"/></p>
+<p>The feature pyramid is sparse in this work because of the downscale operation. The sparse feature pyramid raises the probability that there exists no suitable feature maps for an object to decode, and also raises the risk of introducing background noises when the object is decoded from an unsuitable feature map with too larger receptive field. So salient region is introduced in this head. With the capability of paying attention to the salient region, a decoding head could reduce the noises from the backgrounds of a sliding window and thus produce high quality segmentation results when the receptive field is unmatched with the scale of object. Also the salient region attention has the tolerance to shift disturbance.</p>
+<h2 id="SOME-IDEAS"><a href="#SOME-IDEAS" class="headerlink" title="SOME IDEAS"></a>SOME IDEAS</h2><ol>
+<li>This work shares the similar idea with most one-shot alogrithms, extracting sliding window in the feature map and endcode them with a following network.</li>
+<li>How to extract sliding windows?</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/17/Life_Discovery/Little_Things/2017-04-17-Little-Things/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -908,80 +1004,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/Life_Discovery/My_Drawings/2017-03-10-My-Drawings/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/03/10/Life_Discovery/My_Drawings/2017-03-10-My-Drawings/" class="post-title-link" itemprop="url">My Drawings [20170310]</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2017-03-10 00:00:00" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">2017-03-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/My_Drawings/20170310.jpg" alt="" width="480"/></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1053,7 +1075,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">236</span>
+          <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

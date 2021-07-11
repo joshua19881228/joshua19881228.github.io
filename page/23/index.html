@@ -172,6 +172,108 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/05/Computer_Vision/Reading_Note/2015-11-05-Joint-Tracking-and-Segmentation-of-Multiple-Targets/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/11/05/Computer_Vision/Reading_Note/2015-11-05-Joint-Tracking-and-Segmentation-of-Multiple-Targets/" class="post-title-link" itemprop="url">READING NOTE: READING NOTE: Joint Tracking and Segmentation of Multiple Targets</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-11-05 00:00:00" itemprop="dateCreated datePublished" datetime="2015-11-05T00:00:00+08:00">2015-11-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Joint Tracking and Segmentation of Multiple Targets</p>
+<p><strong>AUTHOR</strong>: Milan, Anton and Leal-Taixe, Laura and Schindler, Konrad and Reid, Ian</p>
+<p><strong>FROM</strong>: CVPR2015</p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>A new CRF model taking advantage of both high-level detector responses and low-level superpixel information</li>
+<li>Fully automated segmentation and tracking of an unknown number of targets.</li>
+<li>A complete state representation at every time step could handle occlusions</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><ol>
+<li>Generate an overcomplete set of trajectory hypotheses.</li>
+<li>Solve data association problem by optimizing an objective function, which is a multi-label conditional random field (CRF).</li>
+</ol>
+<h4 id="SOME-DETAILS"><a href="#SOME-DETAILS" class="headerlink" title="SOME DETAILS"></a>SOME DETAILS</h4><p><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/MRF.png" alt="" width="480"/></p>
+<p>The goal is to find the most probable labeling for all nodes given the observations, which is equivalent to</p>
+<script type="math/tex; mode=display">v^{*} = \mathrm{argmin_{v}}E(\nu)</script><p>in which</p>
+<script type="math/tex; mode=display">E(\nu) = \sum_{s\in\large{\nu}_{S}}\phi^{\large{\nu}_{S}}(s) + \sum_{d\in\large{\nu}_{D}}\phi^{\large{\nu}_{D}}(d) + \sum_{(v,w)\in\Large{\varepsilon}}\psi(v,w)+\psi^{\lambda}</script><p>where \(\phi^{\large{\nu}<em>{S}}\) and \(\phi^{\large{\nu}</em>{D}}\) are unary potential functions for superpixel and detection nodes, respectively, measuring the cost of one detection node in \(\large{\nu}<em>{D}\) or one superpixel node in \(\large{\nu}</em>{S}\) belonging to a certain target; \(\psi(v,w)\) is pairwise edges among superpixels and detections, including spacial and temporal information among superpixels and information among superpixels and detections in the same frame; \(\psi^{\lambda}\) is trajectory cost, containing several constrains of height, shape, dynamics, persistence, image likelihood and parsimony.</p>
+<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>Taking pixel (superpixel) level information in addition to detection results into consideration could handle partial occlusions, which would lead to higher recall.</li>
+<li>Segments could provide considerable information even no reliable detection result exists.</li>
+<li>Modeling multi-targets tracking problem to graph model could take advantage of existing optimization algorithms.</li>
+</ol>
+<h3 id="DISADVANTAGES"><a href="#DISADVANTAGES" class="headerlink" title="DISADVANTAGES"></a>DISADVANTAGES</h3><ol>
+<li>Solving CRF problem is slow, needing 12 seconds per frame.</li>
+<li>Can not handle ID switch in two adjacent temporal slidewindows.</li>
+</ol>
+<h3 id="OTHER"><a href="#OTHER" class="headerlink" title="OTHER"></a>OTHER</h3><ol>
+<li>Tracking-by-detection has proven to be the most successful strategy to address multi-target tracking problem.</li>
+<li>Noise and imprecise measurements, long-term occlusions, complicated dynamics and target interactions all contributes to the problem’s complexity.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/04/Computer_Vision/Reading_Note/2015-11-04-Learning-to-Segment-Moving-Objects-in-Videos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -953,86 +1055,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/08/01/Life_Discovery/Miscellaneous/2015-08-01-Miscellaneous/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2015/08/01/Life_Discovery/Miscellaneous/2015-08-01-Miscellaneous/" class="post-title-link" itemprop="url">梦</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2015-08-01 00:00:00" itemprop="dateCreated datePublished" datetime="2015-08-01T00:00:00+08:00">2015-08-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>昨天夜里做了个梦。</p>
-<p>我叫刘亚楠，年龄应该是18-19岁左右。在A城某学校上学，这所学校绝不是现实中的大学，更像是培训中心，教会学生如何成为人类社会的一颗螺丝钉，如何为了人类的生存而服从管理。在这里，恋爱是被禁止的，因为一个人的未来已经被确定了，他或她以后有没有被计划结婚，繁衍几个后代都是确定的。但是，我和一个叫陈美玲的女孩恋爱了，虽然只能是地下恋情，我们依旧很开心。</p>
-<p>终于有一天我们的事情暴露了，在傍晚天刚刚黑下来的时候，学校的负责人带着政府的人来抓我们。这一天天气阴沉，刚刚下过雨，道路湿滑，宿舍楼道里的黄色灯光十分昏暗，还在不停的抖动，时亮时暗。我的好朋友alice(一个有点男人婆的女生)跑来告诉我快逃，于是我拉着美玲逃出了学校。我清楚地记得当我们转过楼道尽头来到一侧的楼梯间时，来抓我们的人刚刚走出楼道另一侧的楼梯间，就这样他们错过了我们。</p>
-<p>A城晚上是有宵禁的，无缘无故在外面瞎晃是会被抓起来的，于是我和美玲决定乘长途汽车先躲到临城，然后想办法逃到偏远地区生活。学校里，学校负责人发现我们不见了，要求学校里的所有老师和学生对学校和A城进行搜索。从A城出发的长途汽车站只有一个，位于一个叫“老城墙”的地方，而我们离这个地方很远，必须乘车才能到。为了不被学校的人抓到，我们必须去一个偏远的公交站坐车。在去公交站的路上，我们发现有学校的人，我们知道他们是来抓我们的，于是我们不得不去另一个更远的车站。在路上我们不停的跑，一是因为每天公交的班次是有限的，错过了就要几个小时以后才能有下一班，另一个原因就是我们害怕被抓到。</p>
-<p>当我们跑到车站的时候，天已经完全黑了，街边立着不太亮的路灯，我们躲到车站旁边小巷的阴影里忐忑地等车，一边盼望着车快点来，一边紧张地关注着是不是有学校的人出现。当公交车缓缓的进站时，我们走出阴影，准备上车。这时，我突然发现有一群人向车站走来，他们是学校里的学生。这些人中有几个是和我熟识的朋友，其中一个是alice。还有一个小男孩，只有14-15岁，我们都管他叫“小孩”，因为他的年龄比我们都小，很可爱，而且善良单纯，别人说什么都信。我赶紧压低了美玲和我的帽檐，我只盼着他们不要在人群里把我们认出来，因为车已经停下来了，我们马上就可以上车了。这时来抓我们的人已经走到我们身边了，“小孩”就在我身边，我扭过脸怕被他发现，但是他还是发现了我，与我四目相对的一刻，我看到了他眼中的惊奇，或许他从来没有想到过真的可以找到我们，我冲他摇了摇头，希望他不用揭发我们。但是，在一丝犹豫之后，他还是向其他人大喊我在这里。这时车门开了，我一把把美玲推上车，而我被一只手抓住了，虽然我挣脱了那只手，但是我没能上车，我只能沿着路逃跑，我能看见美玲在车窗里流着泪向我比划着说到临城找她。</p>
-<p>宵禁开始了，没有办法，我只能悄悄潜回了学校，躲进了存放打扫工具的房间，我锁上了门，但不敢打开房间里的灯，害怕被人发现。我躲进来不久，房门被钥匙打开了，我赶快躲到了一堆工具后面，但是进来的人没有开灯。我听见他们说话，是alice和“小孩”，alice指责“小孩”为什么要揭发我，“小孩”说是因为老师要求的，alice很无奈，只好让“小孩”先回去了。过了一会儿，alice也出去了，从外面锁了门。等了一会儿，我刚刚感觉到放松，想从工具后面出来，找个舒服一点的地方打个盹，这时门锁又被转动了，进来一个膀大腰圆的男人，他打开灯，一个箭步就把我从工具后面抓了出来…</p>
-<p>醒了。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1104,7 +1126,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">236</span>
+          <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

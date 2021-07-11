@@ -172,6 +172,97 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/Computer_Vision/Reading_Note/2018-01-10-Single-Shot-Refinement-Neural-Network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/10/Computer_Vision/Reading_Note/2018-01-10-Single-Shot-Refinement-Neural-Network/" class="post-title-link" itemprop="url">Reading Note: Single-Shot Refinement Neural Network for Object Detection</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-01-10 00:00:00" itemprop="dateCreated datePublished" datetime="2018-01-10T00:00:00+08:00">2018-01-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Single-Shot Refinement Neural Network for Object Detection</p>
+<p><strong>AUTHOR</strong>: Shifeng Zhang, LongyinWen, Xiao Bian, Zhen Lei, Stan Z. Li</p>
+<p><strong>ASSOCIATION</strong>: CACIA, GE Global Research</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1711.06897" target="_blank" rel="noopener">arXiv:1711.06897</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>A novel one-stage framework for object detection is introduced, composed of two inter-connected modules, i.e., the ARM (Anchor Refinement Module) and the ODM (Object Detection Module). This leads to performance better than the two-stage approach while maintaining high efficiency of the one-stage approach. </li>
+<li>To ensure the effectiveness, TCB (Transfer Connection Block) is designed to transfer the features in the ARM to handle more challenging tasks, i.e., predict accurate object locations, sizes and class labels, in the ODM.</li>
+<li>RefineDet achieves the latest state-of-the-art results on generic object detection</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The idea of this work can be seen as an improvement based on <a href="https://joshua19881228.github.io/2017-02-10-DSSD/" target="_blank" rel="noopener">DSSD</a> method. The DSSD method uses multi-scale feature maps to predict categories and regress bounding boxes. In DSSD, deconvolution is also used to increase the resolution of the last feature maps. In this work, a binary classifier and a coarse regressor is added to the downsampling stages. Their outputs are the inputs to the multi-category classifier and fine regressor. The framework this single-shot refinement neural network is illustrated in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180110_SSRNN.png" alt="Framework" title="Framework"></p>
+<h3 id="Anchor-Refinement-Module"><a href="#Anchor-Refinement-Module" class="headerlink" title="Anchor Refinement Module"></a>Anchor Refinement Module</h3><p>The ARM is designed to (1) identify and remove negative anchors to reduce search space for the classifier, and (2) coarsely adjust the locations and sizes of anchors to provide better initialization for the subsequent regressor.</p>
+<p>In training phase, for a refined anchor box, if its negative confidence is larger than a preset threshold θ (i.e., set θ = 0.99 empirically), we will discard it in training the ODM.</p>
+<h3 id="Object-Detection-Module"><a href="#Object-Detection-Module" class="headerlink" title="Object Detection Module"></a>Object Detection Module</h3><p>The ODM takes the refined anchors as the input from the former to further improve the regression and predict multi-class labels.</p>
+<h3 id="Transfer-Connection-Block"><a href="#Transfer-Connection-Block" class="headerlink" title="Transfer Connection Block"></a>Transfer Connection Block</h3><p>TCB is introduced to convert features of different layers from the ARM, into the form required by the ODM, so that the ODM can share features from the ARM. Another function of the TCBs is to integrate large-scale context by adding the high-level features to the transferred features to improve detection accuracy. An illustration of TCB can be found in the following figure. </p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180110_TCB.png" alt="TCB" title="TCB"></p>
+<h3 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h3><p>The training method is much like SSD. The experiment result and comparison with other method can be found in the following table.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180110_experiment.png" alt="TCB" title="TCB"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/Computer_Vision/Reading_Note/2018-01-08-Panoptic_Segmentation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -936,86 +1027,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/16/Using_Linux/2017-09-16-Linux-on_Win10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/09/16/Using_Linux/2017-09-16-Linux-on_Win10/" class="post-title-link" itemprop="url">Win10开启Linux Bash</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2017-09-16 00:00:00" itemprop="dateCreated datePublished" datetime="2017-09-16T00:00:00+08:00">2017-09-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-04-04 20:16:03" itemprop="dateModified" datetime="2021-04-04T20:16:03+08:00">2021-04-04</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Using-Linux/" itemprop="url" rel="index"><span itemprop="name">Using Linux</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>微软在推送的Win10一周年更新预览版14316中，该版本中包含了大部分已宣布内容，其中包括了一项重要的原生支持Linux Bash命令行支持。即用户现在即使不使用Linux系统或Mac电脑就可以在Win10上使用Bash，那么如何在Win10系统上开启Linux Bash命令行呢？大家可以尝试下面的方法来解决这个问题。</p>
-<ol>
-<li>首先需要用户将Win10系统升级到Build 14316版本。系统设置——更新和安全——针对开发人员——选择开发者模式。</li>
-<li>搜索“程序和功能”，选择“开启或关闭Windows功能”，开启Windows Subsystem for Linux （Beta），并重启系统。</li>
-<li>安装Bash，需要开启命令行模式，然后输入<code>bash</code>，即可使用。</li>
-<li>系统目录在 <code>C:\Users\a\AppData\Local\lxss\home\tztx\CODE\caffe-online-demo</code> 下。</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1087,7 +1098,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">236</span>
+          <span class="site-state-item-count">237</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
