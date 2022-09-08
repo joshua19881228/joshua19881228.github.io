@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="GstreamerThe official website of Gstreamer is here. What is Gstreamer is quoted from its website:  GStreamer is a library for constructing graphs of media-handling components. The applications it supp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Using Gstreamer to Play Video Files">
+<meta property="og:url" content="http://yoursite.com/2016/10/07/Coding/2016-10-07-Using-Gstreamer-to-play-video-files/index.html">
+<meta property="og:site_name" content="Joshua&#39;s Blog">
+<meta property="og:description" content="GstreamerThe official website of Gstreamer is here. What is Gstreamer is quoted from its website:  GStreamer is a library for constructing graphs of media-handling components. The applications it supp">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2016-10-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-19T09:11:04.566Z">
+<meta property="article:author" content="Joshua LI">
+<meta property="article:tag" content="Gstreamer">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2016/10/07/Coding/2016-10-07-Using-Gstreamer-to-play-video-files/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Using Gstreamer to Play Video Files | Joshua's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Joshua's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-my-jumble-of-computer-vision">
+
+    <a href="/2016/08/25/Computer_Vision/2016-08-25-my-jumble-of-computer-vision/" rel="section"><i class=" fa-fw"></i>My Jumble of Computer Vision</a>
+
+  </li>
+        <li class="menu-item menu-item-an-introduction-to-cnn-based-object-detection">
+
+    <a href="/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/" rel="section"><i class=" fa-fw"></i>An Introduction to CNN based Object Detection</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/07/Coding/2016-10-07-Using-Gstreamer-to-play-video-files/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Using Gstreamer to Play Video Files
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-10-07 00:00:00" itemprop="dateCreated datePublished" datetime="2016-10-07T00:00:00+08:00">2016-10-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Gstreamer"><a href="#Gstreamer" class="headerlink" title="Gstreamer"></a>Gstreamer</h1><p>The official website of Gstreamer is <a href="https://gstreamer.freedesktop.org/" target="_blank" rel="noopener">here</a>. What is Gstreamer is quoted from its website:</p>
+<blockquote>
+<p>GStreamer is a library for constructing graphs of media-handling components. The applications it supports range from simple Ogg/Vorbis playback, audio/video streaming to complex audio (mixing) and video (non-linear editing) processing.</p>
+<p>Applications can take advantage of advances in codec and filter technology transparently. Developers can add new codecs and filters by writing a simple plugin with a clean, generic interface.</p>
+<p>GStreamer is released under the LGPL. The 1.x series is API and ABI stable and supersedes the previous stable 0.10 series. Both can be installed in parallel.</p>
+</blockquote>
+<h1 id="A-Simple-Tutorial"><a href="#A-Simple-Tutorial" class="headerlink" title="A Simple Tutorial"></a>A Simple Tutorial</h1><p>I started to learn to use Gstreamer just two days ago, and I found a very useful tutorial called <a href="https://arashafiei.files.wordpress.com/2012/12/gst-doc.pdf" target="_blank" rel="noopener">Gstreamer Small Tutorial</a> authored by <a href="https://github.com/ashafiei" target="_blank" rel="noopener">Arash Shafiei</a>. One could use this tutorial as a stepping-stone to develop more complex applications. A more detailed tutorial can be found in Gstreamer’s <a href="http://docs.gstreamer.com/display/GstSDK/Tutorials" target="_blank" rel="noopener">website</a>.</p>
+<h1 id="My-Own-Trial"><a href="#My-Own-Trial" class="headerlink" title="My Own Trial"></a>My Own Trial</h1><p>Though Arash Shafiei provided an excellent sample, there is some modifications that need to be done to run the application to play video correctly.</p>
+<ol>
+<li>more recent API should be used by replacing <code>gst_pad_get_caps</code> with <code>gst_pad_query_caps</code>.</li>
+<li>there’s a mistake in Arash Shafiei’s sample code of <code>static void pad_added_handler(GstElement *src, GstPad *new_pad, CustomData *data)</code>. The original code will not link video sink if the audio sink has already linked no matter whether video sink is linked or not.</li>
+<li>a demuxer is added to the pipeline to handle the input of a file source element.</li>
+</ol>
+<p>my own code can be found following:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;gst/gst.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;glib.h&gt;</span></span></span><br><span class="line"><span class="comment">/* Structure to contain all our information, so we can pass it to callbacks */</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">CustomData</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    GstElement *pipeline;</span><br><span class="line">    GstElement *source;</span><br><span class="line">    GstElement *demuxer;</span><br><span class="line">    GstElement *video_convert;</span><br><span class="line">    GstElement *audio_convert;</span><br><span class="line">    GstElement *video_sink;</span><br><span class="line">    GstElement *audio_sink;</span><br><span class="line">&#125; CustomData;</span><br><span class="line"><span class="comment">/* Handler for the pad-added signal */</span></span><br><span class="line"><span class="comment">/* This function will be called by the pad-added signal */</span></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">pad_added_handler</span><span class="params">(GstElement *src, GstPad *new_pad, CustomData *data)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    GstPad *sink_pad_audio = gst_element_get_static_pad(data-&gt;audio_convert, <span class="string">"sink"</span>);</span><br><span class="line">    GstPad *sink_pad_video = gst_element_get_static_pad(data-&gt;video_convert, <span class="string">"sink"</span>);</span><br><span class="line">    GstPadLinkReturn ret;</span><br><span class="line">    GstCaps *new_pad_caps = <span class="literal">NULL</span>;</span><br><span class="line">    GstStructure *new_pad_struct = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">const</span> gchar *new_pad_type = <span class="literal">NULL</span>;</span><br><span class="line">    g_print(<span class="string">"Received new pad '%s' from '%s':\n"</span>, GST_PAD_NAME(new_pad), GST_ELEMENT_NAME(src));</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Check the new pad's type */</span></span><br><span class="line">    new_pad_caps = gst_pad_query_caps(new_pad, <span class="number">0</span>);</span><br><span class="line">    new_pad_struct = gst_caps_get_structure(new_pad_caps, <span class="number">0</span>);</span><br><span class="line">    new_pad_type = gst_structure_get_name(new_pad_struct);</span><br><span class="line">    <span class="keyword">if</span> (g_str_has_prefix(new_pad_type, <span class="string">"audio/x-raw"</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* If our audio converter is already linked, we have nothing to do here */</span></span><br><span class="line">        <span class="keyword">if</span> (gst_pad_is_linked(sink_pad_audio))</span><br><span class="line">        &#123;</span><br><span class="line">            g_print(<span class="string">" Type is '%s'.\n"</span>, new_pad_type);</span><br><span class="line">            g_print(<span class="string">" We are already linked. Ignoring.\n"</span>);</span><br><span class="line">            <span class="keyword">goto</span> <span class="built_in">exit</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">/* Attempt the link */</span></span><br><span class="line">        ret = gst_pad_link(new_pad, sink_pad_audio);</span><br><span class="line">        <span class="keyword">if</span> (GST_PAD_LINK_FAILED(ret))</span><br><span class="line">        &#123;</span><br><span class="line">            g_print(<span class="string">" Type is '%s' but link failed.\n"</span>, new_pad_type);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            g_print(<span class="string">" Link succeeded (type '%s').\n"</span>, new_pad_type);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (g_str_has_prefix(new_pad_type, <span class="string">"video/x-raw"</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* If our video converter is already linked, we have nothing to do here */</span></span><br><span class="line">        <span class="keyword">if</span> (gst_pad_is_linked(sink_pad_video))</span><br><span class="line">        &#123;</span><br><span class="line">            g_print(<span class="string">" Type is '%s'.\n"</span>, new_pad_type);</span><br><span class="line">            g_print(<span class="string">" We are already linked. Ignoring.\n"</span>);</span><br><span class="line">            <span class="keyword">goto</span> <span class="built_in">exit</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">/* Attempt the link */</span></span><br><span class="line">        ret = gst_pad_link(new_pad, sink_pad_video);</span><br><span class="line">        <span class="keyword">if</span> (GST_PAD_LINK_FAILED(ret))</span><br><span class="line">        &#123;</span><br><span class="line">            g_print(<span class="string">" Type is '%s' but link failed.\n"</span>, new_pad_type);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            g_print(<span class="string">" Link succeeded (type '%s').\n"</span>, new_pad_type);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        g_print(<span class="string">" It has type '%s' which is not raw audio. Ignoring.\n"</span>, new_pad_type);</span><br><span class="line">        <span class="keyword">goto</span> <span class="built_in">exit</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="built_in">exit</span>:</span><br><span class="line">    <span class="comment">/* Unreference the new pad's caps, if we got them */</span></span><br><span class="line">    <span class="keyword">if</span> (new_pad_caps != <span class="literal">NULL</span>)</span><br><span class="line">        gst_caps_unref(new_pad_caps);</span><br><span class="line">    <span class="comment">/* Unreference the sink pad */</span></span><br><span class="line">    gst_object_unref(sink_pad_audio);</span><br><span class="line">    gst_object_unref(sink_pad_video);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(argc != <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        g_printerr(<span class="string">"usage: ./player &lt;path_to_a_video&gt;\n"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    CustomData data;</span><br><span class="line">    GstBus *bus;</span><br><span class="line">    GstMessage *msg;</span><br><span class="line">    GstStateChangeReturn ret;</span><br><span class="line">    gboolean <span class="built_in">terminate</span> = FALSE;</span><br><span class="line">    <span class="comment">/* Initialize GStreamer */</span></span><br><span class="line">    gst_init(&amp;argc, &amp;argv);</span><br><span class="line">    <span class="comment">/* Create the elements */</span></span><br><span class="line">    data.source = gst_element_factory_make(<span class="string">"filesrc"</span>, <span class="string">"source"</span>);</span><br><span class="line">    data.demuxer = gst_element_factory_make(<span class="string">"decodebin"</span>, <span class="string">"demuxer"</span>);</span><br><span class="line">    data.audio_convert = gst_element_factory_make(<span class="string">"audioconvert"</span>, <span class="string">"audio_convert"</span>);</span><br><span class="line">    data.audio_sink = gst_element_factory_make(<span class="string">"autoaudiosink"</span>, <span class="string">"audio_sink"</span>);</span><br><span class="line">    data.video_convert = gst_element_factory_make(<span class="string">"videoconvert"</span>, <span class="string">"video_convert"</span>);</span><br><span class="line">    data.video_sink = gst_element_factory_make(<span class="string">"autovideosink"</span>, <span class="string">"video_sink"</span>);</span><br><span class="line">    <span class="comment">/* Create the empty pipeline */</span></span><br><span class="line">    data.pipeline = gst_pipeline_new(<span class="string">"test-pipeline"</span>);</span><br><span class="line">    <span class="keyword">if</span> (!data.pipeline || !data.source || !data.audio_convert ||</span><br><span class="line">        !data.audio_sink || !data.video_convert || !data.video_sink)</span><br><span class="line">    &#123;</span><br><span class="line">        g_printerr(<span class="string">"Not all elements could be created.\n"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* Build the pipeline. Note that we are NOT linking the source at this point. We will do it later. */</span></span><br><span class="line">    gst_bin_add_many(GST_BIN(data.pipeline), data.source, data.demuxer,</span><br><span class="line">                    data.audio_convert, data.audio_sink, data.video_convert, data.video_sink, <span class="literal">NULL</span>);</span><br><span class="line">    <span class="keyword">if</span> (!gst_element_link(data.source, data.demuxer))</span><br><span class="line">    &#123;</span><br><span class="line">        g_printerr(<span class="string">"Elements could not be linked.\n"</span>);</span><br><span class="line">        gst_object_unref(data.pipeline);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!gst_element_link(data.audio_convert, data.audio_sink))</span><br><span class="line">    &#123;</span><br><span class="line">        g_printerr(<span class="string">"Elements could not be linked.\n"</span>);</span><br><span class="line">        gst_object_unref(data.pipeline);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!gst_element_link(data.video_convert, data.video_sink))</span><br><span class="line">    &#123;</span><br><span class="line">        g_printerr(<span class="string">"Elements could not be linked.\n"</span>);</span><br><span class="line">        gst_object_unref(data.pipeline);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* Set the file to play */</span></span><br><span class="line">    g_object_set(data.source, <span class="string">"location"</span>, argv[<span class="number">1</span>], <span class="literal">NULL</span>);</span><br><span class="line">    <span class="comment">/* Connect to the pad-added signal */</span></span><br><span class="line">    g_signal_connect(data.demuxer, <span class="string">"pad-added"</span>, G_CALLBACK(pad_added_handler), &amp;data);</span><br><span class="line">    <span class="comment">/* Start playing */</span></span><br><span class="line">    ret = gst_element_set_state(data.pipeline, GST_STATE_PLAYING);</span><br><span class="line">    <span class="keyword">if</span> (ret == GST_STATE_CHANGE_FAILURE)</span><br><span class="line">    &#123;</span><br><span class="line">        g_printerr(<span class="string">"Unable to set the pipeline to the playing state.\n"</span>);</span><br><span class="line">        gst_object_unref(data.pipeline);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/* Listen to the bus */</span></span><br><span class="line">    bus = gst_element_get_bus(data.pipeline);</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        msg = gst_bus_timed_pop_filtered(bus, GST_CLOCK_TIME_NONE,</span><br><span class="line">        (GstMessageType)(GST_MESSAGE_STATE_CHANGED | GST_MESSAGE_ERROR | GST_MESSAGE_EOS));</span><br><span class="line">        <span class="comment">/* Parse message */</span></span><br><span class="line">        <span class="keyword">if</span> (msg != <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            GError *err;</span><br><span class="line">            gchar *debug_info;</span><br><span class="line">            <span class="keyword">switch</span> (GST_MESSAGE_TYPE(msg))</span><br><span class="line">            &#123;</span><br><span class="line">            <span class="keyword">case</span> GST_MESSAGE_ERROR:</span><br><span class="line">                gst_message_parse_error(msg, &amp;err, &amp;debug_info);</span><br><span class="line">                g_printerr(<span class="string">"Error received from element %s: %s\n"</span>, GST_OBJECT_NAME(msg-&gt;src), err-&gt;message);</span><br><span class="line">                g_printerr(<span class="string">"Debugging information: %s\n"</span>, debug_info ? debug_info : <span class="string">"none"</span>);</span><br><span class="line">                g_clear_error(&amp;err);</span><br><span class="line">                g_free(debug_info);</span><br><span class="line">                <span class="built_in">terminate</span> = TRUE;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> GST_MESSAGE_EOS:</span><br><span class="line">                g_print(<span class="string">"End-Of-Stream reached.\n"</span>);</span><br><span class="line">                <span class="built_in">terminate</span> = TRUE;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> GST_MESSAGE_STATE_CHANGED:</span><br><span class="line">                <span class="comment">/* We are only interested in state-changed messages from the pipeline */</span></span><br><span class="line">                <span class="keyword">if</span> (GST_MESSAGE_SRC(msg) == GST_OBJECT(data.pipeline))</span><br><span class="line">                &#123;</span><br><span class="line">                    GstState old_state, new_state, pending_state;</span><br><span class="line">                gst_message_parse_state_changed(msg, &amp;old_state, &amp;new_state, &amp;pending_state);</span><br><span class="line">                g_print(<span class="string">"Pipeline state changed from %s to %s:\n"</span>,</span><br><span class="line">                        gst_element_state_get_name(old_state), gst_element_state_get_name(new_state));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="comment">/* We should not reach here */</span></span><br><span class="line">            g_printerr(<span class="string">"Unexpected message received.\n"</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        gst_message_unref(msg);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">while</span> (!<span class="built_in">terminate</span>);</span><br><span class="line">    <span class="comment">/* Free resources */</span></span><br><span class="line">    gst_object_unref(bus);</span><br><span class="line">    gst_element_set_state(data.pipeline, GST_STATE_NULL);</span><br><span class="line">    gst_object_unref(data.pipeline);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>the compiling commond is </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc player.c -o player &#96;pkg-config --cflags --libs gstreamer-1.0&#96;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Gstreamer/" rel="tag"># Gstreamer</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/10/06/Using_Linux/2016-10-06-Using_WeChat_in_Ubuntu/" rel="prev" title="Using WeChat in Ubuntu">
+      <i class="fa fa-chevron-left"></i> Using WeChat in Ubuntu
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/10/09/Using_Linux/2016-10-09-Useful-tools-in-Ubuntu/" rel="next" title="在Ubuntu上愉快地玩耍">
+      在Ubuntu上愉快地玩耍 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Gstreamer"><span class="nav-number">1.</span> <span class="nav-text">Gstreamer</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#A-Simple-Tutorial"><span class="nav-number">2.</span> <span class="nav-text">A Simple Tutorial</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#My-Own-Trial"><span class="nav-number">3.</span> <span class="nav-text">My Own Trial</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joshua LI"
+      src="/images/avatar-icon.png">
+  <p class="site-author-name" itemprop="name">Joshua LI</p>
+  <div class="site-description" itemprop="description">Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">58</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/joshua19881228" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;joshua19881228" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhixuan.1988.li@gmail.com" title="E-Mail → mailto:zhixuan.1988.li@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/joshua1988" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;joshua1988" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joshua LI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'fa9833471b8d01a7387d',
+      clientSecret: 'ac1fa284ebb82e7ba13fdf0180cb9b41fc73c4f1',
+      repo        : 'joshua19881228.github.io',
+      owner       : 'joshua19881228',
+      admin       : ['joshua19881228'],
+      id          : '3921f5b811a1278c0c087fa722c881aa',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Joshua&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/8/index.html">
+<meta property="og:site_name" content="Joshua&#39;s Blog">
+<meta property="og:description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Joshua LI">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/page/8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Joshua's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Joshua's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-my-jumble-of-computer-vision">
+
+    <a href="/2016/08/25/Computer_Vision/2016-08-25-my-jumble-of-computer-vision/" rel="section"><i class=" fa-fw"></i>My Jumble of Computer Vision</a>
+
+  </li>
+        <li class="menu-item menu-item-an-introduction-to-cnn-based-object-detection">
+
+    <a href="/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/" rel="section"><i class=" fa-fw"></i>An Introduction to CNN based Object Detection</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/26/Life_Discovery/Little_Things/2017-06-26-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/06/26/Life_Discovery/Little_Things/2017-06-26-Little-Things/" class="post-title-link" itemprop="url">Little Things [20170626]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-06-26 00:00:00" itemprop="dateCreated datePublished" datetime="2017-06-26T00:00:00+08:00">2017-06-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Another week.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Little_Things/figures/20170626.jpg" alt="Carnation" title="Carnation"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/19/Life_Discovery/Little_Things/2017-06-19-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/06/19/Life_Discovery/Little_Things/2017-06-19-Little-Things/" class="post-title-link" itemprop="url">Little Things [20170619]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-06-19 00:00:00" itemprop="dateCreated datePublished" datetime="2017-06-19T00:00:00+08:00">2017-06-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>I’m always looking for the brightest sunshine!</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Little_Things/figures/20170619.jpg" alt="Barberton Daisy" title="Barberton Daisy"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/" class="post-title-link" itemprop="url">An Introduction to CNN based Object Detection</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-06-13 00:00:00" itemprop="dateCreated datePublished" datetime="2017-06-13T00:00:00+08:00">2017-06-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1-Content"><a href="#1-Content" class="headerlink" title="1. Content"></a>1. Content</h1><h2 id="Brief-Revisit-to-the-“Ancient”-Algorithm"><a href="#Brief-Revisit-to-the-“Ancient”-Algorithm" class="headerlink" title="Brief Revisit to the “Ancient” Algorithm"></a>Brief Revisit to the “Ancient” Algorithm</h2><ul>
+<li>HOG (before *2007)</li>
+<li>DPM (*2010~2014)</li>
+</ul>
+<h2 id="Epochal-Evolution-of-R-CNN"><a href="#Epochal-Evolution-of-R-CNN" class="headerlink" title="Epochal Evolution of R-CNN"></a>Epochal Evolution of R-CNN</h2><ul>
+<li>R-CNN *2014</li>
+<li>Fast-RCNN *2015</li>
+<li>Faster-RCNN *2015</li>
+</ul>
+<h2 id="Efficient-One-shot-Methods"><a href="#Efficient-One-shot-Methods" class="headerlink" title="Efficient One-shot Methods"></a>Efficient One-shot Methods</h2><ul>
+<li>YOLO</li>
+<li>SSD</li>
+</ul>
+<h2 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h2><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Goal_of_Detection.png" alt="Goal of Object Detection" title="Goal of Object Detection"></p>
+<h1 id="2-Brief-Revisit-to-the-“Ancient”-Algorithm"><a href="#2-Brief-Revisit-to-the-“Ancient”-Algorithm" class="headerlink" title="2. Brief Revisit to the “Ancient” Algorithm"></a>2. Brief Revisit to the “Ancient” Algorithm</h1><h2 id="2-1-Histograms-of-Gradients-HOG"><a href="#2-1-Histograms-of-Gradients-HOG" class="headerlink" title="2.1 Histograms of Gradients (HOG)"></a>2.1 Histograms of Gradients (HOG)</h2><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/HOG.png" alt="Histograms of Gradients" title="Histograms of Gradients"></p>
+<ul>
+<li>Calculate gradient for each pixel</li>
+<li>For each <strong>Cell</strong>, a histogram of gradient is computed</li>
+<li>For each <strong>Block</strong>, a HOG feature is extracted by concatenating histograms of each Cell</li>
+</ul>
+<p>If Block size = 16*16, Block stride = 8, Cell size = 8*8, Bin size = 9, Slide-window size = 128*64, then HOG feature is a 3780-d feature. #Block=((64-16)/8+1)*((128-16)/8+1)=105, #Cell=(16/8)*(16/8)=4, 105*4*9=3780</p>
+<h2 id="2-2-Deformable-Part-Models-DPM"><a href="#2-2-Deformable-Part-Models-DPM" class="headerlink" title="2.2 Deformable Part Models (DPM)"></a>2.2 Deformable Part Models (DPM)</h2><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/DPM.png" alt="DPM" title="DPM"></p>
+<script type="math/tex; mode=display">D_{i,l}(x,y) = \max \limits_{dx,dy} (R_{i,l}(x+dx, y+dy)-d_{i}\cdot \phi_{d}(dx,dy))</script><p>This transformation spreads high filter scores to nearby locations, taking into account the deformation costs.</p>
+<script type="math/tex; mode=display">score(x_{0},y_{0},l_{0}) = R_{0,l_{0}}(x_{0},y_{0})+ \sum_{i=1}^{n} D_{i, l_{0}-\lambda}(2(x_{0},y_{0})+v_{i})+b</script><p>The overall root scores at each level can be expressed by the sum of the root filter response at that level, plus shifted versions of transformed and sub-sampled part responses.</p>
+<h1 id="3-Epochal-Evolution-of-R-CNN"><a href="#3-Epochal-Evolution-of-R-CNN" class="headerlink" title="3. Epochal Evolution of R-CNN"></a>3. Epochal Evolution of R-CNN</h1><h2 id="3-1-RCNN"><a href="#3-1-RCNN" class="headerlink" title="3.1 RCNN"></a>3.1 RCNN</h2><h3 id="3-1-1-Regions-with-CNN-Features"><a href="#3-1-1-Regions-with-CNN-Features" class="headerlink" title="3.1.1 Regions with CNN Features"></a>3.1.1 Regions with CNN Features</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/RCNN.png" alt="RCNN" title="RCNN"></p>
+<ul>
+<li>Region proposals (Selective Search, ~2k)</li>
+<li>CNN features (AlexNet, VGG-16, warped region in image)</li>
+<li>Classifier (Linear SVM per class)</li>
+<li>Bounding box (Class-specific regressor)</li>
+<li>Run-time speed (VGG-16, 47 s/img on single K40 GPU)</li>
+</ul>
+<h3 id="3-1-2-Experiment-Result-AlexNet"><a href="#3-1-2-Experiment-Result-AlexNet" class="headerlink" title="3.1.2 Experiment Result (AlexNet)"></a>3.1.2 Experiment Result (AlexNet)</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/RCNN_Result.png" alt="RCNN_Result" title="RCNN_Result"></p>
+<ul>
+<li>Without FT, fc7 is worse than fc6, pool5 is quite competitive. Much of the CNN’s representational power comes from its convolutional layers, rather than from the much larger densely connected layers.</li>
+<li>With FT, The boost from fine-tuning is much larger for fc6 and fc7 than for pool5. Pool5 features are general. Learning domain-specific non-linear classifiers helps a lot.</li>
+<li>Bounding box regression helps reduce localization errors. </li>
+</ul>
+<h3 id="3-1-3-Interesting-Details-–-Training"><a href="#3-1-3-Interesting-Details-–-Training" class="headerlink" title="3.1.3 Interesting Details – Training"></a>3.1.3 Interesting Details – Training</h3><ul>
+<li>Pre-trained on ILSVRC2012 classification task</li>
+<li><p>Fine-tuned on proposals with N+1 classes without any modification to the network</p>
+<ol>
+<li>IOU&gt;0.5 over ground-truth as positive samples, others as negative samples</li>
+<li>Each mini-batch contains 32 positive samples and 96 background samples</li>
+</ol>
+</li>
+<li><p>SVM for each category</p>
+<ol>
+<li>Ground-truth window as positive samples</li>
+<li>IOU&lt;0.3 over ground-truth as negative samples</li>
+<li>Hard negative mining is adopted</li>
+</ol>
+</li>
+<li><p>Bounding-box regression</p>
+<ol>
+<li>Class-specific</li>
+<li>Features computed by CNN</li>
+<li>Only the proposals IOU&gt;0.6 overlap ground-truth</li>
+<li>Coordinates in pixel</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-1-4-Interesting-Details-–-FP-Error-Types"><a href="#3-1-4-Interesting-Details-–-FP-Error-Types" class="headerlink" title="3.1.4 Interesting Details – FP Error Types"></a>3.1.4 Interesting Details – FP Error Types</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/RCNN_Error.png" alt="RCNN_Error" title="RCNN_Error"></p>
+<ul>
+<li>Loc: poor localization, 0.1 &lt; IOU &lt; 0.5</li>
+<li>Sim: confusion with a similar category</li>
+<li>Oth: confusion with a dissimilar object category</li>
+<li>BG: a FP that fired on background</li>
+</ul>
+<h2 id="3-2-Fast-RCNN"><a href="#3-2-Fast-RCNN" class="headerlink" title="3.2 Fast-RCNN"></a>3.2 Fast-RCNN</h2><h3 id="3-2-1-What’s-Wrong-with-RCNN"><a href="#3-2-1-What’s-Wrong-with-RCNN" class="headerlink" title="3.2.1 What’s Wrong with RCNN"></a>3.2.1 What’s Wrong with RCNN</h3><ul>
+<li>Training is a multi-stage pipeline (Proposal, Fine-tune, SVMs, Regressors)</li>
+<li>Training is expensive in space and time (Extract feature from every proposal, Need to save to disk)</li>
+<li>Oject detection is slow (47 s/img on K40)</li>
+</ul>
+<h3 id="3-2-2-R-CNN-with-ROI-Pooling"><a href="#3-2-2-R-CNN-with-ROI-Pooling" class="headerlink" title="3.2.2 R-CNN with ROI Pooling"></a>3.2.2 R-CNN with ROI Pooling</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN.png" alt="Fast_RCNN" title="Fast_RCNN"></p>
+<ul>
+<li>Region proposals (Selective Search, ~2k)</li>
+<li>CNN features (AlexNet, VGG-16, ROI in feature map)</li>
+<li>Classifier (sub-network softmax)</li>
+<li>Bounding box (sub-network regressor)</li>
+<li>Run-time speed (VGG-16, 0.32 s/img on single K40 GPU)</li>
+</ul>
+<h3 id="3-2-3-ROI-Pooling"><a href="#3-2-3-ROI-Pooling" class="headerlink" title="3.2.3 ROI Pooling"></a>3.2.3 ROI Pooling</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SPP.png" alt="SPP" title="SPP"></p>
+<ul>
+<li>Inspired by Spatial Pyramid Pooling (SPPNet)</li>
+<li><p>Convert arbitrary input size to fixed length</p>
+<ol>
+<li>The input is an ROI area in feature map</li>
+<li>The input is divided into grids</li>
+<li>In each grid, pooling is used to extract features</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-2-4-Experiment-Result-VGG16"><a href="#3-2-4-Experiment-Result-VGG16" class="headerlink" title="3.2.4 Experiment Result (VGG16)"></a>3.2.4 Experiment Result (VGG16)</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_Result.png" alt="Fast_RCNN_Result" title="Fast_RCNN_Result"></p>
+<h3 id="3-2-5-Interesting-Details-–-Training"><a href="#3-2-5-Interesting-Details-–-Training" class="headerlink" title="3.2.5 Interesting Details – Training"></a>3.2.5 Interesting Details – Training</h3><ul>
+<li>Pre-trained on ILSVRC2012 classification task</li>
+<li><p>Fine-tuned with N+1 classes and two sibling layers</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_Finetune.png" alt="Fast_RCNN_Finetune" title="Fast_RCNN_Finetune"></p>
+<ol>
+<li>Fine-tune the whole network</li>
+<li>Each mini-batch has 2 images and 64 ROIs from each images</li>
+<li>25% of the ROIs have IOU&gt;0.5 with ground-truth as positive samples</li>
+<li><p>The rest of the ROIs have IOU [0.1, 0.5) with ground-truth as background samples</p>
+<script type="math/tex; mode=display">L(p,u,l^u,v) = L_{cls}(p,u) + \lambda [u \geq 1] L_{loc}(t^u,v)</script></li>
+<li><p>Multi-task loss, one loss for classification and one for bounding box regression</p>
+</li>
+<li>ROI pooling back-propagation is similar with max-pooling</li>
+</ol>
+</li>
+<li><p>Accelerate using truncated SVD</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_SVD.png" alt="Fast_RCNN_SVD" title="Fast_RCNN_SVD"></p>
+<p>  Implemented by using two FCs without non-linear activation</p>
+</li>
+<li><p>Training time</p>
+<ol>
+<li>146x faster than R-CNN</li>
+<li>If accelerated with truncated SVD, 213x faster than R-CNN</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-2-6-Interesting-Details-–-Design-evaluation"><a href="#3-2-6-Interesting-Details-–-Design-evaluation" class="headerlink" title="3.2.6 Interesting Details – Design evaluation"></a>3.2.6 Interesting Details – Design evaluation</h3><ul>
+<li>Does multi-task training help? <em>Yes, it does!</em></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_multitask_training.png" alt="Multi-task Training" title="Multi-task Training"></p>
+<ul>
+<li>Test with multiple scales? <em>Yes but with cost.</em></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_multiscale.png" alt="Multi-scale vs. single scale" title="Multi-scale vs. single scale"></p>
+<ul>
+<li>Do SVMs outperform softmax? <em>Interesting…</em></li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Fast_RCNN_softmax_svm.png" alt="softmax vs. SVM" title="softmax vs. SVM"></p>
+<h2 id="3-3-Faster-RCNN"><a href="#3-3-Faster-RCNN" class="headerlink" title="3.3 Faster-RCNN"></a>3.3 Faster-RCNN</h2><h3 id="3-3-1-Room-to-improve-Fast-RCNN"><a href="#3-3-1-Room-to-improve-Fast-RCNN" class="headerlink" title="3.3.1 Room to improve Fast-RCNN"></a>3.3.1 Room to improve Fast-RCNN</h3><ul>
+<li>Region proposal has become the bottleneck</li>
+<li>2s for Selective Search, 0.320s for Fast-RCNN</li>
+<li>Why not a unified end-to-end framework</li>
+</ul>
+<h3 id="3-3-2-Fast-RCNN-with-RPN-Region-Proposal-Network"><a href="#3-3-2-Fast-RCNN-with-RPN-Region-Proposal-Network" class="headerlink" title="3.3.2 Fast-RCNN with RPN (Region Proposal Network)"></a>3.3.2 Fast-RCNN with RPN (Region Proposal Network)</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_framework.png" alt="softmax vs. SVM" title="softmax vs. SVM"></p>
+<ul>
+<li>Region proposals (RPN, ~300)</li>
+<li>Classifier (sub-network softmax)</li>
+<li>Bounding box (RPN regressor, sub-network regressor)</li>
+<li>Run-time speed (VGG-16, 0.198 s/img on single K40 GPU)</li>
+</ul>
+<h3 id="3-3-3-Region-Proposal-Network"><a href="#3-3-3-Region-Proposal-Network" class="headerlink" title="3.3.3 Region Proposal Network"></a>3.3.3 Region Proposal Network</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_anchors.png" alt="Anchors" title="Anchors"></p>
+<ul>
+<li><p>Anchors</p>
+<ol>
+<li>reference box, prior box, default box</li>
+<li>Works in a slide-window way</li>
+<li>Implemented by 3*3 kernel convolution</li>
+<li>Centered at the slide-window</li>
+</ol>
+</li>
+<li><p>Translation-Invariant</p>
+<ol>
+<li>If objects translated, proposal should be translated</li>
+<li>Translated along slide-window</li>
+</ol>
+</li>
+<li><p>Multi-Scale and Multi-Ratio</p>
+<ol>
+<li>A pyramid of anchors</li>
+<li>A set of different ratios</li>
+<li>Relies on single scale feature map</li>
+</ol>
+</li>
+<li><p>Objectness and Localization</p>
+<ol>
+<li>Two siblings</li>
+<li>Objectness score</li>
+<li>Bounding box regression</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-3-4-Experiment-Result"><a href="#3-3-4-Experiment-Result" class="headerlink" title="3.3.4 Experiment Result"></a>3.3.4 Experiment Result</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_result.png" alt="Result" title="Result"></p>
+<h3 id="3-3-5-Interesting-Details-–-Training"><a href="#3-3-5-Interesting-Details-–-Training" class="headerlink" title="3.3.5 Interesting Details – Training"></a>3.3.5 Interesting Details – Training</h3><ul>
+<li><p>Sharing Features for RPN and Fast-RCNN</p>
+<ol>
+<li>Alternating training</li>
+<li>Approximate joint training</li>
+<li>Non-approximate joint training</li>
+</ol>
+</li>
+<li><p>Alternating Training</p>
+<ol>
+<li>Train RPN(@) using pre-trained model</li>
+<li>Train Fast-RCNN(#) using pre-trained model and @’s proposal</li>
+<li>Train RPN($) using #’s weight with shared layers fixed</li>
+<li>Train Fast-RCNN using $’s proposal with shared layers fixed</li>
+</ol>
+</li>
+<li><p>Training RPN</p>
+<ol>
+<li>Each mini-batch arises from a single image</li>
+<li>Positive samples: the anchors with (1) the highest IOU and (2) IOU&gt;0.7 overlap with any ground-truth</li>
+<li>Negative samples: IOU&lt;0.3 overlap with all ground-truth</li>
+<li>Randomly sample 256 anchors, pos:neg = 1:1</li>
+<li>Loss function with Ncls=256, Nreg=~2400, λ=10</li>
+<li>Anchors cross image boundaries do not contribute at training stage</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-3-6-Interesting-Details-–-Design-Evaluation"><a href="#3-3-6-Interesting-Details-–-Design-Evaluation" class="headerlink" title="3.3.6 Interesting Details – Design Evaluation"></a>3.3.6 Interesting Details – Design Evaluation</h3><ul>
+<li><p>Ablation on RPN</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_ablation_on_rpn.png" alt="Ablation on RPN" title="Ablation on RPN"></p>
+<ol>
+<li>Sharing: Detector feature helps RPN</li>
+<li>RPN generate quite good proposals</li>
+<li>No cls, randomly selecting proposal, score matters</li>
+<li>No reg, worse localization error</li>
+</ol>
+</li>
+<li><p>Timing</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_timing.png" alt="Timing" title="Timing"></p>
+<ol>
+<li>Nearly cost free</li>
+<li>Less proposal</li>
+</ol>
+</li>
+<li><p>Anchors</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/Faster_RCNN_setting_of_anchor.png" alt="Setting of Anchors" title="Setting of Anchors"></p>
+<ol>
+<li>Scale is more effective</li>
+</ol>
+</li>
+</ul>
+<h1 id="4-Efficient-One-shot-Methods"><a href="#4-Efficient-One-shot-Methods" class="headerlink" title="4 Efficient One-shot Methods"></a>4 Efficient One-shot Methods</h1><h2 id="4-1-YOLO"><a href="#4-1-YOLO" class="headerlink" title="4.1 YOLO"></a>4.1 YOLO</h2><h3 id="4-1-1-You-Only-Look-Once"><a href="#4-1-1-You-Only-Look-Once" class="headerlink" title="4.1.1 You Only Look Once"></a>4.1.1 You Only Look Once</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_framework.png" alt="YOLO" title="YOLO"></p>
+<ul>
+<li>A simple forward on the full image (almost same with a classification task)</li>
+<li>Frame object detection as a regression problem (bounding box coordinates, class probabilities)</li>
+<li>Extremely fast (45 fps for base network, or 150 fps for fast version)</li>
+<li>Reasoning globally on the full context (no slide-window or region proposals)</li>
+<li>Generalizable representations of objects (stable from natural images to artwork)</li>
+</ul>
+<h3 id="4-1-2-Unified-Detection"><a href="#4-1-2-Unified-Detection" class="headerlink" title="4.1.2 Unified Detection"></a>4.1.2 Unified Detection</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_model.png" alt="YOLO model" title="YOLO model"></p>
+<ul>
+<li>The input is divided into S x S grid</li>
+<li>Each grid cell predicts B bounding boxes</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_architecture.png" alt="YOLO architecture" title="YOLO architecture"></p>
+<ul>
+<li><p>5 predictions for one bounding box: x, y, w, h, score</p>
+<ol>
+<li>(x, y) center of the box relative to the bounds of grid</li>
+<li>w, h are width and height relative to the whole image</li>
+<li>the score is a measure of objectness</li>
+</ol>
+</li>
+<li><p>Each grid cell predicts C conditional class probabilities</p>
+</li>
+<li>Class-specific confidence score is defined as</li>
+<li>One predictor is “responsible” for an object having the highest IOU with the ground-truth</li>
+<li>The output is an SxSx(Bx5+C) tensor</li>
+</ul>
+<h3 id="4-1-3-Experiment-Result"><a href="#4-1-3-Experiment-Result" class="headerlink" title="4.1.3 Experiment Result"></a>4.1.3 Experiment Result</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_result.png" alt="YOLO Result" title="YOLO Result"></p>
+<ul>
+<li>Most effective among real-time detectors</li>
+<li>Most efficient among near real-time detectors</li>
+</ul>
+<h3 id="4-1-4-Limitations"><a href="#4-1-4-Limitations" class="headerlink" title="4.1.4 Limitations"></a>4.1.4 Limitations</h3><ul>
+<li><p>Too few bounding boxes</p>
+<ol>
+<li>Nearby objects</li>
+<li>Small objects</li>
+</ol>
+</li>
+<li><p>Data driven</p>
+<ol>
+<li>Sensitive to new or rare ration</li>
+</ol>
+</li>
+</ul>
+<h3 id="4-1-5-Interesting-Details-–-Training"><a href="#4-1-5-Interesting-Details-–-Training" class="headerlink" title="4.1.5 Interesting Details – Training"></a>4.1.5 Interesting Details – Training</h3><ul>
+<li>Pre-train the first 20 layers on ImageNet</li>
+<li>Pre-train on 224*224 images</li>
+<li>Fine-tune 24 layers on detection dataset</li>
+<li>Fine-tune on 448*448 images</li>
+<li><p>Tricks to balance loss</p>
+<ol>
+<li>Weight: localization vs. classification</li>
+<li>Weight: positive vs. negative of objectness</li>
+<li><p>Square root: large object vs. small object</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/YOLO_loss_function.png" alt="YOLO Loss Function" title="YOLO Loss Function"></p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>“Warm up” to start training</p>
+<ol>
+<li>For first epoch, raise 0.001 to 0.01</li>
+<li>0.01 for 75 epochs</li>
+<li>0.001 for 30 epochs</li>
+<li>0.0001 for 30 epochs</li>
+</ol>
+</li>
+</ul>
+<h2 id="4-2-SSD"><a href="#4-2-SSD" class="headerlink" title="4.2 SSD"></a>4.2 SSD</h2><h3 id="4-2-1-Single-Shot-MultiBox-Detector"><a href="#4-2-1-Single-Shot-MultiBox-Detector" class="headerlink" title="4.2.1 Single Shot MultiBox Detector"></a>4.2.1 Single Shot MultiBox Detector</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_framework.png" alt="SSD framework" title="SSD framework"></p>
+<ul>
+<li>Combine anchor and one-shot prediction</li>
+<li>Extract multi-scale features</li>
+<li>Refine multi-scale and multi-ratio anchors</li>
+<li>Dilated convolution</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_dilated_convolution.png" alt="SSD Dilated convolution" title="SSD Dilated convolution"></p>
+<h3 id="4-2-2-Multi-scale-Prediction"><a href="#4-2-2-Multi-scale-Prediction" class="headerlink" title="4.2.2 Multi-scale Prediction"></a>4.2.2 Multi-scale Prediction</h3><ul>
+<li><p>Multi-scale and Multi-ratio anchors</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_model.png" alt="SSD Model" title="SSD Model"></p>
+<ol>
+<li>Each feature map cell corresponds to k anchors</li>
+<li>Similar to Faster-RCNN, but in multi-scale feature map and directly output category info</li>
+</ol>
+</li>
+<li><p>Multi-scale feature maps for detection</p>
+<ol>
+<li>Additional layers are added to the base network</li>
+<li>Different filters are applied to different scale/ratio anchors</li>
+<li>(c+4)k filters for k anchors and c categories in one cell, (c+4)kmn outputs for  an m*n feature map</li>
+</ol>
+</li>
+</ul>
+<h3 id="4-2-3-Experiment-Result"><a href="#4-2-3-Experiment-Result" class="headerlink" title="4.2.3 Experiment Result"></a>4.2.3 Experiment Result</h3><ul>
+<li>VOC2012</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_result_voc2012.png" alt="SSD VOC2012" title="SSD VOC2012"></p>
+<ul>
+<li>COCO2015</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_result_coco2015.png" alt="SSD COCO2015" title="SSD COCO2015"></p>
+<h3 id="4-2-4-Interesting-Details-–-Training"><a href="#4-2-4-Interesting-Details-–-Training" class="headerlink" title="4.2.4 Interesting Details – Training"></a>4.2.4 Interesting Details – Training</h3><ul>
+<li><p>Matching anchors with ground-truth</p>
+<ol>
+<li>Match each ground-truth to a default box with the best IOU</li>
+<li>Match the anchor to any ground truth with IOU higher than a threshold</li>
+</ol>
+</li>
+<li><p>Training objective</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Object_Detection_Figures/SSD_loss_function.png" alt="SSD Training objective" title="SSD Training objective"></p>
+</li>
+<li><p>Scales and aspect ratios for anchors</p>
+<ol>
+<li>Regularly spaced scales </li>
+<li>{1,2,3,1/2,1/3} – 6 ratios</li>
+</ol>
+</li>
+<li><p>Hard negative mining</p>
+<ol>
+<li>Sort the anchors using the highest confidence loss</li>
+<li>Pick the top ones so that neg:pos = 3:1</li>
+</ol>
+</li>
+<li><p>Data augmentation</p>
+<ol>
+<li>Sample randomly from training images</li>
+<li>Entire input image</li>
+<li>Sample a patch so that min IOU with object is 0.1, 0.3, 0.5, 0.7 or 0.9</li>
+<li>Randomly sample a patch, [0.1, 1] of the image, aspect ration [1/2, 2], randomly flip</li>
+</ol>
+</li>
+<li><p>Comparison</p>
+</li>
+</ul>
+<h1 id="5-Others"><a href="#5-Others" class="headerlink" title="5 Others"></a>5 Others</h1><ul>
+<li><p>PVANET: Deep but Lightweight Neural Networks for Real-time Object Detection (<a href="https://joshua19881228.github.io/2016-08-30-Reading-note/" target="_blank" rel="noopener">Reading Note</a>)</p>
+<ol>
+<li>Variant of Faster-RCNN</li>
+<li>Design of architecture</li>
+</ol>
+</li>
+<li><p>Inside-Outside Net: Detecting Objects in Context with Skip Pooling and Recurrent Neural Networks (<a href="https://joshua19881228.github.io/2016-06-01-ION/" target="_blank" rel="noopener">Reading Note</a>)</p>
+<ol>
+<li>Both local and global information are take into account</li>
+<li>Skip pooling uses the information of different scales</li>
+</ol>
+</li>
+<li><p>R-FCN: Object Detection via Region-based Fully Convolutional Networks (<a href="https://joshua19881228.github.io/2016-05-23-RFCN/" target="_blank" rel="noopener">Reading Note</a>)</p>
+<ol>
+<li>Position-sensitive RoI pooling</li>
+</ol>
+</li>
+<li><p>Feature Pyramid Networks for Object Detection (<a href="https://joshua19881228.github.io/2016-12-15-FPN/" target="_blank" rel="noopener">Reading Note</a>)</p>
+<ol>
+<li>lateral connections is developed for building high-level semantic feature maps at all scales</li>
+</ol>
+</li>
+<li><p>Beyond Skip Connections: Top-Down Modulation for Object Detection (<a href="https://joshua19881228.github.io/2016-12-21-TDM/" target="_blank" rel="noopener">Reading Note</a>)</p>
+<ol>
+<li>Similar with FPN</li>
+</ol>
+</li>
+<li><p>YOLO9000: Better, Faster, Stronger (<a href="https://joshua19881228.github.io/2017-01-11-YOLO9000/" target="_blank" rel="noopener">Reading Note</a>)</p>
+<ol>
+<li>Better, Faster, Stronger</li>
+</ol>
+</li>
+<li><p>DSSD: Deconvolutional Single Shot Detector (<a href="https://joshua19881228.github.io/2017-02-10-DSSD/" target="_blank" rel="noopener">Reading Note</a>)</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/08/Life_Discovery/Little_Things/2017-06-08-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/06/08/Life_Discovery/Little_Things/2017-06-08-Little-Things/" class="post-title-link" itemprop="url">Little Things [20170608]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-06-08 00:00:00" itemprop="dateCreated datePublished" datetime="2017-06-08T00:00:00+08:00">2017-06-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Maybe when we are alone we could have an opportunity to look into our deepest corners in our hearts. And we would find that much nasty and evil thoughts there, hatred, jealousy, prejudices and so on. When and how could we find true peace and settlement? And how to be less anxious in this wold of fierce competition.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Little_Things/figures/IMG_1759.JPG" alt="何者" title="何者"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/29/Life_Discovery/Little_Things/2017-05-29-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/05/29/Life_Discovery/Little_Things/2017-05-29-Little-Things/" class="post-title-link" itemprop="url">Little Things [20170529]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-05-29 00:00:00" itemprop="dateCreated datePublished" datetime="2017-05-29T00:00:00+08:00">2017-05-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Little_Things/figures/20170529.jpg" alt="Cookies" title="Cookies"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/22/Life_Discovery/Little_Things/2017-05-22-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/05/22/Life_Discovery/Little_Things/2017-05-22-Little-Things/" class="post-title-link" itemprop="url">Little Things [20170522]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-05-22 00:00:00" itemprop="dateCreated datePublished" datetime="2017-05-22T00:00:00+08:00">2017-05-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Well, today I think I made an important decision for my future and let’s see what will happen!</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Little_Things/figures/20170522.jpg" alt="Decision" title="Decision"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/15/Life_Discovery/Little_Things/2017-05-15-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/05/15/Life_Discovery/Little_Things/2017-05-15-Little-Things/" class="post-title-link" itemprop="url">Little Things [20170515]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-05-15 00:00:00" itemprop="dateCreated datePublished" datetime="2017-05-15T00:00:00+08:00">2017-05-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>I ordered flower from an App that some randomly selected flowers will be sent to me every Monday morning. The flower brings liveliness to my life and cheers me up.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Little_Things/figures/20170515.jpg" alt="Travel to XiaMen" title="Travel to XiaMen"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/11/Life_Discovery/Little_Things/2017-05-11-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/05/11/Life_Discovery/Little_Things/2017-05-11-Little-Things/" class="post-title-link" itemprop="url">Little Things [20170511]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-05-11 00:00:00" itemprop="dateCreated datePublished" datetime="2017-05-11T00:00:00+08:00">2017-05-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>It’s been really great to see the wold.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Little_Things/figures/20170511.jpg" alt="Xiamen" title="Xiamen"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/05/Using_Linux/2017-05-05-Create-Desktop-Shortcut/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/05/05/Using_Linux/2017-05-05-Create-Desktop-Shortcut/" class="post-title-link" itemprop="url">Create a Desktop Shortcut in Linux</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-05-05 00:00:00" itemprop="dateCreated datePublished" datetime="2017-05-05T00:00:00+08:00">2017-05-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Using-Linux/" itemprop="url" rel="index"><span itemprop="name">Using Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Yesterday I installed Qt Creator for Qt 5.8 on my Linux laptop. Everything was all right but I couldn’t to figure out how to conveniently start this IDE, needing to go to the <em>bin</em> directory to click the executable file. I’ve tried to start it from commond line, but the IDE will crash when openning a dialog window. So I decided to create a desktop shortcut to bypass.</p>
+<p>To manually create a desktop shortcut, we can create a .desktop file and place it in either /usr/share/applications or ~/.local/share/applications. A typical .desktop file looks like the following.</p>
+<pre><code>[Desktop Entry]
+Encoding=UTF-8
+Version=1.0                                     # version of an app.
+Name[en_US]=yEd                                 # name of an app.
+GenericName=GUI Port Scanner                    # longer name of an app.
+Exec=java -jar /opt/yed-3.11.1/yed.jar          # command used to launch an app.
+Terminal=false                                  # whether an app requires to be run in a terminal.
+Icon[en_US]=/opt/yed-3.11.1/icons/yicon32.png   # location of icon file.
+Type=Application                                # type.
+Categories=Application;Network;Security;        # categories in which this app should be listed.
+Comment[en_US]=yEd Graph Editor                 # comment which appears as a tooltip.
+</code></pre>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/03/Using_Linux/2017-05-03-Using-VIM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/05/03/Using_Linux/2017-05-03-Using-VIM/" class="post-title-link" itemprop="url">Using VIM</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-05-03 00:00:00" itemprop="dateCreated datePublished" datetime="2017-05-03T00:00:00+08:00">2017-05-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Using-Linux/" itemprop="url" rel="index"><span itemprop="name">Using Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Using VIM is always a geek thing. However, it seems to be exausting to remember large numbers of commonds and shortcuts. Perhaps some really cool plugins can help alleviate the pain.</p>
+<ul>
+<li>First of all, a tool to manage the plugins is of need. <a href="https://github.com/junegunn/vim-plug" target="_blank" rel="noopener">vim-plug</a> is a minimalist Vim plugin manager, which is very easy to setup and use.</li>
+<li>To automatically complete the code, a tool called <a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="noopener">YouCompleteMe</a> is one of the most popular tools. And to use this tool for C-family languages, another tool <a href="https://github.com/rizsotto/Bear" target="_blank" rel="noopener">Bear</a> is needed. Both of these two projects have detailed document.</li>
+<li>A very useful website to find useful vim plugins is <a href="http://vimawesome.com/" target="_blank" rel="noopener">Vim Awesome</a>.</li>
+<li>Another very attractive Swiss-Army-Knife like package is <a href="https://spacevim.org/" target="_blank" rel="noopener">SpaceVim</a>. It is a community-driven vim distribution that seeks to provide layer feature, especially for neovim. It offers a variety of layers to choose from. to create a suitable vim development environment, you just need to select the required layers.</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joshua LI"
+      src="/images/avatar-icon.png">
+  <p class="site-author-name" itemprop="name">Joshua LI</p>
+  <div class="site-description" itemprop="description">Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">58</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/joshua19881228" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;joshua19881228" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhixuan.1988.li@gmail.com" title="E-Mail → mailto:zhixuan.1988.li@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/joshua1988" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;joshua1988" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joshua LI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+</body>
+</html>

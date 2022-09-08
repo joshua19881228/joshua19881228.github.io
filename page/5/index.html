@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Joshua&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/5/index.html">
+<meta property="og:site_name" content="Joshua&#39;s Blog">
+<meta property="og:description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Joshua LI">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/page/5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Joshua's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Joshua's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-my-jumble-of-computer-vision">
+
+    <a href="/2016/08/25/Computer_Vision/2016-08-25-my-jumble-of-computer-vision/" rel="section"><i class=" fa-fw"></i>My Jumble of Computer Vision</a>
+
+  </li>
+        <li class="menu-item menu-item-an-introduction-to-cnn-based-object-detection">
+
+    <a href="/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/" rel="section"><i class=" fa-fw"></i>An Introduction to CNN based Object Detection</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/Computer_Vision/Reading_Note/2018-03-04-Tiny_SSD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/04/Computer_Vision/Reading_Note/2018-03-04-Tiny_SSD/" class="post-title-link" itemprop="url">Reading Note: Tiny SSD: A Tiny Single-shot Detection Deep Convolutional Neural Network for Real-time Embedded Object Detection</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-03-04 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-04T00:00:00+08:00">2018-03-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Tiny SSD: A Tiny Single-shot Detection Deep Convolutional Neural Network for Real-time Embedded Object Detection</p>
+<p><strong>AUTHOR</strong>: Alexander Wong, Mohammad Javad Shafiee, Francis Li, Brendan Chwyl</p>
+<p><strong>ASSOCIATION</strong>: University of Waterloo, DarwinAI</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1802.06488" target="_blank" rel="noopener">arXiv:1802.06488</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>A single-shot detection deep convolutional neural network, <strong>Tiny SSD</strong>, is designed specifically for real-time embedded object detection.</li>
+<li>A non-uniform Fire module is proposed based on SqueezeNet.</li>
+<li>The network achieves 61.3% mAP in VOC2007 dataset with a model size of 2.3MB.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="DESIGN-STRATEGIES"><a href="#DESIGN-STRATEGIES" class="headerlink" title="DESIGN STRATEGIES"></a>DESIGN STRATEGIES</h3><p>Tiny SSD network for real-time embedded object detection is composed of two main sub-network stacks:</p>
+<ol>
+<li>A non-uniform Fire sub-network stack.</li>
+<li>A non-uniform sub-network stack of highly optimized SSD-based auxiliary convolutional feature layers.</li>
+</ol>
+<p>The first sub-network stack is feed into the second sub-network stack. Both sub-networks needs carefully design to run on an embedded device. The first sub-network works as the backbone, which directly affect the performance of object detection. The second sub-network should balance the performance and model size as well as inference speed.</p>
+<p>Three key design strategies are:</p>
+<ol>
+<li>Reduce the number of $3 \times 3$ filters as much as possible.</li>
+<li>Reduce the number of input channels to $3 \times 3$ filters where possible.</li>
+<li>Perform downsampling at a later stage in the network.</li>
+</ol>
+<h3 id="NETWORK-STRUCTURE"><a href="#NETWORK-STRUCTURE" class="headerlink" title="NETWORK STRUCTURE"></a>NETWORK STRUCTURE</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180304_Tiny_SSD_Fire.png" alt="Fire" title="Fire"></p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180304_Tiny_SSD_AB.png" alt="Auxiliary Layers" title="Auxiliary Layers"></p>
+<h3 id="PERFORMANCE"><a href="#PERFORMANCE" class="headerlink" title="PERFORMANCE"></a>PERFORMANCE</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180304_Tiny_SSD_Performance.png" alt="Performance" title="Performance"></p>
+<h2 id="SOME-THOUGHTS"><a href="#SOME-THOUGHTS" class="headerlink" title="SOME THOUGHTS"></a>SOME THOUGHTS</h2><p>The paper uses half precision floating-point to store the model, which reduce the model size by half. From my own expirence, several methods can be tried to export a deep learning model to embedded devices, including</p>
+<ol>
+<li>Architecture design, just like this work illustrated.</li>
+<li>Model pruning, such as decomposition, filter pruning and connection pruning.</li>
+<li>BLAS library optimization.</li>
+<li>Algorithm optimization. Using SSD as an example, the Prior-Box layer needs only one forward as long as the input image size does not change.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/Computer_Vision/Reading_Note/2018-01-20-S^3_Face_Detector/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/20/Computer_Vision/Reading_Note/2018-01-20-S%5E3_Face_Detector/" class="post-title-link" itemprop="url">Reading Note: $S^3FD$: Single Shot Scale-invariant Face Detector</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-01-20 00:00:00" itemprop="dateCreated datePublished" datetime="2018-01-20T00:00:00+08:00">2018-01-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: $S^3FD$: Single Shot Scale-invariant Face Detector</p>
+<p><strong>AUTHOR</strong>: Shifeng Zhang, Xiangyu Zhu, Zhen Lei, Hailin Shi, Xiaobo Wang, Stan Z. Li</p>
+<p><strong>ASSOCIATION</strong>: Chinese Academy of Sciences</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1708.05237" target="_blank" rel="noopener">arXiv:1708.05237</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>Proposing a scale-equitable face detection framework with a wide range of anchor-associated layers and a series of reasonable anchor scales so as to handle dif- ferent scales of faces well.</li>
+<li>Presenting a scale compensation anchor matching strategy to improve the recall rate of small faces.</li>
+<li>Introducing a max-out background label to reduce the high false positive rate of small faces.</li>
+<li>Achieving state-of-the-art results on AFW, PASCAL face, FDDB and WIDER FACE with real-time speed.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>There are mainly three reasons that why the performance of anchor-based detetors drop dramatically as the objects becoming smaller:</p>
+<ol>
+<li><strong>Biased Framework.</strong> Firstly, the stride size of the lowest anchor-associated layer is too large, thus few features are reliable for small faces. Secondly, anchor scale mismatches receptive field and both are too large to fit small faces.</li>
+<li><strong>Anchor Matching Strategy.</strong> Anchor scales are discrete but face scale is continuous. Those faces whose scale distribute away from anchor scales can not match enough anchors, such as tiny and outer face.</li>
+<li><strong>Background from Small Anchors.</strong> Small anchors lead to sharp increase in the number of negative anchors on the background, bringing about many false positive faces.</li>
+</ol>
+<p>The architecture of Single Shot Scale-invariant Face Detector is shown in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180120_S3FD.png" alt="Framework" title="Framework"></p>
+<h3 id="Scale-equitable-framework"><a href="#Scale-equitable-framework" class="headerlink" title="Scale-equitable framework"></a>Scale-equitable framework</h3><p><strong>Constructing Architecture</strong> </p>
+<ul>
+<li>Base Convolutional Layers: layers of VGG16 from conv1_1 to pool5 are kept.</li>
+<li>Extra Convolutional Layers: fc6 and fc7 of VGG16 are converted to convolutional layers. Then extra convolutional layers are added, which is similar to SSD.</li>
+<li>Detection Convolutional Layers: conv3_3, conv4_3, conv5_3, conv_fc7, conv6_2 and conv7_2 are selected as the detection layers.</li>
+<li>Normalization Layers: L2 normalization is applied to conv3_3, conv4_3 and conv5_3 to rescale their norm to 10, 8 and 5 respectively. The scales are then learned during the back propagation.</li>
+<li>Predicted Convolutional Layers: For each anchor, 4 offsets relative to its coordinates and $N_{s}$ scores for classification, where $N_s=N_m+1$ ($N_m$ is the maxout background label) for conv3_3 detection layer and $N_s=2$ for other detection layers.</li>
+<li>Multi-task Loss Layer: Softmax loss for classification and smooth L1 loss for regression.</li>
+</ul>
+<p><strong>Designing scales for anchors</strong></p>
+<ul>
+<li>Effective receptive field: the anchor should be significantly smaller than theoretical receptive field in order to match the effective receptive field.</li>
+<li>Equal-proportion interval principle: the scales of the anchors are 4 times its interval, which guarantees that different scales of anchor have the same density on the image, so that various scales face can approximately match the same number of anchors.</li>
+</ul>
+<h3 id="Scale-compensaton-anchor-matching-strategy"><a href="#Scale-compensaton-anchor-matching-strategy" class="headerlink" title="Scale compensaton anchor matching strategy"></a>Scale compensaton anchor matching strategy</h3><p>To solve the problems that 1) the average number of matched anchors is about 3 which is not enough to recall faces with high scores; 2) the number of matched anchors is highly related to the anchor scales, a scale compensation anchor matching strategy is proposed. There are two stages:</p>
+<ul>
+<li>Stage One: decrease threshold from 0.5 to 0.35 in order to increase the average number of matched anchors.</li>
+<li>Stage Two: firstly pick out anchors whose jaccard overlap with tiny or outer faces are higher than 0.1, then sorting them to select top-N as matched anchors. N is set as the average number from stage one.</li>
+</ul>
+<h3 id="Max-out-background-label"><a href="#Max-out-background-label" class="headerlink" title="Max-out background label"></a>Max-out background label</h3><p>For conv3_3 detection layer, a max-out background label is applied. For each of the smallest anchors, $N_m$ scores are predicted for background label and then choose the highest as its final score.</p>
+<h2 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h2><ol>
+<li>Training dataset and data augmentation, including color distort, random crop and horizontal flip.</li>
+<li>Loss function is a multi-task loss defined in RPN.</li>
+<li>Hard negative mining.</li>
+</ol>
+<p>The experiment result on WIDER FACE is illustrated in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180120_S3FD_expr.png" alt="Experiment" title="Experiment"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/Computer_Vision/Reading_Note/2018-01-10-Single-Shot-Refinement-Neural-Network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/10/Computer_Vision/Reading_Note/2018-01-10-Single-Shot-Refinement-Neural-Network/" class="post-title-link" itemprop="url">Reading Note: Single-Shot Refinement Neural Network for Object Detection</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-01-10 00:00:00" itemprop="dateCreated datePublished" datetime="2018-01-10T00:00:00+08:00">2018-01-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Single-Shot Refinement Neural Network for Object Detection</p>
+<p><strong>AUTHOR</strong>: Shifeng Zhang, LongyinWen, Xiao Bian, Zhen Lei, Stan Z. Li</p>
+<p><strong>ASSOCIATION</strong>: CACIA, GE Global Research</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1711.06897" target="_blank" rel="noopener">arXiv:1711.06897</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>A novel one-stage framework for object detection is introduced, composed of two inter-connected modules, i.e., the ARM (Anchor Refinement Module) and the ODM (Object Detection Module). This leads to performance better than the two-stage approach while maintaining high efficiency of the one-stage approach. </li>
+<li>To ensure the effectiveness, TCB (Transfer Connection Block) is designed to transfer the features in the ARM to handle more challenging tasks, i.e., predict accurate object locations, sizes and class labels, in the ODM.</li>
+<li>RefineDet achieves the latest state-of-the-art results on generic object detection</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The idea of this work can be seen as an improvement based on <a href="https://joshua19881228.github.io/2017-02-10-DSSD/" target="_blank" rel="noopener">DSSD</a> method. The DSSD method uses multi-scale feature maps to predict categories and regress bounding boxes. In DSSD, deconvolution is also used to increase the resolution of the last feature maps. In this work, a binary classifier and a coarse regressor is added to the downsampling stages. Their outputs are the inputs to the multi-category classifier and fine regressor. The framework this single-shot refinement neural network is illustrated in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180110_SSRNN.png" alt="Framework" title="Framework"></p>
+<h3 id="Anchor-Refinement-Module"><a href="#Anchor-Refinement-Module" class="headerlink" title="Anchor Refinement Module"></a>Anchor Refinement Module</h3><p>The ARM is designed to (1) identify and remove negative anchors to reduce search space for the classifier, and (2) coarsely adjust the locations and sizes of anchors to provide better initialization for the subsequent regressor.</p>
+<p>In training phase, for a refined anchor box, if its negative confidence is larger than a preset threshold θ (i.e., set θ = 0.99 empirically), we will discard it in training the ODM.</p>
+<h3 id="Object-Detection-Module"><a href="#Object-Detection-Module" class="headerlink" title="Object Detection Module"></a>Object Detection Module</h3><p>The ODM takes the refined anchors as the input from the former to further improve the regression and predict multi-class labels.</p>
+<h3 id="Transfer-Connection-Block"><a href="#Transfer-Connection-Block" class="headerlink" title="Transfer Connection Block"></a>Transfer Connection Block</h3><p>TCB is introduced to convert features of different layers from the ARM, into the form required by the ODM, so that the ODM can share features from the ARM. Another function of the TCBs is to integrate large-scale context by adding the high-level features to the transferred features to improve detection accuracy. An illustration of TCB can be found in the following figure. </p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180110_TCB.png" alt="TCB" title="TCB"></p>
+<h3 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h3><p>The training method is much like SSD. The experiment result and comparison with other method can be found in the following table.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180110_experiment.png" alt="TCB" title="TCB"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/Computer_Vision/Reading_Note/2018-01-08-Panoptic_Segmentation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/01/08/Computer_Vision/Reading_Note/2018-01-08-Panoptic_Segmentation/" class="post-title-link" itemprop="url">Reading Note: Panoptic Segmentation</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-01-08 00:00:00" itemprop="dateCreated datePublished" datetime="2018-01-08T00:00:00+08:00">2018-01-08</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Panoptic Segmentation</p>
+<p><strong>AUTHOR</strong>: Alexander Kirillov, Kaiming He, Ross Girshick, Carsten Rother, Piotr Dollar</p>
+<p><strong>ASSOCIATION</strong>: FAIR, Heidelberg University</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1801.00868" target="_blank" rel="noopener">arXiv:1801.00868</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>A novel ‘Panoptic Segmentation’ (PS) task is proposed and studied.</li>
+<li>A panoptic quality (PQ) measure is introduced to measure performance on the task.</li>
+<li>A basic algorithmic approach to combine instance and semantic segmentation outputs into panoptic outputs is proposed.</li>
+</ol>
+<h2 id="PROBLEM-DEFINATION"><a href="#PROBLEM-DEFINATION" class="headerlink" title="PROBLEM DEFINATION"></a>PROBLEM DEFINATION</h2><p><em>Panoptic</em> refers to a unified, global view of segmentation. Each pixel of an image must be assigned a semantic label and an instance id. Pixels with the same label and id belong to the same object; for stuff labels the instance id is ignored.</p>
+<h3 id="Panoptic-Segmentation"><a href="#Panoptic-Segmentation" class="headerlink" title="Panoptic Segmentation"></a>Panoptic Segmentation</h3><p>Given a predetermined set of $L$ semantic categories encoded by $\mathcal{L} := {1,…,L}$, the task requires a panoptic segmentation algorithm to map each pixel $i$ of an image to a pair $(l<em>{i}, z</em>{i}) \in \mathcal{L} \times N$, where $l<em>{i}$ represents the semantic class of pixel $i$ and $z</em>{i}$ represents its instance id.</p>
+<p>The semantic label set consist of subsets $\mathcal{L}^{St}$ and $\mathcal{L}^{Th}$, such that $\mathcal{L} = \mathcal{L}^{St} \cup \mathcal{L}^{Th}$ and $\mathcal{L}^{St} \cap \mathcal{L}^{Th} = \phi$. These subsets correspond to <em>stuff</em> labels and <em>thing</em> labels, respectively.</p>
+<h3 id="Panoptic-Quality-PQ"><a href="#Panoptic-Quality-PQ" class="headerlink" title="Panoptic Quality (PQ)"></a>Panoptic Quality (PQ)</h3><p>For each class, the unique matching splits the predicted and ground truth segments into three sets: true positives (TP), false positives (FP), and false negatives (FN), representing matched pairs of segments, unmatched predicted segments, and unmatched ground truth segments, respectively. Given these three sets, PQ is defined as:</p>
+<script type="math/tex; mode=display">PQ=\frac{\sum_{(p,g) \in TP} IoU(p,g)}{|TP|+\frac{1}{2}|FP|+\frac{1}{2}|FN|}</script><p>A predicted segment and a ground truth segment can match only if their intersection over union (IoU) is strictly greater than 0.5.</p>
+<p>PQ can be seen as the multiplication of a <em>Segmentation Quality</em> (SQ) term and a <em>Detection Quality</em> (DQ) term:</p>
+<script type="math/tex; mode=display">PQ=\frac{\sum_{(p,g) \in TP} IoU(p,g)}{|TP|} \times \frac{|TP|}{|TP|+\frac{1}{2}|FP|+\frac{1}{2}|FN|}</script><p>where the first term can be seen as SQ and the second term can be seen as DQ.</p>
+<h3 id="Human-vs-Machine"><a href="#Human-vs-Machine" class="headerlink" title="Human vs. Machine"></a>Human vs. Machine</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180109_human-vs-machine.png" alt="Human vs. Machine" title="Human vs. Machine"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/Life_Discovery/Little_Things/2017-12-10-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/12/10/Life_Discovery/Little_Things/2017-12-10-Little-Things/" class="post-title-link" itemprop="url">Little Things [20171210 May the Force Be with Me]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-12-10 00:00:00" itemprop="dateCreated datePublished" datetime="2017-12-10T00:00:00+08:00">2017-12-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Little_Things/figures/20171210.jpg" alt="Sweet" title="May the Force Be with Me"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/16/Life_Discovery/Little_Things/2017-11-16-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/11/16/Life_Discovery/Little_Things/2017-11-16-Little-Things/" class="post-title-link" itemprop="url">Little Things [20171116 Stand and Work]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-11-16 00:00:00" itemprop="dateCreated datePublished" datetime="2017-11-16T00:00:00+08:00">2017-11-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/Little_Things/figures/20171116.png" alt="Sweet" title="Stand and Work"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/12/Computer_Vision/Reading_Note/2017-11-12-ProgressiveGrowing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/11/12/Computer_Vision/Reading_Note/2017-11-12-ProgressiveGrowing/" class="post-title-link" itemprop="url">Reading Note: Progressive Growing of GANs for Improved Quality, Stability, and Variation</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-11-12 00:00:00" itemprop="dateCreated datePublished" datetime="2017-11-12T00:00:00+08:00">2017-11-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Progressive Growing of GANs for Improved Quality, Stability, and Variation</p>
+<p><strong>AUTHOR</strong>: Tero Karras, Timo Aila, Samuli Laine, Jaakko Lehtinen</p>
+<p><strong>ASSOCIATION</strong>: NVIDIA</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1710.10196" target="_blank" rel="noopener">ICLR2018</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><p>A training methodology is proposed for GANs which starts with low-resolution images, and then progressively increases the resolution by adding layers to the networks. This incremental nature allows the training to first discover large-scale structure of the image distribution and then shift attention to increasingly finer scale detail, instead of having to learn<br>all scales simultaneously.</p>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="PROGRESSIVE-GROWING-OF-GANS"><a href="#PROGRESSIVE-GROWING-OF-GANS" class="headerlink" title="PROGRESSIVE GROWING OF GANS"></a>PROGRESSIVE GROWING OF GANS</h3><p>The following figure illustrates the training procedure of this work. </p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20171112_ProgressiveGrowing.png" alt="Framework" title="Framework"></p>
+<p>The training starts with both the generator $G$ and discriminator $D$ having a low spatial resolution of $4 \times 4$ pixels. As the training advances, successive layers are incrementally added to $G$ and $D$, thus increasing the spatial resolution of the generated images. All existing layers remain trainable throughout the process. Here $N \times N$ refers to convolutional layers operating on $N \times N$ spatial resolution. This allows stable synthesis in high resolutions and also speeds up training considerably.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20171112_ProgressiveGrowing_1.png" alt="Framework" title="Framework"></p>
+<p><em>fade in</em> is adopted when the new layers are added to double resolution of the generator $G$ and discriminator $D$ smoothly. This example illustrates the transition from $16 \times 16$ images (a) to $32 \times 32$ images (c). During the transition (b) the layers that operate on the higher resolution works like a residual block, whose weight $\alpha$ increases linearly from 0 to 1. Here 2x and 0.5x refer to doubling and halving the image resolution using nearest neighbor filtering and average pooling, respectively. The toRGB represents a layer that projects feature vectors to RGB colors and fromRGB does the reverse; both use $1 \times 1$ convolutions. When training the discriminator, the real images are downscaled to match the current resolution of the network. During a resolution transition, interpolation is carried out between two resolutions of the real images, similarly to how the generator output combines two resolutions.</p>
+<h3 id="INCREASING-VARIATION-USING-MINIBATCH-STANDARD-DEVIATION"><a href="#INCREASING-VARIATION-USING-MINIBATCH-STANDARD-DEVIATION" class="headerlink" title="INCREASING VARIATION USING MINIBATCH STANDARD DEVIATION"></a>INCREASING VARIATION USING MINIBATCH STANDARD DEVIATION</h3><ol>
+<li>Compute the standard deviation for each feature in each spatial location over the minibatch.</li>
+<li>Average these estimates over all features and spatial locations to arrive at a single value. </li>
+<li>Consturct one additional (constant) feature map by replicating the value and concatenate it to all spatial locations and over the minibatch</li>
+</ol>
+<h3 id="NORMALIZATION-IN-GENERATOR-AND-DISCRIMINATOR"><a href="#NORMALIZATION-IN-GENERATOR-AND-DISCRIMINATOR" class="headerlink" title="NORMALIZATION IN GENERATOR AND DISCRIMINATOR"></a>NORMALIZATION IN GENERATOR AND DISCRIMINATOR</h3><p><strong>EQUALIZED LEARNING RATE.</strong> A trivial $N (0; 1)$ initialization is used and then explicitly the weights are scaled at runtime. To be precise, $\hat{w}_i = w_i/c$, where $w_i$ are the weights and $c$ is the per-layer normalization constant from He’s initializer.The benefit of doing this dynamically instead of during initialization is somewhat subtle, and relates to the scale-invariance in commonly used adaptive stochastic gradient descent methods.</p>
+<p><strong>PIXELWISE FEATURE VECTOR NORMALIZATION IN GENERATOR.</strong> To disallow the scenario where the magnitudes in the generator and discriminator spiral out of control as a result of competition, the feature vector is normalized in each pixel to unit length in the generator after each convolutional layer, using a variant of “local response normalization”, configured as </p>
+<script type="math/tex; mode=display">b_{x,y}=a_{x,y}/ \sqrt{\frac{1}{N} \sum_{j=0}^{N-1}(a_{x,y}^j)^2 + \epsilon}</script><p>where $\epsilon=10^{-8}$, $N$ is the number of feature maps, and $a<em>{x,y}$ is original feature vector, $b</em>{x,y}$ is the normalized feature vector in pixel $(x,y)$.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/31/Computer_Vision/Reading_Note/2017-10-31-DeepFashion/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/10/31/Computer_Vision/Reading_Note/2017-10-31-DeepFashion/" class="post-title-link" itemprop="url">Reading Note: Be Your Own Prada: Fashion Synthesis with Structural Coherence</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-10-31 00:00:00" itemprop="dateCreated datePublished" datetime="2017-10-31T00:00:00+08:00">2017-10-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Be Your Own Prada: Fashion Synthesis with Structural Coherence</p>
+<p><strong>AUTHOR</strong>: Shizhan Zhu, Sanja Fidler, Raquel Urtasun, Dahua Lin, Chen Change Loy</p>
+<p><strong>ASSOCIATION</strong>: The Chinese University of Hong Kong, University of Toronto, Vector Institute, Uber Advanced Technologies Group</p>
+<p><strong>FROM</strong>: <a href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2017_fashiongan.pdf" target="_blank" rel="noopener">ICCV2017</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><p>A method that can generate new outfits onto existing photos is developped so that it can </p>
+<ol>
+<li>retain the body shape and pose of the wearer,</li>
+<li>roduce regions and the associated textures that conform to the language description, </li>
+<li>Enforce coherent visibility of body parts.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>Given an input photograph of a person and a sentence description of a new desired outfit, the model first generates a segmentation map $\tilde{S}$ using the generator from the first GAN. Then the new image is rendered with another GAN, with the guidance from the segmentation map generated in the previous step. At test time, the final rendered image is obtained with a forward pass through the two GAN networks. The workflow of this work is shown in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20171031_DeepFashion.png" alt="Framework" title="Framework"></p>
+<p>The first generator $G<em>{shape}$ aims to generate the desired semantic segmentation map <script type="math/tex">\tilde{S}</script> by conditioning on the spatial constraint <script type="math/tex">\downarrow m(S_0)</script>, the design coding <script type="math/tex">\textbf{d}</script>, and the Gaussian noise $$\textbf{z}</em>{S}<script type="math/tex">.</script>S<em>{0}<script type="math/tex">is the original pixel-wise one-hot segmentation map of the input image with height of</script>m$$, width of $n$ and channel of $L$, which represents the number of labels. $\downarrow m(S_0)$ downsamples and merges $S</em>{0}$ so that it is agnostic of the clothing worn in the original image, and only captures information about the user’s body. Thus $G<em>{shape}$ can generate a segmentation map $\tilde{S}$ with sleeves from a segmentation map $S</em>{0}$ without sleeves.</p>
+<p>The second generator $G_{image}$ renders the final image $\tilde{I}$ based on the generated segmentation map $\tilde{S}$, design coding $\textbf{d}$, and the Gaussian noise $\textbf{z}_I$.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/25/Computer_Vision/Reading_Note/2017-10-25-D2TT2D/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/10/25/Computer_Vision/Reading_Note/2017-10-25-D2TT2D/" class="post-title-link" itemprop="url">Reading Note: Detect to Track and Track to Detect</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-10-25 00:00:00" itemprop="dateCreated datePublished" datetime="2017-10-25T00:00:00+08:00">2017-10-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Detect to Track and Track to Detect</p>
+<p><strong>AUTHOR</strong>: Christoph Feichtenhofer, Axel Pinz, Andrew Zisserman</p>
+<p><strong>ASSOCIATION</strong>: Graz University of Technology, University of Oxford</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1710.03958" target="_blank" rel="noopener">arXiv:1710.03958</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>A ConvNet architecture is set up for simultaneous detection and tracking, using a multi-task objective for frame-based object detection and across-frame track regression.</li>
+<li>Correlation features that represent object co-occurrences across time are introduced to aid the ConvNet during tracking.</li>
+<li>Frame-level detections are linked to produce high accuracy detections at the video-level based on across-frame tracklets.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>For frame-level detections, this work adopts <a href="https://joshua19881228.github.io/2016-05-23-RFCN/" target="_blank" rel="noopener">R-FCN</a> as the base framework to detect objects in a single frame. The inter-frame correlation features are extracted from the feature maps of the two frames. A multi-task loss of localization, classification and displacement is used to train the net work. The workflow of this work is shown in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20171025_D2TT2D.png" alt="Framework" title="Framework"></p>
+<p>The key innovation of this work is an operation denoted as <strong>ROI tracking</strong>. The input of this operation is the bounding box regression features of the two frames <script type="math/tex">\textbf{x}_{reg}^{t}</script>, <script type="math/tex">\textbf{x}_{reg}^{t+\tau}</script> and the correlation features <script type="math/tex">\textbf{x}^{t,t+\tau}_{corr}</script>, which are concatenated. The correlation layer performs point-wise feature comparison of two feature maps <script type="math/tex">\textbf{x}^{t}_{l}</script>, <script type="math/tex">\textbf{x}^{t+\tau}_{l}</script></p>
+<script type="math/tex; mode=display">\textbf{x}_{corr}^{t,t+\tau} (i,j,p,q) = \langle \textbf{x}_{l}^{t} (i,j), \textbf{x}_{l}^{t+\tau} (i+p,j+q) \rangle</script><p>where $-d \leq p \leq d$ and $-d \leq q \leq d$ are offsets to compare features in a square neighbourhood around the locations $i$, $j$ in the feature map, defined by the maximum displacement $d$. </p>
+<p>The loss function is written as</p>
+<script type="math/tex; mode=display">Loss(\{p_i\},\{b_i\},\{\Delta_i\} ) = \frac{1}{N} \sum_{i=1}^{N}L_{cls}(p_i,c^{*}) + \lambda \frac{1}{N_{fg}} \sum_{i=1}^{N} [c_i^*>0] L_{reg}(b_i, b_i^*) + \lambda \frac{1}{N_{tra}} \sum_{i=1}^{N_{tra}} L_{tra}(\Delta_i^{t+\tau}, \Delta_i^{*,t+\tau})</script><p>A class-wise linking score is defined to combine detections and tracks across time</p>
+<script type="math/tex; mode=display">s_{c}(D_{i,c}^t,D_{j,c}^{t+\tau},T^{t,t+\tau})=p_{i,c}^t+p_{j,c}^{t+\tau}+\phi(D_{i}^{t},D_{j},T^{t,t+\tau})</script><p>where the pairwise term $\phi$ evaluates to 1 if the IoU overlap a track correspondences $T^{t,t+\tau}$ with the detection boxes $D<em>{i}^{t}$, $D</em>{i}^{t+\tau}$ is larger than 0.5. $p<em>{i,c}^{t}$, $p</em>{j,c}^{t+\tau}$ is the softmax probability for class $c$. The optimal path across a video can be found by maximizing the scores over the duration $T$ of the video. Once the optimal tube is found, the detections corresponding to that tube are removed. Then reweight the detection scores in the tube by adding the mean of the 50% highest scores in that tube. And the procedure is applied again to the remaining detections. </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/Computer_Vision/Reading_Note/2017-10-12-InterpretableCNN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/10/12/Computer_Vision/Reading_Note/2017-10-12-InterpretableCNN/" class="post-title-link" itemprop="url">Reading Note: Interpretable Convolutional Neural Networks</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-10-12 00:00:00" itemprop="dateCreated datePublished" datetime="2017-10-12T00:00:00+08:00">2017-10-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Interpretable Convolutional Neural Networks</p>
+<p><strong>AUTHOR</strong>: Quanshi Zhang, Ying Nian Wu, Song-Chun Zhu</p>
+<p><strong>ASSOCIATION</strong>: UCLA</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1710.00935" target="_blank" rel="noopener">arXiv:1710.00935</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>Slightly revised CNNs are propsed to improve their interpretability, which can be broadly applied to CNNs with different network structures.</li>
+<li>No annotations of object parts and/or textures are needed to ensure each high-layer filter to have a certain semantic meaning. Each filter automatically learns a meaningful object-part representation without any additional human supervision.</li>
+<li>When a traditional CNN is modified to an interpretable CNN, experimental settings need not to be changed for learning. I.e. the interpretable CNN does not change the previous loss function on the top layer and uses exactly the same training samples.</li>
+<li>The design for interpretability may decrease the discriminative power of the network a bit, but such a decrease is limited within a small range.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The loss for filter is illustrated in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20171012_interpretableCNN.png" alt="Framework" title="Loss for Layer"></p>
+<p>A feature map is expected to be strongly activated in images of a certain category and keep silent on other images. Therefore, a number of templates are used to evaluate the fitness between the current feature map and the ideal distribution of activations w.r.t. its semantics. The template is an ideal distribution of activations according to space locations. The loss for layers is formulated as the mutual information between feature map $\textbf{X}$ and templates $\textbf{T}$.</p>
+<script type="math/tex; mode=display">Loss_{f} = - MI(\textbf{X}; \textbf{T})</script><p>the loss can be re-written as</p>
+<script type="math/tex; mode=display">Loss_{f} = - H(\textbf{T}) + H(\textbf{T'}=\{T^{-}, \textbf{T}^{+}|\textbf{X}\})+\sum_{x}p(\textbf{T}^{+},x)H(\textbf{T}^{+}|X=x)</script><p><strong>The first term</strong> is a constant denoting the piror entropy of $\textbf{T}^{+}$. <strong>The second term</strong> encourages a low conditional entropy of inter-category activations which means that a well-learned filter needs to be exclusively activated by a certain category and keep silent on other categories. <strong>The third term</strong> encorages a low conditional entropy of spatial distribution of activations. A well-learned filter should only be activated by a single region of the feature map, instead of repetitively appearing at different locations.</p>
+<h2 id="SOME-THOUGHTS"><a href="#SOME-THOUGHTS" class="headerlink" title="SOME THOUGHTS"></a>SOME THOUGHTS</h2><p>This loss can reduce the redundancy among filters, which may be used to compress the model.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joshua LI"
+      src="/images/avatar-icon.png">
+  <p class="site-author-name" itemprop="name">Joshua LI</p>
+  <div class="site-description" itemprop="description">Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">58</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/joshua19881228" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;joshua19881228" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhixuan.1988.li@gmail.com" title="E-Mail → mailto:zhixuan.1988.li@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/joshua1988" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;joshua1988" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joshua LI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+</body>
+</html>

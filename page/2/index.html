@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Joshua&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="Joshua&#39;s Blog">
+<meta property="og:description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Joshua LI">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/page/2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Joshua's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Joshua's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-my-jumble-of-computer-vision">
+
+    <a href="/2016/08/25/Computer_Vision/2016-08-25-my-jumble-of-computer-vision/" rel="section"><i class=" fa-fw"></i>My Jumble of Computer Vision</a>
+
+  </li>
+        <li class="menu-item menu-item-an-introduction-to-cnn-based-object-detection">
+
+    <a href="/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/" rel="section"><i class=" fa-fw"></i>An Introduction to CNN based Object Detection</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/Computer_Vision/Reading_Note/2020-05-04-ResNeSt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/04/Computer_Vision/Reading_Note/2020-05-04-ResNeSt/" class="post-title-link" itemprop="url">Reading Note: ResNeSt: Split-Attention Networks</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-05-04 13:08:00" itemprop="dateCreated datePublished" datetime="2020-05-04T13:08:00+08:00">2020-05-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: ResNeSt: Split-Attention Networks</p>
+<p><strong>AUTHOR</strong>: Hang Zhang, Chongruo Wu, Zhongyue Zhang, Yi Zhu, Zhi Zhang, Haibin Lin, Yue Sun, Tong He, Jonas Mueller, R. Manmatha, Mu Li, Alexander Smola</p>
+<p><strong>ASSOCIATION</strong>: Amazon, University of California, Davis</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/2004.08955" target="_blank" rel="noopener">arXiv:2004.08955</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>A simple architectural modification of the ResNet is explored, incorporating feature-map split attention within the individual network blocks.</li>
+<li>Models utilizing a ResNeSt backbone are able to achieve state of the art performance on several tasks, namely: image classification, object detection, instance segmentation and semantic segmentation.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="Split-Attention-Block"><a href="#Split-Attention-Block" class="headerlink" title="Split-Attention Block"></a>Split-Attention Block</h3><p>In this work, a Split-Attention Block is explored. For implementation convinience, the Radix-major version is easier to understand. The following figure gives an illustration of Split-Attention Block.</p>
+<p><img src="/img/ReadingNote/20200504/Split-Attention-Block.png" alt="Split-Attention Block" title="Split-Attention Block"></p>
+<p>As shown in Radix-major implementation of ResNeSt block, the featuremap groups with same radix index but different cardinality are next to each other physically. This implementation can be easily accelerated, because the $1 \times 1$ convolutional layers can be unified into a layer and the $3 \times 3$ convolutional layers can be implemented using group convolution with the number of groups equal to $RK$.</p>
+<h3 id="Comparison-with-Prior-Work"><a href="#Comparison-with-Prior-Work" class="headerlink" title="Comparison with Prior Work"></a>Comparison with Prior Work</h3><p>The following figure shows the comparison. Splict-Attention Block is shown in cardinality-major view.</p>
+<p><img src="/img/ReadingNote/20200504/comparison.png" alt="Comparison" title="Comparison"></p>
+<p>SE-Net introduces squeeze-and-attention (called excitation in the original paper) to employ a global context to predict channel-wise attention factors. With radix=1, Split-Attention block is applying a squeeze-and-attention operation to each cardinal group, while the SE-Net operates on top of the entire block regardless of multiple groups. Previous models like SK-Net introduced feature attention between two network branches, but their operation is not optimized for training efficiency and scaling to large neural networks. This work generalizes prior work on feature-map attentio within a cardinal group setting, and its implementation remains computationally efficient.</p>
+<h2 id="PERFORMANCE"><a href="#PERFORMANCE" class="headerlink" title="PERFORMANCE"></a>PERFORMANCE</h2><h3 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h3><p><img src="/img/ReadingNote/20200504/classification.png" alt="classification" title="classification"></p>
+<p><img src="/img/ReadingNote/20200504/classification-stoa.png" alt="classification-stoa" title="classification-stoa"></p>
+<h3 id="Detection"><a href="#Detection" class="headerlink" title="Detection"></a>Detection</h3><p><img src="/img/ReadingNote/20200504/detection.png" alt="detection" title="detection"></p>
+<h3 id="Segmentation"><a href="#Segmentation" class="headerlink" title="Segmentation"></a>Segmentation</h3><p><img src="/img/ReadingNote/20200504/instance-segmentation.png" alt="instance-segmentation" title="instance-segmentation"></p>
+<p><img src="/img/ReadingNote/20200504/semantic-segmentation.png" alt="semantic-segmentation" title="semantic-segmentation"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/01/Computer_Vision/Reading_Note/2020-05-01-NBDT/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/01/Computer_Vision/Reading_Note/2020-05-01-NBDT/" class="post-title-link" itemprop="url">Reading Note: NBDT: Neural-Backed Decision Trees</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-05-01 15:11:00" itemprop="dateCreated datePublished" datetime="2020-05-01T15:11:00+08:00">2020-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: NBDT: Neural-Backed Decision Trees</p>
+<p><strong>AUTHOR</strong>: Alvin Wan, Lisa Dunlap, Daniel Ho, Jihan Yin, Scott Lee, Henry Jin, Suzanne Petryk, Sarah Adel Bargal, Joseph E. Gonzalez</p>
+<p><strong>ASSOCIATION</strong>: UC Berkeley, Boston University  </p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/2004.00221" target="_blank" rel="noopener">arXiv:2004.00221</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>A method is proposed for running any classification neural network as a decision tree by defining a set of embedded decision rules that can be constructed from the fully-connected layer. Induced hierarchies are designed that are easier for neural networks to learn.</li>
+<li>Tree supervision loss is proposed, which boosts neural network accuracy by<br>0.5% and produces high-accuracy NBDTs. NBDTs achieve accuracies comparable to neural networks on small, medium, and large-scale image classification datasets.</li>
+<li>Qualitative and quantitative evidence of semantic interpretations are illustrated.  </li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="Steps-for-Converting-CNN-into-a-Decision-Tree"><a href="#Steps-for-Converting-CNN-into-a-Decision-Tree" class="headerlink" title="Steps for Converting CNN into a Decision Tree"></a>Steps for Converting CNN into a Decision Tree</h3><ol>
+<li>Build an induced hierarchy;</li>
+<li>Fine-tune the model with a tree supervision loss;</li>
+<li>For inference, featurize samples with the neural network backbone;</li>
+<li>And run decision rules embedded in the fully-connected layer.  </li>
+</ol>
+<p>The following figure illustrates the main steps for converting a classification neural network into a decision tree:</p>
+<p><img src="/img/ReadingNote/20200501/NBDT_steps.png" alt="Main Steps" title="Main Steps"></p>
+<h3 id="Building-Induced-Hierarchies"><a href="#Building-Induced-Hierarchies" class="headerlink" title="Building Induced Hierarchies"></a>Building Induced Hierarchies</h3><p>The following figure illustrates how to build induced hierarchies from the network’s final fully-connected layer. For the leaf nodes, the representative vectors are extracted from the weights of FC layer. The parents’ representative vectors are computed by averaging the children. </p>
+<p><img src="/img/ReadingNote/20200501/NBDT_build_hierarchies.png" alt="Building Induced Hierarchies" title="Building Induced Hierarchies"></p>
+<p>In this work, the author found a minimal subset of the WordNet hierarchy that includes all classes as leaves, pruning redundant leaves and single-child intermediate nodes.  To leverage the source of labels, hypotheses is generated for each intermediate node by finding the earliest ancestor of each subtrees’ leaves.  </p>
+<h3 id="Training-with-Tree-Supervision-Loss"><a href="#Training-with-Tree-Supervision-Loss" class="headerlink" title="Training with Tree Supervision Loss"></a>Training with Tree Supervision Loss</h3><p>A tree supervision loss is added to the final loss function to encourage the network to separate representative vectors for each internal node.  Two losses are proposed, <em>hard tree supervision loss</em> and <em>soft tree supervision loss</em>. The final loss is </p>
+<script type="math/tex; mode=display">
+Loss=L_{original}+L_{hard/soft}</script><p>where $L<em>{original}$ is the typical cross entopy loss for classification, and $L</em>{hard/soft}$ stands for hard or soft tree supervision loss.</p>
+<p>The hard tree supervsion loss is defined as</p>
+<script type="math/tex; mode=display">
+L_{hard}=\frac{1}{N} \sum_{i=1}^{N} CrossEntropy( D(i)_{pred}, D(i)_{label} )</script><p>where $N$ is the number of nodes in the tree, excluding leaves.  $D(i)<em>{pred}$ is the predicted probabilities and $D</em>{label}$ is the label in node $i$. Note that nodes that are not included in the path from the label to the root have no defined losses.</p>
+<p>The soft tree supervsion loss is defined as </p>
+<script type="math/tex; mode=display">
+L_{soft}=CrossEntropy(D_{pred}, D_{label})</script><p>where $D<em>{pred}$ is the predicted distribution over leaves and $D</em>{label}$ is the wanted distribution.</p>
+<p>The following figure gives an example of the hard and soft tree supervison loss.</p>
+<p><img src="/img/ReadingNote/20200501/NBDT_losses.png" alt="Tree Supervison Loss" title="Tree Supervison Loss"></p>
+<h2 id="PERFORMANCE"><a href="#PERFORMANCE" class="headerlink" title="PERFORMANCE"></a>PERFORMANCE</h2><p>On all CIFAR10, CIFAR100, TinyImageNet, and ImageNet datasets, NBDT outperforms competing decision-tree-based methods, even uninterpretable variants such as a decision forest, by up to 18%. On CIFAR10, CIFAR100, and TinyImageNet, NBDTs largely stay within 1% of neural network performance.  </p>
+<p><img src="/img/ReadingNote/20200501/NBDT_performance.png" alt="Performance" title="Performance"></p>
+<h2 id="SOME-THOUGHTs"><a href="#SOME-THOUGHTs" class="headerlink" title="SOME THOUGHTs"></a>SOME THOUGHTs</h2><ol>
+<li>The performance seems promissing. Howerver, the ablation studies is confusing because they have different expirement settings with more than one variables.</li>
+<li>The method of constructing a reasonable hierarchies is illustrated less exhaustive. My best guess is that the author force the tree to be a binary tree.</li>
+<li>Is this possible that the leaves have duplicated labels?</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/29/Computer_Vision/2020-04-29-ai-history/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/29/Computer_Vision/2020-04-29-ai-history/" class="post-title-link" itemprop="url">A Very Cool AI History</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-29 09:16:00" itemprop="dateCreated datePublished" datetime="2020-04-29T09:16:00+08:00">2020-04-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>A very cool ai history is found <a href="https://www.aminer.cn/ai-history" target="_blank" rel="noopener">here</a>.</p>
+<p><img src="/img/ai.jpg" alt="Performance"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/26/Life_Discovery/Little_Things/2020-04-26-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/26/Life_Discovery/Little_Things/2020-04-26-Little-Things/" class="post-title-link" itemprop="url">Update Blog</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-26 21:55:00" itemprop="dateCreated datePublished" datetime="2020-04-26T21:55:00+08:00">2020-04-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Rebuilt blog with Hexo.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/05/Coding/2020-04-05-Using-NCNN-Crop-Layer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/04/05/Coding/2020-04-05-Using-NCNN-Crop-Layer/" class="post-title-link" itemprop="url">Using NCNN Crop Layer</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-05 00:00:00" itemprop="dateCreated datePublished" datetime="2020-04-05T00:00:00+08:00">2020-04-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>ncnn is a high-performance neural network inference framework optimized for the mobile platform.</p>
+</blockquote>
+<p>I’ve been using NCNN for quite a while. And recently after compiling the latest version, I was surprised the network could not give the correct output. Besides, the program crashed randomly.</p>
+<p>Cropping seemed to be the reason when I digging into the source code. The cropping operation crops not only the 2D feature map but also the channel dim when the input blob is a 3-dim tensor. So I modified <code>_outc = ref_dims == 3 ? ref_channels : channels;</code> to <code>_outc = channels</code>. I’m not sure whether there is another way to avoid this operation. The modification temporately cope the problem.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Crop::resolve_crop_roi</span><span class="params">(<span class="keyword">const</span> Mat &amp;bottom_blob, <span class="keyword">const</span> Mat &amp;reference_blob, <span class="keyword">int</span> &amp;_woffset, <span class="keyword">int</span> &amp;_hoffset, <span class="keyword">int</span> &amp;_coffset, <span class="keyword">int</span> &amp;_outw, <span class="keyword">int</span> &amp;_outh, <span class="keyword">int</span> &amp;_outc)</span> <span class="keyword">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> w = bottom_blob.w;</span><br><span class="line">    <span class="keyword">int</span> h = bottom_blob.h;</span><br><span class="line">    <span class="keyword">int</span> channels = bottom_blob.c;</span><br><span class="line">    <span class="keyword">int</span> dims = bottom_blob.dims;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> ref_w = reference_blob.w;</span><br><span class="line">    <span class="keyword">int</span> ref_h = reference_blob.h;</span><br><span class="line">    <span class="keyword">int</span> ref_channels = reference_blob.c;</span><br><span class="line">    <span class="keyword">int</span> ref_dims = reference_blob.dims;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (dims == <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        _woffset = woffset;</span><br><span class="line">        _outw = ref_w;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (dims == <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        _woffset = woffset;</span><br><span class="line">        _hoffset = hoffset;</span><br><span class="line">        _outw = ref_w;</span><br><span class="line">        _outh = ref_h;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (dims == <span class="number">3</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        _woffset = woffset;</span><br><span class="line">        _hoffset = hoffset;</span><br><span class="line">        _coffset = coffset;</span><br><span class="line">        _outw = ref_w;</span><br><span class="line">        _outh = ref_h;</span><br><span class="line">        <span class="comment">// _outc = ref_dims == 3 ? ref_channels : channels;</span></span><br><span class="line">        _outc = channels;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The following image shows the result of a foreground segmentation nework before and after the modification.</p>
+<p><img src="/img/Coding/using_ncnn_cropping.png" alt="Output Comparison" title="Output Comparison"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/14/Life_Discovery/Little_Things/2020-01-14-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/14/Life_Discovery/Little_Things/2020-01-14-Little-Things/" class="post-title-link" itemprop="url">Little Things [20200114 Magnificent Nature]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-01-14 00:00:00" itemprop="dateCreated datePublished" datetime="2020-01-14T00:00:00+08:00">2020-01-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="/img/LifeDiscovery/20200114.jpg" alt="Magnificent Nature" title="Magnificent Nature"></p>
+<p>望长城内外惟余莽莽，大河上下顿失滔滔</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/15/Coding/2019-09-15-Compiling-MXNet-CPP-API/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/15/Coding/2019-09-15-Compiling-MXNet-CPP-API/" class="post-title-link" itemprop="url">Compile MXNet CPP API on Windows10 Using VS2015</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-09-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-15T00:00:00+08:00">2019-09-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>In order to deploy MXNet based vision engine to projects develped in C++, we need to compile MXNet CPP API. Though the instruction of how to compile is well illustrated in <a href="http://mxnet.incubator.apache.org/versions/master/install/windows_setup.html#build-from-source" target="_blank" rel="noopener"><em>Build from Source</em></a> and <a href="http://mxnet.incubator.apache.org/versions/master/install/c_plus_plus.html" target="_blank" rel="noopener"><em>Build the C++ package</em></a>, I still confronted some difficulties. This blog records some tips for compling MXNet CPP API.</p>
+<ol>
+<li><p>Modify Source Code</p>
+<p>By following the instruction, I could easily complie and get the libmxnet. However, when compling cpp-package, the <code>op.h</code> file can not be generated correctly. In <a href="https://github.com/apache/incubator-mxnet/issues/14116" target="_blank" rel="noopener"><em>issues#14116</em></a>, <a href="https://github.com/Vigilans" target="_blank" rel="noopener">Vigilans</a> provided a solution.</p>
+<blockquote>
+<p>Here: <a href="https://github.com/apache/incubator-mxnet/blob/master/include/mxnet/tuple.h#L744" target="_blank" rel="noopener">https://github.com/apache/incubator-mxnet/blob/master/include/mxnet/tuple.h#L744</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> dmlc &#123;</span><br><span class="line"><span class="comment">/*! \brief description for optional TShape */</span></span><br><span class="line">DMLC_DECLARE_TYPE_NAME(optional&lt;mxnet::TShape&gt;, <span class="string">"Shape or None"</span>);</span><br><span class="line">MLC_DECLARE_TYPE_NAME(optional&lt;mxnet::Tuple&lt;<span class="keyword">int</span>&gt;&gt;, <span class="string">"Shape or None"</span>);</span><br><span class="line"><span class="comment">// avoid low version of MSVC</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> !defined(_MSC_VER) <span class="comment">// &lt;----------- Here !</span></span></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">type_name_helper</span>&lt;mxnet::Tuple&lt;T&gt; &gt; &#123;</span></span><br><span class="line"> <span class="function"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="built_in">std</span>::<span class="built_in">string</span> <span class="title">value</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="keyword">return</span> <span class="string">"tuple of &lt;"</span> + type_name&lt;T&gt;() + <span class="string">"&gt;"</span>;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">&#125;  <span class="comment">// namespace dmlc</span></span><br></pre></td></tr></table></figure>
+<p>So the specialization of mxnet::tuple<T> was disabled for Visual Studio in the first place!<br>I removed the #if block, recompile, then everything works fine.</p>
+</blockquote>
+</li>
+<li><p>Set the Environment Variables</p>
+<p>In my own case, I only needed to set <code>OpenBLAS_HOME</code> and <code>OpenCV_DIR</code>. Both of the can be set by <code>set</code> command or <code>-D</code> in cmake config.</p>
+</li>
+<li><p>Use CMake to generate VS solution</p>
+<p><code>cmake -G &quot;Visual Studio 14 2015 Win64&quot; -DUSE_CUDA=0 -DUSE_CUDNN=0 -DUSE_NVRTC=0 -DUSE_OPENCV=1 -DUSE_OPENMP=1 -DUSE_BLAS=open -DUSE_LAPACK=0 -DUSE_DIST_KVSTORE=0 -DUSE_CPP_PACKAGE=1 -DCMAKE_INSTALL_PREFIX=install ..</code></p>
+<p>Above command can be used to generate a solution without GPU support. By modifying config <code>-DUSE_CUDA</code> and <code>-DUSE_CUDNN</code>, we can generate a solution with GPU support.</p>
+</li>
+<li><p>Generate <code>op.h</code></p>
+<p>After generating libmxnet, we should run <code>python OpWrapperGenerator.py libmxnet.dll</code> to generate <code>op.h</code>. Note to place <code>libmxnet.dll</code>, <code>libopenblas.dll</code> and <code>libopencv_world.dll</code> together with <code>OpWrapperGenerator.py</code>.</p>
+</li>
+<li><p>No <code>mxnet_static.lib</code></p>
+<p>The cpp example project failed to link to <code>mxnet_static.lib</code>, which was actually named as <code>libmxnet.lib</code>. I modified the name of the static library. I believe the project settings can be fixed to cope with this problem.</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/23/Life_Discovery/My_Drawings/2019-08-23-My-Drawings/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/23/Life_Discovery/My_Drawings/2019-08-23-My-Drawings/" class="post-title-link" itemprop="url">My Drawings [20190823]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-08-23 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-23T00:00:00+08:00">2019-08-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="/img/LifeDiscovery/MyDrawings/20190823.jpg" alt="Sunset" title="Sunset"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/22/Life_Discovery/Little_Things/2019-07-22-Little-Things/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/07/22/Life_Discovery/Little_Things/2019-07-22-Little-Things/" class="post-title-link" itemprop="url">Little Things [20190722 Hello World]</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-07-22 00:00:00" itemprop="dateCreated datePublished" datetime="2019-07-22T00:00:00+08:00">2019-07-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="/img/LifeDiscovery/20190722.jpg" alt="Hello World" title="Hello World"></p>
+<p>Another ‘Hello World’ in life.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/15/Using_Linux/2019-06-15-Using-MXNET-on-Jetson-TX1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/06/15/Using_Linux/2019-06-15-Using-MXNET-on-Jetson-TX1/" class="post-title-link" itemprop="url">Using MXNET on Jetson TX1</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-06-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-06-15T00:00:00+08:00">2019-06-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Using-Linux/" itemprop="url" rel="index"><span itemprop="name">Using Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>The main steps can be found on <a href="https://mxnet.apache.org/versions/master/install/index.html?platform=Devices&amp;language=Python" target="_blank" rel="noopener">mxnet install instruction</a>. When following the steps, I’ve confronted with some errors.</p>
+<p><strong>1. nvcc path error</strong></p>
+<p>set the correct path using environment path, or modify USE_CUDA_PATH in config.mk</p>
+<p><strong>2. Error 137</strong></p>
+<p>It’s because of lack of memory when compiling. We need to add a swap file in size 2G</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/dev/zero of=/swapfile bs=1k count=2048000</span><br><span class="line">mkswap /swapfile</span><br><span class="line">swapon /swapfile</span><br></pre></td></tr></table></figure>
+<p><strong>3. openblas link error</strong></p>
+<p>install openblas-dev by <code>sudo apt-get install libopenblas-dev</code></p>
+<p><strong>4. compile error when installing numpy</strong></p>
+<p>install python-dev by <code>sudo apt-get install python-dev</code></p>
+<p><strong>5. gluoncv dependencies</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libfreetype6-dev</span><br><span class="line">sudo apt-get install pkg-config</span><br><span class="line">sudo apt-get install libpng12-dev</span><br><span class="line">sudo apt-get install libjpeg-dev</span><br></pre></td></tr></table></figure>
+<p><strong>6. image.io error when testing GluonCV</strong></p>
+<p>Need to compile libmxnet.so with OpenCV. Modify USE_OPENCV in config.mk. set <code>USE_OPENCV = 1</code></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joshua LI"
+      src="/images/avatar-icon.png">
+  <p class="site-author-name" itemprop="name">Joshua LI</p>
+  <div class="site-description" itemprop="description">Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">58</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/joshua19881228" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;joshua19881228" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhixuan.1988.li@gmail.com" title="E-Mail → mailto:zhixuan.1988.li@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/joshua1988" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;joshua1988" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joshua LI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+</body>
+</html>

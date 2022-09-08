@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="TITLE: ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression AUTHOR: Jian-Hao Luo, Jianxin Wu, Weiyao Lin ASSOCIATION: Nanjing University, Shanghai Jiao Tong University FROM: arXiv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reading Note: ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression">
+<meta property="og:url" content="http://yoursite.com/2017/08/03/Computer_Vision/Reading_Note/2017-08-03-ThiNet/index.html">
+<meta property="og:site_name" content="Joshua&#39;s Blog">
+<meta property="og:description" content="TITLE: ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression AUTHOR: Jian-Hao Luo, Jianxin Wu, Weiyao Lin ASSOCIATION: Nanjing University, Shanghai Jiao Tong University FROM: arXiv">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_0.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_3.png">
+<meta property="article:published_time" content="2017-08-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-19T09:11:04.585Z">
+<meta property="article:author" content="Joshua LI">
+<meta property="article:tag" content="Reading Note">
+<meta property="article:tag" content="CNN">
+<meta property="article:tag" content="Compression">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_0.png">
+
+<link rel="canonical" href="http://yoursite.com/2017/08/03/Computer_Vision/Reading_Note/2017-08-03-ThiNet/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Reading Note: ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression | Joshua's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Joshua's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-my-jumble-of-computer-vision">
+
+    <a href="/2016/08/25/Computer_Vision/2016-08-25-my-jumble-of-computer-vision/" rel="section"><i class=" fa-fw"></i>My Jumble of Computer Vision</a>
+
+  </li>
+        <li class="menu-item menu-item-an-introduction-to-cnn-based-object-detection">
+
+    <a href="/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/" rel="section"><i class=" fa-fw"></i>An Introduction to CNN based Object Detection</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/03/Computer_Vision/Reading_Note/2017-08-03-ThiNet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Reading Note: ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-08-03 00:00:00" itemprop="dateCreated datePublished" datetime="2017-08-03T00:00:00+08:00">2017-08-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>TITLE</strong>: ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression</p>
+<p><strong>AUTHOR</strong>: Jian-Hao Luo, Jianxin Wu, Weiyao Lin</p>
+<p><strong>ASSOCIATION</strong>: Nanjing University, Shanghai Jiao Tong University</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1707.06342" target="_blank" rel="noopener">arXiv:1707.06342</a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><ol>
+<li>A simple yet effective framework, namely ThiNet, is proposed to simultaneously accelerate and compress CNN models.</li>
+<li>Filter pruning is formally established as an optimization problem, and statistics information computed from its next layer is used to prune filters.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h3><p>The framework of ThiNet compression procedure is illustrated in the following figure. The yellow dotted boxes are the weak channels and their corresponding filgers that would be pruned.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_0.png" alt="Framework" title="Framework"></p>
+<ol>
+<li><strong>Filter selection.</strong> The output of layer $i + 1$ is used to guide the pruning in layer $i$. The key idea is: if a subset of channels in layer $(i + 1)$’s input can approximate the output in layer $i + 1$, the other channels can be safely removed from the input of layer $i + 1$. Note that one channel in layer $(i + 1)$’s input is produced by one filter in layer $i$, hence the corresponding filter in layer $i$ can be safely pruned.</li>
+<li><strong>Pruning.</strong> Weak channels in layer $(i + 1)$’s input and their corresponding filters in layer i would be pruned away, leading to a much smaller model. Note that, the pruned network has exactly the same structure but with fewer filters and channels.</li>
+<li><strong>Fine-tuning.</strong> Fine-tuning is a necessary step to recover the generalization ability damaged by filter pruning. For time-saving considerations, fine-tune one or two epochs after the pruning of one layer. In order to get an accurate model, more additional epochs would be carried out when all layers have been pruned.</li>
+<li><strong>Iterate to step 1 to prune the next layer.</strong></li>
+</ol>
+<h3 id="Data-driven-channel-selection"><a href="#Data-driven-channel-selection" class="headerlink" title="Data-driven channel selection"></a>Data-driven channel selection</h3><p>Denote the convolution process in layer $i$ as A triplet</p>
+<script type="math/tex; mode=display">
+\left \langle \mathscr{I}_{i}, \mathscr{W}_{i},  \right \rangle</script><p>where $\mathscr{I}<em>{i}$ is the input tensor, which has $C$ channels, $H$ rows and $W$ columns. And $\mathscr{W}</em>{i}$ is a set of filters with $K \times K$ kernel size, which generates a new tensor with $D$ channels. Note that, if a filter in $\mathscr{W}<em>{i}$ is removed, its corresponding channel in $\mathscr{I}</em>{i+1}$ and $\mathscr{W}<em>{i+1}$ would also be discarded. However, since the filter number in layer $i + 1$ has not been changed, the size of its output tensor, i.e., $\mathscr{I}</em>{i+2}$, would be kept exactly the same. If we can remove several filters that has little influence on $\mathscr{I}_{i+2}$ (which is also the output of layer $i + 1$), it would have little influence on the overall performance too.</p>
+<h3 id="Collecting-training-examples"><a href="#Collecting-training-examples" class="headerlink" title="Collecting training examples"></a>Collecting training examples</h3><p>The training set is randomly sampled from the tensor $\mathscr{I}_{i+2}$ as illustrated in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_1.png" alt="Sampling" title="Sampling"></p>
+<p>The convolution operation can be formalized in a simple way</p>
+<script type="math/tex; mode=display">\hat{y} = \sum_{c=1}^{C} \hat{x}_{c}</script><h3 id="A-greedy-algorithm-for-channel-selection"><a href="#A-greedy-algorithm-for-channel-selection" class="headerlink" title="A greedy algorithm for channel selection"></a>A greedy algorithm for channel selection</h3><p>Given a set of <script type="math/tex">m</script> training examples $\left{ (\mathrm{\hat{x}}<em>{i}, \hat{y}</em>{i}) \right}$, selecting channel can be seen as a optimization problem,</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_2.png" alt="Objective" title="Objective"></p>
+<p>and it eauivalently can be the following alternative objective,</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_3.png" alt="Objective" title="Objective"></p>
+<p>where $S \cup T = \left{ 1,2,…,C \right}$ and $S \cap T = \emptyset$. This problem can be sovled by greedy algorithm.</p>
+<h3 id="Minimize-the-reconstruction-error"><a href="#Minimize-the-reconstruction-error" class="headerlink" title="Minimize the reconstruction error"></a>Minimize the reconstruction error</h3><p>After the subset $T$ is obtained, a scaling factor for each filter weights is learned to minimize the reconstruction error. </p>
+<h2 id="Some-Ideas"><a href="#Some-Ideas" class="headerlink" title="Some Ideas"></a>Some Ideas</h2><ol>
+<li>Maybe the finetue can help avoid the final step of minimizing the reconstruction error.</li>
+<li>If we use this work on non-classification task, such as detection and segmentation, the performance remains to be checked.</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Reading-Note/" rel="tag"># Reading Note</a>
+              <a href="/tags/CNN/" rel="tag"># CNN</a>
+              <a href="/tags/Compression/" rel="tag"># Compression</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/07/30/Life_Discovery/Little_Things/2017-07-30-Little-Things/" rel="prev" title="Little Things [20170730]">
+      <i class="fa fa-chevron-left"></i> Little Things [20170730]
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/08/08/Life_Discovery/Little_Things/2017-08-08-Little-Things/" rel="next" title="Little Things [20170808 Sweet]">
+      Little Things [20170808 Sweet] <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CONTRIBUTIONS"><span class="nav-number">1.</span> <span class="nav-text">CONTRIBUTIONS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#METHOD"><span class="nav-number">2.</span> <span class="nav-text">METHOD</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Framework"><span class="nav-number">2.1.</span> <span class="nav-text">Framework</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-driven-channel-selection"><span class="nav-number">2.2.</span> <span class="nav-text">Data-driven channel selection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Collecting-training-examples"><span class="nav-number">2.3.</span> <span class="nav-text">Collecting training examples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-greedy-algorithm-for-channel-selection"><span class="nav-number">2.4.</span> <span class="nav-text">A greedy algorithm for channel selection</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Minimize-the-reconstruction-error"><span class="nav-number">2.5.</span> <span class="nav-text">Minimize the reconstruction error</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Some-Ideas"><span class="nav-number">3.</span> <span class="nav-text">Some Ideas</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joshua LI"
+      src="/images/avatar-icon.png">
+  <p class="site-author-name" itemprop="name">Joshua LI</p>
+  <div class="site-description" itemprop="description">Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">58</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/joshua19881228" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;joshua19881228" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhixuan.1988.li@gmail.com" title="E-Mail → mailto:zhixuan.1988.li@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/joshua1988" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;joshua1988" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joshua LI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'fa9833471b8d01a7387d',
+      clientSecret: 'ac1fa284ebb82e7ba13fdf0180cb9b41fc73c4f1',
+      repo        : 'joshua19881228.github.io',
+      owner       : 'joshua19881228',
+      admin       : ['joshua19881228'],
+      id          : 'c6e3d6ba664948786b467ac4a2102ada',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="MTCNN 训练记录最近尝试使用 Caffe 复现 MTCNN，感觉坑很大，记录一下训练过程，目前还没有好的结果。网上也有很多童鞋在尝试训练 MTCNN，普遍反映使用 TensorFlow 可以得到比较好的结果，但是使用 Caffe 不是很乐观。 已经遇到的问题现象 2018.09.11：目前只训练了 12net，召回率偏低。 以blankWorld&#x2F;MTCNN-Accelerate-Onet为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Training MTCNN">
+<meta property="og:url" content="http://yoursite.com/2018/09/11/Computer_Vision/2018-09-11-training-mtcnn/index.html">
+<meta property="og:site_name" content="Joshua&#39;s Blog">
+<meta property="og:description" content="MTCNN 训练记录最近尝试使用 Caffe 复现 MTCNN，感觉坑很大，记录一下训练过程，目前还没有好的结果。网上也有很多童鞋在尝试训练 MTCNN，普遍反映使用 TensorFlow 可以得到比较好的结果，但是使用 Caffe 不是很乐观。 已经遇到的问题现象 2018.09.11：目前只训练了 12net，召回率偏低。 以blankWorld&#x2F;MTCNN-Accelerate-Onet为">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/blankWorld/MTCNN-Accelerate-Onet/master/img/mtcnn-fddb.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/12net_fddb.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/12net_roc_1st.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/24net_roc_1st.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/discROC_20181013.png">
+<meta property="article:published_time" content="2018-09-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-19T09:11:04.572Z">
+<meta property="article:author" content="Joshua LI">
+<meta property="article:tag" content="Face Detection">
+<meta property="article:tag" content="Face Alignment">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/blankWorld/MTCNN-Accelerate-Onet/master/img/mtcnn-fddb.jpg">
+
+<link rel="canonical" href="http://yoursite.com/2018/09/11/Computer_Vision/2018-09-11-training-mtcnn/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Training MTCNN | Joshua's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Joshua's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-my-jumble-of-computer-vision">
+
+    <a href="/2016/08/25/Computer_Vision/2016-08-25-my-jumble-of-computer-vision/" rel="section"><i class=" fa-fw"></i>My Jumble of Computer Vision</a>
+
+  </li>
+        <li class="menu-item menu-item-an-introduction-to-cnn-based-object-detection">
+
+    <a href="/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/" rel="section"><i class=" fa-fw"></i>An Introduction to CNN based Object Detection</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/11/Computer_Vision/2018-09-11-training-mtcnn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Training MTCNN
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-09-11 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-11T00:00:00+08:00">2018-09-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="MTCNN-训练记录"><a href="#MTCNN-训练记录" class="headerlink" title="MTCNN 训练记录"></a>MTCNN 训练记录</h1><p>最近尝试使用 Caffe 复现 MTCNN，感觉坑很大，记录一下训练过程，目前还没有好的结果。网上也有很多童鞋在尝试训练 MTCNN，普遍反映使用 TensorFlow 可以得到比较好的结果，但是使用 Caffe 不是很乐观。</p>
+<h2 id="已经遇到的问题现象"><a href="#已经遇到的问题现象" class="headerlink" title="已经遇到的问题现象"></a>已经遇到的问题现象</h2><ul>
+<li><p>2018.09.11：目前只训练了 12net，召回率偏低。</p>
+<p>以<a href="https://github.com/blankWorld/MTCNN-Accelerate-Onet" target="_blank" rel="noopener">blankWorld/MTCNN-Accelerate-Onet</a>为 baseline，blankWorld 在 FDDB 上的测试性能如下图</p>
+<p><img src="https://raw.githubusercontent.com/blankWorld/MTCNN-Accelerate-Onet/master/img/mtcnn-fddb.jpg" alt="FDDB Result" title="FDDB Result"></p>
+<p>这个效果很不错，但是我自己生成样本后训练 12net，召回率有明显下降。性能对比如下图</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/12net_fddb.png" alt="FDDB 12net Compare" title="FDDB 12net Compare"></p>
+<p>暂且不管 12net 的测试结果为什么会这么差，两个模型的性能差距是可以反映的。</p>
+</li>
+</ul>
+<h2 id="训练记录"><a href="#训练记录" class="headerlink" title="训练记录"></a>训练记录</h2><ul>
+<li><p>2018.09.11</p>
+<p><strong>训练数据生成</strong></p>
+<p>参考<a href="https://github.com/AITTSMD/MTCNN-Tensorflow" target="_blank" rel="noopener">AITTSMD/MTCNN-Tensorflow</a>提供的 prepare_data 进行数据生成。数据集情况如下表</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+<th>Landmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>156728/189530</td>
+<td>470184/975229</td>
+<td>156728/547211</td>
+<td>313456/357604</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  其中 Pos:Neg:Part:Landmark = 1:3:1:2，样本比例参考原作的比例。Pos、Neg、Part 来自于<a href="http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/index.html" target="_blank" rel="noopener">WiderFace</a>，Landmark 来自于<a href="http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html" target="_blank" rel="noopener">CelebA</a>。其中正样本进行了人工的数据筛选，筛选的原因是根据 WiderFace 生成的正样本，有很多都是质量很差的图像，包含人脸大面积遮挡或十分模糊的情况。之前召回率很差的性能来自没有经过筛选的训练集，因为使用了 OHEM，只有 loss 值在前 70%的样本才参与梯度计算，感觉如果质量差的样本占比较大，网络学习到的特征是错误的，那些质量好的图像可能得不到充分的学习。</p>
+<p>  <strong>训练参数设置</strong></p>
+<p>  初始训练参数如下</p>
+  <figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">type:<span class="string">"Adam"</span></span><br><span class="line">momentum: <span class="number">0.9</span></span><br><span class="line">momentum2:<span class="number">0.999</span></span><br><span class="line">delta:<span class="number">1</span>e-<span class="number">8</span></span><br><span class="line">base_lr: <span class="number">0.01</span></span><br><span class="line">weight_decay: <span class="number">0.0005</span></span><br><span class="line">batch_size: <span class="number">256</span></span><br></pre></td></tr></table></figure>
+<p>  第一轮训练在 75000 次迭代(17.5 个 epoch)时停止，测试记录如下</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">25.019253</span> <span class="number">21722</span> solver.cpp:<span class="number">347</span>] Iteration <span class="number">75000</span>, Testing net (#<span class="number">0</span>)</span><br><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">28.057858</span> <span class="number">21727</span> data_layer.cpp:<span class="number">89</span>] Restarting data prefetching from start.</span><br><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">28.072748</span> <span class="number">21722</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.4638</span></span><br><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">28.072789</span> <span class="number">21722</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.096654</span> (* <span class="number">1</span> = <span class="number">0.096654</span> loss)</span><br><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">28.072796</span> <span class="number">21722</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.008529</span> (* <span class="number">0.5</span> = <span class="number">0.0042645</span> loss)</span><br><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">28.072801</span> <span class="number">21722</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0221648</span> (* <span class="number">0.5</span> = <span class="number">0.0110824</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  <strong>注意：分类测试结果是 0.4638 是因为测试集没有打乱，1-10000 为 pos 样本，10001-20000 为 neg 样本，20001-30000 为 part 样本，30001-40000 为 landmark 样本。因此，实际分类正确率应该是 0.9276</strong></p>
+<p>  降低学习率至 0.001，训练 135000 次迭代(31.5 个 epoch)时停止，测试记录如下</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">36.482010</span> <span class="number">23543</span> solver.cpp:<span class="number">347</span>] Iteration <span class="number">135000</span>, Testing net (#<span class="number">0</span>)</span><br><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">39.629933</span> <span class="number">23660</span> data_layer.cpp:<span class="number">89</span>] Restarting data prefetching from start.</span><br><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">39.645612</span> <span class="number">23543</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.4714</span></span><br><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">39.645649</span> <span class="number">23543</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0765401</span> (* <span class="number">1</span> = <span class="number">0.0765401</span> loss)</span><br><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">39.645656</span> <span class="number">23543</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.00756469</span> (* <span class="number">0.5</span> = <span class="number">0.00378234</span> loss)</span><br><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">39.645661</span> <span class="number">23543</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0201988</span> (* <span class="number">0.5</span> = <span class="number">0.0100994</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  实际分类正确率是 0.9428。训练 260000 次迭代后停止，测试记录如下</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">47.514267</span> <span class="number">28442</span> solver.cpp:<span class="number">347</span>] Iteration <span class="number">260000</span>, Testing net (#<span class="number">0</span>)</span><br><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">50.624385</span> <span class="number">28448</span> data_layer.cpp:<span class="number">89</span>] Restarting data prefetching from start.</span><br><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">50.639556</span> <span class="number">28442</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.471876</span></span><br><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">50.639595</span> <span class="number">28442</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0750447</span> (* <span class="number">1</span> = <span class="number">0.0750447</span> loss)</span><br><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">50.639602</span> <span class="number">28442</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.0074394</span> (* <span class="number">0.5</span> = <span class="number">0.0037197</span> loss)</span><br><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">50.639608</span> <span class="number">28442</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0199694</span> (* <span class="number">0.5</span> = <span class="number">0.00998469</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  实际分类正确率是 0.943752。</p>
+<p>  <strong>问题：</strong> 训练结果看似还可以，但是召回率很低，在阈值设置为 0.3 的情况下，召回率也才将将达到 90%。阈值要设置到 0.05，才能达到 97%-98%的召回率，ROC 曲线如下图。严格来说这个测试并不严谨，应该用检测器直接在图像中进行检测，但是为了方便，我直接用 val 集上的性能画出了 ROC 曲线，其中的 FDDB 曲线是将的人脸区域截取出来进行测试得到的。</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/12net_roc_1st.png" alt="12net 1st ROC" title="12net 1st ROC"></p>
+<ul>
+<li><p>2018.09.14</p>
+<p>使用上述 12net 在 WiderFace 上提取正负样本，提取结果如下：</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Thresholed</th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.05</td>
+<td>85210</td>
+<td>36745286</td>
+<td>632861</td>
+</tr>
+<tr>
+<td>0.5</td>
+<td>66224</td>
+<td>6299420</td>
+<td>354350</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>2018.09.17</p>
+<p>准备 24net 的训练样本。由于生成 12net 检测到的正样本数目有限，训练 24net 的 pos 样本包含两部分，一部分是训练 12net 的正样本，一部分是经过筛选的 12net 检测到的正样本；neg 样本和 part 样本全部来自 12net 的难例；landmark 与 12net 共用样本。经过采样后达到样本比例 1:3:1:2，样本数目如下表：</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+<th>Landmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>225172</td>
+<td>675516</td>
+<td>225172</td>
+<td>313456</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  训练过程与 12net 类似，学习率从 0.01 下降到 0.0001，最终的训练结果如下</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">00.631140</span> <span class="number">36330</span> solver.cpp:<span class="number">347</span>] Iteration <span class="number">70000</span>, Testing net (#<span class="number">0</span>)</span><br><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">03.305665</span> <span class="number">36335</span> data_layer.cpp:<span class="number">89</span>] Restarting data prefetching from start.</span><br><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">03.317827</span> <span class="number">36330</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.481501</span></span><br><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">03.317865</span> <span class="number">36330</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0479137</span> (* <span class="number">1</span> = <span class="number">0.0479137</span> loss)</span><br><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">03.317874</span> <span class="number">36330</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.00631254</span> (* <span class="number">0.5</span> = <span class="number">0.00315627</span> loss)</span><br><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">03.317879</span> <span class="number">36330</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0179083</span> (* <span class="number">0.5</span> = <span class="number">0.00895414</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  实际分类正确率是 0.963。ROC 曲线如下图，同样使用 val 集上的性能画出曲线。</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/24net_roc_1st.png" alt="24net 1st ROC" title="24net 1st ROC"></p>
+<ul>
+<li><p>2018.09.18</p>
+<p>使用 24net 在 WiderFace 上提取正负样本，提取结果如下：</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Thresholed</th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.5, 0.5</td>
+<td>86396</td>
+<td>83212</td>
+<td>225285</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  利用以上数据生成 48net 的训练样本，由于 24net 生成的样本数量有限，结合前两次训练所用的数据，生成训练集：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+<th>Landmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>283616</td>
+<td>850848</td>
+<td>283616</td>
+<td>567232</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>2018.09.19</p>
+<p>在训练 48net 的过程中，首先尝试了 Adam 算法进行优化，后来发现训练十分不稳定。转而使用 SGD 进行优化，效果好转。训练初始参数如下：</p>
+<figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">type:<span class="string">"SGD"</span></span><br><span class="line">base_lr: <span class="number">0.01</span></span><br><span class="line">momentum: <span class="number">0.9</span></span><br><span class="line">weight_decay: <span class="number">0.0005</span></span><br></pre></td></tr></table></figure>
+<p>48net 的训练结果比较一般，性能如下:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">22.318362</span>  <span class="number">3822</span> solver.cpp:<span class="number">347</span>] Iteration <span class="number">165000</span>, Testing net (#<span class="number">0</span>)</span><br><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">25.877437</span>  <span class="number">3827</span> data_layer.cpp:<span class="number">89</span>] Restarting data prefetching from start.</span><br><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">25.894898</span>  <span class="number">3822</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.4662</span></span><br><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">25.894937</span>  <span class="number">3822</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0917524</span> (* <span class="number">1</span> = <span class="number">0.0917524</span> loss)</span><br><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">25.894943</span>  <span class="number">3822</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.00566356</span> (* <span class="number">1</span> = <span class="number">0.00566356</span> loss)</span><br><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">25.894948</span>  <span class="number">3822</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0177907</span> (* <span class="number">0.5</span> = <span class="number">0.00889534</span> loss)</span><br></pre></td></tr></table></figure>
+<p>实际的分类精度为 0.9324。整体来看基本实现了文章中<a href="http://users.eecs.northwestern.edu/~xsh835/assets/cvpr2015_cascnn.pdf" target="_blank" rel="noopener">参考文献[19]</a>在验证集上的性能，性能对比如下表</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>CNN</th>
+<th>12-net</th>
+<th>24-net</th>
+<th>48-net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[19]</td>
+<td>94.4%</td>
+<td>95.1%</td>
+<td>93.2%</td>
+</tr>
+<tr>
+<td>MTCNN</td>
+<td>94.6%</td>
+<td>95.4%</td>
+<td>95.4%</td>
+</tr>
+<tr>
+<td>Ours</td>
+<td>94.3%</td>
+<td>96.3%</td>
+<td>93.2%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>2018.09.20</p>
+<p>整个系统连通后进行测试，发现人脸框抖动比较厉害，这应该是训练过程和样本带来的问题。</p>
+<p>比较奇怪的问题是在 Caffe 上进行 CPU 运算时，速度极慢，尤其 12net 运行速度慢 30 倍左右。通过观察参数分布发现，有大量 kernel 都是全零分布，初步感觉是因为 Adam 和 ignore label 相互作用的结果，即 ignore label 的样本会产生 0 值 loss，这些 loss 会影响 Adam 的优化过程，具体原因还需进一步理论推导。目前的解决方案是将含有大量 0 值 kernel 的层随机初始化，使用 SGD 进行训练。至于抖动的问题，需要进一步分析。重训后的模型性能如下表：</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>12-net</th>
+<th>24-net</th>
+<th>48-net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td>94.59%</td>
+<td>96.52%</td>
+<td>93.94%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>2018.09.26</p>
+<p>目前来看回归器的训练是完全失败。失败的原因可能有以下几点：</p>
+<ol>
+<li>对欧拉损失层做了代码修改，用来支持 ignore label，可能代码出现问题</li>
+<li>数据本身存在问题，需要验证数据的正确性</li>
+</ol>
+<p>先训练一个不带 ignore label 的回归器，看 loss 是否发生变化。</p>
+</li>
+<li><p>2018.09.27</p>
+<p>做了一个实验，用 20 张图像生成一个数据集，经过训练，网络是可以完全过拟合这个数据集的，说明数据和代码是没有问题的，但是加大数据量后，bounding box 的回归依旧不好。通过跟大神讨论，发现自己犯了一个很弱智的低级错误，<strong>回归问题是不可以做镜像的，回归问题是不可以做镜像的，回归问题是不可以做镜像的</strong>，重要的事情说三遍，如果图像做镜像操作，那么标注也需要进行镜像操作。</p>
+<p>重训后的模型性能如下表：</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>12-net</th>
+<th>24-net</th>
+<th>48-net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td>94.35%</td>
+<td>97.45%</td>
+<td>94.67%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>2018.10.01</p>
+<p>实验还是不够顺利，有些受挫感。目前来看 12net 和 24net 的训练是相对顺利的，至少能够去除大量虚检并给出相对准确的回归框。48net 的训练比较失败，存在虚检、定位不准以及关键点定位不准的问题。</p>
+<p>在训练 12net 和 24net 时，因为网络较小，而且这两个网络都不负责输出关键点，所以训练时只训练了分类和框回归问题。训练 48net 时三个 loss 都很重要，感觉按照原文的 loss weight 进行配置会造成回归问题学习不充分的问题，需要提高回归问题的 loss weight。</p>
+<p>接下来的工作包括：</p>
+<ol>
+<li>之前的训练为了快速验证思路，并没有严格按照后一阶段数据是前一阶段数据中的难例的原则，接下来需要重新走这个流程。</li>
+<li>探索 48net 的训练过程。具体来说有几个点需要尝试，首先，是刚刚提到的难例挖掘；其次，调整各个 loss 的权重；最后，除了阶段间的难例挖掘，也应注意阶段内的难例挖掘。</li>
+<li>以 24net 在 landmark 数据集上进行检测，将其输出作为 48net 进行 landmark 回归的输入。</li>
+</ol>
+</li>
+<li><p>2018.10.13</p>
+<p>最近一次训练的记录如下：</p>
+<p><strong>12net</strong>：</p>
+<p>12net 的样本由随机采样得来。</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>156728</td>
+<td>470184</td>
+<td>156728</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  验证集上的性能为：</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.9435</span></span><br><span class="line">Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0747717</span> (* <span class="number">1</span> = <span class="number">0.0747717</span> loss)</span><br><span class="line">Test net output #<span class="number">2</span>: roi_loss = <span class="number">0.0168385</span> (* <span class="number">0.5</span> = <span class="number">0.00841924</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  <strong>24net</strong></p>
+<p>  24net 的样本全部来自 12net 的检测结果。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>60149</td>
+<td>180447</td>
+<td>120298</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>1500</td>
+<td>1500</td>
+<td>1500</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  验证集上的性能为：</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.977588</span></span><br><span class="line">Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0648633</span> (* <span class="number">1</span> = <span class="number">0.0648633</span> loss)</span><br><span class="line">Test net output #<span class="number">2</span>: roi_loss = <span class="number">0.0192365</span> (* <span class="number">5</span> = <span class="number">0.0961826</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  <strong>48net</strong></p>
+<p>  48net 的正样本和 part 样本来自于 24net 在 widerface 上的检测结果，负样本来自于 24net 在 widerface 和 celeba 上的检测结果，landmark 样本来自于 24net 在 celeba 上的检测结果。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+<th>landmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>242862</td>
+<td>728586</td>
+<td>242862</td>
+<td>485724</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>5000</td>
+<td>5000</td>
+<td>5000</td>
+<td>5000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  在验证集上的性能为：</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.978155</span></span><br><span class="line">Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0694968</span> (* <span class="number">1</span> = <span class="number">0.0694968</span> loss)</span><br><span class="line">Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.00119616</span> (* <span class="number">5</span> = <span class="number">0.00598078</span> loss)</span><br><span class="line">Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0111277</span> (* <span class="number">1</span> = <span class="number">0.0111277</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  使用 0.5,0.5,0.5 作为阈值，在 FDDB 上测得的 discROC 曲线如下图</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/discROC_20181013.png" alt="ROC 20181013" title="ROC 20181013"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Face-Detection/" rel="tag"># Face Detection</a>
+              <a href="/tags/Face-Alignment/" rel="tag"># Face Alignment</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/08/20/Computer_Vision/Reading_Note/2018-08-20-MTCNN/" rel="prev" title="Reading Note: Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks">
+      <i class="fa fa-chevron-left"></i> Reading Note: Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/11/06/Computer_Vision/2018-11-06-GPU-Comparision/" rel="next" title="GPU Comparison">
+      GPU Comparison <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MTCNN-训练记录"><span class="nav-number">1.</span> <span class="nav-text">MTCNN 训练记录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#已经遇到的问题现象"><span class="nav-number">1.1.</span> <span class="nav-text">已经遇到的问题现象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#训练记录"><span class="nav-number">1.2.</span> <span class="nav-text">训练记录</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joshua LI"
+      src="/images/avatar-icon.png">
+  <p class="site-author-name" itemprop="name">Joshua LI</p>
+  <div class="site-description" itemprop="description">Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">58</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/joshua19881228" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;joshua19881228" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhixuan.1988.li@gmail.com" title="E-Mail → mailto:zhixuan.1988.li@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/joshua1988" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;joshua1988" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joshua LI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'fa9833471b8d01a7387d',
+      clientSecret: 'ac1fa284ebb82e7ba13fdf0180cb9b41fc73c4f1',
+      repo        : 'joshua19881228.github.io',
+      owner       : 'joshua19881228',
+      admin       : ['joshua19881228'],
+      id          : 'fc45bbf7029df88326c4b78bff451707',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

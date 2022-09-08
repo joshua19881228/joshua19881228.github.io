@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="2014年4月的时候自己在公司就将Caffe移植到Windows系统了，今年自己换了台电脑，想在家里也随便跑跑，本来也装了Ubuntu可以很方便的配置好，无奈在家的风格是“娱乐的时候抽空学习”，所以移植到Windows还是很有必要的。但是，公司禁止将公司内部资料带出，很多地方又都忘记了，周末磨了一天终于移植完，本篇为记录将Caffe移植至Windows7 x64系统下的一些关键步骤。下面介绍如何从">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VS2013配置Caffe卷积神经网络工具（64位Windows 7）——建立工程">
+<meta property="og:url" content="http://yoursite.com/2015/04/16/Computer_Vision/2015-04-16-caffe-windows-part2/index.html">
+<meta property="og:site_name" content="Joshua&#39;s Blog">
+<meta property="og:description" content="2014年4月的时候自己在公司就将Caffe移植到Windows系统了，今年自己换了台电脑，想在家里也随便跑跑，本来也装了Ubuntu可以很方便的配置好，无奈在家的风格是“娱乐的时候抽空学习”，所以移植到Windows还是很有必要的。但是，公司禁止将公司内部资料带出，很多地方又都忘记了，周末磨了一天终于移植完，本篇为记录将Caffe移植至Windows7 x64系统下的一些关键步骤。下面介绍如何从">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2015-04-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-19T09:11:04.570Z">
+<meta property="article:author" content="Joshua LI">
+<meta property="article:tag" content="Caffe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2015/04/16/Computer_Vision/2015-04-16-caffe-windows-part2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>VS2013配置Caffe卷积神经网络工具（64位Windows 7）——建立工程 | Joshua's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Joshua's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-my-jumble-of-computer-vision">
+
+    <a href="/2016/08/25/Computer_Vision/2016-08-25-my-jumble-of-computer-vision/" rel="section"><i class=" fa-fw"></i>My Jumble of Computer Vision</a>
+
+  </li>
+        <li class="menu-item menu-item-an-introduction-to-cnn-based-object-detection">
+
+    <a href="/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/" rel="section"><i class=" fa-fw"></i>An Introduction to CNN based Object Detection</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/04/16/Computer_Vision/2015-04-16-caffe-windows-part2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VS2013配置Caffe卷积神经网络工具（64位Windows 7）——建立工程
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-04-16 00:00:00" itemprop="dateCreated datePublished" datetime="2015-04-16T00:00:00+08:00">2015-04-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>2014年4月的时候自己在公司就将Caffe移植到Windows系统了，今年自己换了台电脑，想在家里也随便跑跑，本来也装了Ubuntu可以很方便的配置好，无奈在家的风格是“娱乐的时候抽空学习”，所以移植到Windows还是很有必要的。但是，公司禁止将公司内部资料带出，很多地方又都忘记了，周末磨了一天终于移植完，本篇为记录将Caffe移植至Windows7 x64系统下的一些关键步骤。下面介绍如何从源码建立VS2013工程。</p>
+<h2 id="Table-of-Content"><a href="#Table-of-Content" class="headerlink" title="Table of Content"></a>Table of Content</h2><ul>
+<li>Content<br>{:toc}</li>
+</ul>
+<h2 id="1-下载源码"><a href="#1-下载源码" class="headerlink" title="1. 下载源码"></a>1. 下载源码</h2><p>从<a href="https://github.com/BVLC/caffe" target="_blank" rel="noopener">https://github.com/BVLC/caffe</a>下载caffe源码，master或者dev版本都可以，本文中以dev为例</p>
+<h2 id="2-建立工程"><a href="#2-建立工程" class="headerlink" title="2. 建立工程"></a>2. 建立工程</h2><p>新建一个空的控制台VS2013工程，起名为caffe-dev。</p>
+<p>File —&gt; New —&gt; Project</p>
+<p>选择Win32 Console Application</p>
+<p>选择工程路径，比如D:\CODE\CXX</p>
+<p>给项目命名caffe-dev</p>
+<p>单击OK后选择Empty project </p>
+<h2 id="3-将工程的Solution-Platform改为x64"><a href="#3-将工程的Solution-Platform改为x64" class="headerlink" title="3. 将工程的Solution Platform改为x64"></a>3. 将工程的Solution Platform改为x64</h2><p>Build —&gt; Configuration Manager —&gt; Active solution platform —&gt; new —&gt; x64 —&gt; OK </p>
+<h2 id="4-设置CUDA编译"><a href="#4-设置CUDA编译" class="headerlink" title="4. 设置CUDA编译"></a>4. 设置CUDA编译</h2><p>Project —&gt; Build Customizations… —&gt; CUDA 7.0 —&gt; OK </p>
+<h2 id="5-设置一些工程下的路径"><a href="#5-设置一些工程下的路径" class="headerlink" title="5. 设置一些工程下的路径"></a>5. 设置一些工程下的路径</h2><p>注意Debug和Release下都要设置</p>
+<p>在Project —&gt; Properties —&gt; Configuration Properties —&gt; VC++ Directories —&gt; Include Directories中添加openblas、opencv、boost和cuda，例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">D:\LIBS\boost_1_57_0;D:\LIBS\OpenBLAS\include</span><br><span class="line">D:\LIBS\opencv\build\include</span><br><span class="line">D:\LIBS\opencv\build\include\opencv</span><br><span class="line">D:\LIBS\opencv\build\include\opencv2</span><br><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include</span><br></pre></td></tr></table></figure>
+<p>在Project —&gt; Properties —&gt; Configuration Properties —&gt; VC++ Directories —&gt; Library Directories中添加openblas、opencv、boost和cuda，例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">D:\LIBS\OpenBLAS\lib</span><br><span class="line">D:\LIBS\opencv\build\x64\vc12\lib</span><br><span class="line">D:\LIBS\boost_1_57_0\lib</span><br><span class="line">C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\lib\x64</span><br></pre></td></tr></table></figure>
+<h2 id="6-拷贝源码"><a href="#6-拷贝源码" class="headerlink" title="6. 拷贝源码"></a>6. 拷贝源码</h2><p>将压缩包内的include、src和tools文件夹拷贝到工程根目录下，同时把整理好的3rdparty文件夹也拷贝到工程目录下 </p>
+<h2 id="7-添加第三方依赖库路径"><a href="#7-添加第三方依赖库路径" class="headerlink" title="7. 添加第三方依赖库路径"></a>7. 添加第三方依赖库路径</h2><p>添加caffe的路径和3rdparty中第三方依赖库的路径，同样Debug和Release都要设置</p>
+<p>在Project —&gt; Properties —&gt; Configuration Properties —&gt; C/C++ —&gt; General —&gt; Additional Include Directories中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">..&#x2F;include;..&#x2F;src</span><br><span class="line">..&#x2F;3rdparty&#x2F;include</span><br><span class="line">..&#x2F;3rdparty&#x2F;include&#x2F;hdf5</span><br><span class="line">..&#x2F;3rdparty&#x2F;include&#x2F;lmdb</span><br></pre></td></tr></table></figure>
+<p>在Project —&gt; Properties —&gt; Configuration Properties —&gt; Linker —&gt; General —&gt; Additional Library Directories中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">..&#x2F;3rdparty&#x2F;lib</span><br></pre></td></tr></table></figure>
+<p>在Project —&gt; Properties —&gt; Configuration Properties —&gt; Linker —&gt; Input —&gt; Additional Dependencies中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">opencv_core2410.lib</span><br><span class="line">opencv_highgui2410.lib</span><br><span class="line">opencv_imgproc2410.lib</span><br><span class="line">cudart.lib</span><br><span class="line">cublas.lib</span><br><span class="line">curand.lib</span><br><span class="line">gflags.lib</span><br><span class="line">libglog.lib</span><br><span class="line">libopenblas.dll.a</span><br><span class="line">libprotobuf.lib</span><br><span class="line">libprotoc.lib</span><br><span class="line">leveldb.lib</span><br><span class="line">lmdb.lib</span><br><span class="line">libhdf5.lib</span><br><span class="line">libhdf5_hl.lib</span><br><span class="line">Shlwapi.lib</span><br></pre></td></tr></table></figure>
+<p>注意在Debug下应添加xxxd.lib形式的静态库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">opencv_core2410d.lib</span><br><span class="line">opencv_highgui2410d.lib</span><br><span class="line">opencv_imgproc2410d.lib</span><br><span class="line">cudart.lib</span><br><span class="line">cublas.lib</span><br><span class="line">curand.lib</span><br><span class="line">gflagsd.lib</span><br><span class="line">libglogd.lib</span><br><span class="line">libopenblas.dll.a</span><br><span class="line">libprotobufd.lib</span><br><span class="line">libprotoc.lib</span><br><span class="line">leveldbd.lib</span><br><span class="line">lmdbd.lib</span><br><span class="line">libhdf5.lib</span><br><span class="line">libhdf5_hl.lib</span><br><span class="line">Shlwapi.lib</span><br></pre></td></tr></table></figure>
+<h2 id="8-生成pb文件"><a href="#8-生成pb文件" class="headerlink" title="8. 生成pb文件"></a>8. 生成pb文件</h2><p>利用protoc.exe和caffe.proto生成caffe.pb.h和caffe.pb.cc文件</p>
+<p>在编译protobuf的时候会生成一个可执行文件protoc.exe，在工程的D:\CODE\CXX\caffe-dev\src\caffe\proto路径下有一个文件叫caffe.proto，可以将protoc.exe拷贝到该路径下，在命令行中进入D:\CODE\CXX\caffe-dev\src\caffe\proto路径，输入命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">protoc.exe caffe.proto --cpp_output&#x3D;.&#x2F;</span><br></pre></td></tr></table></figure>
+<p>可以看到在该路径下会生成caffe.pb.h和caffe.pb.cc，在D:\CODE\CXX\caffe\include\caffe中新建一个文件夹proto，将生成的两个文件移动到D:\CODE\CXX\caffe\include\caffe\proto中</p>
+<h2 id="9-准备mkstemp-h和mkstemp-cpp文件。"><a href="#9-准备mkstemp-h和mkstemp-cpp文件。" class="headerlink" title="9. 准备mkstemp.h和mkstemp.cpp文件。"></a>9. 准备mkstemp.h和mkstemp.cpp文件。</h2><p>将mkstemp.h放在include/caffe/util/路径下，mkstemp.h中的内容为</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;io.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mkstemp</span><span class="params">(<span class="keyword">char</span> *templates)</span></span>;</span><br></pre></td></tr></table></figure>
+<p>将mkstemp.cpp放在src/caffe/util/路径下，mkstemp.cpp中的内容为</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* mkstemp extracted from libc/sysdeps/posix/tempname.c.  Copyright</span></span><br><span class="line"><span class="comment">    (C) 1991-1999, 2000, 2001, 2006 Free Software Foundation, Inc.</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">    The GNU C Library is free software; you can redistribute it and/or</span></span><br><span class="line"><span class="comment">    modify it under the terms of the GNU Lesser General Public</span></span><br><span class="line"><span class="comment">    License as published by the Free Software Foundation; either</span></span><br><span class="line"><span class="comment">    version 2.1 of the License, or (at your option) any later version.  */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"caffe/util/mkstemp.hpp"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;errno.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fcntl.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/stat.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">char</span> letters[] =</span><br><span class="line"><span class="string">"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Generate a temporary file name based on TMPL.  TMPL must match the</span></span><br><span class="line"><span class="comment">    rules for mk[s]temp (i.e. end in "XXXXXX").  The name constructed</span></span><br><span class="line"><span class="comment">    does not exist at the time of the call to mkstemp.  TMPL is</span></span><br><span class="line"><span class="comment">    overwritten with the result.  */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">mkstemp</span> <span class="params">(<span class="keyword">char</span> *tmpl)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len;</span><br><span class="line">    <span class="keyword">char</span> *XXXXXX;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> value;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> random_time_bits;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> count;</span><br><span class="line">    <span class="keyword">int</span> fd = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> save_errno = errno;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* A lower bound on the number of temporary files to attempt to</span></span><br><span class="line"><span class="comment">        generate.  The maximum total number of temporary file names that</span></span><br><span class="line"><span class="comment">        can exist for a given template is 62**6.  It should never be</span></span><br><span class="line"><span class="comment">        necessary to try all these combinations.  Instead if a reasonable</span></span><br><span class="line"><span class="comment">        number of names is tried (we define reasonable as 62**3) fail to</span></span><br><span class="line"><span class="comment">        give the system administrator the chance to remove the problems.  */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ATTEMPTS_MIN (62 * 62 * 62)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/* The number of times to attempt to generate a temporary file.  To</span></span><br><span class="line"><span class="comment">        conform to POSIX, this must be no smaller than TMP_MAX.  */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">if</span> ATTEMPTS_MIN &lt; TMP_MAX</span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> attempts = TMP_MAX;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">else</span></span></span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> attempts = ATTEMPTS_MIN;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"></span><br><span class="line">    len = <span class="built_in">strlen</span> (tmpl);</span><br><span class="line">    <span class="keyword">if</span> (len &lt; <span class="number">6</span> || <span class="built_in">strcmp</span> (&amp;tmpl[len - <span class="number">6</span>], <span class="string">"XXXXXX"</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        errno = EINVAL;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* This is where the Xs start.  */</span></span><br><span class="line">    XXXXXX = &amp;tmpl[len - <span class="number">6</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Get some more or less random data.  */</span></span><br><span class="line">    &#123;</span><br><span class="line">    SYSTEMTIME      stNow;</span><br><span class="line">    FILETIME ftNow;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// get system time</span></span><br><span class="line">    GetSystemTime(&amp;stNow);</span><br><span class="line">    stNow.wMilliseconds = <span class="number">500</span>;</span><br><span class="line">    <span class="keyword">if</span> (!SystemTimeToFileTime(&amp;stNow, &amp;ftNow))</span><br><span class="line">    &#123;</span><br><span class="line">        errno = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    random_time_bits = (((<span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span>)ftNow.dwHighDateTime &lt;&lt; <span class="number">32</span>)</span><br><span class="line">                        | (<span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span>)ftNow.dwLowDateTime);</span><br><span class="line">    &#125;</span><br><span class="line">    value += random_time_bits ^ (<span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span>)GetCurrentThreadId ();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (count = <span class="number">0</span>; count &lt; attempts; value += <span class="number">7777</span>, ++count)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> v = value;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/* Fill in the random bits.  */</span></span><br><span class="line">        XXXXXX[<span class="number">0</span>] = letters[v % <span class="number">62</span>];</span><br><span class="line">        v /= <span class="number">62</span>;</span><br><span class="line">        XXXXXX[<span class="number">1</span>] = letters[v % <span class="number">62</span>];</span><br><span class="line">        v /= <span class="number">62</span>;</span><br><span class="line">        XXXXXX[<span class="number">2</span>] = letters[v % <span class="number">62</span>];</span><br><span class="line">        v /= <span class="number">62</span>;</span><br><span class="line">        XXXXXX[<span class="number">3</span>] = letters[v % <span class="number">62</span>];</span><br><span class="line">        v /= <span class="number">62</span>;</span><br><span class="line">        XXXXXX[<span class="number">4</span>] = letters[v % <span class="number">62</span>];</span><br><span class="line">        v /= <span class="number">62</span>;</span><br><span class="line">        XXXXXX[<span class="number">5</span>] = letters[v % <span class="number">62</span>];</span><br><span class="line"></span><br><span class="line">        fd = <span class="built_in">open</span> (tmpl, O_RDWR | O_CREAT | O_EXCL, _S_IREAD | _S_IWRITE);</span><br><span class="line">        <span class="keyword">if</span> (fd &gt;= <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        errno = save_errno;</span><br><span class="line">        <span class="keyword">return</span> fd;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (errno != EEXIST)</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* We got out of the loop because we ran out of combinations to try.  */</span></span><br><span class="line">    errno = EEXIST;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="10-将caffe的源文件添加到工程中"><a href="#10-将caffe的源文件添加到工程中" class="headerlink" title="10. 将caffe的源文件添加到工程中"></a>10. 将caffe的源文件添加到工程中</h2><p>将D:\CODE\CXX\caffe-dev\src\caffe路径下除了test文件中的所有源文件添加到工程中，如果想要跑一些测试代码，也可以把test中的源文件加进去</p>
+<p>将D:\CODE\CXX\caffe-dev\include\caffe\proto下的caffe.pb.cc添加到工程中</p>
+<p>将D:\CODE\CXX\caffe-dev\tools下的caffe.cpp添加到工程中 </p>
+<h2 id="11-修改一些代码"><a href="#11-修改一些代码" class="headerlink" title="11. 修改一些代码"></a>11. 修改一些代码</h2><p>在include/caffe/common.hpp中添加<code>#include &lt;direct.h&gt;</code></p>
+<p>在include/caffe/util/io.hpp中添加<code>#include &quot;mkstemp.hpp&quot;</code>，并将<code>close</code>函数替换为<code>_close</code>，将<code>char* mkdtemp_result = mkdtemp(temp_dirname_cstr);</code>替换为<code>errno_t mkdtemp_result = _mktemp_s(temp_dirname_cstr, sizeof(temp_dirname_cstr));</code></p>
+<p>将bnll_layer.cu中的<code>const float kBNLL_THRESHOLD = 50.;</code>修改为<code>#define kBNLL_THRESHOLD 50.</code></p>
+<p>将util/db.cpp中的<code>mkdir(source.c_str(), 0744)</code>修改为<code>_mkdir(source.c_str())</code></p>
+<p>将util/io.cpp中的<code>open</code>函数替换为<code>_open</code>，<code>close</code>函数替换为<code>_close</code></p>
+<p>将util/io.cpp中ReadProtoFromBinaryFile函数中的<code>int fd = open(filename, O_RDONLY);</code>替换为<code>int fd = open(filename, O_RDONLY | O_BINARY);</code></p>
+<p>在util/math_functions.cpp中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#define __builtin_popcount __popcnt </span><br><span class="line">#define __builtin_popcountl __popcnt</span><br></pre></td></tr></table></figure>
+<p>在common.cpp中添加<code>#include &lt;process.h&gt;</code></p>
+<p>将<code>pid = getpid();</code>替换为<code>pid = _getpid();</code> </p>
+<p>注释掉<code>::google::InstallFailureSignalHandler();</code></p>
+<p>将solver.cpp中的<code>snprintf</code>函数替换为<code>sprintf_s</code></p>
+<p>编译吧！！！！</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Caffe/" rel="tag"># Caffe</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2015/04/15/Computer_Vision/2015-04-15-caffe-windows-part1/" rel="prev" title="VS2013配置Caffe卷积神经网络工具（64位Windows 7）——准备依赖库">
+      <i class="fa fa-chevron-left"></i> VS2013配置Caffe卷积神经网络工具（64位Windows 7）——准备依赖库
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2015/05/10/Life_Discovery/Miscellaneous/2015-05-10-Miscellaneous/" rel="next" title="回忆克拉科夫">
+      回忆克拉科夫 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-of-Content"><span class="nav-number">1.</span> <span class="nav-text">Table of Content</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-下载源码"><span class="nav-number">2.</span> <span class="nav-text">1. 下载源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-建立工程"><span class="nav-number">3.</span> <span class="nav-text">2. 建立工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-将工程的Solution-Platform改为x64"><span class="nav-number">4.</span> <span class="nav-text">3. 将工程的Solution Platform改为x64</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-设置CUDA编译"><span class="nav-number">5.</span> <span class="nav-text">4. 设置CUDA编译</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-设置一些工程下的路径"><span class="nav-number">6.</span> <span class="nav-text">5. 设置一些工程下的路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-拷贝源码"><span class="nav-number">7.</span> <span class="nav-text">6. 拷贝源码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-添加第三方依赖库路径"><span class="nav-number">8.</span> <span class="nav-text">7. 添加第三方依赖库路径</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-生成pb文件"><span class="nav-number">9.</span> <span class="nav-text">8. 生成pb文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-准备mkstemp-h和mkstemp-cpp文件。"><span class="nav-number">10.</span> <span class="nav-text">9. 准备mkstemp.h和mkstemp.cpp文件。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-将caffe的源文件添加到工程中"><span class="nav-number">11.</span> <span class="nav-text">10. 将caffe的源文件添加到工程中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-修改一些代码"><span class="nav-number">12.</span> <span class="nav-text">11. 修改一些代码</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joshua LI"
+      src="/images/avatar-icon.png">
+  <p class="site-author-name" itemprop="name">Joshua LI</p>
+  <div class="site-description" itemprop="description">Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">58</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/joshua19881228" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;joshua19881228" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhixuan.1988.li@gmail.com" title="E-Mail → mailto:zhixuan.1988.li@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/joshua1988" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;joshua1988" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joshua LI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'fa9833471b8d01a7387d',
+      clientSecret: 'ac1fa284ebb82e7ba13fdf0180cb9b41fc73c4f1',
+      repo        : 'joshua19881228.github.io',
+      owner       : 'joshua19881228',
+      admin       : ['joshua19881228'],
+      id          : 'cf568f7757ca05da9baccedbbb9712fe',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Joshua&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="Joshua&#39;s Blog">
+<meta property="og:description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Joshua LI">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/page/3/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Joshua's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Joshua's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-my-jumble-of-computer-vision">
+
+    <a href="/2016/08/25/Computer_Vision/2016-08-25-my-jumble-of-computer-vision/" rel="section"><i class=" fa-fw"></i>My Jumble of Computer Vision</a>
+
+  </li>
+        <li class="menu-item menu-item-an-introduction-to-cnn-based-object-detection">
+
+    <a href="/2017/06/13/Computer_Vision/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/" rel="section"><i class=" fa-fw"></i>An Introduction to CNN based Object Detection</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/14/Computer_Vision/Reading_Note/2019-04-14-CSRNet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/14/Computer_Vision/Reading_Note/2019-04-14-CSRNet/" class="post-title-link" itemprop="url">Reading Note: CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-04-14 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-14T00:00:00+08:00">2019-04-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: CSRNet: Dilated Convolutional Neural Networks for Understanding the Highly Congested Scenes</p>
+<p><strong>AUTHOR</strong>: Yuhong Li, Xiaofan Zhang, Deming Chen</p>
+<p><strong>ASSOCIATION</strong>: University of Illinois at Urbana-Champaign, Beijing University of Posts and Telecommunications</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1802.10062" target="_blank" rel="noopener">arXiv:1802.10062</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>a pure fully convolutional network (CSRNet) is proposed for understanding the highly congested scenes.</li>
+<li>CSRNet achieves the state-of-the-art performance on four datasets (ShanghaiTech dataset, the UCF CC 50 dataset, the WorldEXPO’10 dataset, and the UCSD dataset).</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="CSRNet-Architecture"><a href="#CSRNet-Architecture" class="headerlink" title="CSRNet Architecture"></a>CSRNet Architecture</h3><p>The proposed CSRNet is composed of two major components: </p>
+<ol>
+<li>a convolutional neural network (CNN) is utilized as the front-end for 2D feature extraction.</li>
+<li>a dilated CNN follows the front-end for the back-end, which uses dilated kernels to deliver larger reception fields and to replace pooling operations.</li>
+</ol>
+<p>In this work, the front-end CNN is same as the first ten layers of VGG-16 with three pooling layers, considering the tradeoff between acuracy and the resource overhead. The back-end CNN is a series of dilated convolutional layers and the last layer is a $ 1 \times 1 $ convolutional layer producing density map. The network architecture is shown in the following figure</p>
+<p><img src="/img/ReadingNote/20190414/CSRNet_architecture.png" alt="Architecture" title="Architecture"></p>
+<h3 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h3><p>The ground truth is generated using geometry-adaptive kernels to tackle the highly congested scenes. By blurring each head annotation using a Gaussian kernel (which is normalized to 1), the ground truth is generated considering the spatial distribution of all images from each dataset.</p>
+<p>9 patches are cropped from each image at different locations with 1/4 size of the original image. The first four patches contain four quarters of the image without overlapping while the other five patches are randomly cropped from the input image. After that, double the training set by mirroring the patches.</p>
+<h2 id="PERFORMANCE"><a href="#PERFORMANCE" class="headerlink" title="PERFORMANCE"></a>PERFORMANCE</h2><p><img src="/img/ReadingNote/20190414/performance_comp.png" alt="Architecture Comparison" title="Architecture Comparison"></p>
+<p><img src="/img/ReadingNote/20190414/performance_shanghai.png" alt="Performance Shanghai" title="Performance Shanghai"></p>
+<p><img src="/img/ReadingNote/20190414/performance_ucf.png" alt="Performance UCF" title="Performance UCF"></p>
+<p><img src="/img/ReadingNote/20190414/performance_worldexpo.png" alt="Performance WorldExpo" title="Performance WorldExpo"></p>
+<p><img src="/img/ReadingNote/20190414/performance_UCSD.png" alt="Performance UCSD" title="Performance UCSD"></p>
+<h2 id="SOME-THOUGHTs"><a href="#SOME-THOUGHTs" class="headerlink" title="SOME THOUGHTs"></a>SOME THOUGHTs</h2><ol>
+<li>How about using more advanced CNNs?</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/20/Computer_Vision/Reading_Note/2019-01-20-CornerNet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/01/20/Computer_Vision/Reading_Note/2019-01-20-CornerNet/" class="post-title-link" itemprop="url">Reading Note: CornerNet: Detecting Objects as Paired Keypoints</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-01-20 00:00:00" itemprop="dateCreated datePublished" datetime="2019-01-20T00:00:00+08:00">2019-01-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: CornerNet: Detecting Objects as Paired Keypoints</p>
+<p><strong>AUTHOR</strong>: Hei Law, Jia Deng</p>
+<p><strong>ASSOCIATION</strong>: University of Michigan</p>
+<p><strong>FROM</strong>: <a href="https://arxiv.org/abs/1808.01244" target="_blank" rel="noopener">arXiv:1808.01244</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>CornerNet, a new one-stage approach to object detection is introduced that does without anchor boxes. We detect an object as a pair of</li>
+<li>a new type of pooling layer, <em>coner pooling</em>, that helps a convolutional network better localize corners of bounding boxes is introduced.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>The use of anchor boxes has two drawbacks.</p>
+<p>First, a very large set of anchor boxes are of need, e.g. more than 40k in DSSD and more than 100k in RetinaNet. This is because the detector is trained to classify whether each anchor box sufficiently overlaps with a ground truth box, and a large number of anchor boxes is needed to ensure sufficient overlap with most ground truth boxes, leading to huge imbalance between positive and negative anchor boxes.</p>
+<p>Second, the use of anchor boxes introduces many hyperparameters and design choices. These include how many boxes, what sizes, and what aspect ratios. Such choices have largely been made via ad-hoc heuristics, and can become even more complicated when combined with multiscale architectures.</p>
+<h3 id="DetNet-Design"><a href="#DetNet-Design" class="headerlink" title="DetNet Design"></a>DetNet Design</h3><p>In CornerNet, an object is detected as a pair of keypoints, the top-left corner and bottom-right corner of the bounding box. A convolutional network predicts two sets of heatmaps to represent the locations of corners of different object categories, one set for the top-left corners and the other for the bottom-right corners. The network also predicts an embedding vector for each detected corner such that the distance between the embeddings of two corners from the same object is small. To produce tighter bounding boxes, the network also predicts offsets to slightly adjust the locations of the corners. The framework is illustrated in the following figure.</p>
+<p><img src="/img/ReadingNote/20190120/framework.png" alt="Framework" title="Framework"></p>
+<p>To generate heatmaps, embeddings and offsets, the following network structure is utilized. The heatmaps’ goal is detecting corners. The embeddings are used to group corners that belong to the same object. Conner pooling is used in the network to extract features for corner detection.</p>
+<p><img src="/img/ReadingNote/20190120/network-block.png" alt="Framework" title="network structure"></p>
+<p>The annotation of heatmaps is generated in a way that similar to that in detection joints in pose estimation methods. Embeddings are generated within pairs that generated from corners. The offsets are regressed from the difference between actual division of coordinates and downsampling ratio and the floored division.</p>
+<p>The backbone of the network is two hourglasses.</p>
+<h2 id="PERFORMANCE"><a href="#PERFORMANCE" class="headerlink" title="PERFORMANCE"></a>PERFORMANCE</h2><p><img src="/img/ReadingNote/20190120/performance.png" alt="Performance" title="Performance"></p>
+<h2 id="SOME-THOUGHTs"><a href="#SOME-THOUGHTs" class="headerlink" title="SOME THOUGHTs"></a>SOME THOUGHTs</h2><ol>
+<li>How to select numbers of hourglasses?</li>
+<li>The speed of the method is slow. The average inference time is 244ms per image on a Titan X.</li>
+<li>The key of the method is detecting corners and more work can be done in this task.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/18/Life_Discovery/Miscellaneous/2019-01-18-Moving/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/01/18/Life_Discovery/Miscellaneous/2019-01-18-Moving/" class="post-title-link" itemprop="url">搬家</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-01-18 00:00:00" itemprop="dateCreated datePublished" datetime="2019-01-18T00:00:00+08:00">2019-01-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近刚刚搬了家，突然有一些不一样的感受，最深刻的感受是跟过去的一次告别。</p>
+<p>首先，就是因为懒。要收拾的东西太多，有些东西仔细想想好像一年也没怎么用过，甚至自从上一次搬家就没用过，它就一直在某个角落落灰。到了这次搬家，看着它脏脏的样子，掂量掂量还有点分量，再一想那边已经堆了十个收纳箱了，这东西就算了吧，遂直接留给房东，或者直接丢进垃圾箱。</p>
+<p>等东西都搬到了新屋子，发现户型、家具都不一样，以前摆在外面的陈设要么跟房间不搭配、要么没有地方放，就收在收纳箱里。这些陈设可能是我们珍视的合影、得奖的奖状、前公司的工牌……那些定义了我们曾经是谁的东西都被收藏了起来。在搬家之前，它们潜移默化地提醒着我们曾经的经历，但是现在却会慢慢被遗忘了。</p>
+<p>搬了新家，自然还要制备一些新事物，这可是体现我们喜新厌旧本性的时候。新买的肯定会得到更多的宠爱，而那些颜老色衰的就被慢慢冷落了。等下次再搬家的时候，估计它们就是那些被留下的一批了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/12/Using_Linux/2019-01-12-Nvidia-Jetson-Broke-System-Update/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/01/12/Using_Linux/2019-01-12-Nvidia-Jetson-Broke-System-Update/" class="post-title-link" itemprop="url">Nvidia JetPack Breaks Update on Host System</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-01-12 00:00:00" itemprop="dateCreated datePublished" datetime="2019-01-12T00:00:00+08:00">2019-01-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Using-Linux/" itemprop="url" rel="index"><span itemprop="name">Using Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Rencently I’ve been trying to update my Ubuntu16.04 using <code>apt</code> and it failed again and again. At first, I thought it was because of the GFW and the sources. It turned out that any effort on these settings was in vain.</p>
+<p>At last, after analyzing the update logs and digging into my deepest memories, I found that it was because I installed Nvidia JetPack to use Jetson TX1/2. I had to remove a pile of things related to JetPack by following commands.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get remove .*:arm64</span><br><span class="line">dpkg --remove-architecture arm64</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/Life_Discovery/Miscellaneous/2018-12-24-Just-Before-30/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/12/24/Life_Discovery/Miscellaneous/2018-12-24-Just-Before-30/" class="post-title-link" itemprop="url">写在30岁之前</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-12-24 00:00:00" itemprop="dateCreated datePublished" datetime="2018-12-24T00:00:00+08:00">2018-12-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="写在30岁之前"><a href="#写在30岁之前" class="headerlink" title="写在30岁之前"></a>写在30岁之前</h1><p>人还是需要一些仪式感的，自从2017年7月份开始出来创业，自己的仪式感越来越弱，很多事情能省就省。可能过了刚刚出来日日担心饭辙的阶段，也可能是被折磨得麻木了，现在倒觉得人活着还是要开心一些想开一些，该有的仪式感还是要有，不然这日子过得挺没意思。因此，为了迎接自己的30岁，在这里胡乱絮叨絮叨。</p>
+<p>除了仪式感，其实本来早就想写一写近期以来的感受，尤其是创业以来，随着角色的转变，不管是主动的还是被迫的，内心里有很多感触。有些时候，总不知道这些感受该对谁说。可能跟谁说，谁都会觉得我的感触都是一种矫情，写出来也权当一种发泄。</p>
+<h1 id="2007-2011"><a href="#2007-2011" class="headerlink" title="2007-2011"></a>2007-2011</h1><p>想了想，既然是写在30岁之前，除了这一年半的创业，还不如再往前追溯追溯，从高考开始写吧。都过去十年了，现在还能想起来的那些事，估计就是我人生中最重要的一些标记了。</p>
+<h2 id="高考"><a href="#高考" class="headerlink" title="高考"></a>高考</h2><p>当时老师家长为了缓解大家的压力：人生今后遇到的坎多了，回过头来看高考真不算什么。不知道十年后有多少人真的是这样的感受，我不敢说高考真不算什么，起码它是我到现在的人生轨迹的起点。另外，这也真是一个坎。</p>
+<p>高考前的那两个月一直很凉爽，经常下雨，不知道是不是就是因为贪凉，我的咳嗽一直没好。高考前第二天下了大雨，高考前一天放晴，天气突然很热。下午我在自习室里感觉身上很难受，忽冷忽热的，就去医务室量了体温，39度的高烧。也不知道是谁帮我找的老师，谁给我父母打了电话，印象中傍晚的时候家里开车来接我。临上车，我的语文老师对我说：志轩，没事！到了医院，大夫说是肺炎，不记得是不是说让我住院了，我说明天我要高考。在医院输了两个小时液，回家。现在已经完全不记得当晚是什么感受了。</p>
+<p>高考第一天上午考语文，下午考数学。考语文的时候很虚弱，全身都没有力气，有一种世界离我而去的感觉，视野也在变窄。最后写作文，作文题目里有一首诗，完全没有读懂那首诗是什么意思，硬着头皮写。那感觉就好像在潜水，肺一直被水压着，呼吸困难。支持着我写完的就一个念想：考不上我认了，但是我绝不能因为没考完而去复读。下午考数学之前又开始发烧，去医务室打退烧针，大夫跟我说一定要多喝水，因为退烧需要出大量的汗来散热，很容易因为脱水而虚脱。下午我就是在湿透的衬衫下进行考试，估计也是因为太虚弱了，也没有什么胡思乱想，很专心的答题。晚上回去接着发烧，折腾半宿。</p>
+<p>高考第二天上午考理综，下午考英语。身体状态和第一天差不多，心理状态倒好了很多，估计就是破罐破摔了。考试这两天几乎一点东西都没吃，吃了也吐出来。考完试，二话没说直接就去医院住院，高烧不退三四天吧。后来看拍的胸片，右边肺全部感染，左边肺一小半感染。我是直接略过了别人考完忐忑等成绩的那几天，住院半个月，直到出分去学校领成绩单。成绩也算反映了我的状态，语文考得是一塌糊涂，数学因为心态平稳考了个一般分，理综创纪录地考了一个历史最高，英语向来是我的长项，但是那一年题太简单，完全没有拉开分数段。有惊无险地考到了北邮，当时北京是考前报志愿，很保守地报了北邮，估计也是因为这样才能心态平稳地发挥。</p>
+<h2 id="学生会"><a href="#学生会" class="headerlink" title="学生会"></a>学生会</h2><p>在北邮的本科四年，印象最为深刻的应该就是学生会。在学生会的经历重塑了我的性格，在学生会结识的朋友是我一生的挚友。还记得那一个个奋斗的夜晚、跟春晚一样长的例会、北门的砂锅聚餐……</p>
+<p>从小我其实是一个很内向而且自卑的人，也不爱说话。小时候见到父母的同事，从来也不叫人、不说话，跟自己家人说话都是“惜字如金”，“自来水”不说“自来水”，只说“自来”。上了大学之后，觉得自己这样不行啊，得尝试改变一下。听师兄师姐说在学生会能锻炼人，于是也就想着加入学生会吧。小时候喜欢鼓捣一些小制作，也喜欢在电脑上用PS做一些图，看来看去觉得科技部很适合我，于是就加入了科技部。大一做干事，大二做部长，大三做学生会副主席。这两三年，的确让我变得开朗了很多，有时候我甚至觉得这几年的学生会打开了我的一个开关，让我变得太贫了。但不可否认的，在学生会让我变得自信了。</p>
+<p>在学生会里，有两个人我要尤其感谢，一个是枫哥，另一个是小昭。</p>
+<p>枫哥当时是我们的分团委书记，学生会的直接领导，北邮土著，从本科一直到现在都在北邮，绝版青春的Logo代表着一段传奇。对于枫哥，一方面打心眼里敬重，得叫一声老师。另一方面，跟枫哥特别投脾气，私下里叫一声枫哥，亲近了很多。枫哥是我的贵人，后来能够读研，枫哥的推荐起了很大作用。枫哥也是我步入职场的启蒙导师，很多影响都是潜移默化的。嗯，还有就是变贫了，也是天天跟枫哥说相声练出来的。</p>
+<p>小昭让我第一次接触到了计算机视觉，让我找到了我的兴趣所在，以及此后的硕士研究方向和毕业后的职业发展方向。大三的时候受小昭邀请，一起组队参与大创，我们的项目主要内容是检测人员摔倒并报警。现在看来，当时的算法思想十分简朴，但是让我第一次体验了如何通过科学实验验证自己的假设并解决问题，也让当时迷茫的我，找到了未来的方向，直到现在我依旧对计算机视觉抱有极大的热忱。如果没有小昭当时的邀请，估计我不会这么幸运地找到一个让我一直抱有兴趣的方向。</p>
+<h2 id="07112"><a href="#07112" class="headerlink" title="07112"></a>07112</h2><p>07112应该是我们那一届凝聚力最强的班级了吧，大家一起耍的日子里也是各种各样的嗨。那时候每年都要参加评优活动，每到这个时候，就要做一个五分钟左右的视频来展示班级的珍贵回忆，但是五分钟实在实在太短了，根本不可能把我们一起经历的事情展示完，每次都要费尽心思地压缩。我们有太多的并肩奋斗，有太多的携手共度，有太多太多的美好回忆。</p>
+<h1 id="2011-2014"><a href="#2011-2014" class="headerlink" title="2011-2014"></a>2011-2014</h1><p>本科四年算是开开心心地玩过去的，接下来就是努力科研的研究生三年。真的很幸运可以在MCPRL读硕士。</p>
+<h2 id="科研"><a href="#科研" class="headerlink" title="科研"></a>科研</h2><p>我应该是我们实验室考研分数最低的，毕业答辩的时候庄老师说：要不是实验室刚好多出一个名额，你就只能去找调剂了。很幸运我能够在实验室读研，在实验室所做的工作让我积累了很多在计算机视觉领域内的经验，锻炼了我实现算法的编码能力，以及在实际中提出问题、思考问题、解决问题的能力。</p>
+<p>我在实验室没有做过任何横向或纵向项目，一直都是做TRECVID SED国际评测。这是一个监控视频事件检测任务，我们当时关注的事件包括”指 Pointing“、 “放东西 ObjectPut”、“跑 PersonRuns“、“拥抱 Embrace”、“聚集 PeopleMeet”和“分离  PeopleSplitUp”。做这个竞赛的好处就是让我对计算机视觉的基本问题都有了比较系统的了解，而且做了多个方面的工作，包括行人检测、多目标跟踪、人体姿态估计、动作识别、事件检测……</p>
+<p>我记得研三在写毕业论文的时候，很多同学好像还在发愁写什么，我真的是忍不住想要多写一些，给大家分享我所做的工作，学到的知识，以及我对那些问题的思考。刚刚又去翻看了一下自己的毕业论文，最后的致谢是这样写的：</p>
+<blockquote>
+<p>时光荏苒， 两年半的硕士研究生阶段就要结束了， 在此我必须对关心、指导和帮助过我的老师、同学和朋友们表达最衷心的感谢！</p>
+<p>首先感谢赵衍运副教授在这两年多来对我的指导和帮助。赵老师严谨的治学态度和一丝不苟的工作精神时时刻刻都在激励并提醒我在科研中要勤奋刻苦、不能有半点马虎。同时，赵老师与我们分享她的人生阅历，也使我在科研之外的生活中获益匪浅。</p>
+<p>同时感谢蔡安妮教授，蔡老师看问题的深刻程度和对问题的整体把握度都令我折服，蔡老师每一次参加我主讲的组会都会问到我准备最薄弱的部分，都会提出一些让我获得启发的问题， 和蔡老师的每一次交流都使我有所收获。还要感谢苏菲教授、庄伯金副教授和赵志诚老师，他们也在我的学业和科研中给予了极大的指导和帮助。</p>
+<p>此外，还要感谢我的家人和实验室的同学，他们都在我需要的时候给我莫大的鼓励、帮助和安慰，使我不断战胜困难。最后，对所有支持、帮助过我的老师、同学和朋友致以最诚挚的谢意！</p>
+</blockquote>
+<p>直至今天，每当想起实验室，还是这些感谢的话。</p>
+<h2 id="寒文轩"><a href="#寒文轩" class="headerlink" title="寒文轩"></a>寒文轩</h2><p>“寒文轩”是由三个人的名字中各取一个字组成的。</p>
+<p>寒：小寒姐是一个精灵古怪的女孩，爱玩，很活泼也很有想法。读研期间小寒姐去西班牙交流了半年，搞科研的同时，不耽误自己在欧洲转了大半圈。跟小寒姐在一起聊天，会有一种感觉：世界上没有什么事是大不了的。</p>
+<p>文：小F杰是那种让我羡慕的文艺青年，读了万卷书，行了万里路，追随自己内心的男子。他给自己取的昵称叫做“霞客”，非常合适。我们这个小团体的名字也是小F杰取的，也只有他能想到这么有才华的名字。小F杰应该是我们那一届考研分数第一。</p>
+<p>轩：就是我自己了。</p>
+<h1 id="2014-2017"><a href="#2014-2017" class="headerlink" title="2014-2017"></a>2014-2017</h1><p>2014年硕士毕业了，到三星通信研究院工作，在这里积累了很多，结识了一帮技术达人，工作很开心，成长为职场人，不舍地离开。</p>
+<p>现在，在计算机视觉领域最流行的框架应该就是卷积神经网络了，在我读研期间，其实完全没有接触过，到了三星之后才真正开始研究和使用卷积神经网络。2013年至2016年是深度学习大爆发的一段时间，每天都有各种各样的新理论、新结构、新方法被发表出来。因为三星特有的周期性研发节奏，让我有足够的时间汲取消化大量的新知识，并将这些技术应用到实际产品中，在这样的过程中，我也积累了宝贵的经验。在三星，参加竞赛、发专利、去韩国总部开发做报告、参与旗舰机功能的研发……还有一点就是做PPT的技术极大提升。</p>
+<p>我们小组人员最齐整的时候有八个人，每个人有擅长的领域，也各有自己的性格，大家都是互相欣赏。我们几个人配合起来效率很高，有些工作甚至感觉像流水线一样，经过几个人的处理，马上就出活了。在技术上，大家的交流也很多，我从每一位身上都学到了很多。也正是这些同事，让我每天都十分开心地去上班，有一种打心眼里热爱工作和生活的感觉。</p>
+<p>也正是这些小伙伴，让我最终从三星离职，其实在三星工作的期间，真的很开心。我也对当时的领导和同事抱有极大的感恩之心，是他们让我顺利地转变了角色，我也能体会到领导对我的重视和培养，也取得了一些成绩。但是，当身边的小伙伴一个个地离职的时候，用我们开玩笑的话来说就是：有一种失恋的感觉。我们八个人的小团体后来就以“图像叛将小分队”自称了，虽然大家现在在不同的公司，但都一直保持着联系，我相信职场中很少能有这样的感情。记得枫哥曾问过我，对我的工作打多少分，我说9.5分。</p>
+<h1 id="2017-今天"><a href="#2017-今天" class="headerlink" title="2017-今天"></a>2017-今天</h1><p>这一年多，按说应该是感触最多的一年。但是，猛地一想，好像没法很好的进行总结，或许是因为这些感触还需要沉淀，来一波意识流吧。</p>
+<h2 id="创业"><a href="#创业" class="headerlink" title="创业"></a>创业</h2><p>创业其实就是为了折腾。当初选择创业就是想趁年轻折腾折腾，纯粹就是为了折腾。在选择创业之前，我还申请过英国的PhD。14年的12月到2月，工作日上班，周末去上雅思课，自己准备研究计划书，套词……很遗憾没能成行，现在想想就当提升英语能力了。读PhD没折腾成，就选择创业吧。</p>
+<p>创业真不是人干的。在大公司里工作有个好处，尤其在大外企里工作，很容易就可以做到工作生活两不误。工作上，只要做好自己拿一份工作，只要不断提升自己的专业技能，几乎不用再操其他心了。节假日里，大可小资一番，旅游、读书、追剧、画画、健身、望天发呆……自从开始创业，尤其是最开始的三个月，一直都很焦虑，最大的焦虑来自于对未来的不确定性，不知道公司可以走多久走多远。然后是一团乱麻的工作，在大企业里，有各个部门来共同服务员工，各司其职，但是创业就是所有事都要自己操心，什么事都得想着，什么事都得惦记着。从一个研发人员转型为一个管理人员，这个角色转变太难了。而且作为一个草根创业者，我必须既是研发人员又是管理人员。可能我的创业伙伴可以在创业这件事本身上寻找到快乐，但是我是一个必须在生活中寻找乐趣的人，但是自从创业之后，哪怕周末没有去公司，心里其实也总是惦记着公司的事，好像不能完全放松，因此有时候总觉得生活没啥乐趣。哪怕有些时候真是有个半天空闲，现在都不知道可以干点什么了。</p>
+<p>创业真的锻炼人。草根创业就是要做各种各样的工作，因此从技术上来说，我会接触到各种各样的场景，在尝试解决这些不同问题的时候，也是对自己技术的一种锻炼。除了技术，剩下更多的就是对心智的锻炼。提升最多是抗压能力，不管是面对别人的质疑挑战、deadline的压力、未知数的恐惧，也可能是麻木了，反正有时候会觉得无所谓。</p>
+<p>创业可以让人对自己更加了解，诌一句英文就是：know who I am。上面的很多感受其实就是创业之后才知道的，比如我要从生活中获取乐趣；相比较跟人打交道，我更擅长跟机器打交道；我是一个相当保守的人；我相对来说比较固执；《三国演义》里形容袁绍的“多谋寡断”也适合我；我会逃避现实，做一些自我欺骗的事……</p>
+<p>感谢创业路上一起拼搏的兄弟姐妹，感谢合作伙伴，感谢那些踩过的坑吧。</p>
+<h2 id="六人行"><a href="#六人行" class="headerlink" title="六人行"></a>六人行</h2><p>拿《老友记》形容我们再合适不过了，一行六人，三男三女，从小到大的死党。去年我们聚会之后还说，大家都有自己的小生活啦，可是见面还是以前的感觉，真好。大家要多聚聚，以后没准就是孩子们一起玩，我们一起打麻将。无论什么时候，每当那首《I’ll be there for you》响起，我都会想起我们六个人。说起来真是奇怪，越是深沉的感情，好像能够表达的语言反而越少，有的就是心里那种一团暖暖的感觉。</p>
+<h2 id="十年恋爱"><a href="#十年恋爱" class="headerlink" title="十年恋爱"></a>十年恋爱</h2><p>这个感触太多，酸甜苦辣咸，其中百味估计要单独写了。感谢张大夫一直以来的陪伴。</p>
+<h2 id="30岁"><a href="#30岁" class="headerlink" title="30岁"></a>30岁</h2><p>说起30岁，感觉这真是一个坎，对于我自己而言可能就是：要接受自己是一个普通人了。27、28岁的时候，可能还能厚着脸皮谈理想。但是到了现在，估计只有一起创业的小伙伴们，一起喝酒之后，才会再提起理想吧。他们说只有等你有了孩子，才算真正长大了。我感觉自己好像还没准备好长大，就已经不能再说不想长大了。</p>
+<p><img src="/img/LifeDiscovery/2008-2018.jpg" alt="2008-2018" title="2008-2018"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/21/Coding/2018-12-21-JNI-New-Release/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/12/21/Coding/2018-12-21-JNI-New-Release/" class="post-title-link" itemprop="url">JNI和cv::Mat配合中的一个坑</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-12-21 00:00:00" itemprop="dateCreated datePublished" datetime="2018-12-21T00:00:00+08:00">2018-12-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近开发一个需要从Java端将图像传至native层的功能，发现了一个奇怪现象，native层每次获取到的图像都会有一些像素值发生随机变化。原始代码类似如下</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">cv::Mat <span class="title">imgbuf2mat</span><span class="params">(JNIEnv *env, jbyteArray buf, <span class="keyword">int</span> <span class="built_in">width</span>, <span class="keyword">int</span> <span class="built_in">height</span>)</span></span>&#123;</span><br><span class="line">    jbyte *ptr = env-&gt;GetByteArrayElements(buf, <span class="number">0</span>);</span><br><span class="line">    <span class="function">cv::Mat <span class="title">img</span><span class="params">(<span class="built_in">height</span>, <span class="built_in">width</span>, img_type, (<span class="keyword">unsigned</span> <span class="keyword">char</span> *)ptr)</span></span>;</span><br><span class="line">    env-&gt;ReleaseByteArrayElements(buf, ptr, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">return</span> img;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span> nativeProcessImageBuff</span><br><span class="line">        (JNIEnv *env, jobject thiz,</span><br><span class="line">        jbyteArray img_buff,</span><br><span class="line">        jint <span class="built_in">width</span>,</span><br><span class="line">        jint <span class="built_in">height</span>)</span><br><span class="line">&#123;</span><br><span class="line">    cv::Mat img = imgbuf2mat(env, img_buff, <span class="built_in">width</span>, <span class="built_in">height</span>, img_type, img_rotate);</span><br><span class="line">    <span class="comment">//do somethint to the image</span></span><br><span class="line">    <span class="built_in">process</span>(img);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>简单来说就是先把图像内容转成cv::Mat，然后对图像做一些处理，但是即使传入相同的一张图像，处理结果每次都不一样。后来发现其实应该先处理图像，再释放引用，修改后的代码类似如下</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">cv::Mat <span class="title">imgbuf2mat</span><span class="params">(JNIEnv *env, jbyte *ptr, <span class="keyword">int</span> <span class="built_in">width</span>, <span class="keyword">int</span> <span class="built_in">height</span>)</span></span>&#123;</span><br><span class="line">    <span class="function">cv::Mat <span class="title">img</span><span class="params">(<span class="built_in">height</span>, <span class="built_in">width</span>, img_type, (<span class="keyword">unsigned</span> <span class="keyword">char</span> *)ptr)</span></span>;</span><br><span class="line">    <span class="keyword">return</span> img;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span> nativeProcessImageBuff</span><br><span class="line">        (JNIEnv *env, jobject thiz,</span><br><span class="line">        jbyteArray img_buff,</span><br><span class="line">        jint <span class="built_in">width</span>,</span><br><span class="line">        jint <span class="built_in">height</span>)</span><br><span class="line">&#123;</span><br><span class="line">    jbyte *ptr = env-&gt;GetByteArrayElements(img_buff, <span class="number">0</span>);</span><br><span class="line">    cv::Mat img = imgbuf2mat(env, ptr, <span class="built_in">width</span>, <span class="built_in">height</span>);</span><br><span class="line">    <span class="comment">//do somethint to the image</span></span><br><span class="line">    <span class="built_in">process</span>(img);</span><br><span class="line">    env-&gt;ReleaseByteArrayElements(img_buff, ptr, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/06/Computer_Vision/2018-11-06-GPU-Comparision/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/11/06/Computer_Vision/2018-11-06-GPU-Comparision/" class="post-title-link" itemprop="url">GPU Comparison</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-11-06 00:00:00" itemprop="dateCreated datePublished" datetime="2018-11-06T00:00:00+08:00">2018-11-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>The statistics are from Tim Dettmers’ blog <a href="http://timdettmers.com/2018/11/05/which-gpu-for-deep-learning/" target="_blank" rel="noopener">Which GPU(s) to Get for Deep Learning: My Experience and Advice for Using GPUs in Deep Learning</a>.</p>
+<p><img src="https://i0.wp.com/timdettmers.com/wp-content/uploads/2018/08/performance_TPU_RTX_GPUs.png" alt="Performance"></p>
+<p><img src="https://i1.wp.com/timdettmers.com/wp-content/uploads/2018/08/cost_performance_RTX_GPUs.png" alt="Performance per Dollar"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/11/Computer_Vision/2018-09-11-training-mtcnn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/09/11/Computer_Vision/2018-09-11-training-mtcnn/" class="post-title-link" itemprop="url">Training MTCNN</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-09-11 00:00:00" itemprop="dateCreated datePublished" datetime="2018-09-11T00:00:00+08:00">2018-09-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="MTCNN-训练记录"><a href="#MTCNN-训练记录" class="headerlink" title="MTCNN 训练记录"></a>MTCNN 训练记录</h1><p>最近尝试使用 Caffe 复现 MTCNN，感觉坑很大，记录一下训练过程，目前还没有好的结果。网上也有很多童鞋在尝试训练 MTCNN，普遍反映使用 TensorFlow 可以得到比较好的结果，但是使用 Caffe 不是很乐观。</p>
+<h2 id="已经遇到的问题现象"><a href="#已经遇到的问题现象" class="headerlink" title="已经遇到的问题现象"></a>已经遇到的问题现象</h2><ul>
+<li><p>2018.09.11：目前只训练了 12net，召回率偏低。</p>
+<p>以<a href="https://github.com/blankWorld/MTCNN-Accelerate-Onet" target="_blank" rel="noopener">blankWorld/MTCNN-Accelerate-Onet</a>为 baseline，blankWorld 在 FDDB 上的测试性能如下图</p>
+<p><img src="https://raw.githubusercontent.com/blankWorld/MTCNN-Accelerate-Onet/master/img/mtcnn-fddb.jpg" alt="FDDB Result" title="FDDB Result"></p>
+<p>这个效果很不错，但是我自己生成样本后训练 12net，召回率有明显下降。性能对比如下图</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/12net_fddb.png" alt="FDDB 12net Compare" title="FDDB 12net Compare"></p>
+<p>暂且不管 12net 的测试结果为什么会这么差，两个模型的性能差距是可以反映的。</p>
+</li>
+</ul>
+<h2 id="训练记录"><a href="#训练记录" class="headerlink" title="训练记录"></a>训练记录</h2><ul>
+<li><p>2018.09.11</p>
+<p><strong>训练数据生成</strong></p>
+<p>参考<a href="https://github.com/AITTSMD/MTCNN-Tensorflow" target="_blank" rel="noopener">AITTSMD/MTCNN-Tensorflow</a>提供的 prepare_data 进行数据生成。数据集情况如下表</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+<th>Landmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>156728/189530</td>
+<td>470184/975229</td>
+<td>156728/547211</td>
+<td>313456/357604</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  其中 Pos:Neg:Part:Landmark = 1:3:1:2，样本比例参考原作的比例。Pos、Neg、Part 来自于<a href="http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/index.html" target="_blank" rel="noopener">WiderFace</a>，Landmark 来自于<a href="http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html" target="_blank" rel="noopener">CelebA</a>。其中正样本进行了人工的数据筛选，筛选的原因是根据 WiderFace 生成的正样本，有很多都是质量很差的图像，包含人脸大面积遮挡或十分模糊的情况。之前召回率很差的性能来自没有经过筛选的训练集，因为使用了 OHEM，只有 loss 值在前 70%的样本才参与梯度计算，感觉如果质量差的样本占比较大，网络学习到的特征是错误的，那些质量好的图像可能得不到充分的学习。</p>
+<p>  <strong>训练参数设置</strong></p>
+<p>  初始训练参数如下</p>
+  <figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">type:<span class="string">"Adam"</span></span><br><span class="line">momentum: <span class="number">0.9</span></span><br><span class="line">momentum2:<span class="number">0.999</span></span><br><span class="line">delta:<span class="number">1</span>e-<span class="number">8</span></span><br><span class="line">base_lr: <span class="number">0.01</span></span><br><span class="line">weight_decay: <span class="number">0.0005</span></span><br><span class="line">batch_size: <span class="number">256</span></span><br></pre></td></tr></table></figure>
+<p>  第一轮训练在 75000 次迭代(17.5 个 epoch)时停止，测试记录如下</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">25.019253</span> <span class="number">21722</span> solver.cpp:<span class="number">347</span>] Iteration <span class="number">75000</span>, Testing net (#<span class="number">0</span>)</span><br><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">28.057858</span> <span class="number">21727</span> data_layer.cpp:<span class="number">89</span>] Restarting data prefetching from start.</span><br><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">28.072748</span> <span class="number">21722</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.4638</span></span><br><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">28.072789</span> <span class="number">21722</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.096654</span> (* <span class="number">1</span> = <span class="number">0.096654</span> loss)</span><br><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">28.072796</span> <span class="number">21722</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.008529</span> (* <span class="number">0.5</span> = <span class="number">0.0042645</span> loss)</span><br><span class="line">I0911 <span class="number">10</span>:<span class="number">16</span>:<span class="number">28.072801</span> <span class="number">21722</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0221648</span> (* <span class="number">0.5</span> = <span class="number">0.0110824</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  <strong>注意：分类测试结果是 0.4638 是因为测试集没有打乱，1-10000 为 pos 样本，10001-20000 为 neg 样本，20001-30000 为 part 样本，30001-40000 为 landmark 样本。因此，实际分类正确率应该是 0.9276</strong></p>
+<p>  降低学习率至 0.001，训练 135000 次迭代(31.5 个 epoch)时停止，测试记录如下</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">36.482010</span> <span class="number">23543</span> solver.cpp:<span class="number">347</span>] Iteration <span class="number">135000</span>, Testing net (#<span class="number">0</span>)</span><br><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">39.629933</span> <span class="number">23660</span> data_layer.cpp:<span class="number">89</span>] Restarting data prefetching from start.</span><br><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">39.645612</span> <span class="number">23543</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.4714</span></span><br><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">39.645649</span> <span class="number">23543</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0765401</span> (* <span class="number">1</span> = <span class="number">0.0765401</span> loss)</span><br><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">39.645656</span> <span class="number">23543</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.00756469</span> (* <span class="number">0.5</span> = <span class="number">0.00378234</span> loss)</span><br><span class="line">I0911 <span class="number">13</span>:<span class="number">14</span>:<span class="number">39.645661</span> <span class="number">23543</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0201988</span> (* <span class="number">0.5</span> = <span class="number">0.0100994</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  实际分类正确率是 0.9428。训练 260000 次迭代后停止，测试记录如下</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">47.514267</span> <span class="number">28442</span> solver.cpp:<span class="number">347</span>] Iteration <span class="number">260000</span>, Testing net (#<span class="number">0</span>)</span><br><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">50.624385</span> <span class="number">28448</span> data_layer.cpp:<span class="number">89</span>] Restarting data prefetching from start.</span><br><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">50.639556</span> <span class="number">28442</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.471876</span></span><br><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">50.639595</span> <span class="number">28442</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0750447</span> (* <span class="number">1</span> = <span class="number">0.0750447</span> loss)</span><br><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">50.639602</span> <span class="number">28442</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.0074394</span> (* <span class="number">0.5</span> = <span class="number">0.0037197</span> loss)</span><br><span class="line">I0911 <span class="number">16</span>:<span class="number">58</span>:<span class="number">50.639608</span> <span class="number">28442</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0199694</span> (* <span class="number">0.5</span> = <span class="number">0.00998469</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  实际分类正确率是 0.943752。</p>
+<p>  <strong>问题：</strong> 训练结果看似还可以，但是召回率很低，在阈值设置为 0.3 的情况下，召回率也才将将达到 90%。阈值要设置到 0.05，才能达到 97%-98%的召回率，ROC 曲线如下图。严格来说这个测试并不严谨，应该用检测器直接在图像中进行检测，但是为了方便，我直接用 val 集上的性能画出了 ROC 曲线，其中的 FDDB 曲线是将的人脸区域截取出来进行测试得到的。</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/12net_roc_1st.png" alt="12net 1st ROC" title="12net 1st ROC"></p>
+<ul>
+<li><p>2018.09.14</p>
+<p>使用上述 12net 在 WiderFace 上提取正负样本，提取结果如下：</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Thresholed</th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.05</td>
+<td>85210</td>
+<td>36745286</td>
+<td>632861</td>
+</tr>
+<tr>
+<td>0.5</td>
+<td>66224</td>
+<td>6299420</td>
+<td>354350</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>2018.09.17</p>
+<p>准备 24net 的训练样本。由于生成 12net 检测到的正样本数目有限，训练 24net 的 pos 样本包含两部分，一部分是训练 12net 的正样本，一部分是经过筛选的 12net 检测到的正样本；neg 样本和 part 样本全部来自 12net 的难例；landmark 与 12net 共用样本。经过采样后达到样本比例 1:3:1:2，样本数目如下表：</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+<th>Landmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>225172</td>
+<td>675516</td>
+<td>225172</td>
+<td>313456</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  训练过程与 12net 类似，学习率从 0.01 下降到 0.0001，最终的训练结果如下</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">00.631140</span> <span class="number">36330</span> solver.cpp:<span class="number">347</span>] Iteration <span class="number">70000</span>, Testing net (#<span class="number">0</span>)</span><br><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">03.305665</span> <span class="number">36335</span> data_layer.cpp:<span class="number">89</span>] Restarting data prefetching from start.</span><br><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">03.317827</span> <span class="number">36330</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.481501</span></span><br><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">03.317865</span> <span class="number">36330</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0479137</span> (* <span class="number">1</span> = <span class="number">0.0479137</span> loss)</span><br><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">03.317874</span> <span class="number">36330</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.00631254</span> (* <span class="number">0.5</span> = <span class="number">0.00315627</span> loss)</span><br><span class="line">I0917 <span class="number">15</span>:<span class="number">19</span>:<span class="number">03.317879</span> <span class="number">36330</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0179083</span> (* <span class="number">0.5</span> = <span class="number">0.00895414</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  实际分类正确率是 0.963。ROC 曲线如下图，同样使用 val 集上的性能画出曲线。</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/24net_roc_1st.png" alt="24net 1st ROC" title="24net 1st ROC"></p>
+<ul>
+<li><p>2018.09.18</p>
+<p>使用 24net 在 WiderFace 上提取正负样本，提取结果如下：</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Thresholed</th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.5, 0.5</td>
+<td>86396</td>
+<td>83212</td>
+<td>225285</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  利用以上数据生成 48net 的训练样本，由于 24net 生成的样本数量有限，结合前两次训练所用的数据，生成训练集：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+<th>Landmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>283616</td>
+<td>850848</td>
+<td>283616</td>
+<td>567232</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>2018.09.19</p>
+<p>在训练 48net 的过程中，首先尝试了 Adam 算法进行优化，后来发现训练十分不稳定。转而使用 SGD 进行优化，效果好转。训练初始参数如下：</p>
+<figure class="highlight protobuf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">type:<span class="string">"SGD"</span></span><br><span class="line">base_lr: <span class="number">0.01</span></span><br><span class="line">momentum: <span class="number">0.9</span></span><br><span class="line">weight_decay: <span class="number">0.0005</span></span><br></pre></td></tr></table></figure>
+<p>48net 的训练结果比较一般，性能如下:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">22.318362</span>  <span class="number">3822</span> solver.cpp:<span class="number">347</span>] Iteration <span class="number">165000</span>, Testing net (#<span class="number">0</span>)</span><br><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">25.877437</span>  <span class="number">3827</span> data_layer.cpp:<span class="number">89</span>] Restarting data prefetching from start.</span><br><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">25.894898</span>  <span class="number">3822</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.4662</span></span><br><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">25.894937</span>  <span class="number">3822</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0917524</span> (* <span class="number">1</span> = <span class="number">0.0917524</span> loss)</span><br><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">25.894943</span>  <span class="number">3822</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.00566356</span> (* <span class="number">1</span> = <span class="number">0.00566356</span> loss)</span><br><span class="line">I0919 <span class="number">18</span>:<span class="number">02</span>:<span class="number">25.894948</span>  <span class="number">3822</span> solver.cpp:<span class="number">414</span>]     Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0177907</span> (* <span class="number">0.5</span> = <span class="number">0.00889534</span> loss)</span><br></pre></td></tr></table></figure>
+<p>实际的分类精度为 0.9324。整体来看基本实现了文章中<a href="http://users.eecs.northwestern.edu/~xsh835/assets/cvpr2015_cascnn.pdf" target="_blank" rel="noopener">参考文献[19]</a>在验证集上的性能，性能对比如下表</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>CNN</th>
+<th>12-net</th>
+<th>24-net</th>
+<th>48-net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[19]</td>
+<td>94.4%</td>
+<td>95.1%</td>
+<td>93.2%</td>
+</tr>
+<tr>
+<td>MTCNN</td>
+<td>94.6%</td>
+<td>95.4%</td>
+<td>95.4%</td>
+</tr>
+<tr>
+<td>Ours</td>
+<td>94.3%</td>
+<td>96.3%</td>
+<td>93.2%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>2018.09.20</p>
+<p>整个系统连通后进行测试，发现人脸框抖动比较厉害，这应该是训练过程和样本带来的问题。</p>
+<p>比较奇怪的问题是在 Caffe 上进行 CPU 运算时，速度极慢，尤其 12net 运行速度慢 30 倍左右。通过观察参数分布发现，有大量 kernel 都是全零分布，初步感觉是因为 Adam 和 ignore label 相互作用的结果，即 ignore label 的样本会产生 0 值 loss，这些 loss 会影响 Adam 的优化过程，具体原因还需进一步理论推导。目前的解决方案是将含有大量 0 值 kernel 的层随机初始化，使用 SGD 进行训练。至于抖动的问题，需要进一步分析。重训后的模型性能如下表：</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>12-net</th>
+<th>24-net</th>
+<th>48-net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td>94.59%</td>
+<td>96.52%</td>
+<td>93.94%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>2018.09.26</p>
+<p>目前来看回归器的训练是完全失败。失败的原因可能有以下几点：</p>
+<ol>
+<li>对欧拉损失层做了代码修改，用来支持 ignore label，可能代码出现问题</li>
+<li>数据本身存在问题，需要验证数据的正确性</li>
+</ol>
+<p>先训练一个不带 ignore label 的回归器，看 loss 是否发生变化。</p>
+</li>
+<li><p>2018.09.27</p>
+<p>做了一个实验，用 20 张图像生成一个数据集，经过训练，网络是可以完全过拟合这个数据集的，说明数据和代码是没有问题的，但是加大数据量后，bounding box 的回归依旧不好。通过跟大神讨论，发现自己犯了一个很弱智的低级错误，<strong>回归问题是不可以做镜像的，回归问题是不可以做镜像的，回归问题是不可以做镜像的</strong>，重要的事情说三遍，如果图像做镜像操作，那么标注也需要进行镜像操作。</p>
+<p>重训后的模型性能如下表：</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>12-net</th>
+<th>24-net</th>
+<th>48-net</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td>94.35%</td>
+<td>97.45%</td>
+<td>94.67%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>2018.10.01</p>
+<p>实验还是不够顺利，有些受挫感。目前来看 12net 和 24net 的训练是相对顺利的，至少能够去除大量虚检并给出相对准确的回归框。48net 的训练比较失败，存在虚检、定位不准以及关键点定位不准的问题。</p>
+<p>在训练 12net 和 24net 时，因为网络较小，而且这两个网络都不负责输出关键点，所以训练时只训练了分类和框回归问题。训练 48net 时三个 loss 都很重要，感觉按照原文的 loss weight 进行配置会造成回归问题学习不充分的问题，需要提高回归问题的 loss weight。</p>
+<p>接下来的工作包括：</p>
+<ol>
+<li>之前的训练为了快速验证思路，并没有严格按照后一阶段数据是前一阶段数据中的难例的原则，接下来需要重新走这个流程。</li>
+<li>探索 48net 的训练过程。具体来说有几个点需要尝试，首先，是刚刚提到的难例挖掘；其次，调整各个 loss 的权重；最后，除了阶段间的难例挖掘，也应注意阶段内的难例挖掘。</li>
+<li>以 24net 在 landmark 数据集上进行检测，将其输出作为 48net 进行 landmark 回归的输入。</li>
+</ol>
+</li>
+<li><p>2018.10.13</p>
+<p>最近一次训练的记录如下：</p>
+<p><strong>12net</strong>：</p>
+<p>12net 的样本由随机采样得来。</p>
+</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>156728</td>
+<td>470184</td>
+<td>156728</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>10000</td>
+<td>10000</td>
+<td>10000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  验证集上的性能为：</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.9435</span></span><br><span class="line">Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0747717</span> (* <span class="number">1</span> = <span class="number">0.0747717</span> loss)</span><br><span class="line">Test net output #<span class="number">2</span>: roi_loss = <span class="number">0.0168385</span> (* <span class="number">0.5</span> = <span class="number">0.00841924</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  <strong>24net</strong></p>
+<p>  24net 的样本全部来自 12net 的检测结果。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>60149</td>
+<td>180447</td>
+<td>120298</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>1500</td>
+<td>1500</td>
+<td>1500</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  验证集上的性能为：</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.977588</span></span><br><span class="line">Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0648633</span> (* <span class="number">1</span> = <span class="number">0.0648633</span> loss)</span><br><span class="line">Test net output #<span class="number">2</span>: roi_loss = <span class="number">0.0192365</span> (* <span class="number">5</span> = <span class="number">0.0961826</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  <strong>48net</strong></p>
+<p>  48net 的正样本和 part 样本来自于 24net 在 widerface 上的检测结果，负样本来自于 24net 在 widerface 和 celeba 上的检测结果，landmark 样本来自于 24net 在 celeba 上的检测结果。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Positive</th>
+<th>Negative</th>
+<th>Part</th>
+<th>landmark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Set</strong></td>
+<td>242862</td>
+<td>728586</td>
+<td>242862</td>
+<td>485724</td>
+</tr>
+<tr>
+<td><strong>Validation Set</strong></td>
+<td>5000</td>
+<td>5000</td>
+<td>5000</td>
+<td>5000</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>  在验证集上的性能为：</p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Test net output #<span class="number">0</span>: cls_Acc = <span class="number">0.978155</span></span><br><span class="line">Test net output #<span class="number">1</span>: cls_loss = <span class="number">0.0694968</span> (* <span class="number">1</span> = <span class="number">0.0694968</span> loss)</span><br><span class="line">Test net output #<span class="number">2</span>: pts_loss = <span class="number">0.00119616</span> (* <span class="number">5</span> = <span class="number">0.00598078</span> loss)</span><br><span class="line">Test net output #<span class="number">3</span>: roi_loss = <span class="number">0.0111277</span> (* <span class="number">1</span> = <span class="number">0.0111277</span> loss)</span><br></pre></td></tr></table></figure>
+<p>  使用 0.5,0.5,0.5 作为阈值，在 FDDB 上测得的 discROC 曲线如下图</p>
+<p>  <img src="https://raw.githubusercontent.com/joshua19881228/joshua19881228.github.io/master/img/TrainMTCNN/discROC_20181013.png" alt="ROC 20181013" title="ROC 20181013"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/20/Computer_Vision/Reading_Note/2018-08-20-MTCNN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/08/20/Computer_Vision/Reading_Note/2018-08-20-MTCNN/" class="post-title-link" itemprop="url">Reading Note: Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-08-20 00:00:00" itemprop="dateCreated datePublished" datetime="2018-08-20T00:00:00+08:00">2018-08-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks</p>
+<p><strong>AUTHOR</strong>: Kaipeng Zhang, Zhanpeng Zhang, Zhifeng Li</p>
+<p><strong>ASSOCIATION</strong>: Chinese Academy of Sciences, The Chinese University of Hong Kong</p>
+<p><strong>FROM</strong>: <a href="https://kpzhang93.github.io/MTCNN_face_detection_alignment/paper/spl.pdf" target="_blank" rel="noopener">IEEE Signal Processing Letters</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>A new cascaded CNNs based framework is proposed for joint face detection and alignment, and a lightweight CNN architecture is carefully designed for real time performance.</li>
+<li>An effective method is proposed to conduct online hard sample mining to improve the performance.</li>
+<li>Extensive experiments are conducted on challenging benchmarks, to show significant performance improvement of the proposed approach compared to the state-of-the-art techniques in both face detection and face alignment tasks.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>This work is very much like a traditional slide-window based face detection method. A cascade classifier is used to classify an image patch. The first classifier is very simple so that it can efficiently remove easy negative patches. Then more complex classifiers are used to remove harder patches. The last CNN is used as a regressor to localize face landmarks. Along with the classifiers, bounding box is also localized. To handle multiple scales, an image pyramid is built.</p>
+<p>The pipeline of this work is shown as follows. The input image is first resized to different scales to build an image pyramid, which is sent to the three-stage cascaded framework.  </p>
+<p><img src="/img/ReadingNote/20180820/mtcnn_framework.png" alt="Framework" title="Framework"></p>
+<p><strong>Stage 1:</strong> A fully convolutional network is proposed, called Proposal Network (P-Net), to obtain the candidate facial windows and their bounding box regression vectors. Then candidates are calibrated based on the estimated bounding box regression vectors. After that, non-maximum suppression (NMS) is utilized to merge highly overlapped candidates.</p>
+<p><strong>Stage 2:</strong> All candidates are fed to another CNN, called Refine Network (R-Net), which further rejects numerous false candidates, performs calibration with bounding box regression, and conducts NMS.</p>
+<p><strong>Stage 3:</strong> This stage is similar to the second stage, but this stage aims to identify face regions with more supervision. In particular, the network will output five facial landmarks’ positions.</p>
+<p>The architecture of the three networks are shown in the following figure.</p>
+<p><img src="/img/ReadingNote/20180820/mtcnn_architecture.png" alt="Architecture" title="Architecture"></p>
+<p>At training stage, the face classification is trained as typical two-class classification task using cross-entropy loss. In each mini-batch, the samples are sorted by their losses and only the top 70% of them are selected to compute gradients. On the other hand, Bounding box regression and facial landmark localization are trained using Euclidean loss.</p>
+<h2 id="PERFORMANCE"><a href="#PERFORMANCE" class="headerlink" title="PERFORMANCE"></a>PERFORMANCE</h2><p>Face detection performance:</p>
+<p><img src="/img/ReadingNote/20180820/mtcnn_fd.png" alt="Detection" title="Detection"></p>
+<p>Face landmark regression performance:</p>
+<p><img src="/img/ReadingNote/20180820/mtcnn_lm.png" alt="Landmark" title="Landmark"></p>
+<h2 id="IDEAS"><a href="#IDEAS" class="headerlink" title="IDEAS"></a>IDEAS</h2><ol>
+<li>As the author provided no training code, I implement the training code based on caffe by adding ignore labels to EuclideanLossLayer and surpporting multiple label to DataLayer.</li>
+<li>In this work, samples are assigned as different types. In my own experiments, I assign samples with multiple labels, which means that one sample can be used for different losses at the same time. I’m not sure whether this modification can help improve the performance.</li>
+<li>Further experiments are of need to realize the performance of the work.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/12/Coding/2018-07-12-Jupyter-Shortcut/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/07/12/Coding/2018-07-12-Jupyter-Shortcut/" class="post-title-link" itemprop="url">Jupyter Notebook快捷键</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-07-12 00:00:00" itemprop="dateCreated datePublished" datetime="2018-07-12T00:00:00+08:00">2018-07-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-08-19 17:11:04" itemprop="dateModified" datetime="2022-08-19T17:11:04+08:00">2022-08-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Jupyter Notebook 有两种键盘输入模式。编辑模式，允许你往单元中键入代码或文本；这时的单元框线是绿色的。命令模式，键盘输入运行程序命令；这时的单元框线是灰色。</p>
+<ol>
+<li>命令模式 (按键 Esc 开启)</li>
+</ol>
+<ul>
+<li>Enter : 转入编辑模式</li>
+<li>Shift-Enter : 运行本单元，选中下个单元</li>
+<li>Ctrl-Enter : 运行本单元</li>
+<li>Alt-Enter : 运行本单元，在其下插入新单元</li>
+<li>Y : 单元转入代码状态</li>
+<li>M :单元转入markdown状态</li>
+<li>R : 单元转入raw状态</li>
+<li>1 : 设定 1 级标题</li>
+<li>2 : 设定 2 级标题</li>
+<li>3 : 设定 3 级标题</li>
+<li>4 : 设定 4 级标题</li>
+<li>5 : 设定 5 级标题</li>
+<li>6 : 设定 6 级标题</li>
+<li>Up : 选中上方单元</li>
+<li>K : 选中上方单元</li>
+<li>Down : 选中下方单元</li>
+<li>J : 选中下方单元</li>
+<li>Shift-K : 扩大选中上方单元</li>
+<li>Shift-J : 扩大选中下方单元</li>
+<li>A : 在上方插入新单元</li>
+<li>B : 在下方插入新单元</li>
+<li>X : 剪切选中的单元</li>
+<li>C : 复制选中的单元</li>
+<li>Shift-V : 粘贴到上方单元</li>
+<li>V : 粘贴到下方单元</li>
+<li>Z : 恢复删除的最后一个单元</li>
+<li>D,D : 删除选中的单元</li>
+<li>Shift-M : 合并选中的单元</li>
+<li>Ctrl-S : 文件存盘</li>
+<li>S : 文件存盘</li>
+<li>L : 转换行号</li>
+<li>O : 转换输出</li>
+<li>Shift-O : 转换输出滚动</li>
+<li>Esc : 关闭页面</li>
+<li>Q : 关闭页面</li>
+<li>H : 显示快捷键帮助</li>
+<li>I,I : 中断Notebook内核</li>
+<li>0,0 : 重启Notebook内核</li>
+<li>Shift : 忽略</li>
+<li>Shift-Space : 向上滚动</li>
+<li>Space : 向下滚动</li>
+</ul>
+<ol>
+<li>编辑模式 ( Enter 键启动)</li>
+</ol>
+<ul>
+<li>Tab : 代码补全或缩进</li>
+<li>Shift-Tab : 提示</li>
+<li>Ctrl-] : 缩进</li>
+<li>Ctrl-[ : 解除缩进</li>
+<li>Ctrl-A : 全选</li>
+<li>Ctrl-Z : 复原</li>
+<li>Ctrl-Shift-Z : 再做</li>
+<li>Ctrl-Y : 再做</li>
+<li>Ctrl-Home : 跳到单元开头</li>
+<li>Ctrl-Up : 跳到单元开头</li>
+<li>Ctrl-End : 跳到单元末尾</li>
+<li>Ctrl-Down : 跳到单元末尾</li>
+<li>Ctrl-Left : 跳到左边一个字首</li>
+<li>Ctrl-Right : 跳到右边一个字首</li>
+<li>Ctrl-Backspace : 删除前面一个字</li>
+<li>Ctrl-Delete : 删除后面一个字</li>
+<li>Esc : 进入命令模式</li>
+<li>Ctrl-M : 进入命令模式</li>
+<li>Shift-Enter : 运行本单元，选中下一单元</li>
+<li>Ctrl-Enter : 运行本单元</li>
+<li>Alt-Enter : 运行本单元，在下面插入一单元</li>
+<li>Ctrl-Shift— : 分割单元</li>
+<li>Ctrl-Shift-Subtract : 分割单元</li>
+<li>Ctrl-S : 文件存盘</li>
+<li>Shift : 忽略</li>
+<li>Up : 光标上移或转入上一单元</li>
+<li>Down :光标下移或转入下一单元</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Joshua LI"
+      src="/images/avatar-icon.png">
+  <p class="site-author-name" itemprop="name">Joshua LI</p>
+  <div class="site-description" itemprop="description">Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">58</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/joshua19881228" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;joshua19881228" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhixuan.1988.li@gmail.com" title="E-Mail → mailto:zhixuan.1988.li@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/joshua1988" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;joshua1988" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Joshua LI</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+
+</body>
+</html>
