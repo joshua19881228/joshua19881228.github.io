@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+  <meta name="description" content="其实现在的AI真的很强，随便选择一家的产品，都能得到想要的结果。从这一方面来看，用博客来记录，或多或少都没有什么太大必要。因此在这篇里，主要记录个思路，细节上的调整都可以交给大模型来处理。 我的初衷是来自于写了一个自动发布博客的脚本，每天定时用hexo发布github pages。但由于中国大陆访问github总是不太稳定，脚本经常失败。想找一个既能保证推送稳定，又能使用github pages的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用Gitee作为跳板使用Githun Pages">
+<meta property="og:title" content="利用Gitee作为跳板使用Github Pages">
 <meta property="og:url" content="http://yoursite.com/2026/03/14/Coding/2026-03-14-From-Gitee-to-Github/index.html">
 <meta property="og:site_name" content="Joshua&#39;s Blog">
-<meta property="og:description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+<meta property="og:description" content="其实现在的AI真的很强，随便选择一家的产品，都能得到想要的结果。从这一方面来看，用博客来记录，或多或少都没有什么太大必要。因此在这篇里，主要记录个思路，细节上的调整都可以交给大模型来处理。 我的初衷是来自于写了一个自动发布博客的脚本，每天定时用hexo发布github pages。但由于中国大陆访问github总是不太稳定，脚本经常失败。想找一个既能保证推送稳定，又能使用github pages的">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-03-14T07:58:00.000Z">
-<meta property="article:modified_time" content="2026-03-14T07:59:14.881Z">
+<meta property="article:modified_time" content="2026-03-14T13:53:13.555Z">
 <meta property="article:author" content="Joshua LI">
 <meta property="article:tag" content="Github Pages">
 <meta name="twitter:card" content="summary">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>利用Gitee作为跳板使用Githun Pages | Joshua's Blog</title>
+  <title>利用Gitee作为跳板使用Github Pages | Joshua's Blog</title>
   
 
 
@@ -189,7 +189,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          利用Gitee作为跳板使用Githun Pages
+          利用Gitee作为跳板使用Github Pages
         </h1>
 
         <div class="post-meta">
@@ -200,7 +200,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2026-03-14 15:58:00 / Modified: 15:59:14" itemprop="dateCreated datePublished" datetime="2026-03-14T15:58:00+08:00">2026-03-14</time>
+              <time title="Created: 2026-03-14 15:58:00 / Modified: 21:53:13" itemprop="dateCreated datePublished" datetime="2026-03-14T15:58:00+08:00">2026-03-14</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -223,7 +223,83 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>其实现在的AI真的很强，随便选择一家的产品，都能得到想要的结果。从这一方面来看，用博客来记录，或多或少都没有什么太大必要。因此在这篇里，主要记录个思路，细节上的调整都可以交给大模型来处理。</p>
+<p>我的初衷是来自于写了一个自动发布博客的脚本，每天定时用hexo发布github pages。但由于中国大陆访问github总是不太稳定，脚本经常失败。想找一个既能保证推送稳定，又能使用github pages的方法。这才想到是不是可以将gitee.io作为源头，每次用hexo发布到gitee.io。将github.io作为目的地，同步gitee.io的内容，发布github pages博客。</p>
+<p>主要的步骤其实很简单：</p>
+<ol>
+<li><p>在gitee建立一个名称为 <code>XXXXX.gitee.io</code> 的仓库</p>
+</li>
+<li><p>在github建立一个名称为 <code>XXXXX.github.io</code> 的仓库</p>
+</li>
+<li><p>在本地生成SSH密钥</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;your_email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>按提示操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 第1次提示：选择保存位置（直接回车使用默认位置）</span><br><span class="line">&gt; Enter file in which to save the key (/Users/yourname/.ssh/id_ed25519): [回车]</span><br><span class="line"></span><br><span class="line"># 第2次提示：设置 passphrase（直接回车不设密码）</span><br><span class="line">&gt; Enter passphrase (empty for no passphrase): [回车]</span><br><span class="line"></span><br><span class="line"># 第3次提示：确认 passphrase（直接回车）</span><br><span class="line">&gt; Enter same passphrase again: [回车]</span><br></pre></td></tr></table></figure>
+
+<p>会生成<code>id_ed25519</code>和<code>id_ed25519.pub</code></p>
+</li>
+<li><p>配置Gitee SSH公钥</p>
+<ul>
+<li><p>登录Gitee访问<a target="_blank" rel="noopener" href="https://gitee.com/profile/sshkeys">https://gitee.com/profile/sshkeys</a></p>
+</li>
+<li><p>点击 「添加公钥」按钮</p>
+</li>
+<li><p>填写信息。标题 <code>GitHub Actions Sync</code> （可自定义）；公钥内容黏贴<code>id_ed25519.pub</code> 的完整内容</p>
+</li>
+<li><p>点击 「确定」</p>
+</li>
+</ul>
+</li>
+<li><p>配置Github Secrets</p>
+<ul>
+<li><p>在Github仓库<code>XXXXX.github.io</code> 点击 「Settings」 标签</p>
+</li>
+<li><p>左侧菜单找到 「Secrets and variables」 → 「Actions」</p>
+</li>
+<li><p>添加2个Secrets</p>
+<table>
+<thead>
+<tr>
+<th>Secret 名称</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>GITEE_SSH_PRIVATE_KEY</code></td>
+<td><code>id_ed25519</code> 私钥完整内容</td>
+<td>用于 Gitee SSH 认证</td>
+</tr>
+<tr>
+<td><code>GITEE_PAGES_REPO_URL</code></td>
+<td><code>git@gitee.com:用户名/仓库名.git</code></td>
+<td>Gitee 仓库 SSH 地址</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p>创建GitHub Actions工作流</p>
+<ul>
+<li><p>在Github仓库<code>XXXXX.github.io</code> 创建 <code>.github/workflows/sync-from-gitee.yml</code> 文件</p>
+</li>
+<li><p>粘贴以下配置到文件中</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">name: Sync from Gitee</span><br><span class="line"></span><br><span class="line">on:</span><br><span class="line">  schedule:</span><br><span class="line">    - cron: <span class="string">&#x27;*/10 * * * *&#x27;</span></span><br><span class="line">  workflow_dispatch:</span><br><span class="line"></span><br><span class="line"><span class="built_in">jobs</span>:</span><br><span class="line">  <span class="built_in">sync</span>:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    </span><br><span class="line">    steps:</span><br><span class="line">      <span class="comment"># 1. 检出 GitHub 仓库（启用凭证持久化）</span></span><br><span class="line">      - name: Checkout GitHub Repo</span><br><span class="line">        uses: actions/checkout@v4</span><br><span class="line">        with:</span><br><span class="line">          fetch-depth: 0</span><br><span class="line">          persist-credentials: <span class="literal">true</span>  <span class="comment"># ✅ 关键：启用凭证持久化</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># 2. 配置 SSH 密钥（仅用于 Gitee）</span></span><br><span class="line">      - name: Setup SSH Key <span class="keyword">for</span> Gitee</span><br><span class="line">        run: |</span><br><span class="line">          <span class="built_in">mkdir</span> -p ~/.ssh</span><br><span class="line">          <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;&#123; secrets.GITEE_SSH_PRIVATE_KEY &#125;</span>&#125;&quot;</span> &gt; ~/.ssh/id_ed25519</span><br><span class="line">          <span class="built_in">chmod</span> 600 ~/.ssh/id_ed25519</span><br><span class="line">          ssh-keyscan -H gitee.com &gt;&gt; ~/.ssh/known_hosts</span><br><span class="line">          git config --global user.name <span class="string">&quot;GitHub Actions&quot;</span></span><br><span class="line">          git config --global user.email <span class="string">&quot;actions@github.com&quot;</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># 3. 添加 Gitee 远程仓库</span></span><br><span class="line">      - name: Add Gitee Remote</span><br><span class="line">        run: |</span><br><span class="line">          git remote add gitee <span class="variable">$&#123;&#123; secrets.GITEE_PAGES_REPO_URL &#125;</span>&#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 4. 从 Gitee 拉取最新代码</span></span><br><span class="line">      - name: Fetch from Gitee</span><br><span class="line">        run: |</span><br><span class="line">          git fetch gitee</span><br><span class="line">          <span class="comment"># 自动检测 Gitee 的主分支名称</span></span><br><span class="line">          GITEE_BRANCH=$(git remote show gitee | grep <span class="string">&#x27;HEAD branch&#x27;</span> | awk <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span>)</span><br><span class="line">          git checkout -b gitee-temp gitee/<span class="variable">$GITEE_BRANCH</span> 2&gt;/dev/null || \</span><br><span class="line">          git checkout -b gitee-temp gitee/main 2&gt;/dev/null || \</span><br><span class="line">          git checkout -b gitee-temp gitee/master</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 5. 合并代码到主分支</span></span><br><span class="line">      - name: Merge Gitee to GitHub</span><br><span class="line">        run: |</span><br><span class="line">          <span class="comment"># 自动检测本地主分支名称</span></span><br><span class="line">          LOCAL_BRANCH=$(git remote show origin | grep <span class="string">&#x27;HEAD branch&#x27;</span> | awk <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span>)</span><br><span class="line">          git checkout <span class="variable">$LOCAL_BRANCH</span></span><br><span class="line">          git merge gitee-temp --no-edit --allow-unrelated-histories</span><br><span class="line">          git branch -D gitee-temp</span><br><span class="line"></span><br><span class="line">      <span class="comment"># 6. 推送到 GitHub（使用 GITHUB_TOKEN）</span></span><br><span class="line">      - name: Push to GitHub</span><br><span class="line">        run: |</span><br><span class="line">          LOCAL_BRANCH=$(git remote show origin | grep <span class="string">&#x27;HEAD branch&#x27;</span> | awk <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span>)</span><br><span class="line">          git push origin <span class="variable">$LOCAL_BRANCH</span></span><br><span class="line">        <span class="built_in">env</span>:</span><br><span class="line">          GITHUB_TOKEN: <span class="variable">$&#123;&#123; secrets.GITHUB_TOKEN &#125;</span>&#125;  <span class="comment"># ✅ 关键：使用 GitHub Token</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>开启读写权限</p>
+<ul>
+<li><p>在仓库 Settings 找到 Code and automation</p>
+</li>
+<li><p>点击 Actions → General</p>
+</li>
+<li><p>将 Workflow permissions 改为 <code>Read and write permissions</code></p>
+</li>
+</ul>
+</li>
+</ol>
+
     </div>
 
     
