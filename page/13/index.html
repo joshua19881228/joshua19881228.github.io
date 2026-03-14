@@ -172,6 +172,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/21/Computer_Vision/Reading_Note/2016-12-21-TDM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/12/21/Computer_Vision/Reading_Note/2016-12-21-TDM/" class="post-title-link" itemprop="url">Reading Note: Beyond Skip Connections: Top-Down Modulation for Object Detection</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-12-21 00:00:00" itemprop="dateCreated datePublished" datetime="2016-12-21T00:00:00+08:00">2016-12-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Beyond Skip Connections: Top-Down Modulation for Object Detection</p>
+<p><strong>AUTHOR</strong>: Abhinav Shrivastava, Rahul Sukthankar, Jitendra Malik, Abhinav Gupta</p>
+<p><strong>ASSOCIATION</strong>: CMU, UC Berkeley, Google Research</p>
+<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1612.06851">arXiv:1612.06851</a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><p>In this paper top-down modulations is proposed as a way to incorporate fine details into the detection framework. The standard bottom-up, feedforward ConvNet is supplemented with a top-down modulation (TDM) network, connected using lateral connections. These connections are responsible for the modulation of lower layer filters, and the top-down network handles the selection and integration of features.</p>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The idea of this work is very similar with the work of <em><a target="_blank" rel="noopener" href="http://joshua881228.webfactional.com/blog_reading-note-feature-pyramid-networks-for-object-detection_181/">Feature Pyramid Networks for Object Detection</a></em>. An example of Top-Down Modulation (TDM) Network is illustrated as the following figure</p>
+<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/TDM_1.jpg" alt="" width="640"/>
+
+<p>TDM is integrated with the bottom-up network with lateral connections. $C_{i}$ are bottom-up, feedforward feature blocks, $L_{i}$ are the lateral modules which transform low level features for the top-down contextual pathway. Finally, $T_{j,i}$, which represent flow of top-down information from index $j$ to $i$. </p>
+<p>In this paper, the $T$ blocks are implemented using single convolutional layer (with non-linear activation) optionally with upsampling operation. The features from $C$ (processed by $L$) and $T$ are concated then sent to a convolutional layer for combination, as the following figure shows</p>
+<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/TDM_2.jpg" alt="" width="640"/>
+
+<p>At training stage, one new pair of lateral and top-down modules is added at a time and trained repeatedly from a pre-trained model.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/20/Life_Discovery/My_Drawings/2016-12-20-My-Drawings/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -907,112 +993,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/02/Computer_Vision/Reading_Note/2016-12-02-DetectorCompare/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/12/02/Computer_Vision/Reading_Note/2016-12-02-DetectorCompare/" class="post-title-link" itemprop="url">Reading Note: Speed/accuracy trade-offs for modern convolutional object detectors</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-12-02 00:00:00" itemprop="dateCreated datePublished" datetime="2016-12-02T00:00:00+08:00">2016-12-02</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Speed&#x2F;accuracy trade-offs for modern convolutional object detectors</p>
-<p><strong>AUTHOR</strong>: Jonathan Huang, Vivek Rathod, Chen Sun, Menglong Zhu, Anoop Korattikara, Alireza Fathi, Ian Fischer, Zbigniew Wojna, Yang Song, Sergio Guadarrama, Kevin Murphy</p>
-<p><strong>ASSOCIATION</strong>: Google Research</p>
-<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1611.10012">arXiv:1611.10012</a></p>
-<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><p>In this paper, the trade-off between accuracy and speed is studied when building an object detection system based on convolutional neural networks.</p>
-<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Three main families of detectors — Faster R-CNN, R-FCN and SSD which are viewed as “meta-architectures” are considered. Each of these can<br>be combined with different kinds of feature extractors, such as VGG, Inception or ResNet. other parameters, such as the image resolution, and the number of box proposals are also varied to compare how they perform in the task of detecting objects. The main findings are summarized as follows.</p>
-<h3 id="Accuracy-vs-time"><a href="#Accuracy-vs-time" class="headerlink" title="Accuracy vs time"></a>Accuracy vs time</h3><p>The following figure shows the accuracy vs time of different configurations.</p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/DetectorCompare_1.jpeg" alt="" width="640"/>
-
-<p>Generally speaking, R-FCN and SSD models are faster on average while Faster R-CNN tends to lead to slower but more accurate models, requiring at least 100 ms per image.</p>
-<h3 id="Critical-points-on-the-optimality-frontier"><a href="#Critical-points-on-the-optimality-frontier" class="headerlink" title="Critical points on the optimality frontier"></a>Critical points on the optimality frontier</h3><ol>
-<li>SSD models with Inception v2 and Mobilenet feature extractors are most accurate of the fastest models.</li>
-<li>R-FCN models using Residual Network feature extractors which seem to strike the best balance between speed and accuracy.</li>
-<li>Faster R-CNN with dense output Inception Resnet models attain the best possible accuracy</li>
-</ol>
-<h3 id="The-effect-of-the-feature-extractor"><a href="#The-effect-of-the-feature-extractor" class="headerlink" title="The effect of the feature extractor"></a>The effect of the feature extractor</h3><p>There is an intuition that stronger performance on classification should be positively correlated with stronger performance detection. It is true for Faster R-CNN and R-FCN, but it is less apparant for SSD as the following figure illustrated.</p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/DetectorCompare_2.jpeg" alt="" width="640"/>
-
-<h3 id="The-effect-of-object-size"><a href="#The-effect-of-object-size" class="headerlink" title="The effect of object size"></a>The effect of object size</h3><p>Not surprisingly, all methods do much better on large objects. Even though SSD models typically have (very) poor performance on small objects, they are competitive with Faster RCNN and R-FCN on large objects, even outperforming these meta-architectures for the faster and more lightweight feature extractors as the following figure illustrated.</p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/DetectorCompare_3.jpeg" alt="" width="640"/>
-
-<h3 id="The-effect-of-image-size"><a href="#The-effect-of-image-size" class="headerlink" title="The effect of image size"></a>The effect of image size</h3><p>Decreasing resolution by a factor of two in both dimensions consistently lowers accuracy (by 15.88% on average) but also reduces inference time by a relative factor of 27.4% on average.</p>
-<p>Strong performance on small objects implies strong performance on large objects, but not vice-versa as SSD models do well<br>on large objects but not small.</p>
-<h3 id="The-effect-of-the-number-of-proposals"><a href="#The-effect-of-the-number-of-proposals" class="headerlink" title="The effect of the number of proposals"></a>The effect of the number of proposals</h3><p>For Faster R-CNN, reducing proposals help accelerating prediction significantly because the computation of box classifier is correlated with the number of the proposals. The interesting thing is that Inception Resnet, which has 35.4% mAP with 300 proposals can still have surprisingly high accuracy (29% mAP) with only 10 proposals. The sweet spot is probably at 50 proposals.</p>
-<p>For R-FCN, computational savings from using fewer proposals are minimal, because the box classifier is only run once per image. At 100 proposals, the speed and accuracy for Faster R-CNN models with ResNet becomes roughly comparable to that of equivalent R-FCN models which use 300 proposals in both mAP and GPU speed.</p>
-<p>The following figure shows the observation, in which solid lines shows the relation between number of proposals and mAP, while dotted lines shows that of GPU inference time.</p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/DetectorCompare_4.jpeg" alt="" width="640"/>
-
-<h3 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h3><p>The paper also discussed the FLOPs and Memories. The observations in these parts are sort of obvious for the practitioner. Another observation is that Good localization at .75 IOU means good localization at all IOU thresholds.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/12/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/14/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1080,7 +1064,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

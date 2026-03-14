@@ -172,6 +172,124 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/12/03/Computer_Vision/Reading_Note/2015-12-03-Object-Detection-by-Labelling-Superpixels/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/12/03/Computer_Vision/Reading_Note/2015-12-03-Object-Detection-by-Labelling-Superpixels/" class="post-title-link" itemprop="url">READING NOTE: Object Detection by Labelling Superpixels</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-12-03 00:00:00" itemprop="dateCreated datePublished" datetime="2015-12-03T00:00:00+08:00">2015-12-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Object Detection by Labelling Superpixels</p>
+<p><strong>AUTHOR</strong>: Yan, Junjie and Yu, Yinan and Zhu, Xiangyu and Lei, Zhen and Li, Stan Z.</p>
+<p><strong>FROM</strong>: CVPR2015</p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>Convert object detection problem into super-pixel labelling problem, which could avoid false negatives caused by proposals and could take advantages from global contexts.</li>
+<li>Conduct an energy function considering appearance, spatial context and numbers of labels.</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/ODLS.png" alt="" width="640"/>
+
+<ol>
+<li>The image is partitioned into a set of super-pixels, denoted as \(\mathcal{P}&#x3D;\lbrace p_{1},p_{2},…,p_{N}\rbrace\).</li>
+<li>An energy function \(E(\mathcal{L})\) is calculated to measure the corresponding label configuration for each super-pixels, where \(\mathcal{L}&#x3D;\lbrace l_{1},l_{2},…,l_{N}\rbrace\).</li>
+<li>The problem is transfered to select an \(\mathcal{L}\) to minimise \(E(\mathcal{L})\).</li>
+</ol>
+<p><strong>SOME DETAILS</strong></p>
+<p>The energy function is conducted as</p>
+<p>$$ E(\mathcal{L})&#x3D;\sum_{\mathcal{p_{i}}\in\mathcal{P}}D(l_{i},p_{i})+\sum_{(p_{i},p_{j})\in\mathcal{N}}V(l_{i},l_{j},p_{i},p_{j})+C(\mathcal{L}) $$</p>
+<p>where \(D(l_{i},p_{i})\) is the <strong>data cost</strong> to capture the appearance of \(p_{i}\) and measure its cost of belonging to label \(l_{i}\), \(V(l_{i},l_{j},p_{i},p_{j})\) is the pairwise <strong>smooth cost</strong> in the local area \(\mathcal{N}\) and \(C(\mathcal{L})\) is the <strong>label cost</strong> to encourage compact detection and to punish the number of labels.</p>
+<p><strong>Data Cost</strong></p>
+<p>Super-pixels usually does not have enough semantic information, so corresponding regions are classified and their costs are propagated to super-pixels. In this work, RCNN is used to generate and classify semantic regions. The region set of \(T\) elements is denoted as \(\mathcal{R}&#x3D;\lbrace r_{1},..,r_{T}\rbrace\) and the classifier score is \(s_{t}\), thus we can map the scores into \((0,1)\) by</p>
+<p>$$ D(l_{t},r_{t})&#x3D; \begin{cases} \frac{1}{1+\mathit{exp}(-\alpha\cdot s_{t})}&amp; \text{if }l_{t}&gt;0 \\ \frac{\mathit{exp}(-\alpha\cdot s_{t})}{1+\mathit{exp}(-\alpha\cdot s_{t})}&amp; \text{if }l_{t}&#x3D;0 \\ \end{cases} $$</p>
+<p>where \(\alpha\) is set to 1.5 empirically. For each super-pixel the data cost is the weighted sum of T smallest costs,</p>
+<p>$$ D(l_{i},p_{i})&#x3D; \sum_{t&#x3D;1}^{T}\omega_{d_{t}}\cdot D(l_{t}, R(p_{i})_{t}) $$</p>
+<p>where $$R(p_{i})<em>{t}$$ is the region $$p</em>{i}$$ belongs to with the \(t\)-th smallest cost.</p>
+<p><strong>Smooth Cost</strong></p>
+<p>The smooth cost is conducted for the reason that 1) adjacent super-pixels often have the same label and 2) super-pixels belonging to the same label should have similar apprearance. This attribute is measured by</p>
+<p>$$ V(l_{i},l_{j},p_{i},p_{j})&#x3D;\omega_{s_{l}}V_{l}(l_{i}, l_{j})+V_{a}(l_{i},l_{j},p_{i},p_{j}) $$</p>
+<p>where \(V_{l}\) is a boolean variable and is set to \(1\) when \(l_{i}&#x3D;l_{j}\) and \((p_{i},p_{j})\in \mathcal{N}\). \(V_{a}\) is defined as</p>
+<p>$$ V_{a}(l_{i},l_{j},p_{i},p_{j})&#x3D;\omega_{s_{c}}(1-\sum_{q}\mathit{min}(c_{i}^{q}), c_{j}^{q})+\omega_{s_{t}}(1-\sum_{q}\mathit{min}(t_{i}^{q}), t_{j}^{q}) $$</p>
+<p>where \(c_{i}^{q}\) and \(t_{i}^{q}\) are the values in the \(q\)-th bin of color and texture histogram of super-pixel \(p_{i}\). In this work color histogram and SIFT histogram are calculated to describe color and texture information.</p>
+<p><strong>Label Cost</strong></p>
+<p>The label cost is used to encourage less number of labels and its defination is</p>
+<p>$$ C(\mathcal{L})&#x3D;\sum_{i&#x3D;1}^{K}\omega_{l_{i}}\cdot \delta(i, \mathcal{L}) $$</p>
+<p>where \(\delta(\cdot)\) is defined as</p>
+<p>$$ \delta(i, \mathcal{L})&#x3D;\begin{cases} 1&amp; \text{if }i\in \mathcal{L} \\ 0&amp; \text{if otherwise} \\ \end{cases} $$</p>
+<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>Super-pixels are compact and perceptually meaningful atomic regions for images.</li>
+<li>Avoid false negatives caused by inappropriate proposals generated by algorithms suchas Selective Search and BING.</li>
+<li>Super-pixel based method is a trade-off of Pixel based and Proposal based algorithm, leading to accurate and fast results.</li>
+</ol>
+<h3 id="DISADVANTAGES"><a href="#DISADVANTAGES" class="headerlink" title="DISADVANTAGES"></a>DISADVANTAGES</h3><ol>
+<li>The CNN used in RCNN and the parameters in the energy function are learned separately.</li>
+<li>The region generated might not cover all the super-pixels.</li>
+<li>Time consumption is high. Its speed is 1fps for each 128 proposals on a NVIDIA Telsa K40 GPU. However, 128 proposals might not be enough.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/15/Computer_Vision/Reading_Note/2015-11-15-PoolConvNet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -982,104 +1100,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/11/Life_Discovery/Miscellaneous/2015-09-11-Miscellaneous/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2015/09/11/Life_Discovery/Miscellaneous/2015-09-11-Miscellaneous/" class="post-title-link" itemprop="url">写在《仙剑奇侠传》20周年</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2015-09-11 00:00:00" itemprop="dateCreated datePublished" datetime="2015-09-11T00:00:00+08:00">2015-09-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>阅兵假期之前突然莫名地有一种再玩《仙剑奇侠传》的冲动，于是在假期中花了两天时间又重温了一次这部经典之作。后来在网上看，原来今年是《仙剑奇侠传》发行20周年，也算冥冥之中的一种召唤吧。说起这一部游戏，还真是能说一说情怀了。</p>
-<p>《仙剑》是我玩的第一款电脑游戏。小学五年级的时候家里买了第一台电脑，那个时候的电脑还是奔腾3处理器，内存只有256M，买来时是Windows98系统，电话线拨号上网。那个时候还不流行网络游戏，一个是电话线上网网速慢，打开个那个时候流行的搜狐门户都卡得要死；再一个就是网费花不起，按时间计费，我已经不记得当时的网费是多少了，但是几个小时的网费肯定够家里家长唠叨好多天了，基本一个月就是30小时的上网时间，平均起来每天也就是上一个小时网，不可能整天整天的挂在线上。有了电脑，除了平时练练打字或者画个画（不得不提一句，我小时候可是用画图软件画过泰坦尼克号那条大船），偶尔上个网，游戏肯定是不能少的，不然一台电脑可真就浪费了。没有网游，小伙伴们就玩单机游戏，什么《红色警戒》、《帝国时代》、《沙丘2000》等等，那个时候真算是单机游戏的黄金年代了。不过阴差阳错的，这些我后来都玩得津津有味的游戏都没有在第一时间被安装在我的电脑里。我记得应该是在一个夏天的周末，爸妈都去上班了，我在家闲的无聊，就说出去转转吧。在离家不远的一排门脸房，我发现了一个卖软件的店面，店面的名字我早就不记得了，而且现在那个店面也早已改了主人，但是那家店的位置到现在我都还记得清清楚楚。从落地的玻璃中，我可以看到店内花花绿绿的游戏包装，小孩子很容易就被吸引了。走进去左看看右看看，不知道《仙剑》到底是什么吸引了我，让我最终在一整面墙的游戏中唯独掏钱买了这一款，但是我深深地记住了粉红色的包装上画着的男女主人公和飘落的桃花瓣。</p>
-<blockquote>
-<h3 id="李逍遥"><a href="#李逍遥" class="headerlink" title="李逍遥"></a>李逍遥</h3><p>翩翩潇洒美少年，灵岛求药结仙缘。</p>
-<p>千里崎岖不辞苦，仗剑江湖为红颜。</p>
-</blockquote>
-<p>《仙剑》的故事可能是很多小伙伴的爱情启蒙。虽然李逍遥和三个女子都有说不清道不明的情愫，但是这样的一个故事不会让人想起现在流行的后宫剧，而是真正的相亲相爱，有责任、有知己、有呵护。然而幸福的日子总是短暂的，美好的爱情也不能阻挡命运的捉弄，不管是逍遥和灵儿踏上去苗疆的路，还是和月如许愿要吃遍天下珍味、看遍人间美景，都在一个个变故之中成为记忆，每段旅程越是美好，当一切都已成往事时就越刺痛人心。或许，当逍遥最终失去灵儿，告别了阿奴，在冰雪之中看到没有复活但能不死的月如抱着忆如时，他的内心之中早已五味杂陈、悲怆无语了。或许从那时起，逍遥要很长一段时间后才能收拾好心情，走出阴霾，再一次踏上成为大侠的路。</p>
-<blockquote>
-<h3 id="赵灵儿"><a href="#赵灵儿" class="headerlink" title="赵灵儿"></a>赵灵儿</h3><p>仙灵岛上别洞天，池中孤莲伴月眠。</p>
-<p>一朝风雨落水面，愿君拾得惜相怜。</p>
-</blockquote>
-<blockquote>
-<h3 id="林月如"><a href="#林月如" class="headerlink" title="林月如"></a>林月如</h3><p>刁蛮少女贵千金，比武招亲动芳心。</p>
-<p>盼能与君长相依，结伴江湖侠侣行。</p>
-</blockquote>
-<blockquote>
-<h3 id="阿奴"><a href="#阿奴" class="headerlink" title="阿奴"></a>阿奴</h3><p>如花苗女鬼灵精，喜逢君子初尝情。</p>
-<p>落花有意结连理，拌月愿作一颗星。</p>
-</blockquote>
-<p>在这三个女子当中，灵儿温柔善良，阿奴鬼怪精灵，而我最喜欢月如。月如独立坚强，做事有主意有担当，不是那种生活不能自理的大小姐，关键时刻可以帮助逍遥，连终身大事也由自己做主。有时也有一点点刁蛮任性，对仆人棒打鸳鸯，比武招亲手下没轻没重。另外，跟月如在一起的日子，是逍遥最开心的一段时间，可能每一天都充满了新鲜感。月如最吸引我的也就是这种新鲜感，如果没有那些令人悲伤的经历，他们可能一刻也闲不住，总是要闹一些麻烦出来。要是他们穿越到现代，不知他们会实施多少次说走就走的旅行，买上一张最近起飞的航班机票，到一个新鲜的城市，尝试一下百虫宴，来一次蹦极……</p>
-<p>《仙剑》引领了一个武侠游戏的时代，记得那时候还出了《剑侠情缘》、《绝代双骄》等等一大批武侠游戏。现在看来《仙剑》的画面很原始，还是一个个像素快堆叠起的世界，配乐是极简的电音，但是每当一首《蝶恋》响起，看着那“新的故事”和“旧的回忆”，我知道没有什么游戏可以超越《仙剑》在我心中的地位。甚至那一句“胜败乃兵家常事，大侠请重新来过”，也已经被融入到了日常生活。前一阵在知乎上还有人在讨论为什么逍遥和灵儿去蜀地要从余杭到苏州，还经过京城长安，我还真对照着地图，好好研读了一遍评价最高的答案。每看到一个地名，总能回忆起故事中的种种，那一种感动是无以言表的。后来《仙剑》出了很多续作，也玩过其中的一些，但是我总也不能再次体会玩“仙一”那种心境，或许这就是情怀。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/22/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/24/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/22/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/">24</a><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/24/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1147,7 +1171,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

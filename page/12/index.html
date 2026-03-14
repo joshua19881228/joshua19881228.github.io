@@ -172,6 +172,88 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/22/Computer_Vision/Reading_Note/2017-01-22-PixelObjectness/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/01/22/Computer_Vision/Reading_Note/2017-01-22-PixelObjectness/" class="post-title-link" itemprop="url">Reading Note: Pixel Objectness</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-01-22 00:00:00" itemprop="dateCreated datePublished" datetime="2017-01-22T00:00:00+08:00">2017-01-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Pixel Objectness</p>
+<p><strong>AUTHOR</strong>: Suyog Dutt Jain, Bo Xiong, Kristen Grauman</p>
+<p><strong>ASSOCIATION</strong>: The University of Texas at Austin</p>
+<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1701.05349">arXiv:1701.05349</a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><p> An end-to-end learning framework for foreground object segmentation is proposed. Given a single novel image, a pixel-level mask is produced for all “object-like” regions even for object categories never seen during training. </p>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="Problem-Formulation"><a href="#Problem-Formulation" class="headerlink" title="Problem Formulation"></a>Problem Formulation</h3><p>Given an RGB image of size  $m \times n \times c$ as input, the problem is formulated as densely labeling each pixel in the images as eigher “object” or “background”. The output is a binary map of size $m \times n$.</p>
+<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><p>Two different datasets are used including 1) one dataset with <em>explicit</em> boundary-level annotations and 2) one dataset with <em>implicit</em> imagelevel object category annotations.</p>
+<h3 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h3><p>The network is first trained on a large scale object classification task, such as ImageNet 1000-category classification. This stage can be regarded as training on an <em>implicit</em> labeled dataset. Its image representation has a strong notion of objectness built inside it, even though it never observes any segmentation annotations. </p>
+<p>Then the network is trained on PASCAL 2012 segmentation dataset, which is an <em>explicit</em> labeled dataset. The 20 object labels are discarded, and mapped instead to the single generic “object-like” (foreground) label for training.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/19/Computer_Vision/Reading_Note/2017-01-19-TAMPEW/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -950,96 +1032,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/21/Computer_Vision/Reading_Note/2016-12-21-TDM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/12/21/Computer_Vision/Reading_Note/2016-12-21-TDM/" class="post-title-link" itemprop="url">Reading Note: Beyond Skip Connections: Top-Down Modulation for Object Detection</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-12-21 00:00:00" itemprop="dateCreated datePublished" datetime="2016-12-21T00:00:00+08:00">2016-12-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Beyond Skip Connections: Top-Down Modulation for Object Detection</p>
-<p><strong>AUTHOR</strong>: Abhinav Shrivastava, Rahul Sukthankar, Jitendra Malik, Abhinav Gupta</p>
-<p><strong>ASSOCIATION</strong>: CMU, UC Berkeley, Google Research</p>
-<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1612.06851">arXiv:1612.06851</a></p>
-<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><p>In this paper top-down modulations is proposed as a way to incorporate fine details into the detection framework. The standard bottom-up, feedforward ConvNet is supplemented with a top-down modulation (TDM) network, connected using lateral connections. These connections are responsible for the modulation of lower layer filters, and the top-down network handles the selection and integration of features.</p>
-<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The idea of this work is very similar with the work of <em><a target="_blank" rel="noopener" href="http://joshua881228.webfactional.com/blog_reading-note-feature-pyramid-networks-for-object-detection_181/">Feature Pyramid Networks for Object Detection</a></em>. An example of Top-Down Modulation (TDM) Network is illustrated as the following figure</p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/TDM_1.jpg" alt="" width="640"/>
-
-<p>TDM is integrated with the bottom-up network with lateral connections. $C_{i}$ are bottom-up, feedforward feature blocks, $L_{i}$ are the lateral modules which transform low level features for the top-down contextual pathway. Finally, $T_{j,i}$, which represent flow of top-down information from index $j$ to $i$. </p>
-<p>In this paper, the $T$ blocks are implemented using single convolutional layer (with non-linear activation) optionally with upsampling operation. The features from $C$ (processed by $L$) and $T$ are concated then sent to a convolutional layer for combination, as the following figure shows</p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/TDM_2.jpg" alt="" width="640"/>
-
-<p>At training stage, one new pair of lateral and top-down modules is added at a time and trained repeatedly from a pre-trained model.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1107,7 +1103,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

@@ -172,6 +172,93 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/05/Using_Linux/2017-05-05-Create-Desktop-Shortcut/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/05/05/Using_Linux/2017-05-05-Create-Desktop-Shortcut/" class="post-title-link" itemprop="url">Create a Desktop Shortcut in Linux</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-05-05 00:00:00" itemprop="dateCreated datePublished" datetime="2017-05-05T00:00:00+08:00">2017-05-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Using-Linux/" itemprop="url" rel="index"><span itemprop="name">Using Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Yesterday I installed Qt Creator for Qt 5.8 on my Linux laptop. Everything was all right but I couldn’t to figure out how to conveniently start this IDE, needing to go to the <em>bin</em> directory to click the executable file. I’ve tried to start it from commond line, but the IDE will crash when openning a dialog window. So I decided to create a desktop shortcut to bypass.</p>
+<p>To manually create a desktop shortcut, we can create a .desktop file and place it in either &#x2F;usr&#x2F;share&#x2F;applications or ~&#x2F;.local&#x2F;share&#x2F;applications. A typical .desktop file looks like the following.</p>
+<pre><code>[Desktop Entry]
+Encoding=UTF-8
+Version=1.0                                     # version of an app.
+Name[en_US]=yEd                                 # name of an app.
+GenericName=GUI Port Scanner                    # longer name of an app.
+Exec=java -jar /opt/yed-3.11.1/yed.jar          # command used to launch an app.
+Terminal=false                                  # whether an app requires to be run in a terminal.
+Icon[en_US]=/opt/yed-3.11.1/icons/yicon32.png   # location of icon file.
+Type=Application                                # type.
+Categories=Application;Network;Security;        # categories in which this app should be listed.
+Comment[en_US]=yEd Graph Editor                 # comment which appears as a tooltip.
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/03/Using_Linux/2017-05-03-Using-VIM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -900,110 +987,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/Computer_Vision/Reading_Note/2017-03-16-Matting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/03/16/Computer_Vision/Reading_Note/2017-03-16-Matting/" class="post-title-link" itemprop="url">Reading Note: Deep Image Matting</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2017-03-16 00:00:00" itemprop="dateCreated datePublished" datetime="2017-03-16T00:00:00+08:00">2017-03-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Deep Image Matting</p>
-<p><strong>AUTHOR</strong>: Ning Xu, Brian Price, Scott Cohen, Thomas Huang</p>
-<p><strong>ASSOCIATION</strong>: Beckman Institute for Advanced Science and Technology, University of Illinois at Urbana-Champaign, Adobe Research</p>
-<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1703.03872">arXiv:1703.03872</a></p>
-<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><ol>
-<li>A novel deep learning based algorithm is proposed that can predict alpha matte of an image based on both low-level features and high-level context.</li>
-</ol>
-<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The proposed deep model has two parts. </p>
-<ol>
-<li>The first part is a CNN based encoder-decoder network, which is similar with typical FCN networks that are used for semantic segmentation. This part takes the RGB image and its corresponding trimap as input. Its output is the alpha matte of the image. </li>
-<li>The second part is a small convolutional network that is used to refine the output of the first part. The input of this part is the original image and the predicted alpha matte from the first part.</li>
-</ol>
-<p>The method is illustrated in the following figure.</p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170316_Matting_0.jpg" alt="" width="640"/>
-
-<h3 id="Matting-encoder-decoder-stage"><a href="#Matting-encoder-decoder-stage" class="headerlink" title="Matting encoder-decoder stage"></a>Matting encoder-decoder stage</h3><p>The first network leverages two losses. One is <strong>alpha-prediction loss</strong> and the other one is <strong>compositional loss</strong>.</p>
-<p><strong>Alpha-prediction loss</strong> is the absolute difference between the ground truth alpha values and the predicted alpha values at each pixel, which defines as</p>
-<p>$$\mathcal{L}<em>{\alpha}^{i} &#x3D; \sqrt{(\alpha</em>{p}^{i} - \alpha_{g}^{i})^{2}+\epsilon^2}, \alpha_{p}^{i}, \alpha_{g} \in [0,1]$$</p>
-<p>where $\alpha_{p}^{i}$ is the output of the prediction layer at pixel $i$ and $\alpha_{g}^{i}$ is the ground truth alpha value at pixel $i$. $\epsilon$ is a small value which is equal to $10^{-1}$ and is used to ensure differentiable property.</p>
-<p><strong>Compositional loss</strong> the absolute difference between the ground truth RGB colors and the predicted RGB colors composited by the ground truth foreground, the ground truth background and the predicted alpha mattes. The loss is defined as</p>
-<p>$$\mathcal{L}<em>{c}^{i} &#x3D; \sqrt{(c</em>{p}^{i} - c_{g}^{i})^{2}+\epsilon^2}$$</p>
-<p>where $c$ denotes the RGB channel, $p$ denotes the image composited by the predicted alpha, and $g$ denotes the image composited by the ground truth alpha.</p>
-<p>Since only the alpha values inside the unknown regions of trimaps need to be inferred, therefore weights are set on the two types of losses according to the pixel locations, which can help the network pay more attention on the important areas. Specifically, $w_{i} &#x3D; 1$ if pixel $i$ is inside the unknown region of the trimap while $w_{i} &#x3D; 0$ otherwise.</p>
-<h3 id="Matting-refinement-stage"><a href="#Matting-refinement-stage" class="headerlink" title="Matting refinement stage"></a>Matting refinement stage</h3><p>The input to the second stage of our network is the concatenation of an image patch and its alpha prediction from the first stage, resulting in a 4-channel input. This part is trained after the first part is converged. After the refinement part is also converged, finally fine-tune the the whole network together. Only the alpha prediction loss is used.</p>
-<h2 id="SOME-IDEAS"><a href="#SOME-IDEAS" class="headerlink" title="SOME IDEAS"></a>SOME IDEAS</h2><ol>
-<li>The <em>trimap</em> is a very strong prior. The question is how to get it.</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1071,7 +1058,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

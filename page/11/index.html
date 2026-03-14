@@ -172,6 +172,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/22/Computer_Vision/Reading_Note/2017-02-22-ADDA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/02/22/Computer_Vision/Reading_Note/2017-02-22-ADDA/" class="post-title-link" itemprop="url">Reading Note: Adversarial Discriminative Domain Adaptation</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-02-22 00:00:00" itemprop="dateCreated datePublished" datetime="2017-02-22T00:00:00+08:00">2017-02-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Adversarial Discriminative Domain Adaptation</p>
+<p><strong>AUTHOR</strong>: Eric Tzeng, Judy Hoffman, Kate Saenko, Trevor Darrell</p>
+<p><strong>ASSOCIATION</strong>: UC Berkeley, Stanford University, Boston University</p>
+<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1702.05464">arXiv:1702.05464</a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><ol>
+<li>A novel unified framework for adversarial domain adaptation is proposed, which is called Adversarial Discriminative Domain Adaptation (ADDA).</li>
+<li>Design choices such as weight-sharing, base models, and adversarial losses and subsumes previous work, are unified.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The main idea of this work is to find a map function project target data, the data for testing, to the source data domain, that are used for training. The training procedure is illustrated in the following figure.</p>
+<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/ADDA_1.jpg" alt="" width="640"/>
+
+<p>As the figure shows, first pre-train a source encoder CNN using labeled source image examples. Next, perform adversarial adaptation by learning a target encoder CNN such that a discriminator that sees encoded source and target examples cannot reliably predict their domain label. During testing, target images are mapped with the target encoder to the shared feature space and classified by the source classifier. Dashed lines indicate fixed network parameters.</p>
+<p>The ADDA method can be formalized as:</p>
+<p>$$ \min \limits_{M_{s}, C} \mathcal{L}<em>{cls}(\mathbf{X</em>{s}}, \mathbf{Y_{s}}) &#x3D;<br>-\mathbb{E}<em>{(\mathbf{x}</em>{s}, y_{s})\sim(\mathbf{X}<em>{s}, \mathbf{Y}</em>{s})}[\sum_{k&#x3D;1}^{K} \mathbf{1}<em>{[k&#x3D;y</em>{s}]} \log C(M_s(\mathbf{x_s}))]$$</p>
+<p>$$ \min \limits_{D} \mathcal{L}<em>{ \mathbf{adv}<em>D}(\mathbf{X</em>{s}}, \mathbf{X</em>{t}}, \mathbf{M_{s}}, \mathbf{M_{t}}) &#x3D;<br>-\mathbb{E}<em>{\mathbf{x}</em>{s}\sim \mathbf{X}<em>{s}} [\log D(M_s(\mathbf{x_s}))]<br>-\mathbb{E}</em>{\mathbf{x}<em>{t}\sim \mathbf{X}</em>{t}} [\log (1-D(M_t(\mathbf{x_t})))]$$</p>
+<p>$$ \min \limits_{M_s,M_t} \mathcal{L}<em>{ \mathbf{adv}<em>M}(\mathbf{X</em>{s}}, \mathbf{X</em>{t}}, D) &#x3D;<br>-\mathbb{E}<em>{\mathbf{x}</em>{s}\sim \mathbf{X}_{t}} [\log D(M_t(\mathbf{x_t}))] $$</p>
+<p>The first formula is a typical supervised learning. The second formula is just like what has been proposed in GAN. It is used to learn a discriminator to tell target data from source data. The first term can be ignored because $M_s$ is fixed. The third formula is used to learn a $M_t$ mapping data from targe domain to source domain.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/19/Life_Discovery/Miscellaneous/2017-02-19-Miscellaneous/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -872,92 +962,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/22/Computer_Vision/Reading_Note/2017-01-22-PixelObjectness/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/01/22/Computer_Vision/Reading_Note/2017-01-22-PixelObjectness/" class="post-title-link" itemprop="url">Reading Note: Pixel Objectness</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2017-01-22 00:00:00" itemprop="dateCreated datePublished" datetime="2017-01-22T00:00:00+08:00">2017-01-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Pixel Objectness</p>
-<p><strong>AUTHOR</strong>: Suyog Dutt Jain, Bo Xiong, Kristen Grauman</p>
-<p><strong>ASSOCIATION</strong>: The University of Texas at Austin</p>
-<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1701.05349">arXiv:1701.05349</a></p>
-<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><p> An end-to-end learning framework for foreground object segmentation is proposed. Given a single novel image, a pixel-level mask is produced for all “object-like” regions even for object categories never seen during training. </p>
-<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="Problem-Formulation"><a href="#Problem-Formulation" class="headerlink" title="Problem Formulation"></a>Problem Formulation</h3><p>Given an RGB image of size  $m \times n \times c$ as input, the problem is formulated as densely labeling each pixel in the images as eigher “object” or “background”. The output is a binary map of size $m \times n$.</p>
-<h3 id="Dataset"><a href="#Dataset" class="headerlink" title="Dataset"></a>Dataset</h3><p>Two different datasets are used including 1) one dataset with <em>explicit</em> boundary-level annotations and 2) one dataset with <em>implicit</em> imagelevel object category annotations.</p>
-<h3 id="Training"><a href="#Training" class="headerlink" title="Training"></a>Training</h3><p>The network is first trained on a large scale object classification task, such as ImageNet 1000-category classification. This stage can be regarded as training on an <em>implicit</em> labeled dataset. Its image representation has a strong notion of objectness built inside it, even though it never observes any segmentation annotations. </p>
-<p>Then the network is trained on PASCAL 2012 segmentation dataset, which is an <em>explicit</em> labeled dataset. The 20 object labels are discarded, and mapped instead to the single generic “object-like” (foreground) label for training.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/24/">24</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/page/10/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/">25</a><a class="extend next" rel="next" href="/page/12/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -1025,7 +1033,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">241</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
