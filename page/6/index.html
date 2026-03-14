@@ -172,6 +172,97 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/12/Computer_Vision/Reading_Note/2017-10-12-InterpretableCNN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2017/10/12/Computer_Vision/Reading_Note/2017-10-12-InterpretableCNN/" class="post-title-link" itemprop="url">Reading Note: Interpretable Convolutional Neural Networks</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-10-12 00:00:00" itemprop="dateCreated datePublished" datetime="2017-10-12T00:00:00+08:00">2017-10-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Interpretable Convolutional Neural Networks</p>
+<p><strong>AUTHOR</strong>: Quanshi Zhang, Ying Nian Wu, Song-Chun Zhu</p>
+<p><strong>ASSOCIATION</strong>: UCLA</p>
+<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1710.00935">arXiv:1710.00935</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>Slightly revised CNNs are propsed to improve their interpretability, which can be broadly applied to CNNs with different network structures.</li>
+<li>No annotations of object parts and&#x2F;or textures are needed to ensure each high-layer filter to have a certain semantic meaning. Each filter automatically learns a meaningful object-part representation without any additional human supervision.</li>
+<li>When a traditional CNN is modified to an interpretable CNN, experimental settings need not to be changed for learning. I.e. the interpretable CNN does not change the previous loss function on the top layer and uses exactly the same training samples.</li>
+<li>The design for interpretability may decrease the discriminative power of the network a bit, but such a decrease is limited within a small range.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The loss for filter is illustrated in the following figure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20171012_interpretableCNN.png" alt="Framework" title="Loss for Layer"></p>
+<p>A feature map is expected to be strongly activated in images of a certain category and keep silent on other images. Therefore, a number of templates are used to evaluate the fitness between the current feature map and the ideal distribution of activations w.r.t. its semantics. The template is an ideal distribution of activations according to space locations. The loss for layers is formulated as the mutual information between feature map $\textbf{X}$ and templates $\textbf{T}$.</p>
+<p>$$ Loss_{f} &#x3D; - MI(\textbf{X}; \textbf{T}) $$</p>
+<p>the loss can be re-written as</p>
+<p>$$ Loss_{f} &#x3D; - H(\textbf{T}) + H(\textbf{T’}&#x3D;{T^{-}, \textbf{T}^{+}|\textbf{X}})+\sum_{x}p(\textbf{T}^{+},x)H(\textbf{T}^{+}|X&#x3D;x) $$</p>
+<p><strong>The first term</strong> is a constant denoting the piror entropy of $\textbf{T}^{+}$. <strong>The second term</strong> encourages a low conditional entropy of inter-category activations which means that a well-learned filter needs to be exclusively activated by a certain category and keep silent on other categories. <strong>The third term</strong> encorages a low conditional entropy of spatial distribution of activations. A well-learned filter should only be activated by a single region of the feature map, instead of repetitively appearing at different locations.</p>
+<h2 id="SOME-THOUGHTS"><a href="#SOME-THOUGHTS" class="headerlink" title="SOME THOUGHTS"></a>SOME THOUGHTS</h2><p>This loss can reduce the redundancy among filters, which may be used to compress the model.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/28/Coding/2017-09-28-Winsock-Websocket/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -903,112 +994,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/03/Computer_Vision/Reading_Note/2017-08-03-ThiNet/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/08/03/Computer_Vision/Reading_Note/2017-08-03-ThiNet/" class="post-title-link" itemprop="url">Reading Note: ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2017-08-03 00:00:00" itemprop="dateCreated datePublished" datetime="2017-08-03T00:00:00+08:00">2017-08-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: ThiNet: A Filter Level Pruning Method for Deep Neural Network Compression</p>
-<p><strong>AUTHOR</strong>: Jian-Hao Luo, Jianxin Wu, Weiyao Lin</p>
-<p><strong>ASSOCIATION</strong>: Nanjing University, Shanghai Jiao Tong University</p>
-<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1707.06342">arXiv:1707.06342</a></p>
-<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><ol>
-<li>A simple yet effective framework, namely ThiNet, is proposed to simultaneously accelerate and compress CNN models.</li>
-<li>Filter pruning is formally established as an optimization problem, and statistics information computed from its next layer is used to prune filters.</li>
-</ol>
-<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="Framework"><a href="#Framework" class="headerlink" title="Framework"></a>Framework</h3><p>The framework of ThiNet compression procedure is illustrated in the following figure. The yellow dotted boxes are the weak channels and their corresponding filgers that would be pruned.</p>
-<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_0.png" alt="Framework" title="Framework"></p>
-<ol>
-<li><strong>Filter selection.</strong> The output of layer $i + 1$ is used to guide the pruning in layer $i$. The key idea is: if a subset of channels in layer $(i + 1)$’s input can approximate the output in layer $i + 1$, the other channels can be safely removed from the input of layer $i + 1$. Note that one channel in layer $(i + 1)$’s input is produced by one filter in layer $i$, hence the corresponding filter in layer $i$ can be safely pruned.</li>
-<li><strong>Pruning.</strong> Weak channels in layer $(i + 1)$’s input and their corresponding filters in layer i would be pruned away, leading to a much smaller model. Note that, the pruned network has exactly the same structure but with fewer filters and channels.</li>
-<li><strong>Fine-tuning.</strong> Fine-tuning is a necessary step to recover the generalization ability damaged by filter pruning. For time-saving considerations, fine-tune one or two epochs after the pruning of one layer. In order to get an accurate model, more additional epochs would be carried out when all layers have been pruned.</li>
-<li><strong>Iterate to step 1 to prune the next layer.</strong></li>
-</ol>
-<h3 id="Data-driven-channel-selection"><a href="#Data-driven-channel-selection" class="headerlink" title="Data-driven channel selection"></a>Data-driven channel selection</h3><p>Denote the convolution process in layer $i$ as A triplet</p>
-<p>$$<br>\left \langle \mathscr{I}<em>{i}, \mathscr{W}</em>{i},  \right \rangle<br>$$</p>
-<p>where $\mathscr{I}<em>{i}$ is the input tensor, which has $C$ channels, $H$ rows and $W$ columns. And $\mathscr{W}</em>{i}$ is a set of filters with $K \times K$ kernel size, which generates a new tensor with $D$ channels. Note that, if a filter in $\mathscr{W}<em>{i}$ is removed, its corresponding channel in $\mathscr{I}</em>{i+1}$ and $\mathscr{W}<em>{i+1}$ would also be discarded. However, since the filter number in layer $i + 1$ has not been changed, the size of its output tensor, i.e., $\mathscr{I}</em>{i+2}$, would be kept exactly the same. If we can remove several filters that has little influence on $\mathscr{I}_{i+2}$ (which is also the output of layer $i + 1$), it would have little influence on the overall performance too.</p>
-<h3 id="Collecting-training-examples"><a href="#Collecting-training-examples" class="headerlink" title="Collecting training examples"></a>Collecting training examples</h3><p>The training set is randomly sampled from the tensor $\mathscr{I}_{i+2}$ as illustrated in the following figure.</p>
-<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_1.png" alt="Sampling" title="Sampling"></p>
-<p>The convolution operation can be formalized in a simple way</p>
-<p>$$ \hat{y} &#x3D; \sum_{c&#x3D;1}^{C} \hat{x}_{c} $$</p>
-<h3 id="A-greedy-algorithm-for-channel-selection"><a href="#A-greedy-algorithm-for-channel-selection" class="headerlink" title="A greedy algorithm for channel selection"></a>A greedy algorithm for channel selection</h3><p>Given a set of $$m$$ training examples $\left{ (\mathrm{\hat{x}}<em>{i}, \hat{y}</em>{i}) \right}$, selecting channel can be seen as a optimization problem,</p>
-<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_2.png" alt="Objective" title="Objective"></p>
-<p>and it eauivalently can be the following alternative objective,</p>
-<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20170803_ThiNet_3.png" alt="Objective" title="Objective"></p>
-<p>where $S \cup T &#x3D; \left{ 1,2,…,C \right}$ and $S \cap T &#x3D; \emptyset$. This problem can be sovled by greedy algorithm.</p>
-<h3 id="Minimize-the-reconstruction-error"><a href="#Minimize-the-reconstruction-error" class="headerlink" title="Minimize the reconstruction error"></a>Minimize the reconstruction error</h3><p>After the subset $T$ is obtained, a scaling factor for each filter weights is learned to minimize the reconstruction error. </p>
-<h2 id="Some-Ideas"><a href="#Some-Ideas" class="headerlink" title="Some Ideas"></a>Some Ideas</h2><ol>
-<li>Maybe the finetue can help avoid the final step of minimizing the reconstruction error.</li>
-<li>If we use this work on non-classification task, such as detection and segmentation, the performance remains to be checked.</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1080,7 +1065,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-count">240</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

@@ -172,6 +172,101 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/09/Computer_Vision/Reading_Note/2016-08-09-Reading-Note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/09/Computer_Vision/Reading_Note/2016-08-09-Reading-Note/" class="post-title-link" itemprop="url">Reading Note: Do semantic parts emerge in Convolutional Neural Networks</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-08-09 00:00:00" itemprop="dateCreated datePublished" datetime="2016-08-09T00:00:00+08:00">2016-08-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Do semantic parts emerge in Convolutional Neural Networks?</p>
+<p><strong>AUTHER</strong>: Abel Gonzalez-Garica, David Modolo, Vittorio Ferrari</p>
+<p><strong>ASSOCIATION</strong>: CLAVIN, University of Edingburgh, UK</p>
+<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1607.03738">arXiv:1607.03738</a></p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>An extensive quantitative analysis of the association between responses of CNN filters and sematic parts</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><ol>
+<li>CNNs are trained for object detection task or object classification.</li>
+<li>Filters that give significant responses to certain semantic parts are selected.</li>
+<li>Filters are comibned to construct a part detector if necessary.</li>
+<li>A regressor is trained for part bounding-boxes.</li>
+<li>Discriminative filters are selected in object classification task.</li>
+</ol>
+<h3 id="Observation"><a href="#Observation" class="headerlink" title="Observation"></a>Observation</h3><p>There are several interesting observatoins from the authers.</p>
+<p><strong>Differences between layers.</strong> Overall, the higher the network layer, the higher the performance. It means that in higher part of the network abstract semantic contents are represented.</p>
+<p><strong>Differences between part classes.</strong> Performance varies greatly across part classes. It seems that very discriminative semantic parts are well detected.</p>
+<p><strong>Filter combinations.</strong> Performing part detection using a combination of filters always performs better than single best filter. It means taht a semantic part may be represented jointly by several filters.</p>
+<p><strong>Filter sharing across part classes.</strong> Filters are shared across different part classes. It is clear that some filters are representative for a generic part and work well on all object classes containing it.</p>
+<p><strong>The number of emerged semantic parts.</strong> Only a modest number of filters responses to semantic parts. The auther concludes that the network does contain filters combinations that can cover some part classes well, but they do not fire exclusively on the part, making them weak part detectors. Moreover, the part classes covered by the semantic filters tend to either cover a large image area, or be very discriminative for their object class.</p>
+<p><strong>Discriminative filters in object classification.</strong> The filters are measured by how much they contribute to the classification score. On average, 9&#x2F;256 filters are discriminative for a particular class. The total number of dicriminative filte overall 16 object classes amounts to 104. It shows that the discriminative filters are largely distributed across different object classes, with very little sharing.</p>
+<p><strong>Discriminative and semantic filters.</strong> 5.5 out of the 9 discriminative filters for an object class are semantic filters.It means that only a portion of the filters learned by CNN are semantic, and many are just responding to dicriminative patches.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/08/Life_Discovery/My_Drawings/2016-08-08-My-Drawings/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -970,91 +1065,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/06/Using_Linux/2016-07-06-Hot_Linux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/07/06/Using_Linux/2016-07-06-Hot_Linux/" class="post-title-link" itemprop="url">My Laptop is sooo Hot!!</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-07-06 00:00:00" itemprop="dateCreated datePublished" datetime="2016-07-06T00:00:00+08:00">2016-07-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Using-Linux/" itemprop="url" rel="index"><span itemprop="name">Using Linux</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>I have just installed Ubuntu 14.04 on my old Thinkpad T410i. But after the machine booted, it is sooo hot that can be used for frying eggs. I searched much online. Some said that it is because Ubuntu 14.04 does not handle dual graphic units well. Though my old T410i does not show two graphic units, I tried installing NVIDIA Driver and it seems help a little to cool down the machine. The steps are as follow:</p>
-<ol>
-<li><p>Add Nouveau to blacklist. Add <code>blacklist nouveau</code> to &#x2F;etc&#x2F;modprobe.d&#x2F;blacklist.conf</p>
-</li>
-<li><p>Install Nvidia Driver and Prime</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install nvidia-340 nvidia-prime</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Install Nvidia Prime indicator</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> add-apt-repository ppa:nilarimogard/webupd8</span><br><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"><span class="built_in">sudo</span> apt-get install prime-indicator</span><br></pre></td></tr></table></figure>
-<p>Then reboot the machine.</p>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1126,7 +1136,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-count">240</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

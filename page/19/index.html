@@ -172,6 +172,91 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/06/Using_Linux/2016-07-06-Hot_Linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/07/06/Using_Linux/2016-07-06-Hot_Linux/" class="post-title-link" itemprop="url">My Laptop is sooo Hot!!</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-07-06 00:00:00" itemprop="dateCreated datePublished" datetime="2016-07-06T00:00:00+08:00">2016-07-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Using-Linux/" itemprop="url" rel="index"><span itemprop="name">Using Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>I have just installed Ubuntu 14.04 on my old Thinkpad T410i. But after the machine booted, it is sooo hot that can be used for frying eggs. I searched much online. Some said that it is because Ubuntu 14.04 does not handle dual graphic units well. Though my old T410i does not show two graphic units, I tried installing NVIDIA Driver and it seems help a little to cool down the machine. The steps are as follow:</p>
+<ol>
+<li><p>Add Nouveau to blacklist. Add <code>blacklist nouveau</code> to &#x2F;etc&#x2F;modprobe.d&#x2F;blacklist.conf</p>
+</li>
+<li><p>Install Nvidia Driver and Prime</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install nvidia-340 nvidia-prime</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Install Nvidia Prime indicator</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> add-apt-repository ppa:nilarimogard/webupd8</span><br><span class="line"><span class="built_in">sudo</span> apt-get update</span><br><span class="line"><span class="built_in">sudo</span> apt-get install prime-indicator</span><br></pre></td></tr></table></figure>
+<p>Then reboot the machine.</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/04/Computer_Vision/Reading_Note/2016-07-04-DeconvSemanticSegmentation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -948,104 +1033,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/25/Computer_Vision/Reading_Note/2016-05-25-TCNN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/05/25/Computer_Vision/Reading_Note/2016-05-25-TCNN/" class="post-title-link" itemprop="url">Reading Note: Object Detection from Video Tubelets with Convolutional Neural Networks</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-05-25 00:00:00" itemprop="dateCreated datePublished" datetime="2016-05-25T00:00:00+08:00">2016-05-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Object Detection from Video Tubelets with Convolutional Neural Networks</p>
-<p><strong>AUTHER</strong>: Kai Kang, Wanli Ouyang, Hongsheng Li, Xiaogang Wang</p>
-<p><strong>ASSOCIATION</strong>: The Chinese University of Hong Kong</p>
-<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1604.04053">arXiv:1604.04053</a></p>
-<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
-<li>A complete multi-stage framework is proposed for object detection in videos.</li>
-<li>A special temporal convolutional neural network is proposed to incorporate temporal information into object detection from video.</li>
-</ol>
-<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><p>The main steps of the method is shown in the following figure.</p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/TCNN.jpg" alt="" width="640"/>
-
-<ol>
-<li>Image object proposal. The regions are generated in each frame by Selective Search and classified by AlexNet of 200 categories. It is a similar method to R-CNN. The region with scores lower than a threshold are remove and the rest are the proposals.</li>
-<li>Obejct proposal scoring. The proposals are scored by a 30-category classifier deprived from GoogleNet. And the proposals with higher scores are kept.</li>
-<li>High-confidence proposal tracking. The proposals with higher scores are tracked and the overlapped proposals are pressed using IOU. The trackes are tubelet proposals.</li>
-<li>Tublet box perturbation and max-pooling. As the tracking result may drift, multiple regions are generated around tubelet proposals. All the regions are sent to the CNN in step 2 and sorted by the scores. Select the region of highest score to replace the one in tubelet.</li>
-<li>Temporal convolution and re-scoring. Temporal Convolutional Network (TCN) is proposed that uses 1-D serial features including detection scores, tracking scores, anchor offsets and generates temporally dense prediction on every tubelet box. The tubelet with high detection score are regarded as detection result. <strong>However, TCN has not been well explained in this work</strong></li>
-</ol>
-<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
-<li>The TCN help reduce the negative effect caused by the large variations of detection scores along the same track.</li>
-</ol>
-<h3 id="DISADVANTAGES"><a href="#DISADVANTAGES" class="headerlink" title="DISADVANTAGES"></a>DISADVANTAGES</h3><ol>
-<li>Too many stages.</li>
-<li>Too many CNN operations.</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1117,7 +1104,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-count">240</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

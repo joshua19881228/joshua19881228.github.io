@@ -172,6 +172,148 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/24/Coding/2016-09-24-Repo-Joshua-Blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/09/24/Coding/2016-09-24-Repo-Joshua-Blog/" class="post-title-link" itemprop="url">The Github Repo of this JOSHUA's BLOG</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2016-09-24T00:00:00+08:00">2016-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Joshua-s-Blog"><a href="#Joshua-s-Blog" class="headerlink" title="Joshua-s-Blog"></a>Joshua-s-Blog</h1><p>I start up this repo to manage the code of my personal website <a target="_blank" rel="noopener" href="http://joshua881228.webfactional.com/">JOSHUA’s BLOG</a>, which is set up on <a target="_blank" rel="noopener" href="https://www.webfaction.com/">WebFaction</a> and implemented by <a target="_blank" rel="noopener" href="https://www.djangoproject.com/">Django</a> and several other packages. The repository is <a target="_blank" rel="noopener" href="https://github.com/joshua19881228/Joshua-s-Blog">here</a>.</p>
+<p>In addition to manage my own code, viewers can also use this project to learn how to build a website using Django. I will write down the works that need to be done to use these code.</p>
+<p>Finally, welcome to visit <a target="_blank" rel="noopener" href="http://joshua881228.webfactional.com/">JOSHUA’s BLOG</a>.</p>
+<h2 id="Environment"><a href="#Environment" class="headerlink" title="Environment"></a>Environment</h2><ol>
+<li><a target="_blank" rel="noopener" href="http://www.ubuntu.com/">Ubuntu 14.04</a>. Though Ubuntu 16.04 has been released for a while, I am still using an older LTS release. I am not sure the following instruction can work fine on Ubuntu 16.04.</li>
+<li><a target="_blank" rel="noopener" href="http://httpd.apache.org/">Apache 2.4</a>. I chose Apache 2.4 because my deploy server is powered by Apache 2.4. The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows. </li>
+<li><a target="_blank" rel="noopener" href="http://wsgi.readthedocs.io/en/latest/index.html">WSGI 1.5</a>. WSGI is the Web Server Gateway Interface. It is a specification that describes how a web server communicates with web applications, and how web applications can be chained together to process one request.</li>
+<li><a target="_blank" rel="noopener" href="https://www.djangoproject.com/">Django 1.7.1</a>. Hmm… I am still using an ancient version of Django. It is also because I wish I could have an exactly same developing environment with the deploy one. Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.</li>
+</ol>
+<h2 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h2><h3 id="Install-Apache-2-4"><a href="#Install-Apache-2-4" class="headerlink" title="Install Apache 2.4"></a>Install Apache 2.4</h3><p>Apache can be installed easily using the apt-get. <code>sudo apt-get install apache2</code>. Then we can use <code>apacheclt -v</code> to check the version of Apache and its success of installation.</p>
+<h3 id="Install-mod-wsgi-1-5"><a href="#Install-mod-wsgi-1-5" class="headerlink" title="Install mod_wsgi 1.5"></a>Install mod_wsgi 1.5</h3><p>mod_wsgi can be installed using Pip, which can be installed using <code>sudo apt-get install python-pip</code>.</p>
+<ol>
+<li>install mod_wsgi using <code>pip install mod_wsgi</code>. I met an error of <code>missing Apache httpd server packages.</code> here. I bypassed this error by <code>sudo apt-get install apache2-mpm-worker apache2-dev</code>.</li>
+<li>download mod_wsgi-3.5.tar.gz from <a target="_blank" rel="noopener" href="http://modwsgi.readthedocs.io/en/latest/release-notes/version-3.5.html">here</a>.</li>
+<li>extract files from the package using <code>tar xvfz mod_wsgi-3.5.tar.gz</code>.</li>
+<li>enter the directory <code>cd cd mod_wsgi-3.5</code>.</li>
+<li>config by <code>./configure</code></li>
+<li><code>make</code></li>
+<li><code>sudo make install</code></li>
+</ol>
+<h3 id="Install-Django-1-7-1"><a href="#Install-Django-1-7-1" class="headerlink" title="Install Django 1.7.1"></a>Install Django 1.7.1</h3><p>Install Django using command <code>pip install Django==1.7.1</code>. To verify its installation, try to <code>import django</code> in python console. If no error is raised, then the installation is successful. </p>
+<h3 id="Set-up-joshua-blog-project-with-Apache"><a href="#Set-up-joshua-blog-project-with-Apache" class="headerlink" title="Set up joshua_blog project with Apache"></a>Set up joshua_blog project with Apache</h3><p>Note: after download the project, you should change the folder name to <code>joshua_blog</code>.</p>
+<ol>
+<li><p>add the following code to the file of <code>/etc/apache2/apache2.conf</code></p>
+<pre><code> LoadModule wsgi_module /usr/lib/apache2/modules/mod_wsgi.so
+ WSGIScriptAlias / /home/joshua/CODE/PYTHON/joshua_blog/joshua_blog/wsgi.py
+ Alias /media/ /home/joshua/CODE/PYTHON/joshua_blog/media/
+ Alias /static/ /home/joshua/CODE/PYTHON/joshua_blog/static/
+
+ &lt;Directory /home/joshua/CODE/PYTHON/joshua_blog/static&gt;
+     Require all granted
+ &lt;/Directory&gt;
+
+ &lt;Directory /home/joshua/CODE/PYTHON/joshua_blog/media&gt;
+     Require all granted
+ &lt;/Directory&gt;
+
+ &lt;Directory /home/joshua/CODE/PYTHON/joshua_blog/joshua_blog&gt;
+     &lt;Files wsgi.py&gt;
+         Require all granted
+     &lt;/Files&gt;
+ &lt;/Directory&gt;
+
+ WSGIPythonPath /home/joshua/anaconda/lib/python2.7/site-packages
+ ServerName localhost:80
+</code></pre>
+</li>
+<li><p>add the following code to the file of <code>joshua_blog/joshua_blog/wsgi.py</code></p>
+<pre><code> import sys
+ sys.path.append(&quot;/path/joshua_blog/&quot;)
+</code></pre>
+<p> in my case, the path is <code>/home/joshua/CODE/PYTHON/</code>.</p>
+</li>
+<li><p>restart apache server by <code>sudo service apache2 restart</code></p>
+</li>
+</ol>
+<h3 id="Install-dependency-modules"><a href="#Install-dependency-modules" class="headerlink" title="Install dependency modules"></a>Install dependency modules</h3><p>Coming here, we have set up the environment. But when we visit <code>127.0.0.1</code>, we found that the web server return 500 error. It is because several modules needed by joshua_blog are of need to be installed manually. We can see which modules are missed in the file of <code>/var/log/apache2/error.log</code>. Next we will see how to install these modules.</p>
+<ol>
+<li><strong>django-bootstrap</strong>. The author suggests to install this app using <code>pip install django-bootstrap</code>, but the latest version of the app requires Django&gt;&#x3D;1.8. Thus we need to download django-bootstrap from 6.x.x branch, which can be found <a target="_blank" rel="noopener" href="https://pypi.python.org/pypi/django-bootstrap3/6.2.0">here</a>. Extract the package and enter its directory. Install by <code>python setup.py install</code>.</li>
+<li><strong>django-filemanager</strong>. The installation instruction can be found <a target="_blank" rel="noopener" href="http://joshua881228.webfactional.com/blog_using-imgiitroorkee-django-filemanager_59/">here</a>.</li>
+<li><strong>django-disqus</strong>. Install by <code>pip install django-disqus</code>. A brief introduction in Chinese can be found <a target="_blank" rel="noopener" href="http://joshua881228.webfactional.com/blog_li-yong-disquskuai-su-da-jian-ping-lun-xi-tong_57/">here</a></li>
+<li><strong>unidecode</strong>. Install by <code>pip install unidecode</code>.</li>
+<li><strong>markdown2</strong>. Install by <code>pip install markdown2</code>. A brief introduction in Chinese can be found <a target="_blank" rel="noopener" href="http://joshua881228.webfactional.com/blog_zai-djangogong-cheng-zhong-shi-yong-markdown_41/">here</a>.</li>
+</ol>
+<p>At last we can visit our website at 127.0.0.1. We can log in as the supervisor using the username of <code>joshua</code> and the password of <code>joshua</code>. We may meet other issues:</p>
+<ol>
+<li>Here maybe we will get an error message reading “attempt to write a readonly database”. We should change its mode by <code>chmod 666 db.sqlite3</code>.</li>
+<li>Then another error comes as “unable to open database file”. Then we should change the owner of the whole project <code>sudo chown www-data joshua_blog</code>.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/23/Life_Discovery/Miscellaneous/2016-09-23-Miscellaneous/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2373,101 +2515,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/09/Computer_Vision/Reading_Note/2016-08-09-Reading-Note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/08/09/Computer_Vision/Reading_Note/2016-08-09-Reading-Note/" class="post-title-link" itemprop="url">Reading Note: Do semantic parts emerge in Convolutional Neural Networks</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-08-09 00:00:00" itemprop="dateCreated datePublished" datetime="2016-08-09T00:00:00+08:00">2016-08-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Do semantic parts emerge in Convolutional Neural Networks?</p>
-<p><strong>AUTHER</strong>: Abel Gonzalez-Garica, David Modolo, Vittorio Ferrari</p>
-<p><strong>ASSOCIATION</strong>: CLAVIN, University of Edingburgh, UK</p>
-<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1607.03738">arXiv:1607.03738</a></p>
-<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
-<li>An extensive quantitative analysis of the association between responses of CNN filters and sematic parts</li>
-</ol>
-<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><ol>
-<li>CNNs are trained for object detection task or object classification.</li>
-<li>Filters that give significant responses to certain semantic parts are selected.</li>
-<li>Filters are comibned to construct a part detector if necessary.</li>
-<li>A regressor is trained for part bounding-boxes.</li>
-<li>Discriminative filters are selected in object classification task.</li>
-</ol>
-<h3 id="Observation"><a href="#Observation" class="headerlink" title="Observation"></a>Observation</h3><p>There are several interesting observatoins from the authers.</p>
-<p><strong>Differences between layers.</strong> Overall, the higher the network layer, the higher the performance. It means that in higher part of the network abstract semantic contents are represented.</p>
-<p><strong>Differences between part classes.</strong> Performance varies greatly across part classes. It seems that very discriminative semantic parts are well detected.</p>
-<p><strong>Filter combinations.</strong> Performing part detection using a combination of filters always performs better than single best filter. It means taht a semantic part may be represented jointly by several filters.</p>
-<p><strong>Filter sharing across part classes.</strong> Filters are shared across different part classes. It is clear that some filters are representative for a generic part and work well on all object classes containing it.</p>
-<p><strong>The number of emerged semantic parts.</strong> Only a modest number of filters responses to semantic parts. The auther concludes that the network does contain filters combinations that can cover some part classes well, but they do not fire exclusively on the part, making them weak part detectors. Moreover, the part classes covered by the semantic filters tend to either cover a large image area, or be very discriminative for their object class.</p>
-<p><strong>Discriminative filters in object classification.</strong> The filters are measured by how much they contribute to the classification score. On average, 9&#x2F;256 filters are discriminative for a particular class. The total number of dicriminative filte overall 16 object classes amounts to 104. It shows that the discriminative filters are largely distributed across different object classes, with very little sharing.</p>
-<p><strong>Discriminative and semantic filters.</strong> 5.5 out of the 9 discriminative filters for an object class are semantic filters.It means that only a portion of the filters learned by CNN are semantic, and many are just responding to dicriminative patches.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -2539,7 +2586,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-count">240</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

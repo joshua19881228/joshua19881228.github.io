@@ -172,6 +172,117 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/08/30/Computer_Vision/2015-08-30-Setting-Up-Caffe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2015/08/30/Computer_Vision/2015-08-30-Setting-Up-Caffe/" class="post-title-link" itemprop="url">Set Up Caffe on Ubuntu14.04 64bit+NVIDIA GTX970M+CUDA7.0</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2015-08-30 00:00:00" itemprop="dateCreated datePublished" datetime="2015-08-30T00:00:00+08:00">2015-08-30</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Table-of-Content"><a href="#Table-of-Content" class="headerlink" title="Table of Content"></a>Table of Content</h2><ul>
+<li>Content<br>{:toc}</li>
+</ul>
+<h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><ol>
+<li>install NVIDIA GTX970M driver</li>
+<li>install CUDA 7.0 Toolkit</li>
+</ol>
+<p>Please refer to my previous blog <a target="_blank" rel="noopener" href="https://joshua19881228.github.io/2015-08-29-Ndriver-Cuda/">Installation of NVIDIA GPU Driver and CUDA Toolkit</a></p>
+<h2 id="Install-OpenBLAS"><a href="#Install-OpenBLAS" class="headerlink" title="Install OpenBLAS"></a>Install OpenBLAS</h2><ol>
+<li>download source code from <a target="_blank" rel="noopener" href="http://www.openblas.net/">OpenBLAS official website</a> and extract the archive</li>
+<li>(optional) install gfortran by <code>sudo apt-get install gfortran</code></li>
+<li>change directory to the position of extracted folder the and compile <code>make FC=gfortran</code></li>
+<li>install by <code>make PREFIX=/your/path install</code></li>
+<li>add paths to envrionment: <code>PATH=/your/path/to/openblas/include:$PATH</code> and <code>LD_LIBRARY_PATH=/your/path/to/openblas/lib:$LD_LIBRARY_PATH</code> and export the pathes.</li>
+</ol>
+<h2 id="Install-Anaconda"><a href="#Install-Anaconda" class="headerlink" title="Install Anaconda"></a>Install Anaconda</h2><ol>
+<li>download the script from <a target="_blank" rel="noopener" href="http://continuum.io/downloads">http://continuum.io/downloads</a></li>
+<li>change mode <code>sudo chmod +x Anaconda*.sh</code></li>
+<li>execute the installer by <code>bash Anaconda*.sh</code></li>
+<li>in ~&#x2F;.bashrc add</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LD_LIBRARY_PATH=your_anaconda_path/lib:$LD_LIBRARY_PATH</span><br><span class="line">export LD_LIBRARY_PATH</span><br></pre></td></tr></table></figure>
+<p>NEVER put it in &#x2F;etc !!! Otherwise, one may be in danger of unable to get into GUI.<br>5. config HDF5 version</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/lib/x86_64-linux-gnu</span><br><span class="line">sudo ln -s libhdf5.so.7 libhdf5.so.10</span><br><span class="line">sudo ln -s libhdf5_hl.so.7 libhdf5_hl.so.10</span><br><span class="line">sudo ldconfig</span><br></pre></td></tr></table></figure>
+
+<h2 id="Install-OpenCV"><a href="#Install-OpenCV" class="headerlink" title="Install OpenCV"></a>Install OpenCV</h2><p>One can conveniently install OpenCV by run a shell script from a <a target="_blank" rel="noopener" href="https://github.com/jayrambhia/Install-OpenCV">Github repository</a></p>
+<ol>
+<li>download the script. For me, I use OpenCV 2.4.10.</li>
+<li>change mode of the shell <code>sudo chmod +x opencv2_4_10.sh</code></li>
+<li>run the script <code>sudo ./opencv2_4_10.sh</code>. Note that one may need to modify the cmake settings, such as eliminating QT.</li>
+</ol>
+<h2 id="Install-a-Set-of-Dpendencies"><a href="#Install-a-Set-of-Dpendencies" class="headerlink" title="Install a Set of Dpendencies"></a>Install a Set of Dpendencies</h2><p>Following the guideline in <a target="_blank" rel="noopener" href="http://caffe.berkeleyvision.org/installation.html">Caffe</a>, we can set up the dependencies by commond <code>sudo apt-get install libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libboost-all-dev libhdf5-serial-dev libgflags-dev libgoogle-glog-dev liblmdb-dev protobuf-compiler</code></p>
+<h2 id="Compile-Caffe"><a href="#Compile-Caffe" class="headerlink" title="Compile Caffe"></a>Compile Caffe</h2><ol>
+<li>get Caffe from github <code>git clone https://github.com/BVLC/caffe.git</code></li>
+<li>edit Makefile.config to set correct paths. Firstly create Makefile.config by <code>cp Makefile.config.example Makefile.config</code>. Then modify several paths. For me, I set blas to openblas and set blas path to &#x2F;opt&#x2F;OpenBLAS&#x2F;include and &#x2F;opt&#x2F;OpenBLAS&#x2F;lib where I install OpenBLAS; Python is set to Anaconda as well as its paths.</li>
+<li>compile Caffe by <code>make -j</code> and <code>make pycaffe</code></li>
+<li>In addition, so far Caffe should be able to be compiled without any problem. However, when running exampls such as MNIST, some libs might be missing. My solution is to  add libraries to the system library cache. For example, create a file called cuda.conf in &#x2F;etc&#x2F;ld.so.conf.d&#x2F; and add the path  “&#x2F;usr&#x2F;local&#x2F;cuda-7.0&#x2F;lib64” to this file.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/08/29/Computer_Vision/2015-08-29-Ndriver-Cuda/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1106,7 +1217,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">239</span>
+          <span class="site-state-item-count">240</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
