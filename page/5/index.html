@@ -172,7 +172,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/05/Computer_Vision/Reading_Note/2018-03-05-Neural_Aesthetic_Image_Reviewer/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/07/Computer_Vision/Reading_Note/2018-03-07-MobileNetsV2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar-icon.png">
@@ -186,7 +186,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2018/03/05/Computer_Vision/Reading_Note/2018-03-05-Neural_Aesthetic_Image_Reviewer/" class="post-title-link" itemprop="url">Reading Note: Neural Aesthetic Image Reviewer</a>
+            <a href="/2018/03/07/Computer_Vision/Reading_Note/2018-03-07-MobileNetsV2/" class="post-title-link" itemprop="url">Reading Note: MobileNetV2: Inverted Residuals and Linear Bottlenecks</a>
         </h2>
 
         <div class="post-meta">
@@ -196,7 +196,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2018-03-05 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-05T00:00:00+08:00">2018-03-05</time>
+              <time title="Created: 2018-03-07 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-07T00:00:00+08:00">2018-03-07</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
@@ -226,20 +226,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>TITLE</strong>: Tiny SSD: Neural Aesthetic Image Reviewer</p>
-<p><strong>AUTHOR</strong>: WenshanWang, Su Yang, Weishan Zhang, Jiulong Zhang</p>
-<p><strong>ASSOCIATION</strong>: Fudan University, China University of Petroleum, Xi’an University of Technology</p>
-<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1802.10240">arXiv:1802.10240</a></p>
+          <p><strong>TITLE</strong>: MobileNetV2: Inverted Residuals and Linear Bottlenecks</p>
+<p><strong>AUTHOR</strong>: Mark Sandler, Andrew Howard, Menglong Zhu, Andrey Zhmoginov, Liang-Chieh Chen</p>
+<p><strong>ASSOCIATION</strong>: Google</p>
+<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1801.04381">arXiv:1801.04381</a></p>
 <h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
-<li>The problem is whether computer vision systems can perceive image aesthetics as well as generate reviews or explanations as human. It is the first work to investigate into this problem.</li>
-<li>By incorporating shared aesthetically semantic layers at a high level, an end-to-end trainable NAIR architecture is proposed, which can approach the goal of performing aesthetic prediction as well as generating natural-language comments related to aesthetics.</li>
-<li>To enable this research, the AVA-Reviews dataset is collected, which contains 52,118 images and 312,708 comments.</li>
+<li>The main contribution is a novel layer module: the inverted residual with linear bottleneck.</li>
 </ol>
-<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The framework of the work is illustrated in the following figure. The main idea of this work is to learn image aesthetic classification and vision-to-language generation using a multi-task framework.</p>
-<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180305_Framework.png" alt="Framework" title="Framework"></p>
-<p>The authors tried two designs, Model-I and Model-II. The difference between the two architectures is whether there are task-specific embedding layers for each task in addition to the shared layers. The potential limitation of Model-I is that some task-specific features can not be captured by the shared aesthetically semantic layer. Thus a task-specific embedding layer is introduced.</p>
-<p>For image aesthetic classification part, it is a typical binary classification task. For comment generation part, LSTM is applied, the input of which is the high-level visual feature vector for an image.</p>
-<h3 id="PERFORMANCE"><a href="#PERFORMANCE" class="headerlink" title="PERFORMANCE"></a>PERFORMANCE</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180305_Performance.png" alt="Performance" title="Performance"></p>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><h3 id="BUILDING-BLOCKS"><a href="#BUILDING-BLOCKS" class="headerlink" title="BUILDING BLOCKS"></a>BUILDING BLOCKS</h3><p><strong>Depthwise Separable Convolutions</strong>. The basic idea is to replace a full convolutional operator with a factorized version that splits convolution into two separate layers. The first layer is called a depthwise convolution, it performs lightweight filtering by applying a single convolutional filter per input channel. The second layer is a $1 \times 1$ convolution, called a pointwise convolution, which is responsible for building new features through computing linear combinations of the input channels.</p>
+<p><strong>Linear Bottlenecks Consider</strong>. It has been long assumed that manifolds of interest in neural networks could be embedded in low-dimensional subspaces. Two properties are indicative of the requirement that the manifold of interest should lie in a low-dimensional subspace of the higher-dimensional activation space:</p>
+<ol>
+<li>If the manifold of interest remains non-zero vol-ume after ReLU transformation, it corresponds to a linear transformation.</li>
+<li>ReLU is capable of preserving complete information about the input manifold, but only if the input manifold lies in a low-dimensional subspace of the input space.</li>
+</ol>
+<p>Assuming the manifold of interest is low-dimensional we can capture this by inserting linear bottleneck layers into the convolutional blocks.</p>
+<p><strong>Inverted Residuals</strong>. Inspired by the intuition that the bottlenecks actually contain all the necessary information, while an expansion layer acts merely as an implementation detail that accompanies a non-linear transformation of the tensor, shortcuts are used directly between the bottlenecks. In residual networks the bottleneck layers are treated as low-dimensional supplements<br>to high-dimensional “information” tensors.</p>
+<p>The following figure gives the Inverted resicual block. The diagonally hatched texture indicates layers that do not contain non-linearities. It provides a natural separation between the input&#x2F;output domains of the building blocks (bottleneck layers), and the layer transformation – that is a non-linear function that converts input to the output. The former can be seen as the capacity of the network at each layer, whereas the latter as the expressiveness.</p>
+<p>The framework of the work is illustrated in the following figure. The main idea of this work is to learn image aesthetic classification and vision-to-language generation using a multi-task framework.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180307_InvertedResiduals.png" alt="Inverted Residuals" title="Inverted Residuals"></p>
+<p>And the following table gives the basic implementation structure.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180307_BottleneckResidualBlock.png" alt="Bottleneck residual block" title="Bottleneck residual block"></p>
+<h3 id="ARCHITECTURE"><a href="#ARCHITECTURE" class="headerlink" title="ARCHITECTURE"></a>ARCHITECTURE</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180307_Architecture.png" alt="Architecture" title="Architecture"></p>
+<h2 id="PERFORMANCE"><a href="#PERFORMANCE" class="headerlink" title="PERFORMANCE"></a>PERFORMANCE</h2><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180307_Classification.png" alt="Classification" title="Classification"></p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180307_ObjectDetection.png" alt="Object Detection" title="Object Detection"></p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180307_SemanticSegmentation.png" alt="Semantic Segmentation" title="Semantic Segmentation"></p>
 
       
     </div>
@@ -387,6 +397,93 @@
 </ol>
 <p>首先，当你与任何层次的人打交道遇到挫折时，能够尽量把自己放在他们的位置上考虑，会更容易理解其观点和做法。这个其实就是经常会被提到的“体恤下属”和“站在领导的角度看问题”，其实这两件事说起来容易，做起来难度很大。对于前者，当我们有责任有压力在身时，很难做到冷静地处理问题。至于后者，当我们的眼界还不够的时候，几乎不可能具有那样的眼光，或者有时候是“不在其职不谋其政”。</p>
 <p>其次，让所有人都有所得，而且是让每个人得到他自己想要的，而不是我们想给的，才能让所有人顺畅地合作。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/05/Computer_Vision/Reading_Note/2018-03-05-Neural_Aesthetic_Image_Reviewer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/03/05/Computer_Vision/Reading_Note/2018-03-05-Neural_Aesthetic_Image_Reviewer/" class="post-title-link" itemprop="url">Reading Note: Neural Aesthetic Image Reviewer</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-03-05 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-05T00:00:00+08:00">2018-03-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Tiny SSD: Neural Aesthetic Image Reviewer</p>
+<p><strong>AUTHOR</strong>: WenshanWang, Su Yang, Weishan Zhang, Jiulong Zhang</p>
+<p><strong>ASSOCIATION</strong>: Fudan University, China University of Petroleum, Xi’an University of Technology</p>
+<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1802.10240">arXiv:1802.10240</a></p>
+<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><ol>
+<li>The problem is whether computer vision systems can perceive image aesthetics as well as generate reviews or explanations as human. It is the first work to investigate into this problem.</li>
+<li>By incorporating shared aesthetically semantic layers at a high level, an end-to-end trainable NAIR architecture is proposed, which can approach the goal of performing aesthetic prediction as well as generating natural-language comments related to aesthetics.</li>
+<li>To enable this research, the AVA-Reviews dataset is collected, which contains 52,118 images and 312,708 comments.</li>
+</ol>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The framework of the work is illustrated in the following figure. The main idea of this work is to learn image aesthetic classification and vision-to-language generation using a multi-task framework.</p>
+<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180305_Framework.png" alt="Framework" title="Framework"></p>
+<p>The authors tried two designs, Model-I and Model-II. The difference between the two architectures is whether there are task-specific embedding layers for each task in addition to the shared layers. The potential limitation of Model-I is that some task-specific features can not be captured by the shared aesthetically semantic layer. Thus a task-specific embedding layer is introduced.</p>
+<p>For image aesthetic classification part, it is a typical binary classification task. For comment generation part, LSTM is applied, the input of which is the high-level visual feature vector for an image.</p>
+<h3 id="PERFORMANCE"><a href="#PERFORMANCE" class="headerlink" title="PERFORMANCE"></a>PERFORMANCE</h3><p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20180305_Performance.png" alt="Performance" title="Performance"></p>
 
       
     </div>
@@ -1047,93 +1144,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/31/Computer_Vision/Reading_Note/2017-10-31-DeepFashion/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2017/10/31/Computer_Vision/Reading_Note/2017-10-31-DeepFashion/" class="post-title-link" itemprop="url">Reading Note: Be Your Own Prada: Fashion Synthesis with Structural Coherence</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2017-10-31 00:00:00" itemprop="dateCreated datePublished" datetime="2017-10-31T00:00:00+08:00">2017-10-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Be Your Own Prada: Fashion Synthesis with Structural Coherence</p>
-<p><strong>AUTHOR</strong>: Shizhan Zhu, Sanja Fidler, Raquel Urtasun, Dahua Lin, Chen Change Loy</p>
-<p><strong>ASSOCIATION</strong>: The Chinese University of Hong Kong, University of Toronto, Vector Institute, Uber Advanced Technologies Group</p>
-<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="http://personal.ie.cuhk.edu.hk/~ccloy/files/iccv_2017_fashiongan.pdf">ICCV2017</a></p>
-<h2 id="CONTRIBUTION"><a href="#CONTRIBUTION" class="headerlink" title="CONTRIBUTION"></a>CONTRIBUTION</h2><p>A method that can generate new outfits onto existing photos is developped so that it can </p>
-<ol>
-<li>retain the body shape and pose of the wearer,</li>
-<li>roduce regions and the associated textures that conform to the language description, </li>
-<li>Enforce coherent visibility of body parts.</li>
-</ol>
-<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>Given an input photograph of a person and a sentence description of a new desired outfit, the model first generates a segmentation map $\tilde{S}$ using the generator from the first GAN. Then the new image is rendered with another GAN, with the guidance from the segmentation map generated in the previous step. At test time, the final rendered image is obtained with a forward pass through the two GAN networks. The workflow of this work is shown in the following figure.</p>
-<p><img src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/Reading_Note_20171031_DeepFashion.png" alt="Framework" title="Framework"></p>
-<p>The first generator $G_{shape}$ aims to generate the desired semantic segmentation map $$\tilde{S}$$ by conditioning on the spatial constraint $$\downarrow m(S_0)$$, the design coding $$\textbf{d}$$, and the Gaussian noise $$\textbf{z}<em>{S}$$. $$S</em>{0}$$ is the original pixel-wise one-hot segmentation map of the input image with height of $$m$$, width of $n$ and channel of $L$, which represents the number of labels. $\downarrow m(S_0)$ downsamples and merges $S_{0}$ so that it is agnostic of the clothing worn in the original image, and only captures information about the user’s body. Thus $G_{shape}$ can generate a segmentation map $\tilde{S}$ with sleeves from a segmentation map $S_{0}$ without sleeves.</p>
-<p>The second generator $G_{image}$ renders the final image $\tilde{I}$ based on the generated segmentation map $\tilde{S}$, design coding $\textbf{d}$, and the Gaussian noise $\textbf{z}_I$.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1205,7 +1215,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">241</span>
+          <span class="site-state-item-count">242</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

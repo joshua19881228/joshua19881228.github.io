@@ -172,6 +172,105 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/01/Computer_Vision/Reading_Note/2016-06-01-ION/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/06/01/Computer_Vision/Reading_Note/2016-06-01-ION/" class="post-title-link" itemprop="url">Reading Note: Inside-Outside Net: Detecting Objects in Context with Skip Pooling and Recurrent Neural Networks</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-06-01 00:00:00" itemprop="dateCreated datePublished" datetime="2016-06-01T00:00:00+08:00">2016-06-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Inside-Outside Net: Detecting Objects in Context with Skip Pooling and Recurrent Neural Networks</p>
+<p><strong>AUTHER</strong>: Sean Bell, C. Lawrence Zitnick, Kavita Bala, Ross Girshick</p>
+<p><strong>ASSOCIATION</strong>: Cornell University, Microsoft Research</p>
+<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1512.04143">arXiv:1512.04143</a></p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>ION architecture is introduce that leverages context and multi-scale skip pooling for object detection. Use the information both inside and outside the ROI to determine the detection result.</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><p>The main steps of the method is shown in the following figure.</p>
+<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/ION.jpg" alt="" width="640"/>
+
+<ol>
+<li>The image is first fed into a CNN, e.g.VGG16.</li>
+<li>ROI proposals are generated in the same way of Fast R-CNN.</li>
+<li>The information within the ROI are extracted by ROI pooling on different feature maps from different convolutional layers of different scales.</li>
+<li>The information outside the ROI are extracted by 2 successive 4-direction IRNNs. And ROI pooling is used to extract features.</li>
+<li>The pooled features are L2 nomalized and concated. Then a 1X1 conv layer is used to reduce the dimension.</li>
+<li>Two branches are learned to predict category and location.</li>
+</ol>
+<p><strong>some details</strong></p>
+<p>A 4-direction IRNN contains 4 independent IRNNs and each IRNN moves in different directions (left, right, up and down). The internal IRNN computations are splitted into separate logical layers. the input-to-hidden transition is implemented by a 1x1 convolution, and its computation can be shared across different directions.</p>
+<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>The proposed detector works better on smaller objects compared with other works.</li>
+<li>Both local and global information are take into account.</li>
+<li>Skip pooling uses the informaiton of different scales.</li>
+<li>Two successive 4-direction IRNN cover the information form the whole image.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/30/Computer_Vision/Reading_Note/2016-05-30-GLSTM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -980,79 +1079,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/17/Life_Discovery/My_Drawings/2016-04-17-My-Drawings/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/04/17/Life_Discovery/My_Drawings/2016-04-17-My-Drawings/" class="post-title-link" itemprop="url">My Drawings [20160417 Sunflowers]</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-04-17 00:00:00" itemprop="dateCreated datePublished" datetime="2016-04-17T00:00:00+08:00">2016-04-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Life_Discovery/My_Drawings/sunflower.jpg" alt="" width="480"/>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1124,7 +1150,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">241</span>
+          <span class="site-state-item-count">242</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

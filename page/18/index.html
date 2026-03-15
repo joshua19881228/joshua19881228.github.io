@@ -172,6 +172,102 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/19/Computer_Vision/Reading_Note/2016-08-19-Reading-note/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/08/19/Computer_Vision/Reading_Note/2016-08-19-Reading-note/" class="post-title-link" itemprop="url">Reading Note: Factorized Convolutional Neural Networks</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-08-19 00:00:00" itemprop="dateCreated datePublished" datetime="2016-08-19T00:00:00+08:00">2016-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>: Factorized Convolutional Neural Networks</p>
+<p><strong>AUTHER</strong>: Min Wang, Baoyuan Liu, Hassan Foroosh</p>
+<p><strong>ASSOCIATION</strong>: Department of EECS, University of Central Florida, Orlando</p>
+<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1608.04337">arXiv:1608.04337</a></p>
+<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
+<li>A new implementation of convolutional layer is proposed and only involves single in-channel convolution and linear channel projection.</li>
+<li>The network using such layers can achieves similar accuracy with significantly less computaion.</li>
+</ol>
+<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><p><strong>Convolutional Layer with Bases</strong></p>
+<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/alg2.jpg" alt="" width="640"/>
+
+<p>When $b &#x3D; k^2$, this layer is equivalent to the standard convolutional layer. The number of multiplication required for this layer is $hwbm(k^2 + n)$, which means that by reducing b and increasing k, we create a layer that achieves large convolutional kernel while maintaining low complexity.</p>
+<p><strong>Convolutional Layer as Stacked Single Basis Layer</strong></p>
+<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/alg3.jpg" alt="" width="640"/>
+
+<p>One assumption is that the number of output channels is the same as the number of input channels $m &#x3D; n$, which is the case of that in ResNet. The modified layer can be considered as stacking multiple convolutional layers with single basis. Residual learning is also introduced in thie modified layer, which solves the problem of losing useful information caused by single basis.</p>
+<p><strong>Topological Connections</strong></p>
+<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/alg4.jpg" alt="" width="640"/>
+
+<p>A $n$-dimensional topological connections between the input and output channels in convolutional layer is proposed. Each output channel is only connected with its local neighbors rather than all input channels.</p>
+<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
+<li>It is an interesting method of speeding up CNN as the auther claims that the network achieves accuracy of GoogLeNet while consuming 3.4 times less computaion.</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/17/Life_Discovery/Miscellaneous/2016-08-17-Miscellaneous/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -902,85 +998,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/09/Using_Linux/2016-07-09-Flash_Linux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/07/09/Using_Linux/2016-07-09-Flash_Linux/" class="post-title-link" itemprop="url">Install Adobe FlashPlayer for Firefox on Ubuntu 14.04</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-07-09 00:00:00" itemprop="dateCreated datePublished" datetime="2016-07-09T00:00:00+08:00">2016-07-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Using-Linux/" itemprop="url" rel="index"><span itemprop="name">Using Linux</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Though it is recommended using HTML5 in the field, Adobe FlashPlayer is still widely used. So it is of need to install it in our system. The main steps are as follows:</p>
-<ol>
-<li>Download Adobe FlashPlayer from the <a target="_blank" rel="noopener" href="https://get.adobe.com/cn/flashplayer/">official website</a>. I choosed .tar.gz version.</li>
-<li>Extract the archive using <code>tar -zxvf install_flash_player_11_linux.x86_64.tar.gz</code></li>
-<li>Copy files to corresponding directories.</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">cp</span> libflashplayer.so /usr/lib/mozilla/plugins/</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">cp</span> -r ./usr/* /usr/</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/07/09/Using_Linux/2016-07-09-Deb_Linux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1134,7 +1151,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">241</span>
+          <span class="site-state-item-count">242</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

@@ -172,6 +172,101 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/28/Coding/2016-09-28-VLC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/09/28/Coding/2016-09-28-VLC/" class="post-title-link" itemprop="url">VLC SDK</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-09-28 00:00:00" itemprop="dateCreated datePublished" datetime="2016-09-28T00:00:00+08:00">2016-09-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coding/" itemprop="url" rel="index"><span itemprop="name">Coding</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Recently I am searching for an easy-to-use library of media framework that can be embedded to my own codes. First I have tried ffmpeg and SDL2 libraries, which I found too difficult for me since I have little experience of developing multimedia related applications. Then I found VLC media player after I searched the internet using a key word of “media player library”. I thought maybe it was a good choice and searched related projects in github. There is a very simple demo project called <a target="_blank" rel="noopener" href="https://github.com/Mutinifni/VLC-OpenCV">Controlling VLC media player using OpenCV</a>. I was extracted by the word “OpenCV” because I am an engineer in computer vision. After I clicked the link, BINGO! THAT’S ALL I NEED!</p>
+<h2 id="Install-libvlc"><a href="#Install-libvlc" class="headerlink" title="Install libvlc"></a>Install libvlc</h2><ol>
+<li>A simple command is used to install libvlc <code>sudo apt-get install libvlc-dev</code>.</li>
+<li>One may need to install vlc media player to get the plugins work <code>sudo apt-get install vlc</code>.</li>
+</ol>
+<h2 id="Use-libvlc"><a href="#Use-libvlc" class="headerlink" title="Use libvlc"></a>Use libvlc</h2><p>The following code is a simple demo of how to use libvlc to play a video</p>
+<pre><code>#include &lt;vlc/vlc.h&gt;
+// LibVLC requirements, plays video specified as a command line argument
+libvlc_instance_t *instance = libvlc_new(0, NULL);
+libvlc_media_t *media = libvlc_media_new_path(instance, argv[1]);	
+libvlc_media_player_t *mplayer = libvlc_media_player_new_from_media(media);
+
+while(1)
+&#123;
+    //something to do while playing video
+    //...
+&#125;
+
+libvlc_media_release(media);
+libvlc_release(instance);
+</code></pre>
+<p>The libvlc will handle the multimedia thread. All we need to do is controlling the player in main thread. More document can be found <a target="_blank" rel="noopener" href="https://wiki.videolan.org/LibVLC">here</a>.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/26/Life_Discovery/Miscellaneous/2016-09-26-Miscellaneous/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2428,102 +2523,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/19/Computer_Vision/Reading_Note/2016-08-19-Reading-note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/08/19/Computer_Vision/Reading_Note/2016-08-19-Reading-note/" class="post-title-link" itemprop="url">Reading Note: Factorized Convolutional Neural Networks</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-08-19 00:00:00" itemprop="dateCreated datePublished" datetime="2016-08-19T00:00:00+08:00">2016-08-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>TITLE</strong>: Factorized Convolutional Neural Networks</p>
-<p><strong>AUTHER</strong>: Min Wang, Baoyuan Liu, Hassan Foroosh</p>
-<p><strong>ASSOCIATION</strong>: Department of EECS, University of Central Florida, Orlando</p>
-<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="http://arxiv.org/abs/1608.04337">arXiv:1608.04337</a></p>
-<h3 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h3><ol>
-<li>A new implementation of convolutional layer is proposed and only involves single in-channel convolution and linear channel projection.</li>
-<li>The network using such layers can achieves similar accuracy with significantly less computaion.</li>
-</ol>
-<h3 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h3><p><strong>Convolutional Layer with Bases</strong></p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/alg2.jpg" alt="" width="640"/>
-
-<p>When $b &#x3D; k^2$, this layer is equivalent to the standard convolutional layer. The number of multiplication required for this layer is $hwbm(k^2 + n)$, which means that by reducing b and increasing k, we create a layer that achieves large convolutional kernel while maintaining low complexity.</p>
-<p><strong>Convolutional Layer as Stacked Single Basis Layer</strong></p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/alg3.jpg" alt="" width="640"/>
-
-<p>One assumption is that the number of output channels is the same as the number of input channels $m &#x3D; n$, which is the case of that in ResNet. The modified layer can be considered as stacking multiple convolutional layers with single basis. Residual learning is also introduced in thie modified layer, which solves the problem of losing useful information caused by single basis.</p>
-<p><strong>Topological Connections</strong></p>
-<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/alg4.jpg" alt="" width="640"/>
-
-<p>A $n$-dimensional topological connections between the input and output channels in convolutional layer is proposed. Each output channel is only connected with its local neighbors rather than all input channels.</p>
-<h3 id="ADVANTAGES"><a href="#ADVANTAGES" class="headerlink" title="ADVANTAGES"></a>ADVANTAGES</h3><ol>
-<li>It is an interesting method of speeding up CNN as the auther claims that the network achieves accuracy of GoogLeNet while consuming 3.4 times less computaion.</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -2595,7 +2594,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">241</span>
+          <span class="site-state-item-count">242</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

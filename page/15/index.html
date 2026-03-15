@@ -172,6 +172,96 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/21/Computer_Vision/Reading_Note/2016-11-21-FusedDNN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-icon.png">
+      <meta itemprop="name" content="Joshua LI">
+      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Joshua's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2016/11/21/Computer_Vision/Reading_Note/2016-11-21-FusedDNN/" class="post-title-link" itemprop="url">Reading Note: Fused DNN: A deep neural network fusion approach to fast and robust pedestrian detection</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2016-11-21 00:00:00" itemprop="dateCreated datePublished" datetime="2016-11-21T00:00:00+08:00">2016-11-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Vision/" itemprop="url" rel="index"><span itemprop="name">Computer Vision</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>TITLE</strong>:  Fused DNN: A deep neural network fusion approach to fast and robust pedestrian detection</p>
+<p><strong>AUTHOR</strong>: Xianzhi Du, Mostafa El-Khamy, Jungwon Lee, Larry S. Davis</p>
+<p><strong>ASSOCIATION</strong>: University of Maryland, Samsung Electronics</p>
+<p><strong>FROM</strong>: <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1610.03466">arXiv:1610.03466</a></p>
+<h2 id="CONTRIBUTIONS"><a href="#CONTRIBUTIONS" class="headerlink" title="CONTRIBUTIONS"></a>CONTRIBUTIONS</h2><p>A deep neural network fusion architecture is proposed to address the pedestrian detection problem, called Fused Deep Neural Network (F-DNN).</p>
+<h2 id="METHOD"><a href="#METHOD" class="headerlink" title="METHOD"></a>METHOD</h2><p>The proposed network architecture consists of a pedestrian candidate generator, a classification network, and a pixel-wise semantic segmentation network. The pipeline of the proposed network fusion architecture is shown in the following figure:</p>
+<img class="img-responsive center-block" src="https://raw.githubusercontent.com/joshua19881228/my_blogs/master/Computer_Vision/Reading_Note/figures/FusedDNN.jpg" alt="" width="640"/>
+
+<p><strong>Pedestrian Candidate Generator</strong> is implemented by SSD. It provides a large pool of pedestrian candidates varying in scales and aspect ratios. Pedestrian candidates generated should cover almost all the ground truth pedestrians, even though many false positives are introduced at the same time. </p>
+<p><strong>Classification Network</strong> consists of multiple binary classification deep neural networks which are trained on the pedestrian candidates from <em>Pedestrian Candidate Generator</em>. </p>
+<p><strong>Soft-rejection based DNN Fusion</strong> works as follows: Consider one pedestrian candidate and one classifier. If the classifier has high confidence about the candidate, we boost its original score from the candidate generator by multiplying with a confidence scaling factor greater than one. Otherwise, we decrease its score by a scaling factor less than one. To fuse all $M$ classifiers, the candidate’s original confidence score is multiplied with the product of the confidence scaling factors from all classifiers in the classification network.</p>
+<p>$$ S_{FDNN} &#x3D; S_{SSD} \times \prod_{m&#x3D;1}^{M} a_{m} $$</p>
+<p>where</p>
+<p>$$ a_{m} &#x3D; max(p_{m} \times \frac{1}{a_{c}} , b_{c})  $$</p>
+<p>and $a_{c}$ and $b_{c}$ are chosen as 0.7 and 0.1 by cross validation.</p>
+<p><strong>Pixel-wise Semantic Segmentation Network</strong> is trained to get a binary map. DegreeDgreee to which each candidate’s BB overlaps with the pedestrian category in the SS activation mask gives a measure of the confidence of the SS network in the candidate generator’s results. If the generation pixels occupy at least 20% of the candidate BB area, its score is kept unaltered; Otherw, SNF is applied to scale the original confidence scores.</p>
+<h2 id="SOME-IDEAS"><a href="#SOME-IDEAS" class="headerlink" title="SOME IDEAS"></a>SOME IDEAS</h2><p>The idea of the work is simple. It seems a very tricky implementation of pedestrian detection. Though the author claims that it is efficient, it is hard to say how efficient it is using very complex cnn classifiers.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/20/Life_Discovery/Miscellaneous/2016-11-20-Miscellaneous/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -898,82 +988,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/26/Life_Discovery/Little_Things/2016-10-26-Little-Things/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar-icon.png">
-      <meta itemprop="name" content="Joshua LI">
-      <meta itemprop="description" content="Do not aim for success if you want it; just do what you love and believe in, and it will come naturally.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Joshua's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2016/10/26/Life_Discovery/Little_Things/2016-10-26-Little-Things/" class="post-title-link" itemprop="url">Little Things [20161026]</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2016-10-26 00:00:00" itemprop="dateCreated datePublished" datetime="2016-10-26T00:00:00+08:00">2016-10-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2026-03-14 10:54:22" itemprop="dateModified" datetime="2026-03-14T10:54:22+08:00">2026-03-14</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life-Discovery/" itemprop="url" rel="index"><span itemprop="name">Life Discovery</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>没什么新鲜事，应该督促自己读paper了。</p>
-<p>一切事情都不能太自以为是，不然是要被打脸的。总部同事以前就怀疑过SVM预测会占用大量CPU资源，但是我们却觉得2000*100的矩阵向量乘应该是轻量级运算，但是经过排查果然还是这个计算出了问题。</p>
-<p>在make之前一定要make clean。各种调试代码，一个小时以后，最后却是通过make clean解决了，一切代码又恢复原状，无用功啊！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1045,7 +1059,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">241</span>
+          <span class="site-state-item-count">242</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
