@@ -34,12 +34,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y rsync
 
-          # 定义 Gitee 仓库地址（需在 Secrets 中配置 GITEE_REPO_URL）
-          GITEE_REPO_URL=${{ secrets.GITEE_REPO_URL }}
+          # 定义 Gitee 仓库地址（需在 Secrets 中配置 GITEE_PAGES_REPO_URL）
+          GITEE_PAGES_REPO_URL=${{ secrets.GITEE_PAGES_REPO_URL }}
 
           # 创建临时目录并克隆 Gitee 代码
           mkdir /tmp/gitee-source
-          git clone $GITEE_REPO_URL /tmp/gitee-source
+          git clone $GITEE_PAGES_REPO_URL /tmp/gitee-source
 
           # 核心逻辑：使用 rsync 同步文件
           # --exclude='.github' 是关键，它保护了 GitHub Action 脚本不被覆盖
